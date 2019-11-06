@@ -13,7 +13,7 @@
 
     <title>
         
-          Build-Static-Blog - Vassago的博客 | Vassago&#39;s Blog
+          搭建博客 - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
@@ -50,6 +50,14 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+
+    <!-- Google AdSence -->
+
+    
+    <script data-ad-client="ca-pub-7806756021659460" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
 </head>
 
 
@@ -90,14 +98,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archives/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archives/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -168,7 +176,7 @@
                           <a class="tag" href="/tags/#web" title="web">web</a>
                         
                     </div>
-                    <h1>Build-Static-Blog</h1>
+                    <h1>搭建博客</h1>
                     <h2 class="subheading">&quot; 搭建个人博客，全程免费&quot;</h2>
                     <span class="meta">
                         Posted by Von on
@@ -217,7 +225,7 @@
 </div>
 
 <h1><span id="build-blog">Build Blog</span></h1><blockquote>
-<p>Gitpage + Hexo 搭建个人博客，全程免费。</p>
+<p>Gitpage + Hexo 搭建个人博客，全程免费，记录注意事项。</p>
 </blockquote>
 <h2><span id="zong-lan">总览</span></h2><ul>
 <li><a href="https://pages.github.com/" target="_blank" rel="noopener">Gitpage</a> 慷慨的 github 给我们的网站托管</li>
@@ -291,11 +299,15 @@
 </li>
 <li><p><code>hexo deploy</code>后会覆盖自定义域名后生成的<code>CNAME</code>文件。把要保存的文件放在<code>source</code>文件夹里。</p>
 </li>
+<li><p>我更改了一些<code>_config.yaml</code>配置后，发布成功，github 更新成功，本地 serve 也都正常，但是页面仍旧是之前的。尝试删除 <code>.nojekyll</code>文件和<code>.deploy_git</code>目录后再次发布成功。</p>
+</li>
 </ul>
 <h2><span id="zhan-chang-gong-ju">站长工具</span></h2><p><strong>百度统计</strong><br><a href="https://tongji.baidu.com/" target="_blank" rel="noopener">https://tongji.baidu.com/</a><br><code>_config.yaml</code> 配置参数 <code>ba_track_id: ol14dc912ccw01s4cxd12ss0c1acwz</code></p>
 <p><strong>Google分析</strong><br><a href="https://analytics.google.com/" target="_blank" rel="noopener">https://analytics.google.com/</a><br>这里 fork 的 hexo 主题的源码似乎有 bug，需要时使用 Google Analytics 提示的最新代码<br><code>_config.yaml</code> 配置参数 <code>ga_track_id: UA-xxx-x</code></p>
 <h2><span id="jie-ru-google-guang-gao">接入 google 广告</span></h2><p><a href="https://www.google.co.in/adsense/start/#/?modal_active=none" target="_blank" rel="noopener">https://www.google.co.in/adsense/start/#/?modal_active=none</a></p>
 <p>代码写在<code>/hexo-theme-huxblog/themes/huxblog/layout/_partial/footer.ejs</code></p>
+<p>要注意的是：写在<code>&lt;head&gt;&lt;/head&gt;</code>之间</p>
+<p>一审失败，再接再厉hhh</p>
 <h2><span id="qi-ta">其他</span></h2><h3><span id="jie-ru-ping-lun-gong-neng">接入评论功能</span></h3><p><a href="https://disqus.com/" target="_blank" rel="noopener">https://disqus.com/</a> -&gt; I want to install Disqus on my site -&gt; 填写信息 重要的是Websit Name 要求全网唯一，设定后不可改变 -&gt; 设置<code>_config.yaml</code>的参数<code>disqus_username: [上一步的Websit Name]</code><br>据说有收益，定期会审查，如果你的网站满足 Reveal，就会在一周内被联系。(emmm…)</p>
 <h3><span id="zhi-chi-toc">支持 TOC</span></h3><p><a href="https://github.com/bubkoo/hexo-toc" target="_blank" rel="noopener">https://github.com/bubkoo/hexo-toc</a><br>我的设置：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># _<span class="selector-tag">config</span><span class="selector-class">.yaml</span></span><br><span class="line"><span class="selector-tag">toc</span>:</span><br><span class="line">  <span class="selector-tag">maxdepth</span>: 3</span><br><span class="line">  <span class="selector-tag">class</span>: <span class="selector-tag">toc</span></span><br><span class="line">  <span class="selector-tag">slugify</span>: <span class="selector-tag">transliteration</span></span><br><span class="line">  <span class="selector-tag">decodeEntities</span>: <span class="selector-tag">false</span></span><br><span class="line"></span><br><span class="line"># <span class="selector-tag">css</span></span><br><span class="line"><span class="selector-class">.toc</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f1f1f1</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">#bbb</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># <span class="selector-tag">post</span></span><br><span class="line">&lt;!<span class="selector-tag">--</span> <span class="selector-tag">toc</span> <span class="selector-tag">--</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <h3><span id="zhi-chi-zhi-ding">支持置顶</span></h3><p>安装插件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">uninstall</span> hexo-generator-<span class="keyword">index</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-<span class="keyword">index</span>-pin-top <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
@@ -580,12 +592,6 @@
 </script>
 
 
-
-
-<!-- Google AdSence -->
-
-
-<script data-ad-client='ca-pub-7806756021659460' async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
 
