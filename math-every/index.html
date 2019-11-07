@@ -13,11 +13,11 @@
 
     <title>
         
-          Python编码问题 - Vassago的博客 | Vassago&#39;s Blog
+          math-every - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://vongola.tk/python-encoding/">
+    <link rel="canonical" href="https://vongola.tk/math-every/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -163,7 +163,7 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/home-bg.jpg')
+        background-image: url('bg.jpg')
     }
 </style>
 <header class="intro-header" >
@@ -173,14 +173,14 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#python" title="python">python</a>
+                          <a class="tag" href="/tags/#math" title="math">math</a>
                         
                     </div>
-                    <h1>Python编码问题</h1>
-                    <h2 class="subheading">python-encoding</h2>
+                    <h1>math-every</h1>
+                    <h2 class="subheading">每天学点数学总是好的</h2>
                     <span class="meta">
                         Posted by Von on
-                        2019-11-06
+                        2019-11-07
                     </span>
                 </div>
             </div>
@@ -203,39 +203,36 @@
 
 <!-- toc -->
 <ul>
-<li><a href="#python-encoding">Python Encoding</a><ul>
-<li><a href="#b-xing">b’’ 型</a></li>
-<li><a href="#u-xing">u’’ 型</a></li>
-<li><a href="#u00-xing">\u00 型</a></li>
-<li><a href="#uxxxx-xing">\uxxxx 型</a></li>
-<li><a href="#unicode-ascii-qie-u-qian-mei-you">unicode+ascii，且u前没有\</a></li>
-<li><a href="#html-shi-ti">html实体 – ‘&amp;#…;’</a></li>
+<li><a href="#mei-tian-xue-dian-shu-xue">每天学点数学</a><ul>
+<li><a href="#ge-de-ba-he-cai-xiang">哥德巴赫猜想</a><ul>
+<li><a href="#gai-nian">概念</a></li>
+<li><a href="#zheng-ming">证明</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <!-- tocstop -->
 </div>
 
-<h1><span id="python-encoding">Python Encoding</span></h1><h2><span id="b-xing">b’’ 型</span></h2><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b<span class="string">'hello'</span>.decode<span class="comment">()</span></span><br></pre></td></tr></table></figure>
-<h2><span id="u-xing">u’’ 型</span></h2><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=u'<span class="symbol">\x</span>e5<span class="symbol">\x</span>9c<span class="symbol">\x</span>a3<span class="symbol">\x</span>e5<span class="symbol">\x</span>bd<span class="symbol">\x</span>bc<span class="symbol">\x</span>e5<span class="symbol">\x</span>be<span class="symbol">\x</span>97<span class="symbol">\x</span>e5<span class="symbol">\x</span>a0<span class="symbol">\x</span>a1<span class="symbol">\x</span>e6<span class="symbol">\x</span>8e<span class="symbol">\x</span>92<span class="symbol">\x</span>e5<span class="symbol">\x</span>90<span class="symbol">\x</span>8d<span class="symbol">\x</span>e7<span class="symbol">\x</span>ac<span class="symbol">\x</span>ac 1 <span class="symbol">\x</span>e9<span class="symbol">\x</span>a4<span class="symbol">\x</span>90<span class="symbol">\x</span>e5<span class="symbol">\x</span>8e<span class="symbol">\x</span>85 (<span class="symbol">\x</span>e5<span class="symbol">\x</span>85<span class="symbol">\x</span>b1 8,650 <span class="symbol">\x</span>e9<span class="symbol">\x</span>97<span class="symbol">\x</span>b4)'</span><br><span class="line">print(a.encode('raw-unicode-escape'))</span><br></pre></td></tr></table></figure>
-<h2><span id="u00-xing">\u00 型</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">u'\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082\n'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a.encode(<span class="string">'iso-8859-1'</span>).decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
-<h2><span id="uxxxx-xing">\uxxxx 型</span></h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">a</span>=<span class="string">'\u56e0'</span></span><br><span class="line"><span class="builtin-name">print</span>(a.decode(<span class="string">'unicode-escape'</span>))</span><br></pre></td></tr></table></figure>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = '<span class="symbol">\u</span>00e6<span class="symbol">\u</span>0097<span class="symbol">\u</span>00a5<span class="symbol">\u</span>00e6<span class="symbol">\u</span>009c<span class="symbol">\u</span>00ac<span class="symbol">\u</span>00e5<span class="symbol">\u</span>009f<span class="symbol">\u</span>00bc<span class="symbol">\u</span>00e7<span class="symbol">\u</span>008e<span class="symbol">\u</span>0089<span class="symbol">\u</span>00e5<span class="symbol">\u</span>00b8<span class="symbol">\u</span>0082'</span><br><span class="line">print(a.decode('unicode-escape').encode('iso-8859-1').decode('utf8'))</span><br></pre></td></tr></table></figure>
-<h2><span id="unicode-ascii-qie-u-qian-mei-you">unicode+ascii，且u前没有\</span></h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#coding=utf8</span></span><br><span class="line">s = 'u00e7u<span class="number">0088</span>u00b1u00e5u00b0u<span class="number">0094</span>u00e7u00a6u008fu00e7u<span class="number">0089</span>u00b9u00e5u009fu008eu00e9u<span class="number">0099</span>u<span class="number">0085</span>u00e9u<span class="number">0085</span>u<span class="number">0092</span>u00e5u00bau<span class="number">0097</span>u00e6u<span class="number">0098</span>u00afu00e4u00b8u<span class="number">0080</span>u00e5u00aeu00b6u00efu00bcu008cu00e8u00b7u009du00e7u00a6u00bbu00e5u00aeu<span class="number">0089</span>u00e6u00a0u00bcu00e5u00b0u<span class="number">0094</span>u00e5u008du009au00e7u<span class="number">0089</span>u00a9u00e9u00a6u<span class="number">0086</span>u00e5u<span class="number">0092</span>u008cu00e5u<span class="number">0085</span>u008bu00e9u009bu00b7u00e9u00bbu<span class="number">0098</span>u00e6u00a1u00a5u00e4u00b8u008du00e5u<span class="number">0088</span>u00b0 15 u00e5u<span class="number">0088</span>u<span class="number">0086</span>u00e9u<span class="number">0092</span>u009fu00e7u009au<span class="number">0084</span>u00e6u00adu00a5u00e8u00a1u008cu00e8u00b7u00afu00e7u00a8u008bu00e3u<span class="number">0080</span>u<span class="number">0082</span>u00e8u<span class="number">0080</span>u008cu00e4u00b8u<span class="number">0094</span>u00efu00bcu008cu00e8u00bfu<span class="number">0099</span>u00e5u00aeu00b6u00e9u<span class="number">0085</span>u<span class="number">0092</span>u00e5u00bau<span class="number">0097</span>u00e8u00b7u009du00e7u00a6u00bbu00e5u009fu<span class="number">0083</span>u00e5u00b0u<span class="number">0094</span>u00e7u00a6u008fu00e7u<span class="number">0089</span>u00b9u00e5u00a4u00a7u00e6u<span class="number">0095</span>u<span class="number">0099</span>u00e5u00a0u<span class="number">0082</span>u00e5u<span class="number">0092</span>u008cEgapark Erfurtu00e4u00b8u008du00e5u<span class="number">0088</span>u00b0 5 u00e5u<span class="number">0085</span>u00acu00e9u<span class="number">0087</span>u008cu00e3u<span class="number">0080</span>u<span class="number">0082</span> u00e6u00adu00a4u00e9u<span class="number">0085</span>u<span class="number">0092</span>u00e5u00bau<span class="number">0097</span>u00e6u008fu<span class="number">0090</span>u00e4u00beu009bu00e9u00a4u<span class="number">0090</span>u00e5u008eu<span class="number">0085</span>u00e3u<span class="number">0080</span>u<span class="number">0081</span>u00e5u00b1u008bu00e9u00a1u00b6u00e9u009cu00b2u00e5u008fu00b0u00e5u<span class="number">0092</span>u008cu00e5u00b9u00b2u00e6u00b4u<span class="number">0097</span>/u00e6u00b4u<span class="number">0097</span>u00e8u00a1u00a3u00e6u009cu008du00e5u008au00a1u00e3u<span class="number">0080</span>u<span class="number">0082</span>u00e5u00a6u<span class="number">0082</span>u00e6u009eu009cu00e6u<span class="number">0082</span>u00a8u00e6u<span class="number">0083</span>u00b3u00e5u<span class="number">0096</span>u009du00e6u009du00afu00e9u00a5u00aeu00e6u<span class="number">0096</span>u<span class="number">0099</span>u00e6u<span class="number">0094</span>u00beu00e6u009du00beu00e4u00b8u<span class="number">0080</span>u00e4u00b8u008bu00efu00bcu008cu00e9u<span class="number">0085</span>u<span class="number">0092</span>u00e5u<span class="number">0090</span>u00a7/u00e9u<span class="number">0085</span>u<span class="number">0092</span>u00e5u00bbu008au00e7u00bbu009du00e5u00afu00b9u00e6u<span class="number">0098</span>u00afu00e6u<span class="number">0082</span>u00a8u00e7u009au<span class="number">0084</span>u00e5u00a5u00bdu00e5u008eu00bbu00e5u00a4u<span class="number">0084</span>u00e3u<span class="number">0080</span>u<span class="number">0082</span>'</span><br><span class="line"></span><br><span class="line">import re</span><br><span class="line"></span><br><span class="line">pattern = re.compile(r'((u00([a-z0-9])&#123;2&#125;)+)')</span><br><span class="line">for i in pattern.findall(s):</span><br><span class="line">    s = s.replace(i[<span class="number">0</span>], i[<span class="number">0</span>].replace('u', '\\u').decode('unicode-escape').encode('iso-<span class="number">8859</span>-1'))</span><br></pre></td></tr></table></figure>
-<h2><span id="html-shi-ti-amp">html实体 – ‘&amp;#…;’</span></h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def parse_html(self, data):</span><br><span class="line">        aa = re.findall(<span class="string">'&amp;#\d+;'</span>,data)</span><br><span class="line">        xx = [html.fromstring(i).text_content() <span class="keyword">for</span> i in aa]</span><br><span class="line">        yy = re.sub(<span class="string">'&amp;#\d+;'</span>,<span class="string">'&#123;&#125;'</span>,data)</span><br><span class="line">        yy = yy.<span class="keyword">split</span>(<span class="string">'&#123;&#125;'</span>)</span><br><span class="line">        <span class="keyword">res</span> = yy[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i in <span class="built_in">range</span>(<span class="built_in">len</span>(xx)):</span><br><span class="line">            <span class="keyword">res</span> += xx[i]+yy[i+<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">res</span></span><br></pre></td></tr></table></figure>
+<h1><span id="mei-tian-xue-dian-shu-xue">每天学点数学</span></h1><blockquote>
+<p>数学中的一些美丽定理具有这样的特性：它们极易从事实中归纳出来，但证明却隐藏的极深。– 高斯<br>在数学你不明白任何东西。你只使用它们。– 冯·诺伊曼</p>
+</blockquote>
+<h2><span id="ge-de-ba-he-cai-xiang">哥德巴赫猜想</span></h2><h3><span id="gai-nian">概念</span></h3><p><strong>任一大于2的偶数，都可表示成两个素数之和。</strong><br><em>而将一个给定的偶数分拆成两个素数之和，则被称之为此数的哥德巴赫分拆。</em><br><em>换句话说，哥德巴赫猜想主张每个大于等于4的偶数都是哥德巴赫数——可表示成两个素数之和的数。</em></p>
+<p>欧拉注明此一猜想可以有另一个等价的版本:<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">(A)</span>: 任一大于<span class="number">2</span>的偶数都可写成两个质数之和。</span><br><span class="line"></span><br><span class="line"><span class="comment">(B)</span>: 任一大于<span class="number">5</span>的奇数都可写成三个素数之和。</span><br></pre></td></tr></table></figure></p>
+<p>今日常见的猜想陈述为欧拉的版本，(A)亦称为“强哥德巴赫猜想”或“关于偶数的哥德巴赫猜想”。(B)称为“弱哥德巴赫猜想”或“关于奇数的哥德巴赫猜想”。其中(B)从(A)推出，所以如果(A)得证那么(B)也得证。</p>
+<h3><span id="zheng-ming">证明</span></h3><p>陈氏定理（陈景润的）</p>
+<p>所谓“陈氏定理”的“1+2”，是指：对于任给一个大偶数 N，总可以找到奇素数p’, p’’或p1,p2,p3，使得下列两式至少有一个成立：<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">N = p' + p''</span><br><span class="line">N = p1 + p2p3</span><br></pre></td></tr></table></figure></p>
+<p>两式可以同时成立。<em>偶数较小时，如 N=62，则可以有 62=43+19 以及 62=7+5×11</em></p>
 
 
                 <hr>
 
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/code-template/" data-toggle="tooltip" data-placement="top" title="代码模版">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/parse-vip-video/" data-toggle="tooltip" data-placement="top" title="VIP会员视频链接">Next Post &rarr;</a>
+                            <a href="/pythonchallenge/" data-toggle="tooltip" data-placement="top" title="pythonchallenge">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -266,7 +263,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#python" title="python">python</a>
+                          <a class="tag" href="/tags/#math" title="math">math</a>
                         
                     </div>
                 </section>
@@ -305,8 +302,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "vongola";
-    var disqus_identifier = "https://vongola.tk/python-encoding/";
-    var disqus_url = "https://vongola.tk/python-encoding/";
+    var disqus_identifier = "https://vongola.tk/math-every/";
+    var disqus_url = "https://vongola.tk/math-every/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
