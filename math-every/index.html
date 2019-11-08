@@ -97,8 +97,11 @@
                     
 
                         
+                    
+
+                        
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/ROUTE-OF-SOUL/">ROUTE-OF-SOUL</a>
                         </li>
                         
                     
@@ -106,6 +109,13 @@
                         
                         <li>
                             <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -209,6 +219,10 @@
 <li><a href="#zheng-ming">证明</a></li>
 </ul>
 </li>
+<li><a href="#ou-la-ding-li">欧拉定理</a><ul>
+<li><a href="#gai-nian-1">概念</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -224,11 +238,27 @@
 <h3><span id="zheng-ming">证明</span></h3><p>陈氏定理（陈景润的）</p>
 <p>所谓“陈氏定理”的“1+2”，是指：对于任给一个大偶数 N，总可以找到奇素数p’, p’’或p1,p2,p3，使得下列两式至少有一个成立：<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">N = p' + p''</span><br><span class="line">N = p1 + p2p3</span><br></pre></td></tr></table></figure></p>
 <p>两式可以同时成立。<em>偶数较小时，如 N=62，则可以有 62=43+19 以及 62=7+5×11</em></p>
+<h2><span id="ou-la-ding-li">欧拉定理</span></h2><h3><span id="gai-nian">概念</span></h3><p><strong>定理一</strong><br>连通的无向图有欧拉路径的充要条件是：</p>
+<p><strong>G中奇顶点（连接的边数量为奇数的顶点）的数目等于0或者2。</strong></p>
+<p>连通的无向图是欧拉环（存在欧拉回路）的充要条件是：</p>
+<p><strong>G中每个顶点的度都是偶数。</strong></p>
+<p><strong>定理二</strong></p>
+<p><strong>如果连通无向图G 有 2k 个奇顶点，那么它可以用 k 笔画成，并且至少要用 k 笔画成。</strong></p>
+<p>对有向图来说，一笔画不仅指遍历所有边，而且要遵循正确的方向。<br>严谨地说，一个连通有向图G有欧拉路径，指存在一个顶点，从它出发，沿着有向边的方向，可以不重复地遍历图中所有的边。<br>有向图的欧拉回路则是指可以从某一顶点开始，沿有向边的方向不重复地遍历所有边，然后回到原来出发的顶点。用类似于定理一中证明的思路，可以得到有向图一笔画的判定准则：</p>
+<p>一个连通的有向图可以表示为一条从顶点u到v的（不闭合的）欧拉路径的充要条件是：</p>
+<p><strong>u的出度（从这个顶点发出的有向边的数量）比入度（指向这个顶点的有向边的数量）多1， v 的出度比入度少1，而其它顶点的出度和入度都相等。</strong></p>
+<p>一个连通的有向图是欧拉环（存在欧拉回路）的充要条件是以下两个之一：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.每个顶点的出度和入度都相等；</span><br><span class="line"><span class="number">2</span>.存在一系列的（有向）环<span class="built_in">C1</span> <span class="built_in">C2</span>...  Cm，使得图G里的每一条边都恰好属于某一个环。</span><br></pre></td></tr></table></figure></p>
+<p><em>一笔画问题讨论的是能否不重复地遍历一个图的所有边，至于其中有否顶点的遍历或重复经过则没有要求。哈密顿问题讨论的则是顶点的遍历：能否不重复地遍历一个图的所有顶点？</em></p>
+<p>参考：<br><a href="https://www.math.ku.edu/~jmartin/courses/math105-F11/Lectures/chapter5-part2.pdf" target="_blank" rel="noopener">Tutorials</a><br><a href="http://www.geeksforgeeks.org/eulerian-path-and-circuit/" target="_blank" rel="noopener">How to find whether a given graph is Eulerian or not?</a><br><a href="http://www.ms.uky.edu/~lee/ma515fa10/euler.pdf" target="_blank" rel="noopener">Sketch of Eulerian Circuit Algorithm</a></p>
 
 
                 <hr>
 
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/python-garbage-collection/" data-toggle="tooltip" data-placement="top" title="python-garbage-collection">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
