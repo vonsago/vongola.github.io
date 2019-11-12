@@ -216,12 +216,17 @@
 <li><a href="#python-gc">Python GC</a><ul>
 <li><a href="#dui-xiang">对象</a></li>
 <li><a href="#nei-cun">内存：</a></li>
-<li><a href="#la-ji-hui-shou">垃圾回收</a></li>
+<li><a href="#la-ji-hui-shou">垃圾回收</a><ul>
+<li><a href="#chuan-tong-de-gc">传统的 GC</a></li>
+<li><a href="#debug-memory-leaks">Debug memory leaks</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <!-- tocstop -->
-<p></div></p>
+</div>
+
 <h1><span id="python-gc">Python GC</span></h1><p>##Python 垃圾回收原理</p>
 <h3><span id="dui-xiang">对象</span></h3><p>Python所谓的“一切皆对象”，实际上说的是：<br>python有一个<code>Common Object Structures</code>通用对象结构的东西，所有在内存中是<code>PyObject</code>和<code>PyVarObject</code>类型的，都会共享少量字段，如<strong>引用计数</strong>和指向相应类型对象的指针。</p>
 <ul>
@@ -251,10 +256,12 @@
 <ul>
 <li>三代垃圾收集器(目前只有三代)中的每一代都有一个阈值和一个计数器。计数器值为上次GC后对象分配数量-释放数量。当计数器超过该阈值，则触发这一代GC。内存释放过后仍存在的对象，将会移植到更老的一代。</li>
 </ul>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分代回收可以处理引用计数无法处理的情况：循环引用，但是无法处理循环引用中的对象定义了__del__的情况</span><br><span class="line">分代回收并不是实时工作，而是定期运行，每次回收会造成一定的卡顿</span><br><span class="line">老一代的回收频率比新一代的低，而且新一代的回收更多。</span><br><span class="line">```     </span><br><span class="line">**循环引用示例：**</span><br></pre></td></tr></table></figure>
-<p>from ctypes import *<br>class ObjRnt(Structure):<br>    <em>fields</em> = [(‘refcnt’,c_int)]</p>
-<p>l = []<br>l.append(l)<br>l_address = id(l)<br>del(l)<br>ObjRnt.from_address(l_address).refcnt<br>1<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以看出，如果`del`对象后，`lst`不可再被 Python 内部访问了，但是他的地址上来看，他的循环引用计数并不是<span class="number">0</span>。更详细的Debug方法可以往下看</span><br><span class="line"></span><br><span class="line">**如果没有禁用垃圾回收，那么Python中的内存泄露有两种情况：**</span><br></pre></td></tr></table></figure></p>
-<p>要么是对象被生命周期更长的对象所引用，比如global作用域对象；<br>要么是循环引用中存在<strong>del</strong>；<br><code>`</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">分代回收可以处理引用计数无法处理的情况：循环引用，但是无法处理循环引用中的对象定义了<span class="strong">__del__</span>的情况</span><br><span class="line">分代回收并不是实时工作，而是定期运行，每次回收会造成一定的卡顿</span><br><span class="line">老一代的回收频率比新一代的低，而且新一代的回收更多。</span><br></pre></td></tr></table></figure>
+<p><strong>循环引用示例：</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; from ctypes import *</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; <span class="class"><span class="keyword">class</span> <span class="title">ObjRnt</span>(<span class="title">Structure</span>):</span></span><br><span class="line">...     _fields<span class="number">_</span> = [(<span class="string">'refcnt'</span>,c_int)]</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; l = []</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; l.append(l)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; l_address = id(l)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; del(l)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; ObjRnt.from_address(l_address).refcnt</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>可以看出，如果<code>del</code>对象后，<code>lst</code>不可再被 Python 内部访问了，但是他的地址上来看，他的循环引用计数并不是0。更详细的Debug方法可以往下看</p>
+<p><strong>如果没有禁用垃圾回收，那么Python中的内存泄露有两种情况：</strong></p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">要么是对象被生命周期更长的对象所引用，比如<span class="keyword">global</span>作用域对象；</span><br><span class="line">要么是循环引用中存在__del__；</span><br></pre></td></tr></table></figure>
 <p>垃圾回收比较耗性能，解除循环引用，就可以禁用垃圾回收。解除循环引用的办法：</p>
 <ul>
 <li>手动解除</li>
