@@ -284,6 +284,38 @@ Byby 2019在 9102 年的最后一个月我终于用了一个下午把我的 blog
 
 <div class="post-preview">
 
+    <a href="/get-wlan-password/">
+        <h2 class="post-title">
+            获取链接过的 WI-FI 密码
+        </h2>
+        <h3 class="post-subtitle">
+            获取链接过的wifi密码
+        </h3>
+        <div class="post-content-preview">
+            
+
+
+
+Windows:
+Mac
+
+
+
+
+Windows:管理员运行：1for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do  @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear
+还有一种方法：可以获取指定名称的......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Von on
+        2019-11-18
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/linux-interview-qa/">
         <h2 class="post-title">
             Linux 面试题
@@ -604,9 +636,13 @@ u’’ 型12a=u'\xe5\x9c\xa3\xe5\xbd\xbc\xe5\xbe\x97\xe5\xa0\xa1\xe6......
                     <div class="tags">
                         
                             
+                            <a href="/tags/#web" title="web" rel="3">web</a>
+                            
                         
                             
-                            <a href="/tags/#web" title="web" rel="3">web</a>
+                        
+                            
+                            <a href="/tags/#system" title="system" rel="2">system</a>
                             
                         
                             
