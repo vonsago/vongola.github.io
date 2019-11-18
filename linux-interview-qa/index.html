@@ -13,11 +13,11 @@
 
     <title>
         
-          About - Vassago的博客 | Vassago&#39;s Blog
+          Linux 面试题 - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://vongola.tk/about/">
+    <link rel="canonical" href="https://vongola.tk/linux-interview-qa/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -165,185 +165,149 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/about-bg.jpg')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://vongola.tk/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>About</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Hey, this is Vassago.</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#linux" title="linux">linux</a>
+                        
+                    </div>
+                    <h1>Linux 面试题</h1>
+                    <h2 class="subheading">先来100道题开开胃</h2>
+                    <span class="meta">
+                        Posted by Von on
+                        2019-11-15
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <p>版权声明：遵循 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC 4.0 BY-SA</a> 版权协议，转载请附上原文出处链接和本声明。</p>
-<hr>
-<blockquote>
-<p>观察，思考，总结，实践。</p>
-</blockquote>
-<p>通常来说，愈稀奇的事，真相大白后，内情愈平常。</p>
-<p>生活是很枯燥的。我的一生就是力求不要在平庸中虚度光阴。</p>
-<p>对于一个伟大人物来说，任何事物都不是微不足道的。</p>
-<p>我相信友谊，并且愿意首先表示出我的友谊。</p>
-<p>社会上常常会有突如其来的侮辱，那是必须忍受的。</p>
-<p>伟大的人不是生下来就伟大的，而是在成长过程中显示其伟大的。</p>
-<p>过去的事就过去了，永远别回头，无论是为了找借口、为自己辩解还是找乐子，永远都不要回头。你现在是什么人，就是什么人，世界眼下是什么样，就是什么样。</p>
-<p style="text-align:right;"><br>    —— <a href>None － 「」？ </a><br></p>
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#linux">Linux</a><ul>
+<li><a href="#cron-daemon">cron daemon</a></li>
+<li><a href="#block-device">block device</a></li>
+<li><a href="#more">more</a></li>
+<li><a href="#du">du</a></li>
+<li><a href="#chmod">chmod</a></li>
+<li><a href="#runlevel-telinit">runlevel &amp; telinit</a></li>
+<li><a href="#atq">atq</a></li>
+<li><a href="#set">set</a></li>
+<li><a href="#skel">skel</a></li>
+<li><a href="#export">export</a></li>
+<li><a href="#chmod-1">chmod</a></li>
+<li><a href="#userdel">userdel</a></li>
+<li><a href="#umount">umount</a></li>
+<li><a href="#umask">umask</a></li>
+<li><a href="#which">which</a></li>
+<li><a href="#mount">mount</a></li>
+<li><a href="#nice">nice</a></li>
+<li><a href="#tail">tail</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+
+<h1><span id="linux">Linux</span></h1><h2><span id="cron-daemon">cron daemon</span></h2><p>Cron 是一个守护程序，用于计划可以想象的任何类型的任务（<strong>管理系统日常任务的调度</strong>）。Windows 上被称为“Task Scheduler”<br>命令<code>crontab</code>常见于<code>Unix-Like</code>系统，用于设置周期性被执行的指令。<br>该命令从标准输入设备读取指令，并将其存放于“crontab”文件中，以供之后读取和执行。</p>
+<h2><span id="block-device">block device</span></h2><p>块设备是代表某种设备的一种文件，具有可在块中读取或写入的数据。<br>块设备通常代表某种大容量存储单元（例如，硬盘或USB笔式驱动器上的分区）。</p>
+<p><a href="https://en.wikipedia.org/wiki/Device_file#Block_devices" target="_blank" rel="noopener">Detail</a></p>
+<h2><span id="more">more</span></h2><p>more命令是一个基于vi编辑器文本过滤器，它以全屏幕的方式按页显示文本文件的内容<br>该命令可以一次显示一页内容，满屏后停下来</p>
+<h2><span id="du">du</span></h2><p>查看在当前目录下还有多大剩余空间<code>du .</code></p>
+<h2><span id="chmod">chmod</span></h2><p>更改文件的权限</p>
+<h2><span id="runlevel-amp-telinit">runlevel &amp; telinit</span></h2><p><code>runlevel</code>读取系统的utmp文件夹定位系统的运行级别记录，然后显示当前系统的执行等级<br>运行级别指的是<code>Unix-Like</code>系统下不同的运行模式，通常分为7等，分别是从0到6</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span>：停机</span><br><span class="line"><span class="symbol">1 </span>：单用户模式</span><br><span class="line"><span class="symbol">2 </span>：多用户模式，无网络</span><br><span class="line"><span class="symbol">3 </span>：完全的多用户模式</span><br><span class="line"><span class="symbol">4 </span>：用户自定义</span><br><span class="line"><span class="symbol">5 </span>：图形界面多用户模式</span><br><span class="line"><span class="symbol">6 </span>：重启</span><br></pre></td></tr></table></figure>
+<p><code>telinit</code>命令可以设置当前系统的运行等级</p>
+<h2><span id="atq">atq</span></h2><p>可以列出定义在以后特定时间运行一次的所有任务</p>
+<h2><span id="set">set</span></h2><p><code>set PS1=&quot;[\u\w\t]\$&quot; ; export PS1</code>的作用是<br>改变命令提示符</p>
+<h2><span id="skel">skel</span></h2><p><code>/etc/skel</code>目录作用是在建立新用户时，用于初始化用户根目录</p>
+<h2><span id="export">export</span></h2><p>显示和设置环境变量值<br><code>export PATH=$PATH:/usr/local/bin</code>  #将/usr/local/bin加入环境变量中</p>
+<h2><span id="chmod">chmod</span></h2><p>linux 中权限的粒度有 拥有者 、群组 、其它组 三种</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-rw------- (600)  只有拥有者有读写权限。</span></span><br><span class="line"><span class="deletion">-rw-r--r-- (644)  只有拥有者有读写权限；而属组用户和其他用户只有读权限。</span></span><br><span class="line"><span class="deletion">-rwx------ (700)  只有拥有者有读、写、执行权限。</span></span><br><span class="line"><span class="deletion">-rwxr-xr-x (755)  拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。</span></span><br><span class="line"><span class="deletion">-rwx--x--x (711)  拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。</span></span><br><span class="line"><span class="deletion">-rw-rw-rw- (666)  所有用户都有文件读、写权限。</span></span><br><span class="line"><span class="deletion">-rwxrwxrwx (777)  所有用户都有读、写、执行权限。</span></span><br></pre></td></tr></table></figure>
+<p>算法：<br><code>rw-</code> = <code>110</code> = <code>6</code></p>
+<h2><span id="userdel">userdel</span></h2><p>删除使用者帐号及相关档案</p>
+<h2><span id="umount">umount</span></h2><p>卸除文件系统</p>
+<h2><span id="umask">umask</span></h2><p>用来设置限制新文件权限的掩码<br>从权限中“拿走”相应的位,且文件创建时不能赋予执行权限</p>
+<p>对于目录，用户所能拥有的最大权限是777；对于文件，用户所能拥有的最大权限是目录的最大权限去掉执行权限，即666<br>对于root用户，他的umask值是022。当root用户创建目录时，默认的权限就是用最大权限777去掉相应位置的umask值权限，即对于所有者不必去掉任何权限，对于所属组要去掉w权限，对于其他用户也要去掉w权限，所以目录的默认权限就是755；<br>当root用户创建文件时，默认的权限则是用最大权限666去掉相应位置的umask值，即文件的默认权限是644。</p>
+<h2><span id="which">which</span></h2><p>查找环境变量中的文件<br>查找一个二进制命令的路径</p>
+<h2><span id="mount">mount</span></h2><p>加载指定的文件系统</p>
+<p><code>mount -a</code> 用来装载所有在 /etc/fstab 中定义的文件系统</p>
+<h2><span id="nice">nice</span></h2><p>以指定的优先级运行命令，这会影响相应进程的调度。<br>如果不指定命令，程序会显示当前的优先级。优先级的范围是从 -20<br>(最大优先级) 到 19 (最小优先级)。</p>
+<h2><span id="tail">tail</span></h2><p>显示一个文件最后几行</p>
 
 
-                <!-- 如果开启评论功能 -->
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/python-garbage-collection/" data-toggle="tooltip" data-placement="top" title="Python 垃圾回收原理">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
                 
-                    <hr>
-
-                    
-
-                    
-                    <!-- disqus 评论框 start -->
-                    <div class="comment">
-                        <div id="disqus_thread" class="disqus-thread"></div>
-                    </div>
-                    <!-- disqus 评论框 end -->
-                    
-
-
-                    
-
-                    
-                    <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-                    <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES * * */
-                        var disqus_shortname = "vongola";
-                        var disqus_identifier = "https://vongola.tk/about/index.html";
-                        var disqus_url = "https://vongola.tk/about/index.html";
-
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-
-                        
-                    </script>
-                    <!-- disqus 公共JS代码 end -->
-                    
-
-
-
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
                 
 
             </div>
+    <!-- Side Catalog Container -->
+        
+
     <!-- Sidebar Container -->
+
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <!-- no hr -->
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        
-                            
-                        
-                            
-                            <a href="/tags/#web" title="web" rel="3">web</a>
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                            <a href="/tags/#python" title="python" rel="3">python</a>
-                            
+                       
+                          <a class="tag" href="/tags/#linux" title="linux">linux</a>
                         
                     </div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/avatar.jpg" />
-                        
-
-                        
-                            <p>101 110 000</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/V_assago">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-
-                            
-
-                            
-                                <li>
-                                    <a target="_blank" href="https://www.facebook.com/vongo4206">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-
-                            
-                                <li>
-                                    <a target="_blank"  href="https://github.com/vonsago">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                </section>
-                
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -366,9 +330,65 @@
                 </ul>
                 
             </div>
-        
+
+        </div>
     </div>
-</div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "vongola";
+    var disqus_identifier = "https://vongola.tk/linux-interview-qa/";
+    var disqus_url = "https://vongola.tk/linux-interview-qa/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
