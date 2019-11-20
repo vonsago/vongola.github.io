@@ -13,11 +13,11 @@
 
     <title>
         
-          VIP会员视频链接 - Vassago的博客 | Vassago&#39;s Blog
+          位运算的数学等价 - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://vongola.tk/parse-vip-video/">
+    <link rel="canonical" href="https://vongola.tk/bit-calc/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -183,14 +183,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#web" title="web">web</a>
+                          <a class="tag" href="/tags/#math" title="math">math</a>
+                        
+                          <a class="tag" href="/tags/#program" title="program">program</a>
                         
                     </div>
-                    <h1>VIP会员视频链接</h1>
-                    <h2 class="subheading"></h2>
+                    <h1>位运算的数学等价</h1>
+                    <h2 class="subheading">按位运算</h2>
                     <span class="meta">
                         Posted by Von on
-                        2019-11-05
+                        2019-11-20
                     </span>
                 </div>
             </div>
@@ -209,54 +211,41 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>仅供学习交流，严禁用于商业用途，请于24小时内删除</p>
+                <font face="微软雅黑" size="4" color="272727">按位运算符C++共有6个&lt;&lt; , &gt;&gt; , ~ , &amp; , | , ^</font>
+
+<font face="微软雅黑" size="4" color="FF8F59">移位运算符</font><br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//左移运算符&lt;&lt;语法：</span></span><br><span class="line"><span class="keyword">value</span> &lt;&lt; shift  <span class="comment">//value是被操作的整数值，shift是要移动的位数</span></span><br><span class="line"><span class="comment">//功能：左移一位相当于乘2，左移n位相当于乘以2的n次方</span></span><br><span class="line"><span class="comment">//左移运算符在汇编语言中直接修改寄存器的内容，但是C++生成一个新值，如：</span></span><br><span class="line"><span class="keyword">int</span> x=<span class="number">30</span>;</span><br><span class="line"><span class="keyword">int</span> y= x&lt;&lt;<span class="number">3</span>;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">x=x&lt;&lt;<span class="number">4</span>;</span><br><span class="line">y&lt;&lt;=<span class="number">2</span>;</span><br></pre></td></tr></table></figure><br><br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//右移运算符&lt;&lt;语法：</span></span><br><span class="line"><span class="keyword">value</span> &gt;&gt; shift  <span class="comment">//value是被操作的整数值，shift是要移动的位数</span></span><br><span class="line"><span class="comment">//功能：左移一位相当于除以2，左移n位相当于除以2的n次方，如：</span></span><br><span class="line"><span class="keyword">int</span> x=<span class="number">4</span>;</span><br><span class="line">x&gt;&gt;<span class="number">1</span>;</span><br><span class="line">x&gt;&gt;=<span class="number">1</span>;</span><br></pre></td></tr></table></figure><br><br><font face="微软雅黑" size="4" color="FF8F59">逻辑按位运算符</font>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按位非 ~</span></span><br><span class="line"><span class="comment">//先将数写成二进制形式，再将每个0化为1，</span></span><br><span class="line"><span class="comment">//功能：新值是原值的补位，如</span></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> x=<span class="number">3</span>;</span><br><span class="line">十进制中~<span class="number">3</span>=<span class="number">252</span>，</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按位 OR(|)对两个整数进行操作，生成一个新的整数值。</span></span><br><span class="line"><span class="comment">//将数写成二进制形式，对应位“见1为1”</span></span><br><span class="line"><span class="comment">//可以组合赋值运算符，如</span></span><br><span class="line">a <span class="string">|= b;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按位 XOR(^)将两个数结合起来，生成一个新的整数值。</span></span><br><span class="line"><span class="comment">//将数写成二进制形式，对应位“不同为1，相同为0”</span></span><br><span class="line"><span class="comment">//可以组合赋值运算符，如</span></span><br><span class="line">a ^= b;</span><br></pre></td></tr></table></figure>
+<p>异或性质：</p>
+<p>（1）交换律：A ⊕ B = B ⊕ A<br>（2）结合律：A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C<br>（3）自反：A ⊕ B ⊕ B = A ⊕ 0 = A</p>
+<p>异或的应用：</p>
+<p>（1）快速比较两个值<br>判断两个int数字a，b是否相等a ^ b == 0则a,b相等。</p>
+<p>（2）在汇编语言中经常用于将变量置零：xor a，a；</p>
+<p>（3）我们可以使用异或来使某些特定的位翻转，因为不管是0或者是1与1做异或将得到原值的相反值；</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span>^ <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">1 </span>^ <span class="number">1</span> = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>（4）我们使用异或来判断一个二进制数中1的数量是奇数还是偶数</p>
+<blockquote>
+<p>例如：求10100001中1的数量是奇数还是偶数； 答案：1 ^ 0 ^ 1 ^ 0 ^ 0 ^ 0 ^ 0 ^ 1 = 1,结果为1就是奇数个1，结果为0就是偶数个1； 应用：这条性质可用于奇偶校验（Parity Check），比如在串口通信过程中，每个字节的数据都计算一个校验位，数据和校验位一起发送出去，这样接收方可以根据校验位粗略地判断接收到的数据是否有误</p>
 </blockquote>
-<p>从排名及考前的几个解析网站爬出来的解析链接，链接背后的技术以后研究了再跟进</p>
-<ol>
-<li>“<a href="https://www.administratorw.com/admin.php?url=&quot;" target="_blank" rel="noopener">https://www.administratorw.com/admin.php?url=&quot;</a></li>
-<li>“<a href="https://yun.odflv.com/?url=&quot;" target="_blank" rel="noopener">https://yun.odflv.com/?url=&quot;</a></li>
-<li>“<a href="http://goudidiao.com/?url=&quot;" target="_blank" rel="noopener">http://goudidiao.com/?url=&quot;</a></li>
-<li>“<a href="https://jx.maoyun.tv/index.php?id=&quot;" target="_blank" rel="noopener">https://jx.maoyun.tv/index.php?id=&quot;</a></li>
-<li>“<a href="http://www.1717yun.com/jx/vip/index.php?url=&quot;" target="_blank" rel="noopener">http://www.1717yun.com/jx/vip/index.php?url=&quot;</a></li>
-<li>“<a href="http://api.xfsub.com/index.php?url=&quot;" target="_blank" rel="noopener">http://api.xfsub.com/index.php?url=&quot;</a></li>
-<li>“<a href="http://q.z.vip.totv.72du.com/?url=&quot;" target="_blank" rel="noopener">http://q.z.vip.totv.72du.com/?url=&quot;</a></li>
-<li>“<a href="http://jx.api.163ren.com/vod.php?url=&quot;" target="_blank" rel="noopener">http://jx.api.163ren.com/vod.php?url=&quot;</a></li>
-<li>“<a href="http://www.0335haibo.com/tong.php?url=&quot;" target="_blank" rel="noopener">http://www.0335haibo.com/tong.php?url=&quot;</a></li>
-<li>“<a href="http://www.wmxz.wang/video.php?url=&quot;" target="_blank" rel="noopener">http://www.wmxz.wang/video.php?url=&quot;</a></li>
-<li>“<a href="http://www.vipjiexi.com/yun.php?url=&quot;" target="_blank" rel="noopener">http://www.vipjiexi.com/yun.php?url=&quot;</a></li>
-<li>“<a href="https://hhh.qqplayer.cn/beac.php?url=&quot;" target="_blank" rel="noopener">https://hhh.qqplayer.cn/beac.php?url=&quot;</a></li>
-<li>“<a href="http://j.zz22x.com/jx/?url=&quot;" target="_blank" rel="noopener">http://j.zz22x.com/jx/?url=&quot;</a></li>
-<li>“<a href="http://api.nepian.com/ckparse/?url=&quot;" target="_blank" rel="noopener">http://api.nepian.com/ckparse/?url=&quot;</a></li>
-<li>“<a href="https://vip.bljiex.com/?v=&quot;" target="_blank" rel="noopener">https://vip.bljiex.com/?v=&quot;</a></li>
-<li>“<a href="http://vip.jlsprh.com/index.php?url=&quot;" target="_blank" rel="noopener">http://vip.jlsprh.com/index.php?url=&quot;</a></li>
-<li>‘<a href="http://api.baiyug.vip/index.php?url=&#39;" target="_blank" rel="noopener">http://api.baiyug.vip/index.php?url=&#39;</a></li>
-<li>‘<a href="http://jiexi.071811.cc/jx2.php?url=&#39;" target="_blank" rel="noopener">http://jiexi.071811.cc/jx2.php?url=&#39;</a></li>
-<li>‘<a href="http://app.baiyug.cn:2019/vip/?url=&#39;" target="_blank" rel="noopener">http://app.baiyug.cn:2019/vip/?url=&#39;</a></li>
-<li>‘<a href="http://api.nepian.com/ckparse/?url=&#39;" target="_blank" rel="noopener">http://api.nepian.com/ckparse/?url=&#39;</a></li>
-<li>‘<a href="http://j.zz22x.com/jx/?url=&#39;" target="_blank" rel="noopener">http://j.zz22x.com/jx/?url=&#39;</a></li>
-<li>‘<a href="http://api.wlzhan.com/sudu/?url=&#39;" target="_blank" rel="noopener">http://api.wlzhan.com/sudu/?url=&#39;</a></li>
-<li>“<a href="https://jiexi.071811.cc/jx.php?url=&quot;" target="_blank" rel="noopener">https://jiexi.071811.cc/jx.php?url=&quot;</a></li>
-<li>“<a href="https://vip.mpos.ren/v/?url=&quot;" target="_blank" rel="noopener">https://vip.mpos.ren/v/?url=&quot;</a></li>
-<li>“<a href="http://jx.618g.com/?url=&quot;" target="_blank" rel="noopener">http://jx.618g.com/?url=&quot;</a></li>
-<li>“<a href="http://jx.cesms.cn/?url=&quot;" target="_blank" rel="noopener">http://jx.cesms.cn/?url=&quot;</a></li>
-<li>“<a href="https://660e.com/?url=&quot;" target="_blank" rel="noopener">https://660e.com/?url=&quot;</a></li>
-<li>“<a href="https://www.ikukk.com/?url=&quot;" target="_blank" rel="noopener">https://www.ikukk.com/?url=&quot;</a></li>
-</ol>
-<p>复制视频的链接，粘贴到以上链接后面</p>
+<p>（5）校验和恢复</p>
+<blockquote>
+<p>校验和恢复主要利用的了异或的特性：IF a ^ b = c THEN a ^ c = b 应用：一个很好的应用实例是RAID5，使用3块磁盘（A、B、C）组成RAID5阵列，当用户写数据时，将数据分成两部分，分别写到磁盘A和磁盘B，A ^ B的结果写到磁盘C；当读取A的数据时，通过B ^ C可以对A的数据做校验，当A盘出错时，通过B ^ C也可以恢复A盘的数据。</p>
+</blockquote>
+<p>（6）经典题目：不使用其他空间，交换两个值</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">a</span> = a ^ b<span class="comment">;</span></span><br><span class="line"><span class="attr">b</span> = a ^ b<span class="comment">; //a ^ b ^ b = a ^ 0 = a;</span></span><br><span class="line"><span class="attr">a</span> = a ^ b<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>（7）面试题：互换二进制数的奇偶位；<br>以上性质来自<a href="https://www.lijinma.com/blog/2014/05/29/amazing-xor/" target="_blank" rel="noopener">金马的Blog</a></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按位 AND(&amp;)将两个数结合起来，生成一个新的整数值。</span></span><br><span class="line"><span class="comment">//将数写成二进制形式，对应位“同为1结果才为1”</span></span><br><span class="line"><span class="comment">//可以组合赋值运算符，如</span></span><br><span class="line">a <span class="meta">&amp;= b;</span></span><br><span class="line"></span><br><span class="line">a <span class="meta">&amp; 1<span class="comment">//取a二进制的最低位，判断和1是否相同，相同返回1，否则返回0，可用于判断奇偶</span></span></span><br></pre></td></tr></table></figure>
 
 
                 <hr>
 
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/python-encoding/" data-toggle="tooltip" data-placement="top" title="Python编码问题">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/Build-Static-Blog/" data-toggle="tooltip" data-placement="top" title="搭建博客">Next Post &rarr;</a>
+                            <a href="/get-wlan-password/" data-toggle="tooltip" data-placement="top" title="获取链接过的 WI-FI 密码">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -287,7 +276,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#web" title="web">web</a>
+                          <a class="tag" href="/tags/#math" title="math">math</a>
+                        
+                          <a class="tag" href="/tags/#program" title="program">program</a>
                         
                     </div>
                 </section>
@@ -326,8 +317,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "vongola";
-    var disqus_identifier = "https://vongola.tk/parse-vip-video/";
-    var disqus_url = "https://vongola.tk/parse-vip-video/";
+    var disqus_identifier = "https://vongola.tk/bit-calc/";
+    var disqus_url = "https://vongola.tk/bit-calc/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
