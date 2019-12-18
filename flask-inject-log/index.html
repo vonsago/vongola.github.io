@@ -13,11 +13,11 @@
 
     <title>
         
-          Vassago的博客 | Vassago&#39;s Blog
+          Flask 注入自定义的日志 - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://vongola.tk/i_dont_wanna_use_default_archives/2019/page/2/">
+    <link rel="canonical" href="https://vongola.tk/flask-inject-log/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -165,7 +165,185 @@
 
 
     <!-- Main Content -->
-    <!-- Default Archive layout, we use archives instead. -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://vongola.tk/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#flask web python" title="flask web python">flask web python</a>
+                        
+                    </div>
+                    <h1>Flask 注入自定义的日志</h1>
+                    <h2 class="subheading">自定义 flask 日志</h2>
+                    <span class="meta">
+                        Posted by Von on
+                        2019-11-26
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1><span id="flask-logging">Flask logging</span></h1><p>根据官方文档来看，当想要为项目配置日志时，应当在程序启动时尽早进行配置。比如在<code>flask_app = Flask(&#39;api-controller&#39;)</code>之前配置。<br>如果不配置，flask 会<code>create_logger</code><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># flask source code 中是这样的</span></span><br><span class="line">default_handler = logging.StreamHandler(wsgi_errors_stream)</span><br><span class="line">default_handler.setFormatter(</span><br><span class="line">    logging.Formatter(<span class="string">"[%(asctime)s] %(levelname)s in %(module)s: %(message)s"</span>)</span><br><span class="line">)</span><br><span class="line"><span class="comment"># 所以使用缺省配置时</span></span><br></pre></td></tr></table></figure></p>
+<p>如果在操作 <code>app.logger</code> 之后配置日志，并且需要 移除缺省的日志记录器，可以导入并移除它:<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from flask.logging <span class="keyword">import</span> <span class="keyword">default</span><span class="number">_</span>handler</span><br><span class="line"></span><br><span class="line">flask<span class="number">_</span>app.logger.removeHandler(<span class="keyword">default</span><span class="number">_</span>handler)</span><br></pre></td></tr></table></figure></p>
+<p>应用程序代码可以在一个模块中定义和配置父记录器，并在单独的模块中创建（但不配置）子记录器，并且对子记录器的所有调用都将传递给父记录器</p>
+<p>比如在<code>flask</code>应用中我们的目录为<code>app</code><br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># create logger with app <span class="keyword">and </span>config <span class="keyword">it</span></span><br><span class="line"><span class="keyword">logging.getLogger("app").setLevel(log_level)</span></span><br></pre></td></tr></table></figure></p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/zip-picture/" data-toggle="tooltip" data-placement="top" title="压缩图片">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/bit-calc/" data-toggle="tooltip" data-placement="top" title="位运算的数学等价">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#flask web python" title="flask web python">flask web python</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://vongola.tk" target="_blank">Vassago&#39;s Blog</a></li>
+                    
+                        <li><a href="https://discord.gg/VTTaNe" target="_blank">Discord</a></li>
+                    
+                        <li><a href="#" target="_blank">Foo</a></li>
+                    
+                        <li><a href="#" target="_blank">Bar</a></li>
+                    
+                        <li><a href="https://analytics.google.com/analytics/web/#/report-home/a151521286w214414350p205190867" target="_blank">Google SEO</a></li>
+                    
+                        <li><a href="https://tongji.baidu.com/web/10000075644/overview/index?siteId=14081777" target="_blank">Baidu SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "vongola";
+    var disqus_identifier = "https://vongola.tk/flask-inject-log/";
+    var disqus_url = "https://vongola.tk/flask-inject-log/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
     <!-- Footer -->

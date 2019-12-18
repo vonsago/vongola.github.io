@@ -13,7 +13,7 @@
 
     <title>
         
-          获取链接过的 WI-FI 密码 - Vassago的博客 | Vassago&#39;s Blog
+          获取 WI-FI 密码 - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
@@ -108,13 +108,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archives/">Archives</a>
                         </li>
                         
@@ -123,6 +116,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -173,7 +173,7 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/home-bg.jpg')
+        background-image: url('bg.jpeg')
     }
 </style>
 <header class="intro-header" >
@@ -183,11 +183,11 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#system" title="system">system</a>
+                          <a class="tag" href="/tags/#system wifi" title="system wifi">system wifi</a>
                         
                     </div>
-                    <h1>获取链接过的 WI-FI 密码</h1>
-                    <h2 class="subheading">获取链接过的wifi密码</h2>
+                    <h1>获取 WI-FI 密码</h1>
+                    <h2 class="subheading">如何获取你知道/不知道的 wifi 密码</h2>
                     <span class="meta">
                         Posted by Von on
                         2019-11-18
@@ -213,18 +213,54 @@
 
 <!-- toc -->
 <ul>
+<li><a href="#huo-qu-lian-jie-guo-de-wifi-mi-ma">获取链接过的 wifi 密码</a><ul>
 <li><a href="#windows">Windows:</a></li>
 <li><a href="#mac">Mac</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#ru-he-huo-qu-lin-ju-jia-wifi-mi-ma">如何获取邻居家 wifi 密码</a><ul>
+<li><a href="#huan-jing-zhun-bei">环境准备</a></li>
+<li><a href="#kai-shi">开始</a></li>
+<li><a href="#yong-wireshark-huo-qu-wpa-bao">用 wireshark 获取 WPA 包</a></li>
+<li><a href="#bao-po">爆破</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 </div>
 
-<h2><span id="windows">Windows:</span></h2><p>管理员运行：<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> /f <span class="string">"skip=9 tokens=1,2 delims=:"</span> %i <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles'</span>) <span class="keyword">do</span>  @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=<span class="keyword">clear</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>本文仅限于学习，请勿用于非法用途 否则后果作者概不负责</p>
+</blockquote>
+<h2><span id="huo-qu-lian-jie-guo-de-wifi-mi-ma">获取链接过的 wifi 密码</span></h2><h3><span id="windows">Windows:</span></h3><p>管理员运行：<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> /f <span class="string">"skip=9 tokens=1,2 delims=:"</span> %i <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles'</span>) <span class="keyword">do</span>  @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=<span class="keyword">clear</span></span><br></pre></td></tr></table></figure></p>
 <p>还有一种方法：可以获取指定名称的wifi信息<br>step 1:获取所有链接过的wifi名称</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan <span class="keyword">show</span> profile</span><br></pre></td></tr></table></figure>
 <p>step 2:指定wifi名称获取相关信息( 下面代码中wifi_name 是step 1 中列出的名称 )</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show<span class="built_in"> profile </span>wifi_name <span class="attribute">key</span>=clear</span><br></pre></td></tr></table></figure>
-<h2><span id="mac">Mac</span></h2><p>打开 <code>keychain</code> 钥匙串<br>选择 系统，种类：密码<br>通过Wi-Fi名字查看密码</p>
+<h3><span id="mac">Mac</span></h3><p>打开 <code>keychain</code> 钥匙串<br>选择 系统，种类：密码<br>通过Wi-Fi名字查看密码</p>
+<h3><span id="ubuntu">Ubuntu</span></h3><p>从配置文件中获取 psk 的值<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="keyword">grep</span> psk= <span class="regexp">/etc/</span>NetworkManager<span class="regexp">/system-connections/</span>*</span><br></pre></td></tr></table></figure></p>
+<h2><span id="ru-he-huo-qu-lin-ju-jia-wifi-mi-ma">如何获取邻居家 wifi 密码</span></h2><h3><span id="huan-jing-zhun-bei">环境准备</span></h3><ul>
+<li>系统：macOs Mojave 双核8G</li>
+<li>工具：aircrack-ng; wireshark; hashcat </li>
+<li>参考链接：<a href="https://louisabraham.github.io/articles/WPA-wifi-cracking-MBP.html" target="_blank" rel="noopener">Louis Abraham’s</a></li>
+</ul>
+<h3><span id="kai-shi">开始</span></h3><p>官网下载：<a href="https://www.wireshark.org/download.html" target="_blank" rel="noopener">wireshark</a></p>
+<p>由于原本就有 <a href="https://brew.sh/" target="_blank" rel="noopener">homebrew</a>，不再重述下载过程。<br>首先下载 <a href="https://www.aircrack-ng.org/" target="_blank" rel="noopener">aircrack-ng</a>，这里用于暴力破解 Wi-Fi 密码<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>aircrack-ng</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://hashcat.net/hashcat/" target="_blank" rel="noopener">hashcat</a> 世界上最快的密码破解程序<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>hashcat</span><br></pre></td></tr></table></figure></p>
+<h3><span id="yong-wireshark-huo-qu-wpa-bao">用 wireshark 获取 WPA 包</span></h3><h4><span id="wpa-jian-jie">WPA 简介</span></h4><p>WPA（英语：Wi-Fi Protected Access），意即“Wi-Fi访问保护”，是一种保护无线网络（Wi-Fi）访问安全的技术标准。</p>
+<h4><span id="mojave-bu-neng-shi-yong-airport-zhua-bao">Mojave 不能使用 airport 抓包</span></h4><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">sudo</span> ln -s /<span class="type">System</span>/<span class="type">Library</span>/<span class="type">PrivateFrameworks</span>/<span class="type">Apple80211</span>.framework/<span class="type">Versions</span>/<span class="type">Current</span>/<span class="type">Resources</span>/air<span class="keyword">port</span> /usr/sbin/airport</span><br><span class="line"></span><br><span class="line"><span class="title">sudo</span> air<span class="keyword">port</span> -s</span><br><span class="line">// <span class="type">Ctrl</span>-<span class="type">C</span> to stop capturing after <span class="number">2</span><span class="number">-5</span> minutes</span><br><span class="line"><span class="title">sudo</span> air<span class="keyword">port</span> en1 sniff $CHANNEL</span><br></pre></td></tr></table></figure>
+<p>这个方式简单，但是新的系统不支持，只能通过 wireshark 抓包</p>
+<h4><span id="wireshark-zhua-bao">wireshark 抓包</span></h4><p>开启监控模式<br><img src="wireshark.png" alt></p>
+<p>filter:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eapol or wlan<span class="selector-class">.fc</span><span class="selector-class">.type_subtype</span> == <span class="number">0</span>x08</span><br></pre></td></tr></table></figure></p>
+<p>抓取 5分钟 左右，保存.pcap</p>
+<h3><span id="bao-po">爆破</span></h3><h4><span id="tong-guo-aircrack-ng-bao-li-po-jie-mi-ma">通过 aircrack-ng 暴力破解密码</span></h4><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aircrack-ng <span class="keyword">test</span>.pcap -w 密码字典文件</span><br></pre></td></tr></table></figure>
+<p><img src="aircrack.png" alt></p>
+<p>如果有 <code>WPA (1 handshake)</code> 则输入前面的编号 <code>Index number of target network ? 4643</code></p>
+<p>否则重复上述 wireshark 抓包过程</p>
+<p>如果这步成功，成功的关键就在于密码字典，可以在github搜一下，可以找到的字典集我都试过（有上千万的数据了），目前我没有好的可以推荐，因为没有成功破解我邻居的密码:)尬…</p>
+<h4><span id="hashcat-po-jie">hashcat 破解</span></h4><p>在线转化文件<code>pcap-&gt;hccapx</code> <a href="https://hashcat.net/cap2hccapx/" target="_blank" rel="noopener">https://hashcat.net/cap2hccapx/</a></p>
+<p>在我本子上跑温度飙到了 96c 只能放弃</p>
 
 
                 <hr>
@@ -268,7 +304,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#system" title="system">system</a>
+                          <a class="tag" href="/tags/#system wifi" title="system wifi">system wifi</a>
                         
                     </div>
                 </section>
