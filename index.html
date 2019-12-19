@@ -313,7 +313,8 @@ Byby 2019在 9102 年的最后一个月我终于用了一个下午把我的 blog
             自定义 flask 日志
         </h3>
         <div class="post-content-preview">
-            Flask logging根据官方文档来看，当想要为项目配置日志时，应当在程序启动时尽早进行配置。比如在flask_app = Flask(&#39;api-controller&#39;)之前配置。如果不配置，flask 会create_logger123456# flask source code 中是这样的default_handler = logging.StreamHandler(......
+            Flask logging使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。
+根据官方文档来看，当想要为项目配置日志时，应当在程序启动时尽早进行配置。比如在flask_app = Flask(&#39;api-controller&#39;)之前配置。如果不配置，flask 会create_logger12......
         </div>
     </a>
     <p class="post-meta">
@@ -611,15 +612,15 @@ pythonchallen......
                     <div class="tags">
                         
                             
-                            <a href="/tags/#web" title="web" rel="3">web</a>
-                            
-                        
-                            
                             <a href="/tags/#math" title="math" rel="2">math</a>
                             
                         
                             
                         
+                            
+                        
+                            
+                            <a href="/tags/#web" title="web" rel="3">web</a>
                             
                         
                             
