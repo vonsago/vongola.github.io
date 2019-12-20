@@ -236,6 +236,23 @@
 <li><a href="#tail">tail</a></li>
 <li><a href="#tr">tr</a></li>
 <li><a href="#dmesg">dmesg</a></li>
+<li><a href="#xian-shi-xi-tong-zhong-ge-ge-fen-qu-zhong-inode-de-shi-yong-qing-kuang">显示系统中各个分区中inode的使用情况</a></li>
+<li><a href="#xian-shi-linux-xi-tong-zhong-zhu-ce-de-yong-hu-shu">显示Linux系统中注册的用户数</a></li>
+<li><a href="#kill-9-de-han-yi">kill 9 的含义</a></li>
+<li><a href="#jin-tian-wu-ye-yun-xing-ming-ling-cmd1">今天午夜运行命令 cmd1</a></li>
+<li><a href="#yong-hu-de-bian-liang-she-zhi">用户的变量设置</a></li>
+<li><a href="#ru-guo-cmd1-cheng-gong-zhi-xing-ze-zhi-xing-cmd2-ming-ling">如果cmd1成功执行，则执行cmd2命令</a></li>
+<li><a href="#ding-yi-wang-qia-de-i-o-di-zhi">定义网卡的I/O地址</a></li>
+<li><a href="#linux-zhong-ti-gong-tcp-ip-bao-guo-lu-gong-neng-de-ruan-jian">Linux中，提供TCP/IP包过滤功能的软件</a></li>
+<li><a href="#zan-ting-yi-ge-da-yin-dui-lie">暂停一个打印队列</a></li>
+<li><a href="#na-ge-xie-yi-shi-yong-liao-er-ge-yi-shang-de-duan-kou">哪个协议使用了二个以上的端口</a></li>
+<li><a href="#na-ge-ming-ling-ke-yi-ya-suo-bu-fen-wen-jian">哪个命令可以压缩部分文件</a></li>
+<li><a href="#jie-ya-suo-tar-wen-jian">解压缩tar文件</a></li>
+<li><a href="#ping-shi-yong-de-xie-yi-shi">ping使用的协议是</a></li>
+<li><a href="#cha-kan-wang-luo-gu-zhang-de-ming-ling">查看网络故障的命令</a></li>
+<li><a href="#bo-hao-shang-wang-shi-yong-de-xie-yi">拨号上网使用的协议</a></li>
+<li><a href="#ding-yi-liao-wang-luo-fu-wu-de-duan-kou">定义了网络服务的端口</a></li>
+<li><a href="#cha-kan-wang-qia-de-zhong-duan">查看网卡的中断</a></li>
 </ul>
 </li>
 </ul>
@@ -268,8 +285,24 @@
 <h2><span id="nice">nice</span></h2><p>以指定的优先级运行命令，这会影响相应进程的调度。<br>如果不指定命令，程序会显示当前的优先级。优先级的范围是从 -20<br>(最大优先级) 到 19 (最小优先级)。</p>
 <h2><span id="tail">tail</span></h2><p>显示一个文件最后几行</p>
 <h2><span id="tr">tr</span></h2><p><code>tr a-z A-Z</code> 把一个流中所有字符转换成大写字符</p>
-<h2><span id="dmesg">dmesg</span></h2><p>被用于检查和控制内核的环形缓冲区。<br>开机信息保存在<code>/var/log/dmesg</code>文件里</p>
-<p>##</p>
+<h2><span id="dmesg">dmesg</span></h2><p>被用于检查和控制内核的环形缓冲区。<br>Linux 启动信息保存在<code>/var/log/dmesg</code>文件里</p>
+<h2><span id="xian-shi-xi-tong-zhong-ge-ge-fen-qu-zhong-inode-de-shi-yong-qing-kuang">显示系统中各个分区中inode的使用情况</span></h2><p><code>df -i</code></p>
+<h2><span id="xian-shi-linux-xi-tong-zhong-zhu-ce-de-yong-hu-shu">显示Linux系统中注册的用户数</span></h2><p><code>wc --lines /etc/passwd</code></p>
+<h2><span id="kill-9-de-han-yi">kill 9 的含义</span></h2><p>sends SIGTERM to the process whose PID IS 9</p>
+<h2><span id="jin-tian-wu-ye-yun-xing-ming-ling-cmd1">今天午夜运行命令 cmd1</span></h2><p><code>echo &quot;cmd1&quot; | at midnight</code></p>
+<h2><span id="yong-hu-de-bian-liang-she-zhi">用户的变量设置</span></h2><p><code>/etc/profile</code></p>
+<h2><span id="ru-guo-cmd1-cheng-gong-zhi-xing-ze-zhi-xing-cmd2-ming-ling">如果cmd1成功执行，则执行cmd2命令</span></h2><p><code>cmd1&amp;&amp;cmd2</code></p>
+<h2><span id="ding-yi-wang-qia-de-i-o-di-zhi">定义网卡的I/O地址</span></h2><p><code>cat /proc/ioports</code></p>
+<h2><span id="linux-zhong-ti-gong-tcp-ip-bao-guo-lu-gong-neng-de-ruan-jian">Linux中，提供TCP/IP包过滤功能的软件</span></h2><p><code>iptables</code></p>
+<h2><span id="zan-ting-yi-ge-da-yin-dui-lie">暂停一个打印队列</span></h2><p><code>lpc</code></p>
+<h2><span id="na-ge-xie-yi-shi-yong-liao-er-ge-yi-shang-de-duan-kou">哪个协议使用了二个以上的端口</span></h2><p><code>FTP</code></p>
+<h2><span id="na-ge-ming-ling-ke-yi-ya-suo-bu-fen-wen-jian">哪个命令可以压缩部分文件</span></h2><p><code>tar -czvf filename.tgz *</code></p>
+<h2><span id="jie-ya-suo-tar-wen-jian">解压缩tar文件</span></h2><p><code>tar -xzvf filename.tgz</code></p>
+<h2><span id="ping-shi-yong-de-xie-yi-shi">ping使用的协议是</span></h2><p><code>ICMP</code></p>
+<h2><span id="cha-kan-wang-luo-gu-zhang-de-ming-ling">查看网络故障的命令</span></h2><p><code>ping</code> <code>telnet</code> <code>netstat</code></p>
+<h2><span id="bo-hao-shang-wang-shi-yong-de-xie-yi">拨号上网使用的协议</span></h2><p><code>PPP</code></p>
+<h2><span id="ding-yi-liao-wang-luo-fu-wu-de-duan-kou">定义了网络服务的端口</span></h2><p><code>/etc/services</code></p>
+<h2><span id="cha-kan-wang-qia-de-zhong-duan">查看网卡的中断</span></h2><p><code>cat /proc/interrupts</code></p>
 
 
                 <hr>
