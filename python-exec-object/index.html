@@ -13,11 +13,11 @@
 
     <title>
         
-          Vassago的博客 | Vassago&#39;s Blog
+          Python可执行对象使用 - Vassago的博客 | Vassago&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://vongola.tk/baidu_verify_sGf7QqWgRD.html">
+    <link rel="canonical" href="https://vongola.tk/python-exec-object/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -165,184 +165,103 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://vongola.tk/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Vassago&#39;s Blog</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Pure Thinking</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#python" title="python">python</a>
+                        
+                    </div>
+                    <h1>Python可执行对象使用</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by Von on
+                        2020-02-19
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                sGf7QqWgRD
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-                <!-- 如果开启评论功能 -->
+                <h2><span id="exec">exec()</span></h2><h3><span id="syntax">Syntax:</span></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">exec(object[, globals[, locals]])</span><br><span class="line"></span><br><span class="line"><span class="meta">:param object:</span> As already said this can be a string or object code</span><br><span class="line"><span class="meta">:param globals:</span> This can be a dictionary and the parameter is optional</span><br><span class="line"><span class="meta">:param locals:</span> This can be a mapping object and is also optional</span><br></pre></td></tr></table></figure>
+<p>eg.<br><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> <span class="built_in">math</span> <span class="keyword">import</span> *</span><br><span class="line">exec(<span class="string">"print(factorial(5))"</span>, &#123;<span class="string">"factorial"</span>:factorial&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2><span id="eval">eval()</span></h2><h3><span id="syntax">Syntax:</span></h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">eval</span><span class="params">(expression[, globals[, locals]])</span></span></span><br></pre></td></tr></table></figure>
+<h3><span id="diff-with-exec">diff with exec()</span></h3><p>1.eval accepts only a single expression, exec can take a code block that has Python statements: loops, try: except:, class and function/method definitions and so on.<br>2.eval returns the value of the given expression, whereas exec ignores the return value from its code, and always returns None (in Python 2 it is a statement and cannot be used as an expression, so it really does not return anything).</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; a = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; eval(<span class="string">'37 + a'</span>)   <span class="comment"># it is an expression</span></span><br><span class="line"><span class="number">42</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; exec(<span class="string">'37 + a'</span>)   <span class="comment"># it is an expression statement; value is ignored (None is returned)</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; exec(<span class="string">'a = 47'</span>)   <span class="comment"># modify a global variable as a side effect</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; a</span><br><span class="line"><span class="number">47</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; eval(<span class="string">'a = 47'</span>)  <span class="comment"># you cannot evaluate a statement</span></span><br><span class="line">Traceback (most recent call last)<span class="symbol">:</span></span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;<span class="class"><span class="keyword">module</span>&gt;</span></span><br><span class="line">  File <span class="string">"&lt;string&gt;"</span>, line <span class="number">1</span></span><br><span class="line">    a = <span class="number">47</span></span><br><span class="line">      ^</span><br><span class="line"><span class="symbol">SyntaxError:</span> invalid syntax</span><br></pre></td></tr></table></figure>
+<h2><span id="compile">compile()</span></h2><h3><span id="syntax">Syntax:</span></h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile(source, filename, mode, <span class="attribute">flags</span>=0, <span class="attribute">dont_inherit</span>=<span class="literal">False</span>, <span class="attribute">optimize</span>=-1)</span><br></pre></td></tr></table></figure>
+<p>It can be used to speed up repeated invocations of the same code with exec or eval by compiling the source into a code object beforehand.</p>
+<p><a href="https://docs.python.org/3/library/functions.html#compile" target="_blank" rel="noopener">compile</a></p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/real-python/" data-toggle="tooltip" data-placement="top" title="CPython">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
                 
-                    <hr>
-
-                    
-
-                    
-                    <!-- disqus 评论框 start -->
-                    <div class="comment">
-                        <div id="disqus_thread" class="disqus-thread"></div>
-                    </div>
-                    <!-- disqus 评论框 end -->
-                    
-
-
-                    
-
-                    
-                    <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-                    <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES * * */
-                        var disqus_shortname = "vongola";
-                        var disqus_identifier = "https://vongola.tk/baidu_verify_sGf7QqWgRD.html";
-                        var disqus_url = "https://vongola.tk/baidu_verify_sGf7QqWgRD.html";
-
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-
-                        
-                    </script>
-                    <!-- disqus 公共JS代码 end -->
-                    
-
-
-
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
                 
 
             </div>
+    <!-- Side Catalog Container -->
+        
+
     <!-- Sidebar Container -->
+
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <!-- no hr -->
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        
-                            
-                            <a href="/tags/#math" title="math" rel="2">math</a>
-                            
-                        
-                            
-                        
-                            
-                            <a href="/tags/#web" title="web" rel="3">web</a>
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                            <a href="/tags/#python" title="python" rel="5">python</a>
-                            
-                        
-                            
-                        
-                            
-                        
-                            
+                       
+                          <a class="tag" href="/tags/#python" title="python">python</a>
                         
                     </div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/avatar.jpg" />
-                        
-
-                        
-                            <p>101 110 000</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/V_assago">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-
-                            
-
-                            
-                                <li>
-                                    <a target="_blank" href="https://www.facebook.com/vongo4206">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-
-                            
-                                <li>
-                                    <a target="_blank"  href="https://github.com/vonsago">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                </section>
-                
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -365,9 +284,65 @@
                 </ul>
                 
             </div>
-        
+
+        </div>
     </div>
-</div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "vongola";
+    var disqus_identifier = "https://vongola.tk/python-exec-object/";
+    var disqus_url = "https://vongola.tk/python-exec-object/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
