@@ -5,16 +5,16 @@
   "version": "0.1.0",
   "author": "Ars Von Roseregen<ars.von.roseregem@gmail.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.5",
-    "@mdx-js/react": "^1.5.5",
+    "@mdx-js/mdx": "^1.5.8",
+    "@mdx-js/react": "^1.5.8",
     "@pauliescanlon/gatsby-theme-terminal": "*",
     "date-fns": "^2.10.0",
-    "gatsby": "^2.19.7",
+    "gatsby": "^2.20.29",
     "gatsby-plugin-google-analytics": "^2.2.4",
-    "gatsby-plugin-mdx": "^1.0.73",
-    "gatsby-source-filesystem": "^2.1.46",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "gatsby-plugin-mdx": "^1.1.10",
+    "gatsby-source-filesystem": "^2.2.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "gatsby-disable-404": "^0.2.1",
