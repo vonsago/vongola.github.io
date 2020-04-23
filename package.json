@@ -10,6 +10,7 @@
     "@pauliescanlon/gatsby-theme-terminal": "^0.0.21",
     "date-fns": "^2.10.0",
     "gatsby": "^2.20.29",
+    "gatsby-plugin-baidu-analytics": "^2.2.0",
     "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-mdx": "^1.1.10",
     "gatsby-source-filesystem": "^2.2.4",

@@ -24,5 +24,14 @@ module.exports = {
         trackingId: 'UA-151521286-1',
       },
     },
+    {
+      resolve: `gatsby-plugin-baidu-analytics`,
+      options: {
+	      // baidu analytics siteId
+        siteId: "aa14d9ec8097f7630cc7c68cd0c169a8",
+        // Put analytics script in the head instead of the body [default:false]
+        head: false,
+      },
+    }
   ],
 }
