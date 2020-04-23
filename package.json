@@ -3,14 +3,14 @@
   "private": true,
   "description": "A simple starter using gatsby-theme-terminal",
   "version": "0.1.0",
-  "author": "Ars Von Roseregen<ars.von.roseregem@gmail.com>",
+  "author": "Paul Scanlon <pauliescanlon@gmail.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.8",
-    "@mdx-js/react": "^1.5.8",
-    "@pauliescanlon/gatsby-theme-terminal": "*",
+    "@mdx-js/mdx": "^1.5.9",
+    "@mdx-js/react": "^1.5.9",
+    "@pauliescanlon/gatsby-theme-terminal": "^0.0.21",
     "date-fns": "^2.10.0",
     "gatsby": "^2.20.29",
-    "gatsby-plugin-google-analytics": "^2.2.4",
+    "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-mdx": "^1.1.10",
     "gatsby-source-filesystem": "^2.2.4",
     "gh-pages": "^2.2.0",
@@ -18,7 +18,6 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "gatsby-disable-404": "^0.2.1",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -33,7 +32,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "bd": "gatsby build --prefix-paths",
     "deploy": "gh-pages -d public -b master"
   },
   "browserslist": [
