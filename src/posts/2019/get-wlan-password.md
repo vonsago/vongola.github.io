@@ -86,7 +86,7 @@ sudo airport en1 sniff $CHANNEL
 #### wireshark 抓包
 
 开启监控模式
-![](wireshark.png)
+![](/images/get-wlan-password/wireshark.png)
 
 filter:
 ```shell
@@ -102,7 +102,7 @@ eapol or wlan.fc.type_subtype == 0x08
 aircrack-ng test.pcap -w 密码字典文件
 ```
 
-![](aircrack.png)
+![](/images/get-wlan-password/aircrack.png)
 
 如果有 `WPA (1 handshake)` 则输入前面的编号 `Index number of target network ? 4643`
 

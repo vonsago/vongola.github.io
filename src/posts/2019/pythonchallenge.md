@@ -597,7 +597,7 @@ MD,单单这个公式推了半天，最终试出来，实验过程如下：
 >>> show()
 ```
 展示的图像。bit?什么鬼。
-![这里写图片描述](bit.jpeg)
+![这里写图片描述](/images/pythonchallenge/bit.jpeg)
 
 ```none
 试了一下
@@ -607,7 +607,7 @@ you took the wrong curve.
 不不不，突然意识到那个大便有提示作用。。一圈一圈的。。
 O__O "…拙劣的代码写了个蛇形数组(而且还有Bug)。不提出来献丑了所有代码我都保存在github上，等通关了我放到最后，虽然那是一个漫长的时间。
 ```
-![这里写图片描述](cat.jpeg)
+![这里写图片描述](/images/pythonchallenge/cat.jpeg)
 
 不过能看清是只猫，其他都是细节✧(≖ ◡ ≖✿)嘿嘿
 

@@ -3,7 +3,7 @@ title: 压缩图片
 author: Von
 date: 2019-12-18
 tags: ['Picture' , 'Python']
-featuredImage: bbg.jpg   
+featuredImage: ang.jpeg   
 ---
 
 

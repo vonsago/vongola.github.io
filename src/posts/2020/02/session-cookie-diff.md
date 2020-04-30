@@ -3,7 +3,7 @@ title: Session和Cookie的不同
 author: Von
 date: 2020-02-27 
 tags: ['Web']
-featuredImage: bbg.jpg
+featuredImage: home-bg-o.jpg
 ---
 
 Session

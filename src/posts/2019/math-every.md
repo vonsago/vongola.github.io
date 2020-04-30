@@ -2,7 +2,7 @@
 title: 每天学点数学
 author: Von
 tags: ['Math']
-featuredImage: bg.jpeg
+featuredImage: mathbg.jpg
 date: 2019-11-07
 dateModified: 2020-01-01
 ---
@@ -106,7 +106,7 @@ N = p1 + p2p3
  **性质4 除法定理一**：如果ka≡kb(mod m)，且(m,k)=1（即k和m互质），则a≡b(mod m) 
  
  **性质4 除法定理二**：
-![](divide.png)
+![](/images/math-every/divide.png)
 也即是说：m 的因数也可以整除(a-b)。
 m是n的倍数: m = c *n , n | m , 因为m|(a-b) , 所以 n | (a-b) => a≡b (mod n)
 
@@ -141,10 +141,10 @@ a^(n-1) ≡ 1 (mod m)  or
 这就是费马小定理。
 
 [**卡迈克尔函数**](https://zh.wikipedia.org/wiki/%E5%8D%A1%E9%82%81%E5%85%8B%E7%88%BE%E5%87%BD%E6%95%B8)
-![](kamer.png)
+![](/images/math-every/kamer.png)
 
 [**阶乘幂**](https://zh.wikipedia.org/wiki/%E9%98%B6%E4%B9%98%E5%B9%82)
-![](jiecheng.png)
+![](/images/math-every/jiecheng.png)
 
 参考:
 [知行执行](http://www.cnblogs.com/zhixingqiezhixing/archive/2012/04/03/2430676.html)
@@ -153,7 +153,7 @@ a^(n-1) ≡ 1 (mod m)  or
 ## 必须掌握-微积分基础
 
 **导数**
-![](images/导数.png)
+![](/images/math-every/导数.png)
 
 **四则运算**
 

@@ -2,7 +2,7 @@
 title: Python可执行对象使用
 author: Von
 tags: ['Python']
-featuredImage: bbg.jpg
+featuredImage: home-bg.jpg
 date: 2020-02-19
 dateModified: 2020-02-20
 ---

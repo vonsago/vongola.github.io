@@ -13,6 +13,7 @@
     "gatsby-plugin-baidu-analytics": "^2.2.0",
     "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-mdx": "^1.1.10",
+    "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-remark": "^2.7.4",
     "gh-pages": "^2.2.0",
@@ -27,7 +28,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "rm -rf node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "start": "npm run develop",

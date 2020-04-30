@@ -3,7 +3,7 @@ title: Python 垃圾回收原理
 author: Von
 date: 2019-11-07
 tags: ['Python']
-featuredImage: bbg.jpg
+featuredImage: ang.jpeg
 ---
 
 <!-- toc -->

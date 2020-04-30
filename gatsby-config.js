@@ -19,15 +19,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-remark-images`,
-      options: {
-        // It's important to specify the maxWidth (in pixels) of
-        // the content container as this plugin uses this as the
-        // base for generating different widths of each image.
-        maxWidth: 1200,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-151521286-1',
@@ -41,6 +32,13 @@ module.exports = {
         // Put analytics script in the head instead of the body [default:false]
         head: false,
       },
-    }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      }
+    },
   ],
 }
