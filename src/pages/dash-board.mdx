@@ -266,8 +266,9 @@ You can also use the `filter` prop with this component eg: `<SourceTags filter='
       {source.map((edge, index) => {
         const {
           frontmatter: { title },
+          fields: { slug },
         } = edge.node
-        return <li key={index}>{title}</li>
+        return <li key={index}><a href={slug}>{title}</a></li>
       })}
     </ul>
   )}
