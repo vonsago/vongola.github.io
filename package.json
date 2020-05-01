@@ -14,6 +14,7 @@
     "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-mdx": "^1.1.10",
     "gatsby-remark-relative-images": "^0.3.0",
+    "gatsby-remark-table-of-contents": "^0.0.9",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-remark": "^2.7.4",
     "gh-pages": "^2.2.0",
@@ -28,7 +29,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js && gatsby build",
+    "fuck": "rm -rf node_modules/gatsby-plugin-google-fonts && mv theme-gatsby-config.js node_modules/@pauliescanlon/gatsby-theme-terminal/gatsby-config.js",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "start": "npm run develop",

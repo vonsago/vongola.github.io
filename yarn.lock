@@ -6375,6 +6375,14 @@ gatsby-remark-relative-images@^0.3.0:
     slash "^2.0.0"
     unist-util-select "^1.5.0"
 
+gatsby-remark-table-of-contents@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npm.taobao.org/gatsby-remark-table-of-contents/download/gatsby-remark-table-of-contents-0.0.9.tgz#c5c781a3da692f604326ab794498104f0663a4df"
+  integrity sha1-xceBo9ppL2BDJqt5RJgQTwZjpN8=
+  dependencies:
+    js-yaml "^3.13.1"
+    mdast-util-toc "^4.2.0"
+
 gatsby-source-filesystem@^2.2.4:
   version "2.2.4"
   resolved "https://registry.npm.taobao.org/gatsby-source-filesystem/download/gatsby-source-filesystem-2.2.4.tgz#5526e90efa3fd1dd56df587bdbcd87cb6280aa29"
@@ -9291,6 +9299,17 @@ mdast-util-toc@^3.1.0:
     github-slugger "^1.2.1"
     mdast-util-to-string "^1.0.5"
     unist-util-is "^2.1.2"
+    unist-util-visit "^1.1.0"
+
+mdast-util-toc@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npm.taobao.org/mdast-util-toc/download/mdast-util-toc-4.2.0.tgz#9085c4313359c981e4c1d22efe02f8ce01072da4"
+  integrity sha1-kIXEMTNZyYHkwdIu/gL4zgEHLaQ=
+  dependencies:
+    extend "^3.0.2"
+    github-slugger "^1.2.1"
+    mdast-util-to-string "^1.0.5"
+    unist-util-is "^3.0.0"
     unist-util-visit "^1.1.0"
 
 mdast-util-toc@^5.0:
