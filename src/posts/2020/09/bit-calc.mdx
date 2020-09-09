@@ -1,0 +1,52 @@
+---
+title: k8s 概念积累
+date: 2019-11-20
+dateModified: 2020-04-22
+author: Von
+tags: ["Kubernetes"]
+featuredImage: home-bg.jpg
+---
+
+- 什么是 kubernetes(k8s) ？
+> kubernetes 是可移植的、可扩展的开源平台，用于管理容器化的工作负载和服务，可促进声明式配置和自动化。
+
+- 有哪些基本概念？
+> **镜像（Image）**提供了除内核外完整的运行时环境，确保了应用运行环境一致性
+> **容器（Container）**是镜像的运行时，实质是进程，容器存储层的生存周期和容器一样，系统通过cgroup技术实现资源配额和上限，随着容器消亡随之消亡
+> **仓库（Repository**）集中存放镜像的系统
+> **集群(Cluster)** 是用于运行容器化应用程序的一组节点机器
+> **节点(Node)** 是 Kubernetes 集群的工作节点，可以是物理机也可以是虚拟机。
+> **应用(Application)** 接入的特定环境下的业务模块，一个应用可以关联多个集群
+> **Pod** 是 k8s 管理，创建，计划的最小单元，一个 Pod 中多个容器共享网络命名空间
+> **Namespace** 在一个 Kubernetes 集群中可以使用 namespace 创建多个 “虚拟集群”，这些 namespace 之间可以完全隔离，也可以通过某种方式，让一个 namespace 中的 service 可以访问到其他的 namespace 中的服务
+> 
+> **控制器：**
+> **ReplicaSet** 维护一组在任何时候都处于运行状态的 Pod 副本的稳定集合。 因此，它通常用来保证给定数量的、完全相同的 Pod 的可用性。
+> **Deployment** 它管理 ReplicaSet，并向 Pod 提供声明式的更新以及许多其他有用的功能，方便管理应用，是RC的替代，能够滚动升级，容器伸缩，暂停继续应用。
+> **DaemonSet** 确保全部（或者某些）节点上运行一个 Pod 的副本。 当有节点加入集群时， 也会为他们新增一个 Pod 。当有节点从集群移除时，这些 Pod 也会被回收。删除 DaemonSet 将会删除它创建的所有 Pod。
+> **StatefulSet** 解决有状态服务的问题，用于如持久化存储，稳定的PodName和HostName，有序部署，有序收缩等场景
+> **Horizontal Pod Autoscaling （HPA）**Pod 水平自动扩缩，可以基于 CPU 利用率自动扩缩 ReplicationController、Deployment 和 ReplicaSet 中的 Pod 数量。 除了 CPU 利用率，也可以基于其他应程序提供的自定义度量指标 来执行自动扩缩。 Pod 自动扩缩不适用于无法扩缩的对象，比如 DaemonSet。
+> **Job** 批处理任务，即仅执行一次的任务，它保证批处理任务的一个或多个Pod成功结束。
+> **CronJob** 基于时间管理 Job，如指定时间执行，周期性的执行
+> **PodPreset** 是用来在 Pod 被创建的时候向其中注入额外的信息的API资源。可以使用 label selector 来匹配为哪些 Pod 应用 PodPreset。
+> 
+> 
+> **服务发现：**
+> **Endpoint** 暴露 Pod
+> **Service** 服务的抽象，是一个 Pod 的逻辑分组，一种可以访问它们的策略 —— 通常称为微服务，一般通过 Label Selector 实现这一组 Pod 能够被 Service 访问到。在同一个集群内，可以通过service 暴露服务
+> **Ingress** 是从Kubernetes集群外部访问集群内部服务的入口。通常情况下，service和 pod 仅可在集群内部网络中通过IP地址访问
+> 
+> **存储：**
+> **ConfigMap** 用来保存key-value pair配置数据，这个数据可以在pods里使用，或者被用来为像控制器一样的系统组件存储配置数据。
+> **Secret** 加密配置文件
+> **Persistent Volume (PV)** 持久化存储，有管理员设置的存储，是集群的一部分
+> **PersistentVolumeClaim（PVC）** 是用户存储的请求
+> ...
+
+![](/images/kube/k1.png)
+
+- Pod 到底是什么？
+
+![](/images/kube/k2.png)
+![](/images/kube/k3.png)
+![](/images/kube/k4.png)
