@@ -13,10 +13,7 @@
     "gatsby-plugin-baidu-analytics": "^2.2.0",
     "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-mdx": "^1.1.10",
-    "gatsby-remark-relative-images": "^0.3.0",
-    "gatsby-remark-table-of-contents": "^0.0.9",
     "gatsby-source-filesystem": "^2.2.4",
-    "gatsby-transformer-remark": "^2.7.4",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -29,7 +26,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "fuck": "rm -rf node_modules/gatsby-plugin-google-fonts && mv theme-gatsby-config.js node_modules/@pauliescanlon/gatsby-theme-terminal/gatsby-config.js",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",

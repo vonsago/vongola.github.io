@@ -1,0 +1,47 @@
+{
+  "name": "demo",
+  "private": true,
+  "description": "A simple starter using gatsby-theme-terminal",
+  "version": "0.1.0",
+  "author": "Paul Scanlon <pauliescanlon@gmail.com>",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.9",
+    "@mdx-js/react": "^1.5.9",
+    "@pauliescanlon/gatsby-theme-terminal": "^0.0.21",
+    "date-fns": "^2.10.0",
+    "gatsby": "^2.20.29",
+    "gatsby-plugin-baidu-analytics": "^2.2.0",
+    "gatsby-plugin-google-analytics": "^2.1.36",
+    "gatsby-plugin-mdx": "^1.1.10",
+    "gatsby-remark-relative-images": "^0.3.0",
+    "gatsby-remark-table-of-contents": "^0.0.9",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-remark": "^2.7.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "fuck": "rm -rf node_modules/gatsby-plugin-google-fonts && mv theme-gatsby-config.js node_modules/@pauliescanlon/gatsby-theme-terminal/gatsby-config.js",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gh-pages -d public -b master"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead",
+    "IE 11"
+  ]
+}
