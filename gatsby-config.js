@@ -3,7 +3,7 @@ module.exports = {
     name: "Vassago's Blog",
     description: "Happy code Happy hacker",
     keywords: ["tech", "blog", "program", "life"],
-    siteUrl: 'https://vongola.tk/',
+    siteUrl: 'https://vonvon.tk/',
     siteImage: 'images/open-graph-image.jpeg', 
     profileImage: 'profile.png',
     lang: `en`,
@@ -39,22 +39,6 @@ module.exports = {
         path: `${__dirname}/src/pages`,
         name: 'pages',
       }
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: false,
-              fromHeading: 1,
-              toHeading: 6
-            },
-          }
-        ],
-      },
     },
   ],
 }
