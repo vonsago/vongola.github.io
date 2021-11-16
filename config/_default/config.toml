@@ -5,7 +5,7 @@ copyright = "Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved."
 
 # Multilingual mode
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true # If you use only one language comment this option
+defaultContentLanguageInSubdir = false # If you use only one language comment this option
 disableLanguages = ["fr", "zh-tw"] # For disable one or more language
 
 # Pagination
