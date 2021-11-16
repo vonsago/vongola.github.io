@@ -77,6 +77,12 @@
     <loc>/tags/linux/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/series/linux/session-cookie-diff/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/web/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/series/linux/top/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -124,9 +130,6 @@
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/log/</loc>
-    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/web/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/linux/get-wlan-passwd/</loc>
@@ -312,7 +315,5 @@
                 />
   </url><url>
     <loc>/tags/tcp/ip/</loc>
-  </url><url>
-    <loc>/series/linux/session-cookie-diff/</loc>
   </url>
 </urlset>

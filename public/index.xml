@@ -36,6 +36,16 @@
     </item>
     
     <item>
+      <title>The different between Session with Cookie</title>
+      <link>/series/linux/session-cookie-diff/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/session-cookie-diff/</guid>
+      <description>Session
+   Session can store any type of data because the value is of data type of “object”    These are stored at server side.    Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server.    Session is independent for every client i.e. individual for every client.    There is no limitation on the size or number of sessions to be used in an application.</description>
+    </item>
+    
+    <item>
       <title>Man Top</title>
       <link>/series/linux/top/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
@@ -196,16 +206,6 @@
       
       <guid>/contact/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>The different between Session with Cookie</title>
-      <link>/series/linux/session-cookie-diff/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/series/linux/session-cookie-diff/</guid>
-      <description>Session
-   Session can store any type of data because the value is of data type of “object”    These are stored at server side.    Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server.    Session is independent for every client i.e. individual for every client.    There is no limitation on the size or number of sessions to be used in an application.</description>
     </item>
     
   </channel>
