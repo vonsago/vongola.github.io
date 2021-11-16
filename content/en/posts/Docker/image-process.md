@@ -13,7 +13,7 @@ tags = [
   "Image"
 ]
 series = [
-  "Manual"
+  "Docker"
 ]
 images = [
   "images/bg/bgg.png"
