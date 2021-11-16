@@ -13,9 +13,11 @@
 <meta itemprop="description" content="Happy code Happy hacker."><meta property="og:title" content="Posts" />
 <meta property="og:description" content="Happy code Happy hacker." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/en/posts/" />
+<meta property="og:url" content="/en/posts/" /><meta property="og:image" content="/site-feature-image.jpg"/>
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/site-feature-image.jpg"/>
+
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Happy code Happy hacker."/>
 <meta name="twitter:site" content="@V_assago"/>
@@ -204,60 +206,140 @@ Von
   </div>
 </nav><div class="post-sections row component">
   <ul class="nav nav-pills nav-fill"><li class="nav-item post-section">
-      <a class="nav-link" href="/en/posts/shortcodes/">Shortcode</a>
+      <a class="nav-link" href="/en/posts/docker/">Docker</a>
+    </li><li class="nav-item post-section">
+      <a class="nav-link" href="/en/posts/ffmpeg/">FFmpeg</a>
+    </li><li class="nav-item post-section">
+      <a class="nav-link" href="/en/posts/linux/">Linux</a>
+    </li><li class="nav-item post-section">
+      <a class="nav-link" href="/en/posts/math/">Math</a>
+    </li><li class="nav-item post-section">
+      <a class="nav-link" href="/en/posts/python/">Python</a>
     </li></ul>
 </div><div class="posts mb-4"><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/en/posts/rich-content/">Rich Content
+        <h2 class="card-title post-title"><a href="/en/posts/python/zip-picture/">Zip Picture With Python
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Mar 10, 2019
+    <i class="fas fa-fw fa-calendar-alt"></i>Dec 18, 2019
   </span><span class="post-reading-time" title="reading time">
     <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/en/tags/instagram/" class="badge rounded-pill text-white bg-primary post-taxonomy">Instagram</a><a href="/en/tags/youtube/" class="badge rounded-pill text-white bg-primary post-taxonomy">YouTube</a><a href="/en/tags/twitter/" class="badge rounded-pill text-white bg-primary post-taxonomy">Twitter</a><a href="/en/tags/vimeo/" class="badge rounded-pill text-white bg-primary post-taxonomy">Vimeo</a><a href="/en/tags/privacy/" class="badge rounded-pill text-white bg-primary post-taxonomy">Privacy</a></div>
+  </span><a href="/en/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/en/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">python3</a><a href="/en/tags/picture/" class="badge rounded-pill text-white bg-primary post-taxonomy">Picture</a></div>
 <div class="post-summary">
           
-          <p>Hugo ships with several <a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes" target="_blank" rel="noopener noreferrer">Built-in Shortcodes</a>
- for rich content, along with a <a href="https://gohugo.io/about/hugo-and-gdpr/" target="_blank" rel="noopener noreferrer">Privacy Config</a>
- and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.</p>
+          <img class="img-fluid" alt="Zip Picture With Python" src="/images/bg/computer2.jpg" loading="lazy"
+   width="6000" height="4000"
+   />
+
+          
+          1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&#39;.jpeg&#39;, &#39;jpeg&#39;, progressive=True, optimize=True) 6if __name__ == &#39;__main__&#39;: 7 _, pname = sys.argv 8 gipit(pname) 
         </div>
       </div>
     </article><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/en/posts/placeholder-text/">Placeholder Text
+        <h2 class="card-title post-title"><a href="/en/posts/python/flask-inject-log/">Flask Logger
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Mar 9, 2019
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 26, 2019
   </span><span class="post-reading-time" title="reading time">
     <i class="fas fa-fw fa-coffee"></i>2 min read
-  </span><a href="/en/tags/markdown/" class="badge rounded-pill text-white bg-primary post-taxonomy">Markdown</a><a href="/en/tags/text/" class="badge rounded-pill text-white bg-primary post-taxonomy">Text</a></div>
+  </span><a href="/en/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/en/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">python3</a><a href="/en/tags/web/" class="badge rounded-pill text-white bg-primary post-taxonomy">Web</a><a href="/en/tags/log/" class="badge rounded-pill text-white bg-primary post-taxonomy">Log</a><a href="/en/tags/flask/" class="badge rounded-pill text-white bg-primary post-taxonomy">Flask</a></div>
 <div class="post-summary">
           
-          <p>Lorem est tota propiore conpellat pectoribus de pectora summo.</p>
+          <img class="img-fluid" alt="Flask Logger" src="/images/bg/bg.jpeg" loading="lazy"
+   width="4896" height="3264"
+   />
+
+          
+          Flask logging 使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。 根据官方文档
         </div>
       </div>
     </article><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/en/posts/math-typesetting/">Math Typesetting
+        <h2 class="card-title post-title"><a href="/en/posts/linux/get-wlan-passwd/">Get Wlan Password
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Mar 8, 2019
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 18, 2019
   </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/en/tags/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">Math</a></div>
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/en/series/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a><a href="/en/tags/system/" class="badge rounded-pill text-white bg-primary post-taxonomy">System</a><a href="/en/tags/wifi/" class="badge rounded-pill text-white bg-primary post-taxonomy">Wifi</a><a href="/en/tags/tcp/ip/" class="badge rounded-pill text-white bg-primary post-taxonomy">TCP/IP</a><a href="/en/tags/http/" class="badge rounded-pill text-white bg-primary post-taxonomy">HTTP</a></div>
 <div class="post-summary">
           
-          <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+          <img class="img-fluid" alt="Get Wlan Password" src="/images/bg/bbg.jpg" loading="lazy"
+   width="5760" height="3840"
+   />
+
+          
+          如何获取你知道/不知道的 wifi 密码 本文仅限于学习，请勿用于非法用途 否则后果作者概不负责 获取链接过的 wifi 密码 Windows: 管理员运行： 1for /f &#34;skip=9 tokens=1,2 delims=:&#34; %i in (&#39;netsh wlan show profiles&#39;) do @echo
         </div>
       </div>
     </article><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/en/posts/emoji-support/">Emoji Support
+        <h2 class="card-title post-title"><a href="/en/posts/linux/linux-interview/">Linux Interview
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Mar 5, 2019
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 15, 2019
   </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/en/tags/emoji/" class="badge rounded-pill text-white bg-primary post-taxonomy">Emoji</a></div>
+    <i class="fas fa-fw fa-coffee"></i>4 min read
+  </span><a href="/en/series/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a><a href="/en/tags/system/" class="badge rounded-pill text-white bg-primary post-taxonomy">System</a><a href="/en/tags/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a></div>
 <div class="post-summary">
           
-          <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+          <img class="img-fluid" alt="Linux Interview" src="/images/bg/bg2.jpeg" loading="lazy"
+   width="2824" height="2824"
+   />
+
+          
+          Linux 先来100道题开开胃 cron daemon Cron 是一个守护程序，用于计划可以想象的任何类型的任务（管理系统日常任务的调度）。Windows 上被称为“Task Sc
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/en/posts/python/code-template/">Code Template
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 10, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/en/series/manual/" class="badge rounded-pill text-white bg-primary post-taxonomy">Manual</a><a href="/en/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">python3</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Code template" src="/images/bg/computer2.jpg" loading="lazy"
+   width="6000" height="4000"
+   />
+
+          
+          Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&#39;&#39;) 6 f.write(result) 7 8def process(args): 9 &#39;&#39;&#39; 10work 11&#39;&#39;&#39; 12 return result 13 14if __name__ == &#39;__main__&#39;: 15 pool = …
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/en/posts/math/math-every/">Math Every
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 7, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>4 min read
+  </span><a href="/en/series/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">Math</a><a href="/en/tags/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">Math</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Math Every" src="/images/bg/mathbg.jpg" loading="lazy"
+   width="640" height="426"
+   />
+
+          
+          每天学点数学 数学中的一些美丽定理具有这样的特性：它们极易从事实中归纳出来，但证明却隐藏的极深。&ndash; 高斯 在数学你不明白任何东西。你只
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/en/posts/python/parse-vip-video/">VIP Video Parse Link
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 5, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/en/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/en/tags/web/" class="badge rounded-pill text-white bg-primary post-taxonomy">Web</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="VIP Video Parse Link" src="/images/bg/bg2.jpeg" loading="lazy"
+   width="2824" height="2824"
+   />
+
+          
+          仅供学习交流，严禁用于商业用途，请于24小时内删除 从排名及考前的几个解析网站爬出来的解析链接，链接背后的技术以后研究了再跟进 &ldquo;https://www.administratorw.com/admin.php?url=" &ldquo;https://yun.odflv.com/?url=" &ldquo;http://goudidiao.com/?url=" &ldquo;https://jx.maoyun.tv/index.php?id=" &ldquo;http://www.1717yun.com/jx/vip/index.php?url=" …
         </div>
       </div>
     </article></div><div class="row table-responsive mb-3">
@@ -274,11 +356,14 @@ Von
       <li class="page-item active">
         <a href="#" aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
-      <li class="page-item disabled">
-        <a href="#" aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      <li class="page-item">
+        <a href="/en/posts/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
-      <li class="page-item disabled">
-        <a href="#" aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item">
+        <a href="/en/posts/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/en/posts/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 </div>
@@ -292,26 +377,27 @@ Von
    width="257" height="310"
    />
 </div>
-    <div class="col-12 profile-meta"><div class="profile-name">Ars-Von-Geotia</div><div class="profile-bio">Happy code Happy hacker.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>B</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Mars</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://vonv.tk/">About Me</a></div><div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="/en/contact/">Contact Us</a></div></div>
+    <div class="col-12 profile-meta"><div class="profile-name">Ars-Von-Geotia</div><div class="profile-bio">Happy code Happy hacker.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>B</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Mars</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://vonv.tk/en/about/">About Me</a></div><div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="/en/contact/">Contact Me</a></div></div>
   </div>
 </section>
   <section class="featured-posts row card component">
     <div class="card-body">
       <h2 class="card-title">Featured Posts</h2>
-      <ul><li><a href="/en/posts/markdown-syntax/">Markdown Syntax Guide
-</a></li><li><a href="/en/posts/shortcodes/media/">Media Shortcodes
-</a></li><li><a href="/en/posts/shortcodes/online-ide/">Online IDE Shortcodes
-</a></li><li><a href="/en/posts/rich-content/">Rich Content
+      <ul><li><a href="/en/posts/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/en/posts/python/zip-picture/">Zip Picture With Python
+</a></li><li><a href="/en/posts/python/code-template/">Code Template
+</a></li><li><a href="/en/posts/blog/">Build Blog
+</a></li><li><a href="/en/posts/python/python-gc/">Python GC
 </a></li></ul>
     </div>
   </section><section class="recent-posts row card component">
   <div class="card-body">
     <h2 class="card-title">Recent Posts</h2>
-    <ul><li><a href="/en/posts/newpost/">Newpost
-</a></li><li><a href="/en/posts/diagram/">Diagram Guide
-</a></li><li><a href="/en/posts/image-processing/">Image Processing
-</a></li><li><a href="/en/posts/markdown-syntax/">Markdown Syntax Guide
-</a></li><li><a href="/en/posts/shortcodes/alert/">Alert Shortcode
+    <ul><li><a href="/en/posts/docker/image-process/">Image Processing
+</a></li><li><a href="/en/posts/ffmpeg/ffmpeg-develop/">Video Develop Environment
+</a></li><li><a href="/en/posts/ffmpeg/rtmp/">RTMP
+</a></li><li><a href="/en/posts/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/en/posts/linux/top/">Man Top
 </a></li></ul>
   </div>
 </section><section class="taxonomies row card component">
@@ -319,9 +405,7 @@ Von
         <h2 class="card-title">
           <a href="/en/categories">Categories</a>
         </h2>
-        <div><a href="/en/categories/shortcode/" class="badge bg-primary text-white rounded post-taxonomy" title="Shortcode">
-            Shortcode
-          </a><a href="/en/categories/markdown/" class="badge bg-primary text-white rounded post-taxonomy" title="Markdown">
+        <div><a href="/en/categories/markdown/" class="badge bg-primary text-white rounded post-taxonomy" title="Markdown">
             Markdown
           </a></div>
       </div>
@@ -330,8 +414,20 @@ Von
         <h2 class="card-title">
           <a href="/en/series">Series</a>
         </h2>
-        <div><a href="/en/series/manual/" class="badge bg-primary text-white rounded post-taxonomy" title="Manual">
+        <div><a href="/en/series/python/" class="badge bg-primary text-white rounded post-taxonomy" title="Python">
+            Python
+          </a><a href="/en/series/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
+          </a><a href="/en/series/manual/" class="badge bg-primary text-white rounded post-taxonomy" title="Manual">
             Manual
+          </a><a href="/en/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="Math">
+            Math
+          </a><a href="/en/series/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
+          </a><a href="/en/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
+            FFmpeg
+          </a><a href="/en/series/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
+            Kubernetes
           </a></div>
       </div>
     </section><section class="taxonomies row card component">
@@ -339,26 +435,26 @@ Von
         <h2 class="card-title">
           <a href="/en/tags">Tags</a>
         </h2>
-        <div><a href="/en/tags/markdown/" class="badge bg-primary text-white rounded post-taxonomy" title="Markdown">
-            Markdown
-          </a><a href="/en/tags/alert/" class="badge bg-primary text-white rounded post-taxonomy" title="Alert">
-            Alert
-          </a><a href="/en/tags/bilibili/" class="badge bg-primary text-white rounded post-taxonomy" title="Bilibili">
-            Bilibili
-          </a><a href="/en/tags/codepen/" class="badge bg-primary text-white rounded post-taxonomy" title="CodePen">
-            CodePen
-          </a><a href="/en/tags/css/" class="badge bg-primary text-white rounded post-taxonomy" title="CSS">
-            CSS
-          </a><a href="/en/tags/diagram/" class="badge bg-primary text-white rounded post-taxonomy" title="Diagram">
-            Diagram
-          </a><a href="/en/tags/emoji/" class="badge bg-primary text-white rounded post-taxonomy" title="Emoji">
-            Emoji
-          </a><a href="/en/tags/html/" class="badge bg-primary text-white rounded post-taxonomy" title="HTML">
-            HTML
-          </a><a href="/en/tags/image/" class="badge bg-primary text-white rounded post-taxonomy" title="Image">
-            Image
-          </a><a href="/en/tags/instagram/" class="badge bg-primary text-white rounded post-taxonomy" title="Instagram">
-            Instagram
+        <div><a href="/en/tags/python3/" class="badge bg-primary text-white rounded post-taxonomy" title="python3">
+            python3
+          </a><a href="/en/tags/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
+          </a><a href="/en/tags/web/" class="badge bg-primary text-white rounded post-taxonomy" title="Web">
+            Web
+          </a><a href="/en/tags/math/" class="badge bg-primary text-white rounded post-taxonomy" title="Math">
+            Math
+          </a><a href="/en/tags/picture/" class="badge bg-primary text-white rounded post-taxonomy" title="Picture">
+            Picture
+          </a><a href="/en/tags/system/" class="badge bg-primary text-white rounded post-taxonomy" title="System">
+            System
+          </a><a href="/en/tags/algorithm/" class="badge bg-primary text-white rounded post-taxonomy" title="Algorithm">
+            Algorithm
+          </a><a href="/en/tags/blog/" class="badge bg-primary text-white rounded post-taxonomy" title="Blog">
+            Blog
+          </a><a href="/en/tags/c/c&#43;&#43;/" class="badge bg-primary text-white rounded post-taxonomy" title="C/C&#43;&#43;">
+            C/C&#43;&#43;
+          </a><a href="/en/tags/dns/" class="badge bg-primary text-white rounded post-taxonomy" title="dns">
+            dns
           </a></div>
       </div>
     </section>
@@ -409,7 +505,7 @@ Von
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.810b993de960990f904b0a0c63b14630b5647bb7cf77c88bd77615ccc5e23dfb.js" integrity="sha256-gQuZPelgmQ&#43;QSwoMY7FGMLVke7fPd8iL13YVzMXiPfs=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
+<script src="/js/bundle.min.f56c74062c278318292dae01616ed1f487d5ccac72261a269cf3715d8a7a980d.js" integrity="sha256-9Wx0BiwngxgpLa4BYW7R9IfVzKxyJhomnPNxXYp6mA0=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -421,5 +517,13 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-</body>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?https:\/\/hm.baidu.com\/hm.js?efa234dd0de80cabe5e7cb41e0f81e74";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script></body>
 </html>

@@ -7,61 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 01 Sep 2021 11:36:50 +0800</lastBuildDate><atom:link href="/en/series/manual/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Diagram Guide</title>
-      <link>/en/posts/diagram/</link>
-      <pubDate>Wed, 01 Sep 2021 11:36:50 +0800</pubDate>
-      
-      <guid>/en/posts/diagram/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic diagram usage that can be used in Hugo content files.&lt;/p&gt;
-&lt;p&gt;Please see also &lt;a href=&#34;https://mermaid-js.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Mermaid&lt;/a&gt;
-.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Sun, 15 Aug 2021 14:19:06 +0800</lastBuildDate><atom:link href="/en/series/manual/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image Processing</title>
-      <link>/en/posts/image-processing/</link>
+      <link>/en/posts/docker/image-process/</link>
       <pubDate>Sun, 15 Aug 2021 14:19:06 +0800</pubDate>
       
-      <guid>/en/posts/image-processing/</guid>
+      <guid>/en/posts/docker/image-process/</guid>
       <description>&lt;p&gt;This article offers some use cases for showing how to resize and align images.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>/en/posts/markdown-syntax/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      <title>Code template</title>
+      <link>/en/posts/python/code-template/</link>
+      <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/posts/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <guid>/en/posts/python/code-template/</guid>
+      <description>Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&amp;#39;&amp;#39;) 6 f.write(result) 7 8def process(args): 9 &amp;#39;&amp;#39;&amp;#39; 10work 11&amp;#39;&amp;#39;&amp;#39; 12 return result 13 14if __name__ == &amp;#39;__main__&amp;#39;: 15 pool = multiprocessing.Pool(processes = 100)</description>
     </item>
     
     <item>
-      <title>Alert Shortcode</title>
-      <link>/en/posts/shortcodes/alert/</link>
-      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      <title>Build Blog</title>
+      <link>/en/posts/blog/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/posts/shortcodes/alert/</guid>
-      <description>&lt;p&gt;This article shows how to use the &lt;code&gt;alert&lt;/code&gt; shortcode.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Media Shortcodes</title>
-      <link>/en/posts/shortcodes/media/</link>
-      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/en/posts/shortcodes/media/</guid>
-      <description>&lt;p&gt;A detailed description of media shortcodes, such as Bilibili, Tencent, Youku, iQiyi and Netease Music.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Online IDE Shortcodes</title>
-      <link>/en/posts/shortcodes/online-ide/</link>
-      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/en/posts/shortcodes/online-ide/</guid>
-      <description>&lt;p&gt;A detailed description of online IDE shortcodes, such as JSFiddle, CodePen, JSRun.&lt;/p&gt;</description>
+      <guid>/en/posts/blog/</guid>
+      <description>Build Blog Gitpage + Hexo 搭建个人博客，全程免费，记录注意事项。 总览 Gitpage 慷慨的 github 给我们的网站托管 Freenom 免费域名 DNSPod 免费的DNS解析 Markdown 熟悉一些 Markdown 的语法 StaticSite A List of Static Site Generators for</description>
     </item>
     
   </channel>
