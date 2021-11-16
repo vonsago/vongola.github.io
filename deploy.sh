@@ -11,6 +11,9 @@
 #================================================================
 
 now = "$(date + "%r")"
-git add . && git commit -m "update: $now"
+git add . && git commit -m "update: $now" && git push
 git checkout master
 
+cp -r public/* .
+git add . && git commit -m "update: $now"
+git push
