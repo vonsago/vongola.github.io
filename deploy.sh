@@ -15,6 +15,8 @@ hugo -D
 git add . && git commit -m "update: $now" && git push
 git checkout master
 
+
+git checkout pages public
 cp -r public/* .
 git add . && git commit -m "update: $now"
 git push
