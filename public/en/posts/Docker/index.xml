@@ -14,7 +14,9 @@
       <pubDate>Sun, 15 Aug 2021 14:19:06 +0800</pubDate>
       
       <guid>/en/posts/docker/image-process/</guid>
-      <description>&lt;p&gt;This article offers some use cases for showing how to resize and align images.&lt;/p&gt;</description>
+      <description>This article offers some use cases for showing how to resize and align images.
+Resizing Images We use the URL query of image for resizing images. For example:
+Specify the width and preserve ratio 1![Resize](images/sample.png?width=300px) Specify the height and preserve ratio 1![Resize](images/sample.png?height=200px) Specify the width and height 1![Resize](images/sample.png?width=300px&amp;amp;height=200px)  It can be used not only for page resources , but also for the static images and external images. However, in addition to page resources, others are resized by inline style, that is, their original size will not change.</description>
     </item>
     
     <item>

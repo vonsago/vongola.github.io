@@ -16,12 +16,12 @@ series = [
   "Manual"
 ]
 images = [
-  "images/bg/center.png"
+  "images/bg/bgg.png"
 ]
+# toc = true
 +++
 
-This article offers some use cases for showing how to resize and align images.
-<!--more-->
+_This article offers some use cases for showing how to resize and align images._
 
 ## Resizing Images
 
