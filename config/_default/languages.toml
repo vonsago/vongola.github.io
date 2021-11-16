@@ -1,0 +1,35 @@
+[en]
+  languageName = "English"
+  weight = 1
+  contentDir = "content/en"
+
+[fr]
+  languageName = "Français"
+  weight = 2
+  contentDir = "content/fr"
+  [fr.params]
+    dateFormat = "02-01-2016"
+    description = "..."
+    keywords = "..."
+
+[zh-cn]
+  languageName = "简体中文"
+  weight = 4
+  contentDir = "content/zh-cn"
+  [zh-cn.params]
+    dateFormat = "2016-01-02"
+    description = "博客博客"
+    keywords = "空空"
+    [zh-cn.params.archive]
+      dateFormat = "01-02"
+
+[zh-tw]
+  languageName = "繁體中文"
+  weight = 3
+  contentDir = "content/zh-tw"
+  [zh-tw.params]
+    dateFormat = "2016-01-02"
+    description = "博客博客"
+    keywords = "空空"
+    [zh-tw.params.archive]
+      dateFormat = "01-02"

@@ -1,0 +1,12 @@
+name = "Ars-Von-Geotia"
+avatar = "images/profile.png"
+bio = "Happy code Happy hacker."
+company = "B"
+location = "Mars"
+# alternatives:
+# location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
+# location = "<a href='https://www.google.com/maps/search/Earth'>Earth</a>"
+about = "https://vonv.tk/"
+
+[params]
+  #layout = "compact"
