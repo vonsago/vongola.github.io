@@ -10,10 +10,10 @@
     <lastBuildDate>Sun, 10 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="/en/series/manual/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code template</title>
-      <link>/en/posts/python/code-template/</link>
+      <link>/en/series/python/code-template/</link>
       <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/posts/python/code-template/</guid>
+      <guid>/en/series/python/code-template/</guid>
       <description>Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&amp;#39;&amp;#39;) 6 f.write(result) 7 8def process(args): 9 &amp;#39;&amp;#39;&amp;#39; 10work 11&amp;#39;&amp;#39;&amp;#39; 12 return result 13 14if __name__ == &amp;#39;__main__&amp;#39;: 15 pool = multiprocessing.Pool(processes = 100)</description>
     </item>
     
