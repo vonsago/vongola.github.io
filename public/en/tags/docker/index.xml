@@ -10,10 +10,10 @@
     <lastBuildDate>Thu, 20 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/en/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker Stats</title>
-      <link>/en/posts/docker/docker-stats/</link>
+      <link>/en/series/docker/docker-stats/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/en/posts/docker/docker-stats/</guid>
+      <guid>/en/series/docker/docker-stats/</guid>
       <description>Docker Stats 1是基于docker 1.10.3版本的源码， 2对docker stats命令进行源码分析，看看docker stats命令输出的数据是从cg</description>
     </item>
     

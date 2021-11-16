@@ -8,21 +8,8 @@
     <loc>/en/series/ffmpeg/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/ffmpeg/</loc>
+    <loc>/en/series/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/posts/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/posts/"
-                />
   </url><url>
     <loc>/en/series/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
@@ -66,7 +53,7 @@
     <loc>/en/tags/video/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/ffmpeg/ffmpeg-develop/</loc>
+    <loc>/en/series/ffmpeg/ffmpeg-develop/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/series/linux/</loc>
@@ -75,7 +62,7 @@
     <loc>/en/tags/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/ffmpeg/rtmp/</loc>
+    <loc>/en/series/ffmpeg/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/docker/</loc>
@@ -84,28 +71,19 @@
     <loc>/en/series/docker/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/docker/</loc>
-    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/posts/docker/docker-stats/</loc>
+    <loc>/en/series/docker/docker-stats/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/linux/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/linux/</loc>
+    <loc>/en/series/linux/top/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/linux/top/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/posts/python/real-python/</loc>
+    <loc>/en/series/python/real-python/</loc>
     <lastmod>2020-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/series/python/</loc>
-    <lastmod>2020-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/posts/python/</loc>
     <lastmod>2020-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/python3/</loc>
@@ -120,16 +98,29 @@
     <loc>/en/series/kubernetes/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/en/posts/</loc>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/posts/"
+                />
+  </url><url>
     <loc>/en/tags/picture/</loc>
     <lastmod>2019-12-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/python/zip-picture/</loc>
+    <loc>/en/series/python/zip-picture/</loc>
     <lastmod>2019-12-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/flask/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/python/flask-inject-log/</loc>
+    <loc>/en/series/python/flask-inject-log/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/log/</loc>
@@ -138,7 +129,7 @@
     <loc>/en/tags/web/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/linux/get-wlan-passwd/</loc>
+    <loc>/en/series/linux/get-wlan-passwd/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/http/</loc>
@@ -150,10 +141,10 @@
     <loc>/en/tags/wifi/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/linux/linux-interview/</loc>
+    <loc>/en/series/linux/linux-interview/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/python/code-template/</loc>
+    <loc>/en/series/python/code-template/</loc>
     <lastmod>2019-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/series/manual/</loc>
@@ -175,13 +166,10 @@
     <loc>/en/series/math/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/math/</loc>
+    <loc>/en/series/math/math-every/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/math/math-every/</loc>
-    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/posts/python/parse-vip-video/</loc>
+    <loc>/en/series/python/parse-vip-video/</loc>
     <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/blog/</loc>
@@ -249,13 +237,13 @@
                 href="/en/tags/github/"
                 />
   </url><url>
-    <loc>/en/posts/python/python-exec-object/</loc>
+    <loc>/en/series/python/python-exec-object/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/python/python-encoding/</loc>
+    <loc>/en/series/python/python-encoding/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/math/bit-calc/</loc>
+    <loc>/en/series/math/bit-calc/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/algorithm/</loc>
@@ -264,13 +252,13 @@
     <loc>/en/tags/gc/</loc>
     <lastmod>2019-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/python/python-gc/</loc>
+    <loc>/en/series/python/python-gc/</loc>
     <lastmod>2019-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/python/pychallenge/</loc>
+    <loc>/en/series/python/pychallenge/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/archives/</loc>
@@ -325,6 +313,6 @@
   </url><url>
     <loc>/en/tags/tcp/ip/</loc>
   </url><url>
-    <loc>/en/posts/linux/session-cookie-diff/</loc>
+    <loc>/en/series/linux/session-cookie-diff/</loc>
   </url>
 </urlset>
