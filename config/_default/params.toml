@@ -76,7 +76,7 @@ viewer = true # Image Viewer
 [siteVerification]
   google = ""
   bing = ""
-  baidu = ""
+  baidu = "code-Nvd3JNedPF"
   baiduUnion = "" # Baidu Union
   so = ""
   sogou = ""
