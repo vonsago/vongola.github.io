@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 15 Aug 2021 14:19:06 +0800</lastBuildDate><atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Image</title>
-      <link>/en/tags/image/</link>
-      <pubDate>Sun, 15 Aug 2021 14:19:06 +0800</pubDate>
-      
-      <guid>/en/tags/image/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FFmpeg</title>
       <link>/en/tags/ffmpeg/</link>
