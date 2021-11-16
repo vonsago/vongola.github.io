@@ -4,6 +4,7 @@ db.json
 *.log
 node_modules/
 public/
+.hugo_build.lock
 .deploy
 .cache
 wip-readme.md
