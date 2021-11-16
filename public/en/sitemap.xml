@@ -2,36 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/en/categories/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/categories/"
-                />
+    <loc>/en/tags/ffmpeg/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/series/docker/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
+    <loc>/en/series/ffmpeg/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/en/posts/docker/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
-  </url><url>
-    <loc>/en/tags/image/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
-  </url><url>
-    <loc>/en/posts/docker/image-process/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
-  </url><url>
-    <loc>/en/categories/markdown/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
+    <loc>/en/posts/ffmpeg/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/posts/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -44,7 +25,7 @@
                 />
   </url><url>
     <loc>/en/series/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -57,7 +38,7 @@
                 />
   </url><url>
     <loc>/en/tags/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -70,7 +51,7 @@
                 />
   </url><url>
     <loc>/en/</loc>
-    <lastmod>2021-08-15T14:19:06+08:00</lastmod>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -81,15 +62,6 @@
                 hreflang="en"
                 href="/en/"
                 />
-  </url><url>
-    <loc>/en/tags/ffmpeg/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/series/ffmpeg/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/en/posts/ffmpeg/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/video/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
@@ -107,6 +79,12 @@
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/tags/docker/</loc>
+    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/en/series/docker/</loc>
+    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/en/posts/docker/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/en/posts/docker/docker-stats/</loc>
@@ -308,6 +286,18 @@
                 />
   </url><url>
     <loc>/en/tags/c/c&#43;&#43;/</loc>
+  </url><url>
+    <loc>/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/categories/"
+                />
   </url><url>
     <loc>/en/contact/</loc>
     <xhtml:link

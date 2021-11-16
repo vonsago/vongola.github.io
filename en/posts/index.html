@@ -218,26 +218,6 @@ Von
     </li></ul>
 </div><div class="posts mb-4"><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/en/posts/docker/image-process/">Image Processing
-</a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Aug 15, 2021
-  </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/en/categories/markdown/" class="badge rounded-pill text-white bg-primary post-taxonomy">Markdown</a><a href="/en/series/docker/" class="badge rounded-pill text-white bg-primary post-taxonomy">Docker</a><a href="/en/tags/image/" class="badge rounded-pill text-white bg-primary post-taxonomy">Image</a></div>
-<div class="post-summary">
-          
-          <img class="img-fluid" alt="Image Processing" src="/images/bg/bgg.png" loading="lazy"
-   width="4000" height="3000"
-   />
-
-          
-          This article offers some use cases for showing how to resize and align images.
-Resizing Images We use the URL query of image for resizing images. For example:
-Specify the width and preserve ratio 1![Resize](images/sample.png?width=300px) Specify the height and preserve ratio 1![Resize](images/sample.png?height=200px) …
-        </div>
-      </div>
-    </article><article class="row card post component">
-      <div class="card-body">
         <h2 class="card-title post-title"><a href="/en/posts/ffmpeg/ffmpeg-develop/">Video Develop Environment
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
     <i class="fas fa-fw fa-calendar-alt"></i>May 17, 2021
@@ -344,6 +324,24 @@ Specify the width and preserve ratio 1![Resize](images/sample.png?width=300px) S
           
         </div>
       </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/en/posts/python/zip-picture/">Zip Picture With Python
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Dec 18, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/en/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/en/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">python3</a><a href="/en/tags/picture/" class="badge rounded-pill text-white bg-primary post-taxonomy">Picture</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Zip Picture With Python" src="/images/bg/computer2.jpg" loading="lazy"
+   width="6000" height="4000"
+   />
+
+          
+          1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&#39;.jpeg&#39;, &#39;jpeg&#39;, progressive=True, optimize=True) 6if __name__ == &#39;__main__&#39;: 7 _, pname = sys.argv 8 gipit(pname) 
+        </div>
+      </div>
     </article></div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
       <li class="page-item disabled">
@@ -395,23 +393,14 @@ Specify the width and preserve ratio 1![Resize](images/sample.png?width=300px) S
   </section><section class="recent-posts row card component">
   <div class="card-body">
     <h2 class="card-title">Recent Posts</h2>
-    <ul><li><a href="/en/posts/docker/image-process/">Image Processing
-</a></li><li><a href="/en/posts/ffmpeg/ffmpeg-develop/">Video Develop Environment
+    <ul><li><a href="/en/posts/ffmpeg/ffmpeg-develop/">Video Develop Environment
 </a></li><li><a href="/en/posts/ffmpeg/rtmp/">RTMP
 </a></li><li><a href="/en/posts/docker/docker-stats/">Docker Stats
 </a></li><li><a href="/en/posts/linux/top/">Man Top
+</a></li><li><a href="/en/posts/python/real-python/">CPython
 </a></li></ul>
   </div>
 </section><section class="taxonomies row card component">
-      <div class="card-body">
-        <h2 class="card-title">
-          <a href="/en/categories">Categories</a>
-        </h2>
-        <div><a href="/en/categories/markdown/" class="badge bg-primary text-white rounded post-taxonomy" title="Markdown">
-            Markdown
-          </a></div>
-      </div>
-    </section><section class="taxonomies row card component">
       <div class="card-body">
         <h2 class="card-title">
           <a href="/en/series">Series</a>
@@ -420,12 +409,12 @@ Specify the width and preserve ratio 1![Resize](images/sample.png?width=300px) S
             Python
           </a><a href="/en/series/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
             Linux
-          </a><a href="/en/series/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
-            Docker
           </a><a href="/en/series/manual/" class="badge bg-primary text-white rounded post-taxonomy" title="Manual">
             Manual
           </a><a href="/en/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="Math">
             Math
+          </a><a href="/en/series/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
           </a><a href="/en/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
             FFmpeg
           </a><a href="/en/series/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
