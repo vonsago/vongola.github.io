@@ -1,0 +1,700 @@
+<!doctype html><html lang="en"
+  >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build Blog - Vassago&#39;s Blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="keywords" content="" />
+<meta name="description" content="build blog with github pages free" /><meta itemprop="name" content="Build Blog">
+<meta itemprop="description" content="build blog with github pages free"><meta itemprop="datePublished" content="2019-11-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-11-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1558"><meta itemprop="image" content="/images/bg/computerp.png">
+<meta itemprop="keywords" content="Blog,github,dns,domain," /><meta property="og:title" content="Build Blog" />
+<meta property="og:description" content="build blog with github pages free" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/blog/" /><meta property="og:image" content="/images/bg/computerp.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-11-03T00:00:00+00:00" />
+<meta property="og:see_also" content="/series/python/code-template/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/bg/computerp.png"/>
+
+<meta name="twitter:title" content="Build Blog"/>
+<meta name="twitter:description" content="build blog with github pages free"/>
+<meta name="twitter:site" content="@V_assago"/>
+<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand me-3" href="/"><img class="logo" alt="Logo" src="/images/mlogo.webp" loading="lazy"
+   width="400" height="400"
+   />
+Von
+    </a>
+    <button class="navbar-social-share" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
+  aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
+  <i class="fas fa-share-alt"></i>
+</button>
+
+<div class="offcanvas offcanvas-bottom surface" tabindex="-1" id="offcanvasSocialShare" aria-labelledby="offcanvasSocialShare">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Share</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=Build%20Blog&url=%2fposts%2fblog%2f">
+      <i class="fab fa-fw fa-twitter"></i> Twitter
+    </a>
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fblog%2f">
+      <i class="fab fa-fw fa-facebook-f"></i> Facebook
+    </a>
+  </div>
+</div>
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Settings</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-language"></i> Language</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="dropdown">
+        <a class="btn btn-sm btn-outline-primary dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          English
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li><a class="dropdown-item" href="/zh-cn/">简体中文</a></li></ul>
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> Mode</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> Font Size</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> Palette</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <a id="btnPalette" class="btn btn-sm btn-outline-primary" role="button" aria-label="palettePicker">
+        <i class="fas fa-eye-dropper"></i>
+      </a>
+    </div>
+  </form>
+  <div class="mt-2 d-flex visually-hidden" id="palettePicker"><button type="button" id="palette-blue" aria-label="Blue"
+        class="btn btn-sm palette" data-palette="blue">
+      </button><button type="button" id="palette-blue-gray" aria-label="Blue Gray"
+        class="btn btn-sm palette" data-palette="blue-gray">
+      </button><button type="button" id="palette-brown" aria-label="Brown"
+        class="btn btn-sm palette" data-palette="brown">
+      </button><button type="button" id="palette-cyan" aria-label="Cyan"
+        class="btn btn-sm palette" data-palette="cyan">
+      </button><button type="button" id="palette-green" aria-label="Green"
+        class="btn btn-sm palette" data-palette="green">
+      </button><button type="button" id="palette-indigo" aria-label="Indigo"
+        class="btn btn-sm palette" data-palette="indigo">
+      </button><button type="button" id="palette-orange" aria-label="Orange"
+        class="btn btn-sm palette" data-palette="orange">
+      </button><button type="button" id="palette-pink" aria-label="Pink"
+        class="btn btn-sm palette" data-palette="pink">
+      </button><button type="button" id="palette-purple" aria-label="Purple"
+        class="btn btn-sm palette" data-palette="purple">
+      </button><button type="button" id="palette-red" aria-label="Red"
+        class="btn btn-sm palette" data-palette="red">
+      </button><button type="button" id="palette-teal" aria-label="Teal"
+        class="btn btn-sm palette" data-palette="teal">
+      </button><button type="button" id="palette-yellow" aria-label="Yellow"
+        class="btn btn-sm palette" data-palette="yellow">
+      </button></div>
+</section>
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>Archives
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>Categories
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>Tags
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>Series
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="https://github.com/vonsago/vonvon.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-fw fa-github"></i>Repository
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link" id="navbarDropdown-demo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-fw fa-chevron-circle-down"></i>Demo Sites
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-demo"><li>
+              <a class="dropdown-item"
+                href="https://hbs.razonyang.com" target="_blank" rel="noopener noreferrer">
+                Netlify
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://hbs-cn.razonyang.com" target="_blank" rel="noopener noreferrer">
+                China
+              </a>
+            </li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">Build Blog</li></ol>
+  </div>
+</nav>    <article class="row card component mb-4 post"><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+  
+    
+  <div class="post-translations nav-item dropdown action">
+    <a class="nav-link p-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Translations dropdown menu">
+      <i class="fas fa-fw fa-language"></i>
+    </a>
+    <div class="dropdown-menu"><a class="dropdown-item post-translation" href="/zh-cn/posts/blog/">简体中文</a></div>
+  </div>
+
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="Buy me a coffee">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0" role="button" aria-label="Copyright" 
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    
+  </div>
+</div>
+<div class="card-body">
+        <h1 class="card-title my-3">Build Blog
+</h1><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 3, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>4 min read
+  </span><a href="/series/manual/" class="badge rounded-pill text-white bg-primary post-taxonomy">Manual</a><a href="/tags/blog/" class="badge rounded-pill text-white bg-primary post-taxonomy">Blog</a><a href="/tags/github/" class="badge rounded-pill text-white bg-primary post-taxonomy">github</a><a href="/tags/dns/" class="badge rounded-pill text-white bg-primary post-taxonomy">dns</a><a href="/tags/domain/" class="badge rounded-pill text-white bg-primary post-taxonomy">domain</a></div>
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">Table Of Contents</h5>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#总览">总览</a></li>
+    <li><a href="#gitpage">Gitpage</a></li>
+    <li><a href="#freenom">Freenom</a></li>
+    <li><a href="#dnspod">DNSPod</a></li>
+    <li><a href="#staticsite">StaticSite</a></li>
+    <li><a href="#最后--注意">最后 &amp;&amp; 注意</a></li>
+    <li><a href="#站长工具">站长工具</a></li>
+    <li><a href="#接入-google-广告">接入 google 广告</a></li>
+    <li><a href="#站点地图">站点地图</a>
+      <ul>
+        <li><a href="#百度">百度</a></li>
+        <li><a href="#google">Google</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他">其他</a>
+      <ul>
+        <li><a href="#接入评论功能">接入评论功能</a></li>
+        <li><a href="#支持-toc">支持 TOC</a></li>
+        <li><a href="#支持置顶">支持置顶</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><h1 id="build-blog">Build Blog</h1>
+<blockquote>
+<p>Gitpage + Hexo 搭建个人博客，全程免费，记录注意事项。</p>
+</blockquote>
+<h2 id="总览">总览</h2>
+<ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">Gitpage</a>
+ 慷慨的 github 给我们的网站托管</li>
+<li><a href="https://www.freenom.com/" target="_blank" rel="noopener noreferrer">Freenom</a>
+ 免费域名</li>
+<li><a href="https://www.dnspod.cn/" target="_blank" rel="noopener noreferrer">DNSPod</a>
+ 免费的DNS解析</li>
+<li><a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener noreferrer">Markdown</a>
+ 熟悉一些 Markdown 的语法</li>
+<li><a href="https://www.staticgen.com/" target="_blank" rel="noopener noreferrer">StaticSite</a>
+ A List of Static Site Generators for JAMstack Sites</li>
+</ul>
+<h2 id="gitpage">Gitpage</h2>
+<p>create a new repository named username.github.io
+创建一个新的代码库，名字：[github账号名].github.io</p>
+<h2 id="freenom">Freenom</h2>
+<ul>
+<li>
+<p>1.sign in(我是通过google账号登录的) -&gt; Services -&gt; Register a new domain.</p>
+</li>
+<li>
+<p>2.想guo名字，baidu/taobao 之类的想想就算了，想一遍过就想那种生僻的(手动滑稽) -&gt; check availability -&gt; 成功的话就选择免费的那些 get it now! -&gt; 然后 checkout</p>
+</li>
+<li>
+<p>3.结账的时候注意 Period 选最大的期限 12 Months@Free (有钱可以10 years) -&gt; 如果失败了，通过 <a href="https://whoer.net/zh" target="_blank" rel="noopener noreferrer">https://whoer.net/zh</a>
+ 查看当前代理所在国家，要和个人资料里国家填写一致，包括地址街道(不知道的话网上搜个地址吧)也要和所在国家一致，邮编最好也是对应街道的，手机号姓名什么都可随便填。</p>
+</li>
+<li>
+<p>4.成功后不会提示 Attention! -&gt; Services -&gt; My domains 查看你的域名 -&gt; Manage Domain -&gt; Management tools -&gt; Use custom nameservers (enter below) 这里要填写的就是DNSPod域名服务器的域。</p>
+</li>
+</ul>
+<h2 id="dnspod">DNSPod</h2>
+<ul>
+<li>
+<p>登录到控制台 -&gt; DNS管理 -&gt; 我的域名 -&gt; 添加刚才申请到的域名 -&gt; 其中记录类型为 NS 的记录值填写到上面4.的最后一步</p>
+</li>
+<li>
+<p>添加几个记录：这里可以参考 <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain" target="_blank" rel="noopener noreferrer">gitpage的指导</a>
+</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">主机记录</th>
+<th style="text-align:center">记录类型</th>
+<th style="text-align:center">记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">www</td>
+<td style="text-align:center">CNAME</td>
+<td style="text-align:center">[github username].github.io.</td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">185.199.108.153</td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">185.199.109.153</td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">185.199.110.153</td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">185.199.111.153</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>点击刷新，我的情况是直接就可以使用</li>
+</ul>
+<h2 id="staticsite">StaticSite</h2>
+<p>选择一个静态站点生成工具，我用的 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener noreferrer">hexo</a>
+
+跟着文档做就好了，主要是配置文件的修改，遇到问题才会去看源码。开始遇到的坑是图片的绝对路径错误
+<code>//img/xxx.jpg</code> 生成后是这种路径，不过我添加了自定义域名后自动解决了这个问题</p>
+<p>常用的hexo命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>hexo new post [name of post]
+<span class="ln">2</span>hexo generate
+<span class="ln">3</span>hexo serve
+<span class="ln">4</span>hexo clean &amp;&amp; hexo deploy
+</code></pre></div><h2 id="最后--注意">最后 &amp;&amp; 注意</h2>
+<ul>
+<li>
+<p>在开始创建的代码仓库设置里，设置自己的Custom domain，自定义域名</p>
+</li>
+<li>
+<p>Freenom 购买免费域名时，当前 ip 所在地和账号资料的位置信息一定要对应</p>
+</li>
+<li>
+<p><code>hexo deploy</code>后会覆盖自定义域名后生成的<code>CNAME</code>文件。把要保存的文件放在<code>source</code>文件夹里。</p>
+</li>
+<li>
+<p>我更改了一些<code>_config.yaml</code>配置后<code>permalink: :title/</code>，发布成功，github 更新成功，本地 serve 也都正常，但是页面仍旧是之前的。尝试删除 <code>.nojekyll</code>文件和<code>.deploy_git</code>目录后再次发布成功。</p>
+</li>
+</ul>
+<h2 id="站长工具">站长工具</h2>
+<p><strong>百度统计</strong>
+<a href="https://tongji.baidu.com/" target="_blank" rel="noopener noreferrer">https://tongji.baidu.com/</a>
+
+<code>_config.yaml</code> 配置参数 <code>ba_track_id: ol14dc912ccw01s4cxd12ss0c1acwz</code></p>
+<p><strong>Google分析</strong>
+<a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">https://analytics.google.com/</a>
+
+这里 fork 的 hexo 主题的源码似乎有 bug，需要时使用 Google Analytics 提示的最新代码
+<code>_config.yaml</code> 配置参数 <code>ga_track_id: UA-xxx-x</code></p>
+<h2 id="接入-google-广告">接入 google 广告</h2>
+<p><a href="https://www.google.co.in/adsense/start/#/?modal_active=none" target="_blank" rel="noopener noreferrer">https://www.google.co.in/adsense/start/#/?modal_active=none</a>
+</p>
+<p>代码写在<code>/hexo-theme-huxblog/themes/huxblog/layout/_partial/footer.ejs</code></p>
+<p>要注意的是：写在<code>&lt;head&gt;&lt;/head&gt;</code>之间</p>
+<p>一审失败，提示我只有2篇帖子，需要有更多的帖子，并且运行几个月后再来试试。</p>
+<h2 id="站点地图">站点地图</h2>
+<p><em>让百度，Google收录自己的博客站点</em></p>
+<h3 id="百度">百度</h3>
+<p><a href="https://ziyuan.baidu.com/site/index" target="_blank" rel="noopener noreferrer">地址链接</a>
+
+验证主要有三种方法：</p>
+<ul>
+<li>1.文件验证 我最终是通过这个方式通过的。试了一下不能直接复制里面的内容，以同名文件的形式传到 github 上；须上传下载的原文件才可以。</li>
+<li>2.HTML标签验证 没试过</li>
+<li>3.CNAME验证 开始通过这个方式验证，看破了帮助，死活过不去，于是乎换成了第一种</li>
+</ul>
+<h3 id="google">Google</h3>
+<p><a href="https://search.google.com/search-console/about?utm_source=wmx&amp;utm_medium=wmx-welcome#utm_source=zh-TW-wmxmsg&amp;utm_medium=wmxmsg&amp;utm_campaign=bm&amp;authuser=0" target="_blank" rel="noopener noreferrer">地址链接</a>
+
+也可以在Google搜索中输入<code>site:[your_domain]</code> like <code>site:vongola.tk</code>
+没收录的话就会提示你去点击链接<code>请使用 Google Search Console</code>
+验证方式：
+在 DNS 解析加入提示信息的记录即可</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">记录类型</th>
+<th style="text-align:center">记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">TXT</td>
+<td style="text-align:center">google-site-verification=xxx</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>Tips: 里面还提供了测试网站速度的工具，很有趣
+</code></pre></div><h2 id="其他">其他</h2>
+<h3 id="接入评论功能">接入评论功能</h3>
+<p><a href="https://disqus.com/" target="_blank" rel="noopener noreferrer">https://disqus.com/</a>
+ -&gt; I want to install Disqus on my site -&gt; 填写信息 重要的是Websit Name 要求全网唯一，设定后不可改变 -&gt; 设置<code>_config.yaml</code>的参数<code>disqus_username: [上一步的Websit Name]</code>
+据说有收益，定期会审查，如果你的网站满足 Reveal，就会在一周内被联系。(emmm&hellip;)</p>
+<h3 id="支持-toc">支持 TOC</h3>
+<p><a href="https://github.com/bubkoo/hexo-toc" target="_blank" rel="noopener noreferrer">https://github.com/bubkoo/hexo-toc</a>
+
+我的设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span># _config.yaml
+<span class="ln"> 2</span>toc:
+<span class="ln"> 3</span>  maxdepth: 3
+<span class="ln"> 4</span>  class: toc
+<span class="ln"> 5</span>  slugify: transliteration
+<span class="ln"> 6</span>  decodeEntities: false
+<span class="ln"> 7</span>
+<span class="ln"> 8</span># css
+<span class="ln"> 9</span>.toc {
+<span class="ln">10</span>  float: right;
+<span class="ln">11</span>  margin-left: 40px;
+<span class="ln">12</span>  padding: 10px 20px;
+<span class="ln">13</span>  background: #f1f1f1;
+<span class="ln">14</span>  border-radius: 10px;
+<span class="ln">15</span>  box-shadow: 0 0 3px #bbb;
+<span class="ln">16</span>}
+<span class="ln">17</span>
+<span class="ln">18</span># post
+<span class="ln">19</span>
+</code></pre></div><h3 id="支持置顶">支持置顶</h3>
+<p>安装插件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>npm uninstall hexo-generator-index --save
+<span class="ln">2</span>npm install hexo-generator-index-pin-top --save
+</code></pre></div><p>post 的配置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>---
+<span class="ln">2</span>top: true
+<span class="ln">3</span>---
+</code></pre></div><p><a href="http://ico.duduxuexi.com/" target="_blank" rel="noopener noreferrer">在线生成ico</a>
+</p>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>Buy me a coffee</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline-primary" aria-label="Close"><i class="fas fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>Alipay
+            </a>
+          </li><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>WeChat
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
+  <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+    <a href="/series/python/python-exec-object/">Python Exec Object
+</a>
+  </div><div class="post-nav post-next">
+    <a href="/series/python/parse-vip-video/">VIP Video Parse Link
+</a>
+    <i class="fas fa-fw fa-chevron-right"></i>
+  </div></div><section class="related-posts-wrapper">
+    <h3>Related Posts</h3>
+    <ul class="related-posts"><li><a href="/series/python/python-exec-object/">Python Exec Object
+</a></li><li><a href="/series/python/python-encoding/">Python Encode
+</a></li><li><a href="/series/math/bit-calc/">位运算的数学等价
+</a></li><li><a href="/series/python/python-gc/">Python GC
+</a></li><li><a href="/about/">About
+</a></li></ul>
+  </section></div>
+    </article><div class="card component row post-comments">
+  <div class="card-body"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_LCyGJbOccq" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><script src="https://utteranc.es/client.js"
+  repo="razonyang/hugo-theme-bootstrap-comments"
+  issue-term="pathname"
+  label="comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script></div>
+</div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container">
+    
+    <section class="card row text-center profile component">
+  <div class="card-body">
+    <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Ars-Von-Geotia" src="/images/profile.png" loading="lazy"
+   width="257" height="310"
+   />
+</div>
+    <div class="col-12 profile-meta"><div class="profile-name">Ars-Von-Geotia</div><div class="profile-bio">Happy code Happy hacker.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>B</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Mars</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://vonv.tk/en/about/">About Me</a></div><div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="/contact/">Contact Me</a></div></div>
+  </div>
+</section>
+  <section class="featured-posts row card component">
+    <div class="card-body">
+      <h2 class="card-title">Featured Posts</h2>
+      <ul><li><a href="/series/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/series/python/zip-picture/">Zip Picture With Python
+</a></li><li><a href="/series/python/code-template/">Code Template
+</a></li><li><a href="/series/python/python-gc/">Python GC
+</a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
+</a></li></ul>
+    </div>
+  </section><section class="recent-posts row card component">
+  <div class="card-body">
+    <h2 class="card-title">Recent Posts</h2>
+    <ul><li><a href="/series/ffmpeg/ffmpeg-develop/">Video Develop Environment
+</a></li><li><a href="/series/ffmpeg/rtmp/">RTMP
+</a></li><li><a href="/series/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/series/linux/top/">Man Top
+</a></li><li><a href="/series/python/real-python/">CPython
+</a></li></ul>
+  </div>
+</section><section class="taxonomies row card component">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="/series">Series</a>
+        </h2>
+        <div><a href="/series/python/" class="badge bg-primary text-white rounded post-taxonomy" title="Python">
+            Python
+          </a><a href="/series/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
+          </a><a href="/series/manual/" class="badge bg-primary text-white rounded post-taxonomy" title="Manual">
+            Manual
+          </a><a href="/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="math">
+            math
+          </a><a href="/series/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
+          </a><a href="/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
+            FFmpeg
+          </a><a href="/series/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
+            Kubernetes
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="/tags">Tags</a>
+        </h2>
+        <div><a href="/tags/python3/" class="badge bg-primary text-white rounded post-taxonomy" title="python3">
+            python3
+          </a><a href="/tags/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
+          </a><a href="/tags/web/" class="badge bg-primary text-white rounded post-taxonomy" title="Web">
+            Web
+          </a><a href="/tags/math/" class="badge bg-primary text-white rounded post-taxonomy" title="Math">
+            Math
+          </a><a href="/tags/picture/" class="badge bg-primary text-white rounded post-taxonomy" title="Picture">
+            Picture
+          </a><a href="/tags/system/" class="badge bg-primary text-white rounded post-taxonomy" title="System">
+            System
+          </a><a href="/tags/algorithm/" class="badge bg-primary text-white rounded post-taxonomy" title="Algorithm">
+            Algorithm
+          </a><a href="/tags/blog/" class="badge bg-primary text-white rounded post-taxonomy" title="Blog">
+            Blog
+          </a><a href="/tags/c/c&#43;&#43;/" class="badge bg-primary text-white rounded post-taxonomy" title="C/C&#43;&#43;">
+            C/C&#43;&#43;
+          </a><a href="/tags/dns/" class="badge bg-primary text-white rounded post-taxonomy" title="dns">
+            dns
+          </a></div>
+      </div>
+    </section>
+    
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" target="_blank" href="https://space.bilibili.com/38811864" title="bilibili" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bilibili"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://bitbucket.org/yourbitbucketworkspaceid" title="Bitbucket" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bitbucket"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://discord.com/invite/yourdiscordinvitecode" title="Discord" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discord"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://yourforum.tld" title="Discourse" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discourse"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://hub.docker.com/u/yourdockerhubusername" title="Docker Hub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-docker"></i>
+      </a><a class="nav-link social-link" href="mailto:ars.von.roseregen@gmail.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/vonsago" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://kaggle.com/yourkaggleusername" title="Kaggle" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-kaggle"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.last.fm/user/yourlastfmusername" title="Last.fm" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-lastfm"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/yourlinkedinusername" title="LinkedIn" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://medium.com/@yourmediumusername" title="Medium" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.pinterest.com/yourpinterestusername" title="Pinterest" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-pinterest"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.reddit.com/user/yourredditusername" title="Reddit" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-reddit"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://stackoverflow.com/users/7369431" title="Stack Overflow" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-stack-overflow"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://t.me/yourtelegramusername" title="Telegram" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-telegram-plane"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://twitter.com/V_assago" title="Twitter" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-twitter"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.youtube.com/channel/youryoutubechannelid" title="Youtube" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-youtube"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2015-2021 Ars Von Geotia. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
+</div></footer>
+<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-151521286-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?https:\/\/hm.baidu.com\/hm.js?efa234dd0de80cabe5e7cb41e0f81e74";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script></body>
+</html>
