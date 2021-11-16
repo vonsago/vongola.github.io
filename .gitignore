@@ -3,7 +3,6 @@ Thumbs.db
 db.json
 *.log
 node_modules/
-public/
 .hugo_build.lock
 .deploy
 .cache
@@ -67,7 +66,6 @@ typings/
 
 # gatsby files
 .cache/
-public
 
 # Mac files
 .DS_Store
