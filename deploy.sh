@@ -10,5 +10,7 @@
 #
 #================================================================
 
-git subtree push --prefix public/* origin master
+now = "$(date + "%r")"
+git add . && git commit -m "update: $now"
+git checkout master
 
