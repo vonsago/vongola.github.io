@@ -239,24 +239,6 @@ Von
       </div>
     </article><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/series/docker/docker-stats/">Docker Stats
-</a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Feb 20, 2020
-  </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>4 min read
-  </span><a href="/series/docker/" class="badge rounded-pill text-white bg-primary post-taxonomy">Docker</a><a href="/tags/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a><a href="/tags/docker/" class="badge rounded-pill text-white bg-primary post-taxonomy">Docker</a></div>
-<div class="post-summary">
-          
-          <img class="img-fluid" alt="Docker Stats" src="/images/bg/bg2.jpeg" loading="lazy"
-   width="2824" height="2824"
-   />
-
-          
-          Docker Stats 1是基于docker 1.10.3版本的源码， 2对docker stats命令进行源码分析，看看docker stats命令输出的数据是从cg
-        </div>
-      </div>
-    </article><article class="row card post component">
-      <div class="card-body">
         <h2 class="card-title post-title"><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
     <i class="fas fa-fw fa-calendar-alt"></i>Feb 10, 2020
@@ -328,6 +310,24 @@ Von
           1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&#39;.jpeg&#39;, &#39;jpeg&#39;, progressive=True, optimize=True) 6if __name__ == &#39;__main__&#39;: 7 _, pname = sys.argv 8 gipit(pname) 
         </div>
       </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/series/python/flask-inject-log/">Flask Logger
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 26, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">python3</a><a href="/tags/web/" class="badge rounded-pill text-white bg-primary post-taxonomy">Web</a><a href="/tags/log/" class="badge rounded-pill text-white bg-primary post-taxonomy">Log</a><a href="/tags/flask/" class="badge rounded-pill text-white bg-primary post-taxonomy">Flask</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Flask Logger" src="/images/bg/bg.jpeg" loading="lazy"
+   width="4896" height="3264"
+   />
+
+          
+          Flask logging 使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。 根据官方文档
+        </div>
+      </div>
     </article></div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
       <li class="page-item disabled">
@@ -369,8 +369,7 @@ Von
   <section class="featured-posts row card component">
     <div class="card-body">
       <h2 class="card-title">Featured Posts</h2>
-      <ul><li><a href="/series/docker/docker-stats/">Docker Stats
-</a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
+      <ul><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
 </a></li><li><a href="/series/python/zip-picture/">Zip Picture With Python
 </a></li><li><a href="/series/python/code-template/">Code Template
 </a></li><li><a href="/series/python/python-gc/">Python GC
@@ -381,12 +380,23 @@ Von
     <h2 class="card-title">Recent Posts</h2>
     <ul><li><a href="/series/ffmpeg/ffmpeg-develop/">Video Develop Environment
 </a></li><li><a href="/series/ffmpeg/rtmp/">RTMP
-</a></li><li><a href="/series/docker/docker-stats/">Docker Stats
 </a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
 </a></li><li><a href="/series/linux/top/">Man Top
+</a></li><li><a href="/series/python/real-python/">CPython
 </a></li></ul>
   </div>
 </section><section class="taxonomies row card component">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="/categories">Categories</a>
+        </h2>
+        <div><a href="/categories/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
+          </a><a href="/categories/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
+            Kubernetes
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
       <div class="card-body">
         <h2 class="card-title">
           <a href="/series">Series</a>
@@ -399,12 +409,8 @@ Von
             Manual
           </a><a href="/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="math">
             math
-          </a><a href="/series/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
-            Docker
           </a><a href="/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
             FFmpeg
-          </a><a href="/series/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
-            Kubernetes
           </a></div>
       </div>
     </section><section class="taxonomies row card component">

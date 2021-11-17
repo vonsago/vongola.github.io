@@ -5,11 +5,9 @@ date = "2020-01-03"
 description = "kubernetes"
 featured = false
 categories = [
-]
-tags = [
   "Kubernetes"
 ]
-series = [
+tags = [
   "Kubernetes"
 ]
 images = [

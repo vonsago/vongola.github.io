@@ -5,13 +5,11 @@ date = "2020-02-20"
 description = "docker stats"
 featured = true
 categories = [
+  "Docker"
 ]
 tags = [
   "Linux",
   "Docker"
-]
-series = [
-  "docker"
 ]
 images = [
   "images/bg/bg2.jpeg"
