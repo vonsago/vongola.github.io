@@ -1,0 +1,613 @@
+<!doctype html><html lang="en"
+  >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Math Every - Vassago&#39;s Blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="keywords" content="" />
+<meta name="description" content="Math Every" /><meta itemprop="name" content="Math Every">
+<meta itemprop="description" content="Math Every"><meta itemprop="datePublished" content="2019-11-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-11-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1979"><meta itemprop="image" content="/images/bg/mathbg.jpg">
+<meta itemprop="keywords" content="Math," /><meta property="og:title" content="Math Every" />
+<meta property="og:description" content="Math Every" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/series/math/mathday/" /><meta property="og:image" content="/images/bg/mathbg.jpg" /><meta property="article:section" content="series" />
+<meta property="article:published_time" content="2019-11-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-11-07T00:00:00+00:00" />
+<meta property="og:see_also" content="/series/math/bit-calc/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/bg/mathbg.jpg"/>
+
+<meta name="twitter:title" content="Math Every"/>
+<meta name="twitter:description" content="Math Every"/>
+<meta name="twitter:site" content="@V_assago"/>
+<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand me-3" href="/"><img class="logo" alt="Logo" src="/images/mlogo.webp" loading="lazy"
+   width="400" height="400"
+   />
+Von
+    </a>
+    <button class="navbar-social-share" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
+  aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
+  <i class="fas fa-share-alt"></i>
+</button>
+
+<div class="offcanvas offcanvas-bottom surface" tabindex="-1" id="offcanvasSocialShare" aria-labelledby="offcanvasSocialShare">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Share</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=Math%20Every&url=%2fseries%2fmath%2fmathday%2f">
+      <i class="fab fa-fw fa-twitter"></i> Twitter
+    </a>
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2fmath%2fmathday%2f">
+      <i class="fab fa-fw fa-facebook-f"></i> Facebook
+    </a>
+  </div>
+</div>
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Settings</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-language"></i> Language</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="dropdown">
+        <a class="btn btn-sm btn-outline-primary dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          English
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li><a class="dropdown-item" href="/zh-cn/">简体中文</a></li></ul>
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> Mode</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> Font Size</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> Palette</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <a id="btnPalette" class="btn btn-sm btn-outline-primary" role="button" aria-label="palettePicker">
+        <i class="fas fa-eye-dropper"></i>
+      </a>
+    </div>
+  </form>
+  <div class="mt-2 d-flex visually-hidden" id="palettePicker"><button type="button" id="palette-blue" aria-label="Blue"
+        class="btn btn-sm palette" data-palette="blue">
+      </button><button type="button" id="palette-blue-gray" aria-label="Blue Gray"
+        class="btn btn-sm palette" data-palette="blue-gray">
+      </button><button type="button" id="palette-brown" aria-label="Brown"
+        class="btn btn-sm palette" data-palette="brown">
+      </button><button type="button" id="palette-cyan" aria-label="Cyan"
+        class="btn btn-sm palette" data-palette="cyan">
+      </button><button type="button" id="palette-green" aria-label="Green"
+        class="btn btn-sm palette" data-palette="green">
+      </button><button type="button" id="palette-indigo" aria-label="Indigo"
+        class="btn btn-sm palette" data-palette="indigo">
+      </button><button type="button" id="palette-orange" aria-label="Orange"
+        class="btn btn-sm palette" data-palette="orange">
+      </button><button type="button" id="palette-pink" aria-label="Pink"
+        class="btn btn-sm palette" data-palette="pink">
+      </button><button type="button" id="palette-purple" aria-label="Purple"
+        class="btn btn-sm palette" data-palette="purple">
+      </button><button type="button" id="palette-red" aria-label="Red"
+        class="btn btn-sm palette" data-palette="red">
+      </button><button type="button" id="palette-teal" aria-label="Teal"
+        class="btn btn-sm palette" data-palette="teal">
+      </button><button type="button" id="palette-yellow" aria-label="Yellow"
+        class="btn btn-sm palette" data-palette="yellow">
+      </button></div>
+</section>
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>Archives
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>Categories
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>Tags
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>Series
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="https://github.com/vonsago/vonvon.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-fw fa-github"></i>Repository
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link" id="navbarDropdown-demo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-fw fa-chevron-circle-down"></i>Demo Sites
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-demo"><li>
+              <a class="dropdown-item"
+                href="https://hbs.razonyang.com" target="_blank" rel="noopener noreferrer">
+                Netlify
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://hbs-cn.razonyang.com" target="_blank" rel="noopener noreferrer">
+                China
+              </a>
+            </li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/series/">Series</a></li><li class="breadcrumb-item active">Math Every</li></ol>
+  </div>
+</nav>    <article class="row card component mb-4 post"><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+  
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="Buy me a coffee">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0" role="button" aria-label="Copyright" 
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    
+  </div>
+</div>
+<div class="card-body">
+        <h1 class="card-title my-3">Math Every
+</h1><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 7, 2019
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>4 min read
+  </span><a href="/series/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">math</a><a href="/tags/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">Math</a></div>
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">Table Of Contents</h5>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#哥德巴赫猜想">哥德巴赫猜想</a>
+      <ul>
+        <li><a href="#概念">概念</a></li>
+        <li><a href="#证明">证明</a></li>
+      </ul>
+    </li>
+    <li><a href="#欧拉定理">欧拉定理</a>
+      <ul>
+        <li><a href="#概念-1">概念</a></li>
+      </ul>
+    </li>
+    <li><a href="#同余定理">同余定理</a>
+      <ul>
+        <li><a href="#性质">性质</a></li>
+        <li><a href="#同余关系式">同余关系式</a></li>
+      </ul>
+    </li>
+    <li><a href="#必须掌握-微积分基础">必须掌握-微积分基础</a></li>
+    <li><a href="#特征向量新公式">特征向量新公式</a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><h1 id="每天学点数学">每天学点数学</h1>
+<blockquote>
+<p>数学中的一些美丽定理具有这样的特性：它们极易从事实中归纳出来，但证明却隐藏的极深。&ndash; 高斯
+在数学你不明白任何东西。你只使用它们。&ndash; 冯·诺伊曼</p>
+</blockquote>
+<h2 id="哥德巴赫猜想">哥德巴赫猜想</h2>
+<h3 id="概念">概念</h3>
+<p><strong>任一大于2的偶数，都可表示成两个素数之和。</strong>
+<em>而将一个给定的偶数分拆成两个素数之和，则被称之为此数的哥德巴赫分拆。</em>
+<em>换句话说，哥德巴赫猜想主张每个大于等于4的偶数都是哥德巴赫数——可表示成两个素数之和的数。</em></p>
+<p>欧拉注明此一猜想可以有另一个等价的版本:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>(A): 任一大于2的偶数都可写成两个质数之和。
+<span class="ln">2</span>
+<span class="ln">3</span>(B): 任一大于5的奇数都可写成三个素数之和。
+</code></pre></div><p>今日常见的猜想陈述为欧拉的版本，(A)亦称为“强哥德巴赫猜想”或“关于偶数的哥德巴赫猜想”。(B)称为“弱哥德巴赫猜想”或“关于奇数的哥德巴赫猜想”。其中(B)从(A)推出，所以如果(A)得证那么(B)也得证。</p>
+<h3 id="证明">证明</h3>
+<p>陈氏定理（陈景润的）</p>
+<p>所谓“陈氏定理”的“1+2”，是指：对于任给一个大偶数 N，总可以找到奇素数p', p'&lsquo;或p1,p2,p3，使得下列两式至少有一个成立：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="ln">1</span><span class="nv">N</span> <span class="o">=</span> p<span class="s1">&#39; + p&#39;</span><span class="err">&#39;</span>
+<span class="ln">2</span><span class="nv">N</span> <span class="o">=</span> p1 + p2p3
+</code></pre></div><p>两式可以同时成立。<em>偶数较小时，如 N=62，则可以有 62=43+19 以及 62=7+5×11</em></p>
+<h2 id="欧拉定理">欧拉定理</h2>
+<h3 id="概念-1">概念</h3>
+<p><strong>定理一</strong>
+连通的无向图有欧拉路径的充要条件是：</p>
+<p><strong>G中奇顶点（连接的边数量为奇数的顶点）的数目等于0或者2。</strong></p>
+<p>连通的无向图是欧拉环（存在欧拉回路）的充要条件是：</p>
+<p><strong>G中每个顶点的度都是偶数。</strong></p>
+<p><strong>定理二</strong></p>
+<p><strong>如果连通无向图G 有 2k 个奇顶点，那么它可以用 k 笔画成，并且至少要用 k 笔画成。</strong></p>
+<p>对有向图来说，一笔画不仅指遍历所有边，而且要遵循正确的方向。
+严谨地说，一个连通有向图G有欧拉路径，指存在一个顶点，从它出发，沿着有向边的方向，可以不重复地遍历图中所有的边。
+有向图的欧拉回路则是指可以从某一顶点开始，沿有向边的方向不重复地遍历所有边，然后回到原来出发的顶点。用类似于定理一中证明的思路，可以得到有向图一笔画的判定准则：</p>
+<p>一个连通的有向图可以表示为一条从顶点u到v的（不闭合的）欧拉路径的充要条件是：</p>
+<p><strong>u的出度（从这个顶点发出的有向边的数量）比入度（指向这个顶点的有向边的数量）多1， v 的出度比入度少1，而其它顶点的出度和入度都相等。</strong></p>
+<p>一个连通的有向图是欧拉环（存在欧拉回路）的充要条件是以下两个之一：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span> 1.每个顶点的出度和入度都相等；
+<span class="ln">2</span> 2.存在一系列的（有向）环C1 C2...  Cm，使得图G里的每一条边都恰好属于某一个环。
+</code></pre></div><p><em>一笔画问题讨论的是能否不重复地遍历一个图的所有边，至于其中有否顶点的遍历或重复经过则没有要求。哈密顿问题讨论的则是顶点的遍历：能否不重复地遍历一个图的所有顶点？</em></p>
+<p>参考：
+<a href="https://www.math.ku.edu/~jmartin/courses/math105-F11/Lectures/chapter5-part2.pdf" target="_blank" rel="noopener noreferrer">Tutorials</a>
+
+<a href="http://www.geeksforgeeks.org/eulerian-path-and-circuit/" target="_blank" rel="noopener noreferrer">How to find whether a given graph is Eulerian or not?</a>
+
+<a href="http://www.ms.uky.edu/~lee/ma515fa10/euler.pdf" target="_blank" rel="noopener noreferrer">Sketch of Eulerian Circuit Algorithm</a>
+</p>
+<h2 id="同余定理">同余定理</h2>
+<p>数学上，<strong>同余</strong>（英语：congruence modulo，符号：≡）是数论中的一种等价关系。当两个整数除以同一个正整数，若得相同余数，则二整数同余。同余是抽象代数中的同余关系的原型。最先引用同余的概念与“≡”符号者为德国数学家高斯。</p>
+<p><strong>定义</strong>：两个正整数a,b如果它们初一正整数m所得的余数相同，则称a,b对于模m同余。记作：<strong>a≡b(mod m)</strong></p>
+<h3 id="性质">性质</h3>
+<p><strong>性质1</strong>：a≡b(mod m) =&gt; c*m=a-b  ,c属于Z（即是说 a 和 b 之差是 m 的倍数）
+换句话说：a≡b(mod m) =&gt; m | (a-b)  （即是说 m 能整除 a 和 b 之差，同时**m | (a-b) ** 也是a,b关于m同余的充要条件）</p>
+<p><strong>性质2</strong>：  同余关系具有反身性、对称性与传递性，即</p>
+<blockquote>
+<p>1）a≡a (mod m);</p>
+<p>2）若a≡b (mod m), 则b≡a (mod m);</p>
+<p>3）若a≡b (mod m), b≡c (mod m)，则a≡c (mod m).</p>
+</blockquote>
+<p><strong>性质3</strong> ：若a≡b(mod m), c≡d (mod m),则</p>
+<blockquote>
+<p>1）a+c≡b+d (mod m);</p>
+<p>2）a-c≡b-d (mod m);</p>
+<p>3）ac≡bd (mod m).</p>
+</blockquote>
+<p><strong>推论</strong>  若a≡b(mod m),n为自然数，则an≡bn (mod m)。</p>
+<p><strong>性质4 除法定理一</strong>：如果ka≡kb(mod m)，且(m,k)=1（即k和m互质），则a≡b(mod m)</p>
+<p><strong>性质4 除法定理二</strong>：
+<img class="img-fluid" alt="" src="/series/math/mathday/images/divide.png" loading="lazy"
+   width="391" height="108"
+   />
+
+
+也即是说：m 的因数也可以整除(a-b)。
+m是n的倍数: m = c *n , n | m , 因为m|(a-b) , 所以 n | (a-b) =&gt; a≡b (mod n)</p>
+<h3 id="同余关系式">同余关系式</h3>
+<p><strong>威尔逊定理</strong></p>
+<p>威尔逊定理给出了判定一个自然数是否为素数的充分必要条件。
+即：当且仅当p为素数时：<strong>(p-1)! ≡ -1 (mod p)</strong>
+但是由于阶乘是呈爆炸增长的，其结论作为<em>了解</em>。</p>
+<p><strong>费马小定理</strong></p>
+<p>假如a是一个整数，p是一个质数，那么 是p的倍数，可以表示为<strong>a^p≡a (mod p)</strong></p>
+<p>当(a,p)=1 (a不是p的倍数)时定理可以写为：<strong>a^(p-1) ≡1 (mod p)</strong></p>
+<p>费马小定理是欧拉定理的一个特殊情况，看下面</p>
+<p><strong>欧拉定理</strong></p>
+<p>欧拉定理（也称费马-欧拉定理或欧拉函数定理）是一个关于同余的性质:若 n,a为正整数，且 n,a互素（即 gcd(a,n)=1）则</p>
+<p><strong>a^φ(n) ≡1 (mod m)</strong></p>
+<p>即 a^φ(n)与1在模n下同余；φ(n)为欧拉函数。</p>
+<p>当n是素数的时候， φ(n)=n-1，所以欧拉定理变为：
+a^(n-1) ≡ 1 (mod m)  or
+a^n ≡ a (mod m)
+这就是费马小定理。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%8D%A1%E9%82%81%E5%85%8B%E7%88%BE%E5%87%BD%E6%95%B8" target="_blank" rel="noopener noreferrer"><strong>卡迈克尔函数</strong></a>
+
+<img class="img-fluid" alt="" src="/series/math/mathday/images/kamer.png" loading="lazy"
+   width="215" height="53"
+   />
+
+</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E9%98%B6%E4%B9%98%E5%B9%82" target="_blank" rel="noopener noreferrer"><strong>阶乘幂</strong></a>
+
+<img class="img-fluid" alt="" src="/series/math/mathday/images/jiecheng.png" loading="lazy"
+   width="563" height="40"
+   />
+
+</p>
+<p>参考:
+<a href="http://www.cnblogs.com/zhixingqiezhixing/archive/2012/04/03/2430676.html" target="_blank" rel="noopener noreferrer">知行执行</a>
+
+<a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">wikipedia</a>
+</p>
+<h2 id="必须掌握-微积分基础">必须掌握-微积分基础</h2>
+<p><strong>导数</strong>
+<img class="img-fluid" alt="描述" src="/series/math/mathday/images/ds.png" loading="lazy"
+   width="616" height="238"
+   />
+
+</p>
+<p><strong>四则运算</strong></p>
+<h2 id="特征向量新公式">特征向量新公式</h2>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>Buy me a coffee</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline-primary" aria-label="Close"><i class="fas fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>Alipay
+            </a>
+          </li><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>WeChat
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
+  <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+    <a href="/series/python/parse-vip-video/">VIP Video Parse Link
+</a>
+  </div><div class="post-nav post-next">
+    <a href="/series/python/code-template/">Code Template
+</a>
+    <i class="fas fa-fw fa-chevron-right"></i>
+  </div></div><section class="related-posts-wrapper">
+    <h3>Related Posts</h3>
+    <ul class="related-posts"><li><a href="/series/math/bit-calc/">位运算的数学等价
+</a></li><li><a href="/series/python/parse-vip-video/">VIP Video Parse Link
+</a></li><li><a href="/posts/blog/">Build Blog
+</a></li><li><a href="/series/python/python-exec-object/">Python Exec Object
+</a></li><li><a href="/series/python/python-encoding/">Python Encode
+</a></li></ul>
+  </section></div>
+    </article><div class="card component row post-comments">
+  <div class="card-body"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_LCyGJbOccq" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><script src="https://utteranc.es/client.js"
+  repo="razonyang/hugo-theme-bootstrap-comments"
+  issue-term="pathname"
+  label="comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script></div>
+</div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container">
+    
+    <section class="card row text-center profile component">
+  <div class="card-body">
+    <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Ars-Von-Geotia" src="/images/profile.png" loading="lazy"
+   width="257" height="310"
+   />
+</div>
+    <div class="col-12 profile-meta"><div class="profile-name">Ars-Von-Geotia</div><div class="profile-bio">Happy code Happy hacker.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>B</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Mars</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://vonv.tk/about/">About Me</a></div><div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="/contact/">Contact Me</a></div></div>
+  </div>
+</section>
+  <section class="featured-posts row card component">
+    <div class="card-body">
+      <h2 class="card-title">Featured Posts</h2>
+      <ul><li><a href="/series/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
+</a></li><li><a href="/series/python/zip-picture/">Zip Picture With Python
+</a></li><li><a href="/series/python/code-template/">Code Template
+</a></li><li><a href="/series/python/python-gc/">Python GC
+</a></li></ul>
+    </div>
+  </section><section class="recent-posts row card component">
+  <div class="card-body">
+    <h2 class="card-title">Recent Posts</h2>
+    <ul><li><a href="/series/ffmpeg/ffmpeg-develop/">Video Develop Environment
+</a></li><li><a href="/series/ffmpeg/rtmp/">RTMP
+</a></li><li><a href="/series/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
+</a></li><li><a href="/series/linux/top/">Man Top
+</a></li></ul>
+  </div>
+</section><section class="taxonomies row card component">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="/series">Series</a>
+        </h2>
+        <div><a href="/series/python/" class="badge bg-primary text-white rounded post-taxonomy" title="Python">
+            Python
+          </a><a href="/series/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
+          </a><a href="/series/manual/" class="badge bg-primary text-white rounded post-taxonomy" title="Manual">
+            Manual
+          </a><a href="/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="math">
+            math
+          </a><a href="/series/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
+          </a><a href="/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
+            FFmpeg
+          </a><a href="/series/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
+            Kubernetes
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="/tags">Tags</a>
+        </h2>
+        <div><a href="/tags/python3/" class="badge bg-primary text-white rounded post-taxonomy" title="python3">
+            python3
+          </a><a href="/tags/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
+          </a><a href="/tags/web/" class="badge bg-primary text-white rounded post-taxonomy" title="Web">
+            Web
+          </a><a href="/tags/math/" class="badge bg-primary text-white rounded post-taxonomy" title="Math">
+            Math
+          </a><a href="/tags/picture/" class="badge bg-primary text-white rounded post-taxonomy" title="Picture">
+            Picture
+          </a><a href="/tags/system/" class="badge bg-primary text-white rounded post-taxonomy" title="System">
+            System
+          </a><a href="/tags/algorithm/" class="badge bg-primary text-white rounded post-taxonomy" title="Algorithm">
+            Algorithm
+          </a><a href="/tags/blog/" class="badge bg-primary text-white rounded post-taxonomy" title="Blog">
+            Blog
+          </a><a href="/tags/c/c&#43;&#43;/" class="badge bg-primary text-white rounded post-taxonomy" title="C/C&#43;&#43;">
+            C/C&#43;&#43;
+          </a><a href="/tags/dns/" class="badge bg-primary text-white rounded post-taxonomy" title="dns">
+            dns
+          </a></div>
+      </div>
+    </section>
+    
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" target="_blank" href="https://space.bilibili.com/38811864" title="bilibili" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bilibili"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://bitbucket.org/yourbitbucketworkspaceid" title="Bitbucket" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-bitbucket"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://discord.com/invite/yourdiscordinvitecode" title="Discord" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discord"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://yourforum.tld" title="Discourse" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-discourse"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://hub.docker.com/u/yourdockerhubusername" title="Docker Hub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-docker"></i>
+      </a><a class="nav-link social-link" href="mailto:ars.von.roseregen@gmail.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/vonsago" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://kaggle.com/yourkaggleusername" title="Kaggle" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-kaggle"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.last.fm/user/yourlastfmusername" title="Last.fm" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-lastfm"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/yourlinkedinusername" title="LinkedIn" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://medium.com/@yourmediumusername" title="Medium" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.pinterest.com/yourpinterestusername" title="Pinterest" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-pinterest"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.reddit.com/user/yourredditusername" title="Reddit" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-reddit"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://stackoverflow.com/users/7369431" title="Stack Overflow" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-stack-overflow"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://t.me/yourtelegramusername" title="Telegram" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-telegram-plane"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://twitter.com/V_assago" title="Twitter" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-twitter"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.youtube.com/channel/youryoutubechannelid" title="Youtube" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-youtube"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2015-2021 Ars Von Geotia. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
+</div></footer>
+<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-151521286-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?https:\/\/hm.baidu.com\/hm.js?efa234dd0de80cabe5e7cb41e0f81e74";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script></body>
+</html>

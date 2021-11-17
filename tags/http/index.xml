@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on Vassago&#39;s Blog</title>
+    <link>/tags/http/</link>
+    <description>Recent content in HTTP on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 18 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get Wlan Password</title>
+      <link>/series/linux/get-wlan-passwd/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/get-wlan-passwd/</guid>
+      <description>如何获取你知道/不知道的 wifi 密码 本文仅限于学习，请勿用于非法用途 否则后果作者概不负责 获取链接过的 wifi 密码 Windows: 管理员运行： 1for /f &amp;#34;skip=9 tokens=1,2 delims=:&amp;#34; %i in (&amp;#39;netsh wlan show profiles&amp;#39;) do @echo</description>
+    </item>
+    
+  </channel>
+</rss>
