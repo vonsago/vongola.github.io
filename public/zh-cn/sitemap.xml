@@ -15,6 +15,19 @@
                 href="/zh-cn/tags/blog/"
                 />
   </url><url>
+    <loc>/zh-cn/posts/blog/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/posts/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/blog/"
+                />
+  </url><url>
     <loc>/zh-cn/tags/dns/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -91,19 +104,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/series/"
-                />
-  </url><url>
-    <loc>/zh-cn/posts/blog/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/posts/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/blog/"
                 />
   </url><url>
     <loc>/zh-cn/posts/</loc>

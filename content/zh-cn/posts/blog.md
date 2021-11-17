@@ -1,8 +1,8 @@
 +++
 author = "Ars"
-title = "搭建静态博客"
+title = "Build Blog"
 date = "2019-11-03"
-description = "基于 github page 免费构建博客"
+description = "build blog with github pages free"
 featured = true
 categories = [
 ]
@@ -15,12 +15,12 @@ tags = [
 series = [
   "Manual"
 ]
-aliases = ["我的免费博客"]
 images = [
-  "images/computerp.png"
+  "images/bg/computerp.png"
 ]
 # toc = true
 +++
+
 # Build Blog
 > Gitpage + Hexo 搭建个人博客，全程免费，记录注意事项。
 ## 总览

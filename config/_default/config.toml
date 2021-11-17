@@ -16,7 +16,7 @@ paginate = 7
 disqusShortname = "disqus_LCyGJbOccq"
 
 # Google analytics
-googleAnalytics = "UA-151521286-1"
+googleAnalytics = ""
 
 enableRobotsTXT = true
 
