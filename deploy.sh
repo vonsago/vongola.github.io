@@ -13,7 +13,7 @@
 rm -rf public
 now = "$(date + "%r")"
 hugo -D
-git add . && git commit -m "update: $now" && git push
+git add . && git commit -m "update:$now" && git push
 git checkout master
 
 rm -r ./* 
