@@ -4,8 +4,6 @@ title = "RTMP"
 date = "2020-07-14"
 description = "RTMP"
 featured = false
-categories = [
-]
 tags = [
   "RTMP"
 ]
@@ -18,4 +16,4 @@ images = [
 # toc = true
 +++
 
-...
+# What is RTMP

@@ -62,7 +62,7 @@
     <loc>/tags/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/series/ffmpeg/rtmp/</loc>
+    <loc>/series/linux/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
@@ -306,6 +306,10 @@
                 href="/contact/"
                 />
   </url><url>
+    <loc>/tags/life/</loc>
+  </url><url>
+    <loc>/series/life/</loc>
+  </url><url>
     <loc>/search/</loc>
     <xhtml:link
                 rel="alternate"
@@ -317,6 +321,8 @@
                 hreflang="en"
                 href="/search/"
                 />
+  </url><url>
+    <loc>/series/life/sleep/</loc>
   </url><url>
     <loc>/tags/tcp/ip/</loc>
   </url>

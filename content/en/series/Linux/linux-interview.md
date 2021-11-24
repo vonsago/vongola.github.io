@@ -4,8 +4,6 @@ title = "Linux Interview"
 date = "2019-11-15"
 description = "Linux Interview"
 featured = false
-categories = [
-]
 tags = [
   "System",
   "Linux"
@@ -214,6 +212,20 @@ sends SIGTERM to the process whose PID IS 9
 ## 查看网卡的中断
 
 `cat /proc/interrupts`
+
+## 查看内存使用
+`free [-b] [-k] [-m] [-g] [-t] [-s]`
+
+前面的对应的都是单位；
+-t: 输出内存和swap分区的总量
+-s: 持续显示，间隔秒数
+
+## 后台运行程序
+`nohup { -p pid | Command [ Arg ... ] [ & ] }`
+
+nohup 命令忽略所有的挂起 (SIGHUP) 信号，或者修改用 -p 选项指定的进程来忽略所有的挂起 (SIGHUP) 信号。
+在注销后还可以使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &（表示“and”的符号）到命令的尾部。
+注：使用 -p pid 时，指定进程的输出将不会重定向到 nohup.out。
 
 ---
 
