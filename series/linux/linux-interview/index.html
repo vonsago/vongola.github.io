@@ -12,14 +12,14 @@
 <meta name="description" content="Linux Interview" /><meta itemprop="name" content="Linux Interview">
 <meta itemprop="description" content="Linux Interview"><meta itemprop="datePublished" content="2019-11-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-11-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1668"><meta itemprop="image" content="/images/bg/bg2.jpeg">
+<meta itemprop="wordCount" content="1866"><meta itemprop="image" content="/images/bg/bg2.jpeg">
 <meta itemprop="keywords" content="System,Linux," /><meta property="og:title" content="Linux Interview" />
 <meta property="og:description" content="Linux Interview" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/series/linux/linux-interview/" /><meta property="og:image" content="/images/bg/bg2.jpeg" /><meta property="article:section" content="series" />
 <meta property="article:published_time" content="2019-11-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-11-15T00:00:00+00:00" />
-<meta property="og:see_also" content="/series/ffmpeg/rtmp/" /><meta property="og:see_also" content="/series/linux/session-cookie-diff/" /><meta property="og:see_also" content="/series/linux/top/" /><meta property="og:see_also" content="/series/linux/get-wlan-passwd/" />
+<meta property="og:see_also" content="/series/linux/rtmp/" /><meta property="og:see_also" content="/series/linux/session-cookie-diff/" /><meta property="og:see_also" content="/series/linux/top/" /><meta property="og:see_also" content="/series/linux/get-wlan-passwd/" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/bg/bg2.jpeg"/>
@@ -288,6 +288,8 @@ Von
     <li><a href="#拨号上网使用的协议">拨号上网使用的协议</a></li>
     <li><a href="#定义了网络服务的端口">定义了网络服务的端口</a></li>
     <li><a href="#查看网卡的中断">查看网卡的中断</a></li>
+    <li><a href="#查看内存使用">查看内存使用</a></li>
+    <li><a href="#后台运行程序">后台运行程序</a></li>
     <li><a href="#cpu">CPU</a></li>
     <li><a href="#mysql">MySQL</a></li>
   </ul>
@@ -404,6 +406,16 @@ Linux 启动信息保存在<code>/var/log/dmesg</code>文件里</p>
 <p><code>/etc/services</code></p>
 <h2 id="查看网卡的中断">查看网卡的中断</h2>
 <p><code>cat /proc/interrupts</code></p>
+<h2 id="查看内存使用">查看内存使用</h2>
+<p><code>free [-b] [-k] [-m] [-g] [-t] [-s]</code></p>
+<p>前面的对应的都是单位；
+-t: 输出内存和swap分区的总量
+-s: 持续显示，间隔秒数</p>
+<h2 id="后台运行程序">后台运行程序</h2>
+<p><code>nohup { -p pid | Command [ Arg ... ] [ &amp; ] }</code></p>
+<p>nohup 命令忽略所有的挂起 (SIGHUP) 信号，或者修改用 -p 选项指定的进程来忽略所有的挂起 (SIGHUP) 信号。
+在注销后还可以使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp;（表示“and”的符号）到命令的尾部。
+注：使用 -p pid 时，指定进程的输出将不会重定向到 nohup.out。</p>
 <hr>
 <h2 id="cpu">CPU</h2>
 <p>CPU 的全称是 Central Processing Unit
@@ -506,7 +518,7 @@ CPU 的核心是从程序或应用程序获取指令并执行计算。此过程�
   <div class="card-body">
     <h2 class="card-title">Recent Posts</h2>
     <ul><li><a href="/series/ffmpeg/ffmpeg-develop/">Video Develop Environment
-</a></li><li><a href="/series/ffmpeg/rtmp/">RTMP
+</a></li><li><a href="/series/linux/rtmp/">RTMP
 </a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
 </a></li><li><a href="/series/linux/top/">Man Top
 </a></li><li><a href="/series/python/real-python/">CPython
@@ -538,6 +550,8 @@ CPU 的核心是从程序或应用程序获取指令并执行计算。此过程�
             math
           </a><a href="/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
             FFmpeg
+          </a><a href="/series/life/" class="badge bg-primary text-white rounded post-taxonomy" title="Life">
+            Life
           </a></div>
       </div>
     </section><section class="taxonomies row card component">
