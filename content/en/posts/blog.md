@@ -4,8 +4,6 @@ title = "Build Blog"
 date = "2019-11-03"
 description = "build blog with github pages free"
 featured = true
-categories = [
-]
 tags = [
   "Blog",
   "github",
