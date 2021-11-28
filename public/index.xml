@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fxxk SSH</title>
+      <link>/series/linux/fxxk_ssh/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/fxxk_ssh/</guid>
+      <description>1 curl -O -L https://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz &amp;amp;&amp;amp; tar xvzf sshpass-1.06.tar.gz 2 ./configure 3 make install </description>
+    </item>
+    
     <item>
       <title>Video Develop Environment</title>
       <link>/series/ffmpeg/ffmpeg-develop/</link>
@@ -23,7 +32,7 @@
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/series/linux/rtmp/</guid>
-      <description>What is RTMP </description>
+      <description>What is RTMP   </description>
     </item>
     
     <item>
@@ -88,6 +97,15 @@
       
       <guid>/series/python/flask-inject-log/</guid>
       <description>Flask logging 使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。 根据官方文档</description>
+    </item>
+    
+    <item>
+      <title>Game Theory</title>
+      <link>/categories/algorithm/game-theory/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/algorithm/game-theory/</guid>
+      <description>一般认为，博弈主要可以分为合作博弈和非合作博弈，他们的区别在于博弈方之间是否存在一个具有约束力的协议 博弈论 博弈题库 （一）巴什博奕（Bash G</description>
     </item>
     
     <item>

@@ -2,17 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/ffmpeg/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <loc>/series/linux/fxxk_ssh/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/series/ffmpeg/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <loc>/tags/linux/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/linux/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/python3/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -24,8 +30,14 @@
                 href="/series/"
                 />
   </url><url>
+    <loc>/tags/shell/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ssh/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -38,7 +50,7 @@
                 />
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -50,14 +62,17 @@
                 href="/"
                 />
   </url><url>
+    <loc>/tags/ffmpeg/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/ffmpeg/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/video/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/ffmpeg/ffmpeg-develop/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/linux/</loc>
-    <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
@@ -90,9 +105,6 @@
     <loc>/categories/docker/docker-stats/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/series/linux/session-cookie-diff/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -106,9 +118,6 @@
     <lastmod>2020-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/python/</loc>
-    <lastmod>2020-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/python3/</loc>
     <lastmod>2020-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/k8s/kubernetes-learn/</loc>
@@ -134,6 +143,12 @@
   </url><url>
     <loc>/tags/log/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/algorithm/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/algorithm/game-theory/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/linux/get-wlan-passwd/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
@@ -305,6 +320,8 @@
                 hreflang="en"
                 href="/contact/"
                 />
+  </url><url>
+    <loc>/categories/k8s/</loc>
   </url><url>
     <loc>/tags/life/</loc>
   </url><url>

@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/series/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/series/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fxxk SSH</title>
+      <link>/series/linux/fxxk_ssh/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/fxxk_ssh/</guid>
+      <description>1 curl -O -L https://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz &amp;amp;&amp;amp; tar xvzf sshpass-1.06.tar.gz 2 ./configure 3 make install </description>
+    </item>
+    
     <item>
       <title>RTMP</title>
       <link>/series/linux/rtmp/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/series/linux/rtmp/</guid>
-      <description>What is RTMP </description>
+      <description>What is RTMP   </description>
     </item>
     
     <item>
