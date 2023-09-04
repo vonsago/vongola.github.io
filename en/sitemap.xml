@@ -2,6 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/"
+                />
+  </url><url>
+    <loc>/tags/dns/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/dns/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/dns/"
+                />
+  </url><url>
+    <loc>/categories/network/dns/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/network/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url><url>
+    <loc>/categories/golang/</loc>
+    <lastmod>2021-11-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/golang/golang-note/</loc>
+    <lastmod>2021-11-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/series/linux/fxxk_ssh/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -36,30 +103,59 @@
     <loc>/tags/ssh/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+    <loc>/tags/blog/</loc>
+    <lastmod>2021-11-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/tags/"
+                href="/zh-cn/tags/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="/tags/blog/"
                 />
   </url><url>
-    <loc>/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+    <loc>/categories/workway/cicd/</loc>
+    <lastmod>2021-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/domain/</loc>
+    <lastmod>2021-11-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/"
+                href="/zh-cn/tags/domain/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="/tags/domain/"
+                />
+  </url><url>
+    <loc>/tags/github/</loc>
+    <lastmod>2021-11-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/github/"
+                />
+  </url><url>
+    <loc>/series/manual/</loc>
+    <lastmod>2021-11-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/series/manual/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/series/manual/"
                 />
   </url><url>
     <loc>/tags/ffmpeg/</loc>
@@ -79,22 +175,6 @@
   </url><url>
     <loc>/series/linux/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/"
-                />
   </url><url>
     <loc>/tags/docker/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
@@ -168,19 +248,6 @@
     <loc>/series/python/code-template/</loc>
     <lastmod>2019-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/series/manual/</loc>
-    <lastmod>2019-11-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/series/manual/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/series/manual/"
-                />
-  </url><url>
     <loc>/tags/math/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -193,19 +260,6 @@
     <loc>/series/python/parse-vip-video/</loc>
     <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/blog/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/blog/"
-                />
-  </url><url>
     <loc>/posts/blog/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -217,45 +271,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/posts/blog/"
-                />
-  </url><url>
-    <loc>/tags/dns/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/dns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/dns/"
-                />
-  </url><url>
-    <loc>/tags/domain/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/domain/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/domain/"
-                />
-  </url><url>
-    <loc>/tags/github/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/github/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/github/"
                 />
   </url><url>
     <loc>/posts/</loc>
@@ -294,6 +309,8 @@
   </url><url>
     <loc>/series/python/pychallenge/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/linux/root_directory/</loc>
   </url><url>
     <loc>/archives/</loc>
     <xhtml:link
@@ -342,5 +359,7 @@
     <loc>/series/life/sleep/</loc>
   </url><url>
     <loc>/tags/tcp/ip/</loc>
+  </url><url>
+    <loc>/categories/workway/</loc>
   </url>
 </urlset>

@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DNS use both the protocols TCP and UDP</title>
+      <link>/categories/network/dns/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/dns/</guid>
+      <description>UDP packets can&amp;rsquo;t be greater than 512 bytes.
+TCP is used for Zone transfer and UDP for name, and queries either regular (primary) or reverse.
+There should be consistency in DNS Zone database.</description>
+    </item>
+    
+    <item>
+      <title>Golang Notes</title>
+      <link>/categories/golang/golang-note/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/golang/golang-note/</guid>
+      <description>Keywords context golang 并发编程中常用的一种编程模式 上层任务取消后（超时，取消操作或者异常情况），所有下层的任务都会被取消 中间的某一层任务取消后，只会将当前任</description>
+    </item>
+    
     <item>
       <title>Fxxk SSH</title>
       <link>/series/linux/fxxk_ssh/</link>
@@ -15,6 +35,15 @@
       
       <guid>/series/linux/fxxk_ssh/</guid>
       <description>1 curl -O -L https://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz &amp;amp;&amp;amp; tar xvzf sshpass-1.06.tar.gz 2 ./configure 3 make install </description>
+    </item>
+    
+    <item>
+      <title>DevOps!</title>
+      <link>/categories/workway/cicd/</link>
+      <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/workway/cicd/</guid>
+      <description>what is devops DevOps 是一种工作模式，集合文化理念、实践和工具，来使团队的工作合作更高效，交付更便捷可靠。 why need devops 懒 因为它可以帮我们自动的处理一些苦燥的任务</description>
     </item>
     
     <item>
@@ -215,6 +244,16 @@
       
       <guid>/series/python/pychallenge/</guid>
       <description>pythonchallenge 游戏入口 http://www.pythonchallenge.com/ 挺好玩的解密小游戏，会上瘾 第零关 Hint: try to change the URL address. 12**38 = 274877906944 1http://www.pythonchallenge.com/pc/def/274877906944.html 第一关 everybody thinks twice before solving this. g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&amp;rsquo;q ufw rfgq rcvr gq qm jmle.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/series/linux/root_directory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/root_directory/</guid>
+      <description>The base of the Linux/Unix file system hierarchy begins at the root and everything starts with the root directory.
+These are the common top-level directories associated with the root directory: /bin – binary or executable programs. /etc – system configuration files. /home – home directory. It is the default current directory. /opt – optional or third-party software. /tmp – temporary space, typically cleared on reboot. /usr – User related programs. /var – log files.</description>
     </item>
     
     <item>

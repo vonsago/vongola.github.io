@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Vassago&#39;s Blog</title>
+    <link>/categories/golang/</link>
+    <description>Recent content in Golang on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 29 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Notes</title>
+      <link>/categories/golang/golang-note/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/golang/golang-note/</guid>
+      <description>Keywords context golang 并发编程中常用的一种编程模式 上层任务取消后（超时，取消操作或者异常情况），所有下层的任务都会被取消 中间的某一层任务取消后，只会将当前任</description>
+    </item>
+    
+  </channel>
+</rss>
