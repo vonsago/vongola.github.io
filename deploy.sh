@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/bin/bash
 
 #================================================================
 #   Copyright (C) 2021 Sangfor Ltd. All rights reserved.
