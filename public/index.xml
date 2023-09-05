@@ -29,12 +29,12 @@ There should be consistency in DNS Zone database.</description>
     </item>
     
     <item>
-      <title>Golang Notes</title>
-      <link>/categories/golang/golang-note/</link>
+      <title>Fan vs go func</title>
+      <link>/categories/golang/fan/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/golang/golang-note/</guid>
-      <description>Keywords context golang 并发编程中常用的一种编程模式 上层任务取消后（超时，取消操作或者异常情况），所有下层的任务都会被取消 中间的某一层任务取消后，只会将当前任</description>
+      <guid>/categories/golang/fan/</guid>
+      <description>test script 1func gen(nums ...int) &amp;lt;-chan int { 2 out := make(chan int) 3 go func() { 4 for _, n := range nums { 5 out &amp;lt;- n 6 } 7 close(out) 8 }() 9 return out 10} 11func sq(in &amp;lt;-chan int) &amp;lt;-chan int { 12 out := make(chan int) 13 go func() { 14 for n := range in { 15 out &amp;lt;- n * n 16 } 17 close(out) 18 }() 19 return out 20} 21 22func merge(cs .</description>
     </item>
     
     <item>
