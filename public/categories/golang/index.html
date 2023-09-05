@@ -206,20 +206,20 @@ Von
   </div>
 </nav><div class="posts mb-4"><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/categories/golang/golang-note/">Golang Notes
+        <h2 class="card-title post-title"><a href="/categories/golang/fan/">Fan vs Go Func
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
     <i class="fas fa-fw fa-calendar-alt"></i>Nov 29, 2021
   </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
+    <i class="fas fa-fw fa-coffee"></i>2 min read
   </span><a href="/categories/golang/" class="badge rounded-pill text-white bg-primary post-taxonomy">Golang</a></div>
 <div class="post-summary">
           
-          <img class="img-fluid" alt="Golang Notes" src="/images/bg/go.png" loading="lazy"
+          <img class="img-fluid" alt="Fan vs go func" src="/images/bg/go.png" loading="lazy"
    width="400" height="400"
    />
 
           
-          Keywords context golang 并发编程中常用的一种编程模式 上层任务取消后（超时，取消操作或者异常情况），所有下层的任务都会被取消 中间的某一层任务取消后，只会将当前任
+          test script 1func gen(nums ...int) &lt;-chan int { 2 out := make(chan int) 3 go func() { 4 for _, n := range nums { 5 out &lt;- n 6 } 7 close(out) 8 }() 9 return out 10} 11func sq(in &lt;-chan int) &lt;-chan int { 12 out := make(chan int) 13 go func() { 14 for n := range in { 15 out &lt;- n * n 16 } 17 close(out) 18 …
         </div>
       </div>
     </article></div><div class="row table-responsive mb-3"></div>
