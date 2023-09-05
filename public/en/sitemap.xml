@@ -72,6 +72,31 @@
     <loc>/categories/network/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/series/python/pip/</loc>
+    <lastmod>2022-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/python/</loc>
+    <lastmod>2022-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/python3/</loc>
+    <lastmod>2022-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2022-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2022-08-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/series/"
+                />
+  </url><url>
     <loc>/categories/golang/fan/</loc>
     <lastmod>2021-11-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -86,25 +111,6 @@
   </url><url>
     <loc>/series/linux/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/python3/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/series/"
-                />
   </url><url>
     <loc>/tags/shell/</loc>
     <lastmod>2021-11-26T00:00:00+00:00</lastmod>
@@ -179,6 +185,9 @@
     <loc>/series/ffmpeg/ffmpeg-develop/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/series/ffmpeg/video/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/rtmp/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -204,9 +213,6 @@
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/python/real-python/</loc>
-    <lastmod>2020-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/python/</loc>
     <lastmod>2020-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/k8s/kubernetes-learn/</loc>

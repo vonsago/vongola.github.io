@@ -203,6 +203,24 @@ Von
 <div class="col-lg-8">
   <div class="container"><div class="posts mb-4"><article class="row card post component">
       <div class="card-body">
+        <h2 class="card-title post-title"><a href="/series/python/pip/">Change Pip Conf in Global
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Aug 13, 2022
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python3</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Change pip conf in global" src="/images/bg/ang.jpeg" loading="lazy"
+   width="6000" height="3375"
+   />
+
+          
+          1cat &gt;&gt; .pip/pip.conf &lt;&lt; EOF 23[global] 45timeout = 6000 67index-url = https://pypi.douban.com/simple/ 89[install] 1011use-mirrors = true 1213mirrors = https://pypi.douban.com/simple/ 1415trusted-host = pypi.douban.com 1617EOF 
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
         <h2 class="card-title post-title"><a href="/series/linux/fxxk_ssh/">Fxxk SSH
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
     <i class="fas fa-fw fa-calendar-alt"></i>Nov 26, 2021
@@ -235,6 +253,24 @@ Von
 
           
           ffmpeg-develop: vscode + docker + ssh Dockerfile 1FROM vonsago/ffmpeg-devel 2RUN mkdir /var/run/sshd &amp;&amp; apt-get install -y openssh-server --allow-unauthenticated &amp;&amp; echo &#39;root:root&#39; | chpasswd &amp;&amp; sed -i &#39;s/#PermitRootLogin prohibit-password/PermitRootLogin yes/&#39; …
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/series/ffmpeg/video/">流媒体词汇表
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>May 17, 2021
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>5 min read
+  </span><a href="/series/ffmpeg/" class="badge rounded-pill text-white bg-primary post-taxonomy">FFmpeg</a><a href="/tags/ffmpeg/" class="badge rounded-pill text-white bg-primary post-taxonomy">FFmpeg</a><a href="/tags/video/" class="badge rounded-pill text-white bg-primary post-taxonomy">Video</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="流媒体词汇表" src="/images/bg/computer2.jpg" loading="lazy"
+   width="6000" height="4000"
+   />
+
+          
+          封装格式 封装格式(Format)是将已经编码压缩好的视频流和音频流按照一定的格式规范，放到一个文件中。对于网络点播 而言，更加合适的术语应该叫
         </div>
       </div>
     </article><article class="row card post component">
@@ -292,42 +328,6 @@ Von
           top 参数详解
         </div>
       </div>
-    </article><article class="row card post component">
-      <div class="card-body">
-        <h2 class="card-title post-title"><a href="/series/python/real-python/">CPython
-</a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Jan 14, 2020
-  </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python3</a></div>
-<div class="post-summary">
-          
-          <img class="img-fluid" alt="CPython" src="/images/bg/ang.jpeg" loading="lazy"
-   width="6000" height="3375"
-   />
-
-          
-          FFmpeg calls python Depends  ffmpeg needs to dynamically compile (or python programs need to be statically compiled, it&rsquo;s difficult) python program needs to call cpython interface   Example docker images python programs debug 
-        </div>
-      </div>
-    </article><article class="row card post component">
-      <div class="card-body">
-        <h2 class="card-title post-title"><a href="/series/python/zip-picture/">Zip Picture With Python
-</a></h2><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Dec 18, 2019
-  </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python3</a><a href="/tags/picture/" class="badge rounded-pill text-white bg-primary post-taxonomy">Picture</a></div>
-<div class="post-summary">
-          
-          <img class="img-fluid" alt="Zip Picture With Python" src="/images/bg/computer2.jpg" loading="lazy"
-   width="6000" height="4000"
-   />
-
-          
-          1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&#39;.jpeg&#39;, &#39;jpeg&#39;, progressive=True, optimize=True) 6if __name__ == &#39;__main__&#39;: 7 _, pname = sys.argv 8 gipit(pname) 
-        </div>
-      </div>
     </article></div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
       <li class="page-item disabled">
@@ -346,10 +346,13 @@ Von
         <a href="/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
       <li class="page-item">
+        <a href="/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
         <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/4/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 </div>
@@ -369,21 +372,21 @@ Von
   <section class="featured-posts row card component">
     <div class="card-body">
       <h2 class="card-title">Featured Posts</h2>
-      <ul><li><a href="/series/linux/fxxk_ssh/">Fxxk SSH
+      <ul><li><a href="/series/python/pip/">Change Pip Conf in Global
+</a></li><li><a href="/series/linux/fxxk_ssh/">Fxxk SSH
 </a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
 </a></li><li><a href="/series/python/zip-picture/">Zip Picture With Python
 </a></li><li><a href="/series/python/code-template/">Code Template
-</a></li><li><a href="/series/python/python-gc/">Python GC
 </a></li></ul>
     </div>
   </section><section class="recent-posts row card component">
   <div class="card-body">
     <h2 class="card-title">Recent Posts</h2>
-    <ul><li><a href="/series/linux/fxxk_ssh/">Fxxk SSH
+    <ul><li><a href="/series/python/pip/">Change Pip Conf in Global
+</a></li><li><a href="/series/linux/fxxk_ssh/">Fxxk SSH
 </a></li><li><a href="/series/ffmpeg/ffmpeg-develop/">Video Develop Environment
+</a></li><li><a href="/series/ffmpeg/video/">流媒体词汇表
 </a></li><li><a href="/series/linux/rtmp/">RTMP
-</a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
-</a></li><li><a href="/series/linux/top/">Man Top
 </a></li></ul>
   </div>
 </section><section class="taxonomies row card component">
@@ -414,10 +417,10 @@ Von
             Linux
           </a><a href="/series/manual/" class="badge bg-primary text-white rounded post-taxonomy" title="Manual">
             Manual
-          </a><a href="/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="math">
-            math
           </a><a href="/series/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
             FFmpeg
+          </a><a href="/series/math/" class="badge bg-primary text-white rounded post-taxonomy" title="math">
+            math
           </a><a href="/series/life/" class="badge bg-primary text-white rounded post-taxonomy" title="Life">
             Life
           </a></div>
@@ -439,14 +442,14 @@ Von
             Blog
           </a><a href="/tags/domain/" class="badge bg-primary text-white rounded post-taxonomy" title="domain">
             domain
+          </a><a href="/tags/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
+            FFmpeg
           </a><a href="/tags/github/" class="badge bg-primary text-white rounded post-taxonomy" title="github">
             github
           </a><a href="/tags/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
             Kubernetes
           </a><a href="/tags/math/" class="badge bg-primary text-white rounded post-taxonomy" title="Math">
             Math
-          </a><a href="/tags/picture/" class="badge bg-primary text-white rounded post-taxonomy" title="Picture">
-            Picture
           </a></div>
       </div>
     </section>
