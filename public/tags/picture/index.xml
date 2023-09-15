@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Picture on Vassago&#39;s Blog</title>
+    <link>/tags/picture/</link>
+    <description>Recent content in Picture on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/picture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zip Picture With Python</title>
+      <link>/series/python/zip-picture/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/zip-picture/</guid>
+      <description>1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&amp;#39;.jpeg&amp;#39;, &amp;#39;jpeg&amp;#39;, progressive=True, optimize=True) 6if __name__ == &amp;#39;__main__&amp;#39;: 7 _, pname = sys.argv 8 gipit(pname) </description>
+    </item>
+    
+    <item>
+      <title>Python Challenges</title>
+      <link>/series/python/pychallenge/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/pychallenge/</guid>
+      <description>pythonchallenge 游戏入口 http://www.pythonchallenge.com/ 挺好玩的解密小游戏，会上瘾 第零关 Hint: try to change the URL address. 12**38 = 274877906944 1http://www.pythonchallenge.com/pc/def/274877906944.html 第一关 everybody thinks twice before solving this. g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&amp;rsquo;q ufw rfgq rcvr gq qm jmle.</description>
+    </item>
+    
+  </channel>
+</rss>

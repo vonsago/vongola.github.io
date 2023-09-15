@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Vassago&#39;s Blog</title>
+    <link>/series/python/</link>
+    <description>Recent content in Python on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/series/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change pip conf in global</title>
+      <link>/series/python/pip/</link>
+      <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/pip/</guid>
+      <description> 1cat &amp;gt;&amp;gt; .pip/pip.conf &amp;lt;&amp;lt; EOF 2 3[global] 4 5timeout = 6000 6 7index-url = https://pypi.douban.com/simple/ 8 9[install] 10 11use-mirrors = true 12 13mirrors = https://pypi.douban.com/simple/ 14 15trusted-host = pypi.douban.com 16 17EOF </description>
+    </item>
+    
+    <item>
+      <title>CPython</title>
+      <link>/series/python/real-python/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/real-python/</guid>
+      <description>FFmpeg calls python Depends ffmpeg needs to dynamically compile (or python programs need to be statically compiled, it&amp;rsquo;s difficult) python program needs to call cpython interface Example docker images python programs debug </description>
+    </item>
+    
+    <item>
+      <title>Zip Picture With Python</title>
+      <link>/series/python/zip-picture/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/zip-picture/</guid>
+      <description>1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&amp;#39;.jpeg&amp;#39;, &amp;#39;jpeg&amp;#39;, progressive=True, optimize=True) 6if __name__ == &amp;#39;__main__&amp;#39;: 7 _, pname = sys.argv 8 gipit(pname) </description>
+    </item>
+    
+    <item>
+      <title>Flask Logger</title>
+      <link>/series/python/flask-inject-log/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/flask-inject-log/</guid>
+      <description>Flask logging 使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。 根据官方文档</description>
+    </item>
+    
+    <item>
+      <title>VIP Video Parse Link</title>
+      <link>/series/python/parse-vip-video/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/parse-vip-video/</guid>
+      <description>仅供学习交流，严禁用于商业用途，请于24小时内删除 从排名及考前的几个解析网站爬出来的解析链接，链接背后的技术以后研究了再跟进 &amp;ldquo;https://www.administratorw.com/admin.php?url=&#34; &amp;ldquo;https://yun.odflv.com/?url=&#34; &amp;ldquo;http://goudidiao.com/?url=&#34; &amp;ldquo;https://jx.maoyun.tv/index.php?id=&#34; &amp;ldquo;http://www.1717yun.com/jx/vip/index.php?url=&#34; &amp;ldquo;http://api.xfsub.com/index.php?url=&#34; &amp;ldquo;http://q.z.vip.totv.72du.com/?url=&#34; &amp;ldquo;http://jx.api.163ren.com/vod.php?url=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Python Exec Object</title>
+      <link>/series/python/python-exec-object/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/python-exec-object/</guid>
+      <description>exec() Syntax: 1exec(object[, globals[, locals]]) 2 3:param object: As already said this can be a string or object code 4:param globals: This can be a dictionary and the parameter is optional 5:param locals: This can be a mapping object and is also optional eg.
+1from math import * 2exec(&amp;#34;print(factorial(5))&amp;#34;, {&amp;#34;factorial&amp;#34;:factorial}) eval() Syntax: 1eval(expression[, globals[, locals]]) diff with exec() 1.eval accepts only a single expression, exec can take a code block that has Python statements: loops, try: except:, class and function/method definitions and so on.</description>
+    </item>
+    
+    <item>
+      <title>Python Encode</title>
+      <link>/series/python/python-encoding/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/python-encoding/</guid>
+      <description>Python Encoding b&amp;rsquo;&amp;rsquo; 型 1b&amp;#39;hello&amp;#39;.decode() u&amp;rsquo;&amp;rsquo; 型 1a=u&amp;#39;\xe5\x9c\xa3\xe5\xbd\xbc\xe5\xbe\x97\xe5\xa0\xa1\xe6\x8e\x92\xe5\x90\x8d\xe7\xac\xac 1 \xe9\xa4\x90\xe5\x8e\x85 (\xe5\x85\xb1 8,650 \xe9\x97\xb4)&amp;#39; 2print(a.encode(&amp;#39;raw-unicode-escape&amp;#39;)) \u00 型 1&amp;gt;&amp;gt;&amp;gt; a = u&amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082\n&amp;#39; 2&amp;gt;&amp;gt;&amp;gt; print(a) 3&amp;gt;&amp;gt;&amp;gt; print(a.encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf-8&amp;#39;)) \uxxxx 型 1a=&amp;#39;\u56e0&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;)) 1a = &amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;).encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf8&amp;#39;)) unicode+ascii，且u前没有\ 1#coding=utf8 2s = &amp;#39;u00e7u0088u00b1u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u009fu008eu00e9u0099u0085u00e9u0085u0092u00e5u00bau0097u00e6u0098u00afu00e4u00b8u0080u00e5u00aeu00b6u00efu00bcu008cu00e8u00b7u009du00e7u00a6u00bbu00e5u00aeu0089u00e6u00a0u00bcu00e5u00b0u0094u00e5u008du009au00e7u0089u00a9u00e9u00a6u0086u00e5u0092u008cu00e5u0085u008bu00e9u009bu00b7u00e9u00bbu0098u00e6u00a1u00a5u00e4u00b8u008du00e5u0088u00b0 15 u00e5u0088u0086u00e9u0092u009fu00e7u009au0084u00e6u00adu00a5u00e8u00a1u008cu00e8u00b7u00afu00e7u00a8u008bu00e3u0080u0082u00e8u0080u008cu00e4u00b8u0094u00efu00bcu008cu00e8u00bfu0099u00e5u00aeu00b6u00e9u0085u0092u00e5u00bau0097u00e8u00b7u009du00e7u00a6u00bbu00e5u009fu0083u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u00a4u00a7u00e6u0095u0099u00e5u00a0u0082u00e5u0092u008cEgapark Erfurtu00e4u00b8u008du00e5u0088u00b0 5 u00e5u0085u00acu00e9u0087u008cu00e3u0080u0082 u00e6u00adu00a4u00e9u0085u0092u00e5u00bau0097u00e6u008fu0090u00e4u00beu009bu00e9u00a4u0090u00e5u008eu0085u00e3u0080u0081u00e5u00b1u008bu00e9u00a1u00b6u00e9u009cu00b2u00e5u008fu00b0u00e5u0092u008cu00e5u00b9u00b2u00e6u00b4u0097/u00e6u00b4u0097u00e8u00a1u00a3u00e6u009cu008du00e5u008au00a1u00e3u0080u0082u00e5u00a6u0082u00e6u009eu009cu00e6u0082u00a8u00e6u0083u00b3u00e5u0096u009du00e6u009du00afu00e9u00a5u00aeu00e6u0096u0099u00e6u0094u00beu00e6u009du00beu00e4u00b8u0080u00e4u00b8u008bu00efu00bcu008cu00e9u0085u0092u00e5u0090u00a7/u00e9u0085u0092u00e5u00bbu008au00e7u00bbu009du00e5u00afu00b9u00e6u0098u00afu00e6u0082u00a8u00e7u009au0084u00e5u00a5u00bdu00e5u008eu00bbu00e5u00a4u0084u00e3u0080u0082&amp;#39; 3 4import re 5 6pattern = re.compile(r&amp;#39;((u00([a-z0-9]){2})+)&amp;#39;) 7for</description>
+    </item>
+    
+    <item>
+      <title>Python GC</title>
+      <link>/series/python/python-gc/</link>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/python-gc/</guid>
+      <description>Python GC ##Python 垃圾回收原理 对象 Python所谓的“一切皆对象”，实际上说的是： python有一个Common Object Structures通用对象结构的东西</description>
+    </item>
+    
+    <item>
+      <title>Python Challenges</title>
+      <link>/series/python/pychallenge/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/pychallenge/</guid>
+      <description>pythonchallenge 游戏入口 http://www.pythonchallenge.com/ 挺好玩的解密小游戏，会上瘾 第零关 Hint: try to change the URL address. 12**38 = 274877906944 1http://www.pythonchallenge.com/pc/def/274877906944.html 第一关 everybody thinks twice before solving this. g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&amp;rsquo;q ufw rfgq rcvr gq qm jmle.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Vassago&#39;s Blog</title>
+    <link>/tags/shell/</link>
+    <description>Recent content in Shell on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fxxk SSH</title>
+      <link>/series/linux/fxxk_ssh/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/fxxk_ssh/</guid>
+      <description>1 curl -O -L https://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz &amp;amp;&amp;amp; tar xvzf sshpass-1.06.tar.gz 2 ./configure 3 make install </description>
+    </item>
+    
+  </channel>
+</rss>
