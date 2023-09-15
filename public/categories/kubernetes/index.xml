@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Vassago&#39;s Blog</title>
+    <link>/categories/kubernetes/</link>
+    <description>Recent content in Kubernetes on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install kubernetes(k8s) with kubeadm</title>
+      <link>/categories/k8s/install/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/install/</guid>
+      <description>Version Choise .ref https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ kubeadm version: &amp;amp;version.Info{Major:&amp;ldquo;1&amp;rdquo;, Minor:&amp;ldquo;26&amp;rdquo;, GitVersion:&amp;ldquo;v1.26.1&amp;rdquo;, GitCommit:&amp;ldquo;8f94681cd294aa8cfd3407b8191f6c70214973a4&amp;rdquo;, GitTreeState:&amp;ldquo;clean&amp;rdquo;, BuildDate:&amp;ldquo;2023-01-18T15:56:50Z&amp;rdquo;, GoVersion:&amp;ldquo;go1.19.5&amp;rdquo;, Compiler:&amp;ldquo;gc&amp;rdquo;, Platform:&amp;ldquo;linux/amd64&amp;rdquo;} docker Version: 20.10.12 containerd: 1.6.18 Prepare 1# check swap off with free -m .ref https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ 2swapoff -a 3 4 5# check port is available 6nc 127.0.0.1 6443 7 8# some host dependences 9apt install socat conntrack 10 11# Kubernetes package repositories 12sudo apt-get update 13sudo apt-get install -y apt-transport-https ca-certificates curl 14 15curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key</description>
+    </item>
+    
+    <item>
+      <title>Kube</title>
+      <link>/categories/k8s/kubernetes-learn/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/kubernetes-learn/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
