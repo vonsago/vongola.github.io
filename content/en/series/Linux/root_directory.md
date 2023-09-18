@@ -1,3 +1,24 @@
++++
+author = "Ars"
+title = "Linux Path Description"
+date = "2021-07-12"
+description = "The best practice of ssh"
+featured = true
+categories = [
+]
+tags = [
+  "Shell",
+  "Linux",
+]
+series = [
+  "Linux"
+]
+images = [
+  "images/bg.jpeg"
+]
+# toc = true
++++
+
 The base of the Linux/Unix file system hierarchy begins at the root and everything starts with the root directory. 
 
 These are the common top-level directories associated with the root directory:
