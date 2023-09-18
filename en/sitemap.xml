@@ -188,6 +188,28 @@
                 href="/series/manual/"
                 />
   </url><url>
+    <loc>/tags/language/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/letter/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/posts/"
+                />
+  </url><url>
+    <loc>/series/linux/root_directory/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/ffmpeg/</loc>
     <lastmod>2021-05-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -297,19 +319,6 @@
                 href="/posts/blog/"
                 />
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/posts/"
-                />
-  </url><url>
     <loc>/series/python/python-exec-object/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -333,8 +342,6 @@
   </url><url>
     <loc>/series/python/pychallenge/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/linux/root_directory/</loc>
   </url><url>
     <loc>/archives/</loc>
     <xhtml:link

@@ -9,57 +9,204 @@
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python</title>
-      <link>/series/python/</link>
+      <title>Change pip conf in global</title>
+      <link>/series/python/pip/</link>
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/series/python/</guid>
-      <description></description>
+      <guid>/series/python/pip/</guid>
+      <description> 1cat &amp;gt;&amp;gt; .pip/pip.conf &amp;lt;&amp;lt; EOF 2 3[global] 4 5timeout = 6000 6 7index-url = https://pypi.douban.com/simple/ 8 9[install] 10 11use-mirrors = true 12 13mirrors = https://pypi.douban.com/simple/ 14 15trusted-host = pypi.douban.com 16 17EOF </description>
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>/series/linux/</link>
+      <title>Fxxk SSH</title>
+      <link>/series/linux/fxxk_ssh/</link>
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/series/linux/</guid>
-      <description></description>
+      <guid>/series/linux/fxxk_ssh/</guid>
+      <description>1 curl -O -L https://sourceforge.net/projects/sshpass/files/sshpass/1.06/sshpass-1.06.tar.gz &amp;amp;&amp;amp; tar xvzf sshpass-1.06.tar.gz 2 ./configure 3 make install </description>
     </item>
     
     <item>
-      <title>Manual</title>
-      <link>/series/manual/</link>
-      <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+      <title>Linux Path Description</title>
+      <link>/series/linux/root_directory/</link>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>/series/manual/</guid>
-      <description></description>
+      <guid>/series/linux/root_directory/</guid>
+      <description>The base of the Linux/Unix file system hierarchy begins at the root and everything starts with the root directory.
+These are the common top-level directories associated with the root directory: /bin – binary or executable programs. /etc – system configuration files. /home – home directory. It is the default current directory. /opt – optional or third-party software. /tmp – temporary space, typically cleared on reboot. /usr – User related programs. /var – log files.</description>
     </item>
     
     <item>
-      <title>FFmpeg</title>
-      <link>/series/ffmpeg/</link>
+      <title>Video Develop Environment</title>
+      <link>/series/ffmpeg/ffmpeg-develop/</link>
       <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/series/ffmpeg/</guid>
-      <description></description>
+      <guid>/series/ffmpeg/ffmpeg-develop/</guid>
+      <description>ffmpeg-develop: vscode + docker + ssh Dockerfile 1FROM vonsago/ffmpeg-devel 2RUN mkdir /var/run/sshd &amp;amp;&amp;amp; apt-get install -y openssh-server --allow-unauthenticated &amp;amp;&amp;amp; echo &amp;#39;root:root&amp;#39; | chpasswd &amp;amp;&amp;amp; sed -i &amp;#39;s/#PermitRootLogin prohibit-password/PermitRootLogin yes/&amp;#39; /etc/ssh/sshd_config &amp;amp;&amp;amp; useradd -ms /bin/bash debugger &amp;amp;&amp;amp; echo &amp;#39;debugger:pwd&amp;#39; | chpasswd 3RUN wget &amp;#34;http://ftp.gnu.org/gnu/gdb/gdb-7.11.tar.gz&amp;#34; &amp;amp;&amp;amp; tar -xvzf gdb-7.11.tar.gz &amp;amp;&amp;amp; cd gdb-7.11 &amp;amp;&amp;amp; ./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install 4RUN apt-get install -y --allow-unauthenticated clang 5CMD [&amp;#34;/usr/sbin/sshd&amp;#34;, &amp;#34;-D&amp;#34;] 1docker build -f Dockerfil.dev --no-cache -t vonsago/ffmpeg-dev .</description>
     </item>
     
     <item>
-      <title>math</title>
-      <link>/series/math/</link>
+      <title>流媒体词汇表</title>
+      <link>/series/ffmpeg/video/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/series/ffmpeg/video/</guid>
+      <description>封装格式 封装格式(Format)是将已经编码压缩好的视频流和音频流按照一定的格式规范，放到一个文件中。对于网络点播 而言，更加合适的术语应该叫</description>
+    </item>
+    
+    <item>
+      <title>RTMP</title>
+      <link>/series/linux/rtmp/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/rtmp/</guid>
+      <description>What is RTMP </description>
+    </item>
+    
+    <item>
+      <title>The different between Session with Cookie</title>
+      <link>/series/linux/session-cookie-diff/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/session-cookie-diff/</guid>
+      <description>Session
+Session can store any type of data because the value is of data type of “object” These are stored at server side. Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server. Session is independent for every client i.e. individual for every client. There is no limitation on the size or number of sessions to be used in an application. We cannot disable the sessions.</description>
+    </item>
+    
+    <item>
+      <title>Man Top</title>
+      <link>/series/linux/top/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/top/</guid>
+      <description>top 参数详解</description>
+    </item>
+    
+    <item>
+      <title>CPython</title>
+      <link>/series/python/real-python/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/real-python/</guid>
+      <description>FFmpeg calls python Depends ffmpeg needs to dynamically compile (or python programs need to be statically compiled, it&amp;rsquo;s difficult) python program needs to call cpython interface Example docker images python programs debug </description>
+    </item>
+    
+    <item>
+      <title>Zip Picture With Python</title>
+      <link>/series/python/zip-picture/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/zip-picture/</guid>
+      <description>1from PIL import Image 2import sys 3def gipit(pname): 4 with Image.open(pname) as im: 5 im.save(pname+&amp;#39;.jpeg&amp;#39;, &amp;#39;jpeg&amp;#39;, progressive=True, optimize=True) 6if __name__ == &amp;#39;__main__&amp;#39;: 7 _, pname = sys.argv 8 gipit(pname) </description>
+    </item>
+    
+    <item>
+      <title>Flask Logger</title>
+      <link>/series/python/flask-inject-log/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/flask-inject-log/</guid>
+      <description>Flask logging 使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。 根据官方文档</description>
+    </item>
+    
+    <item>
+      <title>Get Wlan Password</title>
+      <link>/series/linux/get-wlan-passwd/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/get-wlan-passwd/</guid>
+      <description>如何获取你知道/不知道的 wifi 密码 本文仅限于学习，请勿用于非法用途 否则后果作者概不负责 获取链接过的 wifi 密码 Windows: 管理员运行： 1for /f &amp;#34;skip=9 tokens=1,2 delims=:&amp;#34; %i in (&amp;#39;netsh wlan show profiles&amp;#39;) do @echo</description>
+    </item>
+    
+    <item>
+      <title>Linux Interview</title>
+      <link>/series/linux/linux-interview/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/linux-interview/</guid>
+      <description>Linux 先来100道题开开胃 cron daemon Cron 是一个守护程序，用于计划可以想象的任何类型的任务（管理系统日常任务的调度）。Windows 上被称为“Task Sc</description>
+    </item>
+    
+    <item>
+      <title>Code template</title>
+      <link>/series/python/code-template/</link>
+      <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/code-template/</guid>
+      <description>Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&amp;#39;&amp;#39;) 6 f.write(result) 7 8def process(args): 9 &amp;#39;&amp;#39;&amp;#39; 10 work 11 &amp;#39;&amp;#39;&amp;#39; 12 return result 13 14if __name__ == &amp;#39;__main__&amp;#39;: 15 pool = multiprocessing.Pool(processes</description>
+    </item>
+    
+    <item>
+      <title>Math Every</title>
+      <link>/series/math/mathday/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/series/math/</guid>
-      <description></description>
+      <guid>/series/math/mathday/</guid>
+      <description>每天学点数学 数学中的一些美丽定理具有这样的特性：它们极易从事实中归纳出来，但证明却隐藏的极深。&amp;ndash; 高斯 在数学你不明白任何东西。你只</description>
     </item>
     
     <item>
-      <title>Life</title>
-      <link>/series/life/</link>
+      <title>VIP Video Parse Link</title>
+      <link>/series/python/parse-vip-video/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/parse-vip-video/</guid>
+      <description>仅供学习交流，严禁用于商业用途，请于24小时内删除 从排名及考前的几个解析网站爬出来的解析链接，链接背后的技术以后研究了再跟进 &amp;ldquo;https://www.administratorw.com/admin.php?url=&#34; &amp;ldquo;https://yun.odflv.com/?url=&#34; &amp;ldquo;http://goudidiao.com/?url=&#34; &amp;ldquo;https://jx.maoyun.tv/index.php?id=&#34; &amp;ldquo;http://www.1717yun.com/jx/vip/index.php?url=&#34; &amp;ldquo;http://api.xfsub.com/index.php?url=&#34; &amp;ldquo;http://q.z.vip.totv.72du.com/?url=&#34; &amp;ldquo;http://jx.api.163ren.com/vod.php?url=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Python Exec Object</title>
+      <link>/series/python/python-exec-object/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/python-exec-object/</guid>
+      <description>exec() Syntax: 1exec(object[, globals[, locals]]) 2 3:param object: As already said this can be a string or object code 4:param globals: This can be a dictionary and the parameter is optional 5:param locals: This can be a mapping object and is also optional eg.
+1from math import * 2exec(&amp;#34;print(factorial(5))&amp;#34;, {&amp;#34;factorial&amp;#34;:factorial}) eval() Syntax: 1eval(expression[, globals[, locals]]) diff with exec() 1.eval accepts only a single expression, exec can take a code block that has Python statements: loops, try: except:, class and function/method definitions and so on.</description>
+    </item>
+    
+    <item>
+      <title>Python Encode</title>
+      <link>/series/python/python-encoding/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/python-encoding/</guid>
+      <description>Python Encoding b&amp;rsquo;&amp;rsquo; 型 1b&amp;#39;hello&amp;#39;.decode() u&amp;rsquo;&amp;rsquo; 型 1a=u&amp;#39;\xe5\x9c\xa3\xe5\xbd\xbc\xe5\xbe\x97\xe5\xa0\xa1\xe6\x8e\x92\xe5\x90\x8d\xe7\xac\xac 1 \xe9\xa4\x90\xe5\x8e\x85 (\xe5\x85\xb1 8,650 \xe9\x97\xb4)&amp;#39; 2print(a.encode(&amp;#39;raw-unicode-escape&amp;#39;)) \u00 型 1&amp;gt;&amp;gt;&amp;gt; a = u&amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082\n&amp;#39; 2&amp;gt;&amp;gt;&amp;gt; print(a) 3&amp;gt;&amp;gt;&amp;gt; print(a.encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf-8&amp;#39;)) \uxxxx 型 1a=&amp;#39;\u56e0&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;)) 1a = &amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;).encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf8&amp;#39;)) unicode+ascii，且u前没有\ 1#coding=utf8 2s = &amp;#39;u00e7u0088u00b1u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u009fu008eu00e9u0099u0085u00e9u0085u0092u00e5u00bau0097u00e6u0098u00afu00e4u00b8u0080u00e5u00aeu00b6u00efu00bcu008cu00e8u00b7u009du00e7u00a6u00bbu00e5u00aeu0089u00e6u00a0u00bcu00e5u00b0u0094u00e5u008du009au00e7u0089u00a9u00e9u00a6u0086u00e5u0092u008cu00e5u0085u008bu00e9u009bu00b7u00e9u00bbu0098u00e6u00a1u00a5u00e4u00b8u008du00e5u0088u00b0 15 u00e5u0088u0086u00e9u0092u009fu00e7u009au0084u00e6u00adu00a5u00e8u00a1u008cu00e8u00b7u00afu00e7u00a8u008bu00e3u0080u0082u00e8u0080u008cu00e4u00b8u0094u00efu00bcu008cu00e8u00bfu0099u00e5u00aeu00b6u00e9u0085u0092u00e5u00bau0097u00e8u00b7u009du00e7u00a6u00bbu00e5u009fu0083u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u00a4u00a7u00e6u0095u0099u00e5u00a0u0082u00e5u0092u008cEgapark Erfurtu00e4u00b8u008du00e5u0088u00b0 5 u00e5u0085u00acu00e9u0087u008cu00e3u0080u0082 u00e6u00adu00a4u00e9u0085u0092u00e5u00bau0097u00e6u008fu0090u00e4u00beu009bu00e9u00a4u0090u00e5u008eu0085u00e3u0080u0081u00e5u00b1u008bu00e9u00a1u00b6u00e9u009cu00b2u00e5u008fu00b0u00e5u0092u008cu00e5u00b9u00b2u00e6u00b4u0097/u00e6u00b4u0097u00e8u00a1u00a3u00e6u009cu008du00e5u008au00a1u00e3u0080u0082u00e5u00a6u0082u00e6u009eu009cu00e6u0082u00a8u00e6u0083u00b3u00e5u0096u009du00e6u009du00afu00e9u00a5u00aeu00e6u0096u0099u00e6u0094u00beu00e6u009du00beu00e4u00b8u0080u00e4u00b8u008bu00efu00bcu008cu00e9u0085u0092u00e5u0090u00a7/u00e9u0085u0092u00e5u00bbu008au00e7u00bbu009du00e5u00afu00b9u00e6u0098u00afu00e6u0082u00a8u00e7u009au0084u00e5u00a5u00bdu00e5u008eu00bbu00e5u00a4u0084u00e3u0080u0082&amp;#39; 3 4import re 5 6pattern = re.compile(r&amp;#39;((u00([a-z0-9]){2})+)&amp;#39;) 7for</description>
+    </item>
+    
+    <item>
+      <title>位运算的数学等价</title>
+      <link>/series/math/bit-calc/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/math/bit-calc/</guid>
+      <description>按位运算符C++共有6个&amp;laquo; , &amp;raquo; , ~ , &amp;amp; , | , ^ 移位运算符 1//左移运算符&amp;lt;&amp;lt;语法： 2value &amp;lt;&amp;lt; shift //value是被操作的整数</description>
+    </item>
+    
+    <item>
+      <title>Python GC</title>
+      <link>/series/python/python-gc/</link>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/python-gc/</guid>
+      <description>Python GC ##Python 垃圾回收原理 对象 Python所谓的“一切皆对象”，实际上说的是： python有一个Common Object Structures通用对象结构的东西</description>
+    </item>
+    
+    <item>
+      <title>Python Challenges</title>
+      <link>/series/python/pychallenge/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/pychallenge/</guid>
+      <description>pythonchallenge 游戏入口 http://www.pythonchallenge.com/ 挺好玩的解密小游戏，会上瘾 第零关 Hint: try to change the URL address. 12**38 = 274877906944 1http://www.pythonchallenge.com/pc/def/274877906944.html 第一关 everybody thinks twice before solving this. g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&amp;rsquo;q ufw rfgq rcvr gq qm jmle.</description>
+    </item>
+    
+    <item>
+      <title>Sleep</title>
+      <link>/series/life/sleep/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/series/life/</guid>
-      <description></description>
+      <guid>/series/life/sleep/</guid>
+      <description>What is R90 一次完美的睡眠是5个周期，5*90分，就是7.5小时。在R90睡眠法中，评价睡眠的质量不是通过睡眠的时间，而是睡眠周期的数量。 R90的</description>
     </item>
     
   </channel>
