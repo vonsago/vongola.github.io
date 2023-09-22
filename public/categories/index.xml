@@ -9,75 +9,104 @@
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Golang</title>
-      <link>/categories/golang/</link>
+      <title>Goroutine Pool</title>
+      <link>/categories/golang/process_pool/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/categories/golang/</guid>
-      <description></description>
+      <guid>/categories/golang/process_pool/</guid>
+      <description>1package test 2 3import ( 4 &amp;#34;fmt&amp;#34; 5 &amp;#34;runtime&amp;#34; 6 &amp;#34;testing&amp;#34; 7 &amp;#34;time&amp;#34; 8) 9 10type PPool struct { 11 EntryChan chan func() error 12 JobChan chan func() error 13 WorkNum int 14} 15 16func NewPPool(cap int) *PPool { 17 p := PPool{ 18 EntryChan: make(chan func() error), 19 JobChan: make(chan func() error), 20 WorkNum: cap, 21 } 22 return &amp;amp;p 23} 24 25func (p *PPool) worker(wId int) { 26</description>
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>/categories/kubernetes/</link>
+      <title>Install kubernetes(k8s) with kubeadm</title>
+      <link>/categories/k8s/install/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>/categories/kubernetes/</guid>
-      <description></description>
+      <guid>/categories/k8s/install/</guid>
+      <description>Version Choise .ref https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ kubeadm version: &amp;amp;version.Info{Major:&amp;ldquo;1&amp;rdquo;, Minor:&amp;ldquo;26&amp;rdquo;, GitVersion:&amp;ldquo;v1.26.1&amp;rdquo;, GitCommit:&amp;ldquo;8f94681cd294aa8cfd3407b8191f6c70214973a4&amp;rdquo;, GitTreeState:&amp;ldquo;clean&amp;rdquo;, BuildDate:&amp;ldquo;2023-01-18T15:56:50Z&amp;rdquo;, GoVersion:&amp;ldquo;go1.19.5&amp;rdquo;, Compiler:&amp;ldquo;gc&amp;rdquo;, Platform:&amp;ldquo;linux/amd64&amp;rdquo;} docker Version: 20.10.12 containerd: 1.6.18 Prepare 1# check swap off with free -m .ref https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ 2swapoff -a 3 4 5# check port is available 6nc 127.0.0.1 6443 7 8# some host dependences 9apt install socat conntrack 10 11# Kubernetes package repositories 12sudo apt-get update 13sudo apt-get install -y apt-transport-https ca-certificates curl 14 15curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key</description>
     </item>
     
     <item>
-      <title>Data</title>
-      <link>/categories/data/</link>
+      <title>Install redis cluster with docker-compose</title>
+      <link>/categories/data/dns/</link>
       <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/categories/data/</guid>
-      <description></description>
+      <guid>/categories/data/dns/</guid>
+      <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl port ${PORT} requirepass 1234 masterauth 1234 protected-mode no daemonize no appendonly yes cluster-enabled yes cluster-config-file nodes.conf cluster-node-timeout 15000 cluster-announce-ip 192.168.10.10 cluster-announce-port ${PORT} cluster-announce-bus-port 1${PORT} port ${PORT} requirepass 1234 masterauth 1234 protected-mode no daemonize no appendonly yes cluster-enabled yes cluster-config-file nodes.conf cluster-node-timeout 15000 cluster-announce-ip 192.168.10.11 cluster-announce-port ${PORT} cluster-announce-bus-port</description>
     </item>
     
     <item>
-      <title>Network</title>
-      <link>/categories/network/</link>
+      <title>DNS use both the protocols TCP and UDP</title>
+      <link>/categories/network/dns/</link>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>/categories/network/</guid>
-      <description></description>
+      <guid>/categories/network/dns/</guid>
+      <description>UDP packets can&amp;rsquo;t be greater than 512 bytes.
+TCP is used for Zone transfer and UDP for name, and queries either regular (primary) or reverse.
+There should be consistency in DNS Zone database.</description>
     </item>
     
     <item>
-      <title>Docker</title>
-      <link>/categories/docker/</link>
+      <title>Service Discovery</title>
+      <link>/categories/k8s/discovery/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/discovery/</guid>
+      <description>一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管</description>
+    </item>
+    
+    <item>
+      <title>HTTP Method POST vs GET</title>
+      <link>/categories/network/post/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/post/</guid>
+      <description>语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求</description>
+    </item>
+    
+    <item>
+      <title>Fan vs go func</title>
+      <link>/categories/golang/fan/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/golang/fan/</guid>
+      <description>test script 1func gen(nums ...int) &amp;lt;-chan int { 2 out := make(chan int) 3 go func() { 4 for _, n := range nums { 5 out &amp;lt;- n 6 } 7 close(out) 8 }() 9 return out 10} 11func sq(in &amp;lt;-chan int) &amp;lt;-chan int { 12 out := make(chan int) 13 go func() { 14 for n := range in { 15 out &amp;lt;- n * n 16 } 17 close(out) 18 }() 19 return out 20} 21 22func merge(cs .</description>
+    </item>
+    
+    <item>
+      <title>DevOps!</title>
+      <link>/categories/workway/cicd/</link>
+      <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/workway/cicd/</guid>
+      <description>what is devops DevOps 是一种工作模式，集合文化理念、实践和工具，来使团队的工作合作更高效，交付更便捷可靠。 why need devops 懒 因为它可以帮我们自动的处理一些苦燥的任务</description>
+    </item>
+    
+    <item>
+      <title>Docker Stats</title>
+      <link>/categories/docker/docker-stats/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/docker/</guid>
-      <description></description>
+      <guid>/categories/docker/docker-stats/</guid>
+      <description>Docker Stats 1是基于docker 1.10.3版本的源码， 2对docker stats命令进行源码分析，看看docker stats命令输出的数据是从cg</description>
     </item>
     
     <item>
-      <title>Algorithm</title>
-      <link>/categories/algorithm/</link>
+      <title>Kubernetes Beginner</title>
+      <link>/categories/k8s/kubernetes-learn/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/kubernetes-learn/</guid>
+      <description>调度 网络 https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/#6-internet-to-service-networking-a-nameinternal-to-servicea</description>
+    </item>
+    
+    <item>
+      <title>Game Theory</title>
+      <link>/categories/algorithm/game-theory/</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>/categories/k8s/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/k8s/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Work Way</title>
-      <link>/categories/workway/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/workway/</guid>
-      <description></description>
+      <guid>/categories/algorithm/game-theory/</guid>
+      <description>一般认为，博弈主要可以分为合作博弈和非合作博弈，他们的区别在于博弈方之间是否存在一个具有约束力的协议 博弈论 博弈题库 （一）巴什博奕（Bash G</description>
     </item>
     
   </channel>
