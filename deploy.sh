@@ -13,12 +13,12 @@
 rm -rf public
 now = "$(date + "%r")"
 hugo -D
-git add . && git commit -m "update:$now" && git push
+git add . && git commit -m "update:${now}" && git push
 git checkout master
 
 rm -r ./* 
 git checkout pages public
 cp -r public/* .
-git add . && git commit -m "update: $now"
+git add . && git commit -m "update: ${now}"
 git push
 git checkout pages
