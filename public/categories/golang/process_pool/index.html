@@ -12,7 +12,7 @@
 <meta name="description" content="Golang Notes" /><meta itemprop="name" content="Goroutine Pool">
 <meta itemprop="description" content="Golang Notes"><meta itemprop="datePublished" content="2023-08-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-08-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="284"><meta itemprop="image" content="/images/bg/go.png">
+<meta itemprop="wordCount" content="290"><meta itemprop="image" content="/images/bg/go.png">
 <meta itemprop="keywords" content="" /><meta property="og:title" content="Goroutine Pool" />
 <meta property="og:description" content="Golang Notes" />
 <meta property="og:type" content="article" />
@@ -284,45 +284,46 @@ Von
 </span></span><span class="line"><span class="ln">44</span><span class="cl">		<span class="nx">p</span><span class="p">.</span><span class="nx">JobChan</span> <span class="o">&lt;-</span> <span class="nx">t</span>
 </span></span><span class="line"><span class="ln">45</span><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="ln">46</span><span class="cl">	<span class="nb">close</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">JobChan</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">47</span><span class="cl">	<span class="nb">close</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">EntryChan</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">48</span><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="ln">49</span><span class="cl">
-</span></span><span class="line"><span class="ln">50</span><span class="cl"><span class="kd">func</span> <span class="nf">TestPool</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">51</span><span class="cl">	<span class="nx">tt</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">error</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">52</span><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">())</span>
-</span></span><span class="line"><span class="ln">53</span><span class="cl">		<span class="k">return</span> <span class="kc">nil</span>
-</span></span><span class="line"><span class="ln">54</span><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="ln">55</span><span class="cl">
-</span></span><span class="line"><span class="ln">56</span><span class="cl">	<span class="nx">p</span> <span class="o">:=</span> <span class="nf">NewPPool</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">57</span><span class="cl">	<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">58</span><span class="cl">		<span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="ln">59</span><span class="cl">		<span class="k">for</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">60</span><span class="cl">			<span class="nx">p</span><span class="p">.</span><span class="nf">Receive</span><span class="p">(</span><span class="nx">tt</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">61</span><span class="cl">			<span class="nx">i</span><span class="o">++</span>
-</span></span><span class="line"><span class="ln">62</span><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="ln">63</span><span class="cl">	<span class="p">}()</span>
-</span></span><span class="line"><span class="ln">64</span><span class="cl">	<span class="nx">p</span><span class="p">.</span><span class="nf">Run</span><span class="p">()</span>
-</span></span><span class="line"><span class="ln">65</span><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="ln">66</span><span class="cl">
-</span></span><span class="line"><span class="ln">67</span><span class="cl"><span class="kd">func</span> <span class="nf">loop</span><span class="p">(</span><span class="nx">num</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">quit</span> <span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">68</span><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">69</span><span class="cl">		<span class="nx">runtime</span><span class="p">.</span><span class="nf">Gosched</span><span class="p">()</span>
-</span></span><span class="line"><span class="ln">70</span><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%d-%d\n&#34;</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">71</span><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="ln">72</span><span class="cl">	<span class="nx">quit</span> <span class="o">&lt;-</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="ln">73</span><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="ln">74</span><span class="cl">
-</span></span><span class="line"><span class="ln">75</span><span class="cl"><span class="kd">func</span> <span class="nf">TestGo</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">76</span><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nf">NumCPU</span><span class="p">())</span>
-</span></span><span class="line"><span class="ln">77</span><span class="cl">	<span class="kd">var</span> <span class="nx">quit</span> <span class="kd">chan</span> <span class="kt">int</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">78</span><span class="cl">	<span class="k">go</span> <span class="nf">loop</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">quit</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">79</span><span class="cl">	<span class="k">go</span> <span class="nf">loop</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nx">quit</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">80</span><span class="cl">	<span class="k">go</span> <span class="nf">loop</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nx">quit</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">81</span><span class="cl">
-</span></span><span class="line"><span class="ln">82</span><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">83</span><span class="cl">		<span class="o">&lt;-</span><span class="nx">quit</span>
-</span></span><span class="line"><span class="ln">84</span><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="ln">85</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">48</span><span class="cl">
+</span></span><span class="line"><span class="ln">49</span><span class="cl"><span class="kd">func</span> <span class="nf">TestPool</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">50</span><span class="cl">	<span class="nx">tt</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">())</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">		<span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln">54</span><span class="cl">
+</span></span><span class="line"><span class="ln">55</span><span class="cl">	<span class="nx">p</span> <span class="o">:=</span> <span class="nf">NewPPool</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">56</span><span class="cl">	<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">57</span><span class="cl">		<span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln">58</span><span class="cl">		<span class="k">for</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">59</span><span class="cl">			<span class="nx">p</span><span class="p">.</span><span class="nf">Receive</span><span class="p">(</span><span class="nx">tt</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">60</span><span class="cl">			<span class="nx">i</span><span class="o">++</span>
+</span></span><span class="line"><span class="ln">61</span><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="ln">62</span><span class="cl">		<span class="c1">// close by send side
+</span></span></span><span class="line"><span class="ln">63</span><span class="cl"><span class="c1"></span>		<span class="nb">close</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">EntryChan</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">64</span><span class="cl">	<span class="p">}()</span>
+</span></span><span class="line"><span class="ln">65</span><span class="cl">	<span class="nx">p</span><span class="p">.</span><span class="nf">Run</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">66</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">67</span><span class="cl">
+</span></span><span class="line"><span class="ln">68</span><span class="cl"><span class="kd">func</span> <span class="nf">loop</span><span class="p">(</span><span class="nx">num</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">quit</span> <span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">69</span><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl">		<span class="nx">runtime</span><span class="p">.</span><span class="nf">Gosched</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">71</span><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%d-%d\n&#34;</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">72</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln">73</span><span class="cl">	<span class="nx">quit</span> <span class="o">&lt;-</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="ln">74</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">75</span><span class="cl">
+</span></span><span class="line"><span class="ln">76</span><span class="cl"><span class="kd">func</span> <span class="nf">TestGo</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">77</span><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nf">NumCPU</span><span class="p">())</span>
+</span></span><span class="line"><span class="ln">78</span><span class="cl">	<span class="kd">var</span> <span class="nx">quit</span> <span class="kd">chan</span> <span class="kt">int</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">79</span><span class="cl">	<span class="k">go</span> <span class="nf">loop</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">quit</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">80</span><span class="cl">	<span class="k">go</span> <span class="nf">loop</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nx">quit</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">81</span><span class="cl">	<span class="k">go</span> <span class="nf">loop</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nx">quit</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">82</span><span class="cl">
+</span></span><span class="line"><span class="ln">83</span><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">84</span><span class="cl">		<span class="o">&lt;-</span><span class="nx">quit</span>
+</span></span><span class="line"><span class="ln">85</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln">86</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
