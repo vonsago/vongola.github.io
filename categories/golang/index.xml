@@ -14,7 +14,7 @@
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>/categories/golang/process_pool/</guid>
-      <description>package test import ( &amp;ldquo;fmt&amp;rdquo; &amp;ldquo;runtime&amp;rdquo; &amp;ldquo;testing&amp;rdquo; &amp;ldquo;time&amp;rdquo; ) type PPool struct { EntryChan chan func() error JobChan chan func() error WorkNum int } func NewPPool(cap int) *PPool { p := PPool{ EntryChan: make(chan func() error), JobChan: make(chan func() error), WorkNum: cap, } return &amp;amp;p } func (p *PPool) worker(wId int) { for t := range p.JobChan { err := t() fmt.Println(&amp;ldquo;workerId&amp;rdquo;, wId, &amp;ldquo;</description>
+      <description>1package test 2 3import ( 4 &amp;#34;fmt&amp;#34; 5 &amp;#34;runtime&amp;#34; 6 &amp;#34;testing&amp;#34; 7 &amp;#34;time&amp;#34; 8) 9 10type PPool struct { 11 EntryChan chan func() error 12 JobChan chan func() error 13 WorkNum int 14} 15 16func NewPPool(cap int) *PPool { 17 p := PPool{ 18 EntryChan: make(chan func() error), 19 JobChan: make(chan func() error), 20 WorkNum: cap, 21 } 22 return &amp;amp;p 23} 24 25func (p *PPool) worker(wId int) { 26</description>
     </item>
     
     <item>

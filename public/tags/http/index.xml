@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 18 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP Method POST vs GET</title>
+      <link>/categories/network/post/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/post/</guid>
+      <description>语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求</description>
+    </item>
+    
     <item>
       <title>Get Wlan Password</title>
       <link>/series/linux/get-wlan-passwd/</link>
