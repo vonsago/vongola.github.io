@@ -11,7 +11,7 @@
 #================================================================
 
 rm -rf public
-now = "$(date + "%r")"
+now="$(date + "%r")"
 hugo -D
 git add . && git commit -m "update:${now}" && git push
 git checkout master
