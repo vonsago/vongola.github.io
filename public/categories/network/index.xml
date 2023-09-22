@@ -19,5 +19,14 @@ TCP is used for Zone transfer and UDP for name, and queries either regular (prim
 There should be consistency in DNS Zone database.</description>
     </item>
     
+    <item>
+      <title>HTTP Method POST vs GET</title>
+      <link>/categories/network/post/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/post/</guid>
+      <description>语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求</description>
+    </item>
+    
   </channel>
 </rss>

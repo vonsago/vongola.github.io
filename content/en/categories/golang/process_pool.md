@@ -15,7 +15,7 @@ images = [
 +++
 
 
-
+```golang
 package test
 
 import (
@@ -101,4 +101,4 @@ func TestGo(t *testing.T) {
 		<-quit
 	}
 }
-
+```

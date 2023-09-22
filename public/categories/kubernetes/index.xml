@@ -18,12 +18,21 @@
     </item>
     
     <item>
-      <title>Kube</title>
+      <title>Service Discovery</title>
+      <link>/categories/k8s/discovery/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/discovery/</guid>
+      <description>一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Beginner</title>
       <link>/categories/k8s/kubernetes-learn/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/k8s/kubernetes-learn/</guid>
-      <description></description>
+      <description>调度 网络 https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/#6-internet-to-service-networking-a-nameinternal-to-servicea</description>
     </item>
     
   </channel>

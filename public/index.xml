@@ -14,7 +14,7 @@
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>/categories/golang/process_pool/</guid>
-      <description>package test import ( &amp;ldquo;fmt&amp;rdquo; &amp;ldquo;runtime&amp;rdquo; &amp;ldquo;testing&amp;rdquo; &amp;ldquo;time&amp;rdquo; ) type PPool struct { EntryChan chan func() error JobChan chan func() error WorkNum int } func NewPPool(cap int) *PPool { p := PPool{ EntryChan: make(chan func() error), JobChan: make(chan func() error), WorkNum: cap, } return &amp;amp;p } func (p *PPool) worker(wId int) { for t := range p.JobChan { err := t() fmt.Println(&amp;ldquo;workerId&amp;rdquo;, wId, &amp;ldquo;</description>
+      <description>1package test 2 3import ( 4 &amp;#34;fmt&amp;#34; 5 &amp;#34;runtime&amp;#34; 6 &amp;#34;testing&amp;#34; 7 &amp;#34;time&amp;#34; 8) 9 10type PPool struct { 11 EntryChan chan func() error 12 JobChan chan func() error 13 WorkNum int 14} 15 16func NewPPool(cap int) *PPool { 17 p := PPool{ 18 EntryChan: make(chan func() error), 19 JobChan: make(chan func() error), 20 WorkNum: cap, 21 } 22 return &amp;amp;p 23} 24 25func (p *PPool) worker(wId int) { 26</description>
     </item>
     
     <item>
@@ -47,12 +47,30 @@ There should be consistency in DNS Zone database.</description>
     </item>
     
     <item>
+      <title>Service Discovery</title>
+      <link>/categories/k8s/discovery/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/discovery/</guid>
+      <description>一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管</description>
+    </item>
+    
+    <item>
       <title>Change pip conf in global</title>
       <link>/series/python/pip/</link>
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>/series/python/pip/</guid>
       <description> 1cat &amp;gt;&amp;gt; .pip/pip.conf &amp;lt;&amp;lt; EOF 2 3[global] 4 5timeout = 6000 6 7index-url = https://pypi.douban.com/simple/ 8 9[install] 10 11use-mirrors = true 12 13mirrors = https://pypi.douban.com/simple/ 14 15trusted-host = pypi.douban.com 16 17EOF </description>
+    </item>
+    
+    <item>
+      <title>HTTP Method POST vs GET</title>
+      <link>/categories/network/post/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/post/</guid>
+      <description>语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求</description>
     </item>
     
     <item>
@@ -166,12 +184,12 @@ Session can store any type of data because the value is of data type of “objec
     </item>
     
     <item>
-      <title>Kube</title>
+      <title>Kubernetes Beginner</title>
       <link>/categories/k8s/kubernetes-learn/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/k8s/kubernetes-learn/</guid>
-      <description></description>
+      <description>调度 网络 https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/#6-internet-to-service-networking-a-nameinternal-to-servicea</description>
     </item>
     
     <item>

@@ -90,6 +90,9 @@
     <loc>/categories/network/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/categories/k8s/discovery/</loc>
+    <lastmod>2022-11-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/series/python/pip/</loc>
     <lastmod>2022-08-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -114,6 +117,12 @@
                 hreflang="en"
                 href="/series/"
                 />
+  </url><url>
+    <loc>/tags/http/</loc>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/network/post/</loc>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/golang/fan/</loc>
     <lastmod>2021-11-29T00:00:00+00:00</lastmod>
@@ -277,9 +286,6 @@
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/series/linux/get-wlan-passwd/</loc>
-    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/http/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/system/</loc>

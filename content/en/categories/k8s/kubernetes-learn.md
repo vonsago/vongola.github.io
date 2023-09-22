@@ -1,6 +1,6 @@
 +++
 author = "Ars"
-title = "Kube"
+title = "Kubernetes Beginner"
 date = "2020-01-03"
 description = "kubernetes"
 featured = false
@@ -15,3 +15,10 @@ images = [
 ]
 # toc = true
 +++
+
+
+# 调度
+
+
+# 网络
+https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/#6-internet-to-service-networking-a-nameinternal-to-servicea
