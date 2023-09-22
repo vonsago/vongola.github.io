@@ -62,7 +62,6 @@ func (p *PPool) Run() {
 		p.JobChan <- t
 	}
 	close(p.JobChan)
-	close(p.EntryChan)
 }
 
 func TestPool(t *testing.T) {
@@ -78,6 +77,8 @@ func TestPool(t *testing.T) {
 			p.Receive(tt)
 			i++
 		}
+		// close by send side
+		close(p.EntryChan)
 	}()
 	p.Run()
 }
