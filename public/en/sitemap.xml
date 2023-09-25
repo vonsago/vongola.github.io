@@ -87,6 +87,12 @@
     <loc>/categories/network/dns/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/categories/network/http/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/http/</loc>
+    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/categories/network/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -117,9 +123,6 @@
                 hreflang="en"
                 href="/series/"
                 />
-  </url><url>
-    <loc>/tags/http/</loc>
-    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/network/post/</loc>
     <lastmod>2022-08-03T00:00:00+00:00</lastmod>
