@@ -38,6 +38,6 @@ Cookies
 - 5. Size of cookie is limited to 40 and number of cookies to be used is restricted to 20.
 - 6. Cookies can be disabled.
 - 7. Since the value is in string format there is no security.
-- 8.We have persistent and non-persistent cookies.
+- 8. We have persistent and non-persistent cookies.
 
 

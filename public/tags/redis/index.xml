@@ -5,15 +5,15 @@
     <link>/tags/redis/</link>
     <description>Recent content in Redis on Vassago&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install redis cluster with docker-compose</title>
-      <link>/categories/data/dns/</link>
+      <link>/categories/data/redis/</link>
       <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/categories/data/dns/</guid>
+      <guid>/categories/data/redis/</guid>
       <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl port ${PORT} requirepass 1234 masterauth 1234 protected-mode no daemonize no appendonly yes cluster-enabled yes cluster-config-file nodes.conf cluster-node-timeout 15000 cluster-announce-ip 192.168.10.10 cluster-announce-port ${PORT} cluster-announce-bus-port 1${PORT} port ${PORT} requirepass 1234 masterauth 1234 protected-mode no daemonize no appendonly yes cluster-enabled yes cluster-config-file nodes.conf cluster-node-timeout 15000 cluster-announce-ip 192.168.10.11 cluster-announce-port ${PORT} cluster-announce-bus-port</description>
     </item>
     

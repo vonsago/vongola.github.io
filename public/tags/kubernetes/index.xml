@@ -5,7 +5,7 @@
     <link>/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Vassago&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -24,6 +24,15 @@
       
       <guid>/categories/k8s/discovery/</guid>
       <description>一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管</description>
+    </item>
+    
+    <item>
+      <title>Docker Log</title>
+      <link>/categories/k8s/log/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/log/</guid>
+      <description>Docker docker 支持的日志驱动，配置文件 /etc/docker/daemon.json none 没有容器日志，无任何输出 local 自定义格式存储 json-file 默认驱动程序，json syslog 依赖 syslog 守护进程，可指定路径 journald 依赖 journald 守护进程</description>
     </item>
     
     <item>
