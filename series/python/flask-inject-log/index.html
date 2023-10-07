@@ -12,7 +12,7 @@
 <meta name="description" content="flask logger" /><meta itemprop="name" content="Flask Logger">
 <meta itemprop="description" content="flask logger"><meta itemprop="datePublished" content="2019-11-26T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-11-26T00:00:00+00:00" />
-<meta itemprop="wordCount" content="510"><meta itemprop="image" content="/images/bg/bg.jpeg">
+<meta itemprop="wordCount" content="508"><meta itemprop="image" content="/images/bg/bg.jpeg">
 <meta itemprop="keywords" content="Python3,Web,Log,Flask," /><meta property="og:title" content="Flask Logger" />
 <meta property="og:description" content="flask logger" />
 <meta property="og:type" content="article" />
@@ -27,9 +27,9 @@
 <meta name="twitter:title" content="Flask Logger"/>
 <meta name="twitter:description" content="flask logger"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -243,32 +243,33 @@ Von
 <p>使用 Flask 时，如何优雅的输出日志。这些日志也许需要特定的格式，更丰富的信息，或者添加一些上下文的信息（如当前登录的用户名）等等。</p>
 <p>根据官方文档来看，当想要为项目配置日志时，应当在程序启动时尽早进行配置。比如在<code>flask_app = Flask('api-controller')</code>之前配置。
 如果不配置，flask 会<code>create_logger</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl"># flask source code 中是这样的
-</span></span><span class="line"><span class="ln">2</span><span class="cl">default_handler = logging.StreamHandler(wsgi_errors_stream)
-</span></span><span class="line"><span class="ln">3</span><span class="cl">default_handler.setFormatter(
-</span></span><span class="line"><span class="ln">4</span><span class="cl">    logging.Formatter(&#34;[%(asctime)s] %(levelname)s in %(module)s: %(message)s&#34;)
-</span></span><span class="line"><span class="ln">5</span><span class="cl">)
-</span></span><span class="line"><span class="ln">6</span><span class="cl"># 所以使用缺省配置时
-</span></span></code></pre></div><p>如果在操作 <code>app.logger</code> 之后配置日志，并且需要 移除缺省的日志记录器，可以导入并移除它:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">from</span> <span class="nn">flask.logging</span> <span class="kn">import</span> <span class="n">default_handler</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">
-</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">flask_app</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">removeHandler</span><span class="p">(</span><span class="n">default_handler</span><span class="p">)</span>
-</span></span></code></pre></div><p>实际上，在设置完 basicConfig 后也可以通过下面方式修改。这段代码的影响是**在所有日志后面增加一个上下文参数（当前登录的用户名）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">g</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">root</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
-</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(name)s</span><span class="s1"> </span><span class="si">%(levelname)-8s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&#34; User: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="n">root</span><span class="o">.</span><span class="n">handlers</span> <span class="o">=</span> <span class="p">[</span><span class="n">handler</span><span class="p">]</span>
-</span></span></code></pre></div><p>应用程序代码可以在一个模块中定义和配置父记录器，并在单独的模块中创建（但不配置）子记录器，并且对子记录器的<strong>所有调用都将传递给父记录器</strong>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span># flask source code 中是这样的
+<span class="ln">2</span>default_handler = logging.StreamHandler(wsgi_errors_stream)
+<span class="ln">3</span>default_handler.setFormatter(
+<span class="ln">4</span>    logging.Formatter(&#34;[%(asctime)s] %(levelname)s in %(module)s: %(message)s&#34;)
+<span class="ln">5</span>)
+<span class="ln">6</span># 所以使用缺省配置时
+<span class="ln">7</span>
+</code></pre></div><p>如果在操作 <code>app.logger</code> 之后配置日志，并且需要 移除缺省的日志记录器，可以导入并移除它:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="kn">from</span> <span class="nn">flask.logging</span> <span class="kn">import</span> <span class="n">default_handler</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="n">flask_app</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">removeHandler</span><span class="p">(</span><span class="n">default_handler</span><span class="p">)</span>
+</code></pre></div><p>实际上，在设置完 basicConfig 后也可以通过下面方式修改。这段代码的影响是**在所有日志后面增加一个上下文参数（当前登录的用户名）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">g</span>
+<span class="ln">2</span><span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span>
+<span class="ln">3</span><span class="n">root</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+<span class="ln">4</span><span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="ln">5</span><span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(name)s</span><span class="s1"> </span><span class="si">%(levelname)-8s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&#34; User: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="ln">6</span><span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="ln">7</span><span class="n">root</span><span class="o">.</span><span class="n">handlers</span> <span class="o">=</span> <span class="p">[</span><span class="n">handler</span><span class="p">]</span>
+</code></pre></div><p>应用程序代码可以在一个模块中定义和配置父记录器，并在单独的模块中创建（但不配置）子记录器，并且对子记录器的<strong>所有调用都将传递给父记录器</strong>。</p>
 <p>比如上面的 <code>logging.getLogger() # 同 logging.getLogger('')</code> 其实就是获取了 root logger 并作修改。
 上述代码写在 <code>@app.before_request</code> 函数中，会对所有的日志输出有影响；
 如果写在 <code>@app.after_request</code> 函数中，只会影响 <code>werkzeug</code> 的日志输出。
 比如在<code>flask</code>应用中我们的目录为<code>app</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># create logger with app and config it</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">log_level</span><span class="p">)</span>
-</span></span></code></pre></div><p>那么所有的 <code>app.*</code> 文件下的 logger 都会这个父记录器的影响。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="c1"># create logger with app and config it</span>
+<span class="ln">2</span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">log_level</span><span class="p">)</span>
+</code></pre></div><p>那么所有的 <code>app.*</code> 文件下的 logger 都会这个父记录器的影响。</p>
 </div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
@@ -314,7 +315,7 @@ Von
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    window.disqus_config = function () {
+    var disqus_config = function () {
     
     
     
@@ -389,6 +390,8 @@ Von
             Data
           </a><a href="/categories/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
             Docker
+          </a><a href="/categories/mongodb/" class="badge bg-primary text-white rounded post-taxonomy" title="Mongodb">
+            Mongodb
           </a></div>
       </div>
     </section><section class="taxonomies row card component">
@@ -419,14 +422,14 @@ Von
             Python3
           </a><a href="/tags/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
             Linux
+          </a><a href="/tags/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
+            Kubernetes
           </a><a href="/tags/web/" class="badge bg-primary text-white rounded post-taxonomy" title="Web">
             Web
           </a><a href="/tags/dns/" class="badge bg-primary text-white rounded post-taxonomy" title="DNS">
             DNS
           </a><a href="/tags/http/" class="badge bg-primary text-white rounded post-taxonomy" title="HTTP">
             HTTP
-          </a><a href="/tags/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
-            Kubernetes
           </a><a href="/tags/blog/" class="badge bg-primary text-white rounded post-taxonomy" title="Blog">
             Blog
           </a><a href="/tags/domain/" class="badge bg-primary text-white rounded post-taxonomy" title="domain">
@@ -483,7 +486,7 @@ Von
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script>
+<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {

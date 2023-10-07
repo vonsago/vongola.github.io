@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongodb on Vassago&#39;s Blog</title>
+    <link>/tags/mongodb/</link>
+    <description>Recent content in Mongodb on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 07 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tuning page size and compression of mongodb</title>
+      <link>/categories/data/mongodb_p1/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data/mongodb_p1/</guid>
+      <description>memory_page_max 在协调到磁盘之前表的页面在内存中允许增长的最大大小。 默认 5MB [512B, 10TB]，leaf_page_max &amp;lt;= memory_page_max &amp;lt;= cache_size/10 memory_page_max 对于想要调整写入密集型工作负载</description>
+    </item>
+    
+  </channel>
+</rss>
