@@ -14,7 +14,7 @@
       <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>/categories/data/mongodb_p1/</guid>
-      <description>memory_page_max 在协调到磁盘之前表的页面在内存中允许增长的最大大小。 默认 5MB [512B, 10TB]，leaf_page_max &amp;lt;= memory_page_max &amp;lt;= cache_size/10 memory_page_max 对于想要调整写入密集型工作负载</description>
+      <description>Mongodb 存储到底是Btree 还是B+tree 实际上要讨论的是 WiredTiger 存储引擎到底是什么结构 提前要对齐的几件事情 文档中称表是B-Trees是一种简单表达，</description>
     </item>
     
     <item>
