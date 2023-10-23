@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 07 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Mongodb Mysql</title>
+      <link>/categories/data/rds2mys2mon/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data/rds2mys2mon/</guid>
+      <description>Redis MongoDB MySQL 数据模型: 基于键值的内存数据存储 永久性文档数据库，将数据存储在 JSON 文档中，然后将其整理成集合 将数据存储在列和行中。数据存储是表格式和关系</description>
+    </item>
+    
     <item>
       <title>Tuning page size and compression of mongodb</title>
       <link>/categories/data/mongodb_p1/</link>
