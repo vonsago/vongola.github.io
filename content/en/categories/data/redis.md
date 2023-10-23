@@ -23,7 +23,7 @@ mkdir -p /usr/local/docker-redis/redis-cluster
 cd /usr/local/docker-redis/redis-cluster/
 # 编写 redis-cluster.tmpl 文件
 vi redis-cluster.tmpl
-
+```
 port ${PORT}
 requirepass 1234
 masterauth 1234
@@ -63,7 +63,9 @@ for port in `seq 6374 6376`; do \
   && PORT=${port} envsubst < redis-cluster.tmpl > ${port}/conf/redis.conf \
   && mkdir -p ${port}/data;\
 done
+```
 
+```
 version: "3.8"
 
 services:
@@ -126,7 +128,9 @@ services:
       - /usr/local/docker-redis/redis-cluster/6376/conf/redis.conf:/usr/local/etc/redis/redis.conf
       - /usr/local/docker-redis/redis-cluster/6376/data:/data
     command: redis-server /usr/local/etc/redis/redis.conf
+```
 
+```
 docker exec -it  xx bash
 cd /usr/local/bin
 
@@ -143,4 +147,4 @@ if __name__ == "__main__":
     else:
         os.system("mongosh mongodb://live:8O3ydQyaPf4qLIvvg5MLxX3TSVCnF2JK@10.157.17.32:10070,10.157.11.24:10070,10.157.14.38:10070/live?readPreference=secondaryPreferred --authenticationDatabase admin")
 
-
+```
