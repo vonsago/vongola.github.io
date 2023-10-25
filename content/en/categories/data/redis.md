@@ -39,6 +39,7 @@ cluster-announce-bus-port 1${PORT}
 
 ```
 
+mkdir conf & data path
 ```
 
 for port in `seq 6371 6373`; do \
@@ -90,9 +91,15 @@ services:
 ```
 
 ```
-docker exec -it  xx bash
-cd /usr/local/bin
+docker-compose up -d
 
 redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373  --cluster-replicas 1
+
+```
+
+Install docker compose 
+```
+
+curl -SL https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 
 ```
