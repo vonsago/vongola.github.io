@@ -134,17 +134,6 @@ services:
 docker exec -it  xx bash
 cd /usr/local/bin
 
-redis-cli -a 1234 --cluster create 172.22.119.17:6371 172.22.119.17:6372 172.22.119.17:6373 172.22.119.25:6374 172.22.119.25:6375 172.22.119.25:6376 --cluster-replicas 1
-
-mongosh mongodb://live:8O3ydQyaPf4qLIvvg5MLxX3TSVCnF2JK@10.157.17.32:10070,10.157.11.24:10070,10.157.14.38:10070/live?readPreference=secondaryPreferred --authenticationDatabase admin
-
-import sys
-
-if __name__ == "__main__":
-    _, t = sys.argv
-    if t == "export":
-        os.system("mongoexport -u video_admin -p 7O0lDzpfxUHEDnUOuX83HQQdfNvi8aCM -h 10.69.169.36:27024 --authenticationDatabase admin -d video-calc -c tasks --type json -o tasks.json")
-    else:
-        os.system("mongosh mongodb://live:8O3ydQyaPf4qLIvvg5MLxX3TSVCnF2JK@10.157.17.32:10070,10.157.11.24:10070,10.157.14.38:10070/live?readPreference=secondaryPreferred --authenticationDatabase admin")
+redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373 {ip}:6374 {ip}:6375 {ip}:6376 --cluster-replicas 1
 
 ```

@@ -12,7 +12,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="Install redis cluster with docker-compose">
 <meta itemprop="description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 14port ${PORT} 15requirepass 1234 16masterauth 1234 17protected-mode no 18daemonize no 19appendonly yes 20cluster-enabled yes 21cluster-config-file nodes.conf 22cluster-node-timeout 15000 23cluster-announce-ip 192.168.10.11 24cluster-announce-port ${PORT}"><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-07-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="480"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="wordCount" content="432"><meta itemprop="image" content="/images/bg/bgh1.jpg">
 <meta itemprop="keywords" content="Data,Redis," /><meta property="og:title" content="Install redis cluster with docker-compose" />
 <meta property="og:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 14port ${PORT} 15requirepass 1234 16masterauth 1234 17protected-mode no 18daemonize no 19appendonly yes 20cluster-enabled yes 21cluster-config-file nodes.conf 22cluster-node-timeout 15000 23cluster-announce-ip 192.168.10.11 24cluster-announce-port ${PORT}" />
 <meta property="og:type" content="article" />
@@ -345,22 +345,11 @@ Von
 <span class="ln">60</span>      - /usr/local/docker-redis/redis-cluster/6376/conf/redis.conf:/usr/local/etc/redis/redis.conf
 <span class="ln">61</span>      - /usr/local/docker-redis/redis-cluster/6376/data:/data
 <span class="ln">62</span>    command: redis-server /usr/local/etc/redis/redis.conf
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>docker exec -it  xx bash
-<span class="ln"> 2</span>cd /usr/local/bin
-<span class="ln"> 3</span>
-<span class="ln"> 4</span>redis-cli -a 1234 --cluster create 172.22.119.17:6371 172.22.119.17:6372 172.22.119.17:6373 172.22.119.25:6374 172.22.119.25:6375 172.22.119.25:6376 --cluster-replicas 1
-<span class="ln"> 5</span>
-<span class="ln"> 6</span>mongosh mongodb://live:8O3ydQyaPf4qLIvvg5MLxX3TSVCnF2JK@10.157.17.32:10070,10.157.11.24:10070,10.157.14.38:10070/live?readPreference=secondaryPreferred --authenticationDatabase admin
-<span class="ln"> 7</span>
-<span class="ln"> 8</span>import sys
-<span class="ln"> 9</span>
-<span class="ln">10</span>if __name__ == &#34;__main__&#34;:
-<span class="ln">11</span>    _, t = sys.argv
-<span class="ln">12</span>    if t == &#34;export&#34;:
-<span class="ln">13</span>        os.system(&#34;mongoexport -u video_admin -p 7O0lDzpfxUHEDnUOuX83HQQdfNvi8aCM -h 10.69.169.36:27024 --authenticationDatabase admin -d video-calc -c tasks --type json -o tasks.json&#34;)
-<span class="ln">14</span>    else:
-<span class="ln">15</span>        os.system(&#34;mongosh mongodb://live:8O3ydQyaPf4qLIvvg5MLxX3TSVCnF2JK@10.157.17.32:10070,10.157.11.24:10070,10.157.14.38:10070/live?readPreference=secondaryPreferred --authenticationDatabase admin&#34;)
-<span class="ln">16</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>docker exec -it  xx bash
+<span class="ln">2</span>cd /usr/local/bin
+<span class="ln">3</span>
+<span class="ln">4</span>redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373 {ip}:6374 {ip}:6375 {ip}:6376 --cluster-replicas 1
+<span class="ln">5</span>
 </code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
