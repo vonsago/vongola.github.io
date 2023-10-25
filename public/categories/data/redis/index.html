@@ -10,11 +10,11 @@
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" /><meta itemprop="name" content="Install redis cluster with docker-compose">
-<meta itemprop="description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port} envsubst &lt; redis-cluster.tmpl &gt; ${port}/conf/redis.conf"><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
+<meta itemprop="description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}"><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-07-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="265"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="wordCount" content="276"><meta itemprop="image" content="/images/bg/bgh1.jpg">
 <meta itemprop="keywords" content="Data,Redis," /><meta property="og:title" content="Install redis cluster with docker-compose" />
-<meta property="og:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port} envsubst &lt; redis-cluster.tmpl &gt; ${port}/conf/redis.conf" />
+<meta property="og:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/categories/data/redis/" /><meta property="og:image" content="/images/bg/bgh1.jpg" /><meta property="article:section" content="categories" />
 <meta property="article:published_time" content="2023-07-01T00:00:00+00:00" />
@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="/images/bg/bgh1.jpg"/>
 
 <meta name="twitter:title" content="Install redis cluster with docker-compose"/>
-<meta name="twitter:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port} envsubst &lt; redis-cluster.tmpl &gt; ${port}/conf/redis.conf"/>
+<meta name="twitter:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}"/>
 <meta name="twitter:site" content="@V_assago"/>
 <link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
@@ -257,7 +257,8 @@ Von
 <span class="ln">11</span>cluster-announce-port ${PORT}
 <span class="ln">12</span>cluster-announce-bus-port 1${PORT}
 <span class="ln">13</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>
+</code></pre></div><p>mkdir conf &amp; data path</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>
 <span class="ln"> 2</span>for port in `seq 6371 6373`; do \
 <span class="ln"> 3</span>  mkdir -p ${port}/conf \
 <span class="ln"> 4</span>  &amp;&amp; PORT=${port} envsubst &lt; redis-cluster.tmpl &gt; ${port}/conf/redis.conf \
@@ -301,11 +302,14 @@ Von
 <span class="ln">29</span>      - /usr/local/docker-redis/redis-cluster/6373/data:/data
 <span class="ln">30</span>    command: redis-server /usr/local/etc/redis/redis.conf
 <span class="ln">31</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>docker exec -it  xx bash
-<span class="ln">2</span>cd /usr/local/bin
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>docker-compose up -d
+<span class="ln">2</span>
+<span class="ln">3</span>redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373  --cluster-replicas 1
+<span class="ln">4</span>
+</code></pre></div><p>Install docker compose</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>
+<span class="ln">2</span>curl -SL https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 <span class="ln">3</span>
-<span class="ln">4</span>redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373  --cluster-replicas 1
-<span class="ln">5</span>
 </code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
