@@ -37,20 +37,9 @@ cluster-announce-ip 192.168.10.10
 cluster-announce-port ${PORT}
 cluster-announce-bus-port 1${PORT}
 
-port ${PORT}
-requirepass 1234
-masterauth 1234
-protected-mode no
-daemonize no
-appendonly yes
-cluster-enabled yes
-cluster-config-file nodes.conf
-cluster-node-timeout 15000
-cluster-announce-ip 192.168.10.11
-cluster-announce-port ${PORT}
-cluster-announce-bus-port 1${PORT}
+```
 
-
+```
 
 for port in `seq 6371 6373`; do \
   mkdir -p ${port}/conf \
@@ -65,6 +54,7 @@ for port in `seq 6374 6376`; do \
 done
 ```
 
+compose.yaml
 ```
 version: "3.8"
 
@@ -97,43 +87,12 @@ services:
       - /usr/local/docker-redis/redis-cluster/6373/data:/data
     command: redis-server /usr/local/etc/redis/redis.conf
 
-
-version: "3.8"
-
-services:
-  redis-6374: # 服务名称
-    image: redis # 创建容器时所需的镜像
-    container_name: redis-6374 # 容器名称
-    restart: always # 容器总是重新启动
-    network_mode: "host" # host 网络模式
-    volumes: # 数据卷，目录挂载
-      - /usr/local/docker-redis/redis-cluster/6374/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /usr/local/docker-redis/redis-cluster/6374/data:/data
-    command: redis-server /usr/local/etc/redis/redis.conf # 覆盖容器启动后默认执行的命令
-
-  redis-6375:
-    image: redis
-    container_name: redis-6375
-    network_mode: "host"
-    volumes:
-      - /usr/local/docker-redis/redis-cluster/6375/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /usr/local/docker-redis/redis-cluster/6375/data:/data
-    command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis-6376:
-    image: redis
-    container_name: redis-6376
-    network_mode: "host"
-    volumes:
-      - /usr/local/docker-redis/redis-cluster/6376/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /usr/local/docker-redis/redis-cluster/6376/data:/data
-    command: redis-server /usr/local/etc/redis/redis.conf
 ```
 
 ```
 docker exec -it  xx bash
 cd /usr/local/bin
 
-redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373 {ip}:6374 {ip}:6375 {ip}:6376 --cluster-replicas 1
+redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373  --cluster-replicas 1
 
 ```
