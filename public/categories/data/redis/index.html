@@ -12,7 +12,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="Install redis cluster with docker-compose">
 <meta itemprop="description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}"><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-07-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="276"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="wordCount" content="351"><meta itemprop="image" content="/images/bg/bgh1.jpg">
 <meta itemprop="keywords" content="Data,Redis," /><meta property="og:title" content="Install redis cluster with docker-compose" />
 <meta property="og:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}" />
 <meta property="og:type" content="article" />
@@ -302,9 +302,36 @@ Von
 <span class="ln">29</span>      - /usr/local/docker-redis/redis-cluster/6373/data:/data
 <span class="ln">30</span>    command: redis-server /usr/local/etc/redis/redis.conf
 <span class="ln">31</span>
+<span class="ln">32</span>  redis-6374:
+<span class="ln">33</span>    image: redis
+<span class="ln">34</span>    container_name: redis-6374
+<span class="ln">35</span>    network_mode: &#34;host&#34;
+<span class="ln">36</span>    volumes:
+<span class="ln">37</span>      - /usr/local/docker-redis/redis-cluster/6374/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">38</span>      - /usr/local/docker-redis/redis-cluster/6374/data:/data
+<span class="ln">39</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">40</span>
+<span class="ln">41</span>  redis-6375:
+<span class="ln">42</span>    image: redis
+<span class="ln">43</span>    container_name: redis-6375
+<span class="ln">44</span>    network_mode: &#34;host&#34;
+<span class="ln">45</span>    volumes:
+<span class="ln">46</span>      - /usr/local/docker-redis/redis-cluster/6375/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">47</span>      - /usr/local/docker-redis/redis-cluster/6375/data:/data
+<span class="ln">48</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">49</span>
+<span class="ln">50</span>  redis-6376:
+<span class="ln">51</span>    image: redis
+<span class="ln">52</span>    container_name: redis-6376
+<span class="ln">53</span>    network_mode: &#34;host&#34;
+<span class="ln">54</span>    volumes:
+<span class="ln">55</span>      - /usr/local/docker-redis/redis-cluster/6376/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">56</span>      - /usr/local/docker-redis/redis-cluster/6376/data:/data
+<span class="ln">57</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">58</span>
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>docker-compose up -d
 <span class="ln">2</span>
-<span class="ln">3</span>redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373  --cluster-replicas 1
+<span class="ln">3</span>redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373 {ip}:6374 {ip}:6375 {ip}:6376 --cluster-replicas 1
 <span class="ln">4</span>
 </code></pre></div><p>Install docker compose</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>
