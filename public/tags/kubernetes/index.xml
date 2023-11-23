@@ -5,7 +5,7 @@
     <link>/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Vassago&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/k8s/kubernetes-learn/</guid>
-      <description>调度 网络 https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/#6-internet-to-service-networking-a-nameinternal-to-servicea</description>
+      <description>调度 网络 容器网络模式 none: 完全隔离，既不访问外部网络，也不提供服务访问自己。可以用于测试容器，为后续容器创建网络环境容器 host: 共享宿主机网络，性能好</description>
     </item>
     
   </channel>

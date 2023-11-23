@@ -12,7 +12,7 @@
 <meta name="description" content="code template" /><meta itemprop="name" content="Code template">
 <meta itemprop="description" content="code template"><meta itemprop="datePublished" content="2019-11-10T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-11-10T00:00:00+00:00" />
-<meta itemprop="wordCount" content="916"><meta itemprop="image" content="/images/bg/computer2.jpg">
+<meta itemprop="wordCount" content="919"><meta itemprop="image" content="/images/bg/computer2.jpg">
 <meta itemprop="keywords" content="python3," /><meta property="og:title" content="Code template" />
 <meta property="og:description" content="code template" />
 <meta property="og:type" content="article" />
@@ -27,9 +27,9 @@
 <meta name="twitter:title" content="Code template"/>
 <meta name="twitter:description" content="code template"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -268,26 +268,26 @@ Von
 <h2 id="python多进程写入文件multiprocessing-template">Python多进程写入文件(multiprocessing template)</h2>
 <p><a href="https://docs.python.org/2/library/multiprocessing.html?highlight=apply_async#multiprocessing.pool.multiprocessing.Pool.apply_async" target="_blank" rel="noopener noreferrer">参考文档</a>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln"> 1</span><span class="c1">#multiprocessing template</span>
-<span class="ln"> 2</span><span class="kn">import</span> <span class="nn">multiprocessing</span>
-<span class="ln"> 3</span>
-<span class="ln"> 4</span><span class="k">def</span> <span class="nf">write_file</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
-<span class="ln"> 5</span>    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="ln"> 6</span>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="ln"> 7</span>
-<span class="ln"> 8</span><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-<span class="ln"> 9</span>    <span class="s1">&#39;&#39;&#39;
-</span><span class="ln">10</span><span class="s1">    work
-</span><span class="ln">11</span><span class="s1">    &#39;&#39;&#39;</span>
-<span class="ln">12</span>    <span class="k">return</span> <span class="n">result</span>
-<span class="ln">13</span>
-<span class="ln">14</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<span class="ln">15</span>    <span class="n">pool</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-<span class="ln">16</span>    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
-<span class="ln">17</span>        <span class="n">pool</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">process</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="p">),</span><span class="n">callback</span><span class="o">=</span><span class="n">write_file</span><span class="p">)</span>
-<span class="ln">18</span>    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="ln">19</span>    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-</code></pre></div><h2 id="高次方取模">高次方取模</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1">#multiprocessing template</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="k">def</span> <span class="nf">write_file</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="s1">    work
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="k">return</span> <span class="n">result</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="n">pool</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">        <span class="n">pool</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">process</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="p">),</span><span class="n">callback</span><span class="o">=</span><span class="n">write_file</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span></code></pre></div><h2 id="高次方取模">高次方取模</h2>
 <h3 id="次方求模模板">次方求模模板</h3>
 <p>就是求<code>(a^b)% p</code>其中 a, b, p 数值比较大
 取余公式：<strong>(a*b)% p = (a%p * b%p)% p</strong>
@@ -296,214 +296,213 @@ Von
    />
 
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="c1">//次方求模模板
-</span><span class="ln">2</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">Type</span><span class="o">&gt;</span>
-<span class="ln">3</span><span class="kr">inline</span> <span class="n">Type</span> <span class="n">ModPow</span><span class="p">(</span><span class="n">Type</span> <span class="n">m</span><span class="p">,</span><span class="n">Type</span> <span class="n">n</span><span class="p">,</span><span class="n">Type</span> <span class="n">p</span><span class="p">)</span> <span class="c1">//m的n次方模p
-</span><span class="ln">4</span><span class="c1"></span><span class="p">{</span>
-<span class="ln">5</span>    <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-<span class="ln">6</span>    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">m</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<span class="ln">7</span>        <span class="n">Type</span> <span class="n">tmp</span><span class="o">=</span><span class="n">ModPow</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">);</span>
-<span class="ln">8</span>    <span class="k">return</span> <span class="p">(</span><span class="n">tmp</span><span class="o">*</span><span class="n">tmp</span><span class="o">%</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">?</span><span class="nl">m</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">p</span><span class="p">)</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<span class="ln">9</span><span class="p">}</span>
-</code></pre></div><h3 id="高次方求模">高次方求模</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="cm">/*高次方求模：
-</span><span class="ln"> 2</span><span class="cm">比如a的b次方对c求模
-</span><span class="ln"> 3</span><span class="cm">我们可以把b 化为二进制形式看那一位有1
-</span><span class="ln"> 4</span><span class="cm">比如b=10101则  a^b=a^(10000)*a^(100)*a^(1)
-</span><span class="ln"> 5</span><span class="cm">以函数形式体现：*/</span>
-<span class="ln"> 6</span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">Type</span><span class="o">&gt;</span>
-<span class="ln"> 7</span><span class="kr">inline</span> <span class="n">Type</span> <span class="n">han</span><span class="p">()</span>
-<span class="ln"> 8</span><span class="p">{</span>
-<span class="ln"> 9</span>    <span class="n">Type</span> <span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">;</span>
-<span class="ln">10</span>    <span class="k">for</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="n">a</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">b</span><span class="p">;</span><span class="n">b</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="o">*=</span><span class="n">t</span><span class="p">,</span><span class="n">t</span><span class="o">%=</span><span class="n">c</span><span class="p">)</span><span class="c1">//用b&gt;&gt;=1查看b中1
-</span><span class="ln">11</span><span class="c1"></span>     <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">){</span><span class="n">s</span><span class="o">*=</span><span class="n">t</span><span class="p">;</span><span class="n">s</span><span class="o">%=</span><span class="n">c</span><span class="p">;}</span>
-<span class="ln">12</span>    <span class="k">return</span> <span class="n">s</span><span class="o">%</span><span class="n">c</span><span class="p">;</span>
-<span class="ln">13</span><span class="p">}</span>
-</code></pre></div><h3 id="大数取模的模板">大数取模的模板</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1">//次方求模模板
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">Type</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="kr">inline</span> <span class="n">Type</span> <span class="n">ModPow</span><span class="p">(</span><span class="n">Type</span> <span class="n">m</span><span class="p">,</span><span class="n">Type</span> <span class="n">n</span><span class="p">,</span><span class="n">Type</span> <span class="n">p</span><span class="p">)</span> <span class="c1">//m的n次方模p
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">m</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">        <span class="n">Type</span> <span class="n">tmp</span><span class="o">=</span><span class="n">ModPow</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">tmp</span><span class="o">*</span><span class="n">tmp</span><span class="o">%</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">?</span><span class="nl">m</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">p</span><span class="p">)</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="高次方求模">高次方求模</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cm">/*高次方求模：
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cm">比如a的b次方对c求模
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="cm">我们可以把b 化为二进制形式看那一位有1
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="cm">比如b=10101则  a^b=a^(10000)*a^(100)*a^(1)
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="cm">以函数形式体现：*/</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">Type</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="kr">inline</span> <span class="n">Type</span> <span class="n">han</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="n">Type</span> <span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="n">a</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">b</span><span class="p">;</span><span class="n">b</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="o">*=</span><span class="n">t</span><span class="p">,</span><span class="n">t</span><span class="o">%=</span><span class="n">c</span><span class="p">)</span><span class="c1">//用b&gt;&gt;=1查看b中1
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"></span>     <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">){</span><span class="n">s</span><span class="o">*=</span><span class="n">t</span><span class="p">;</span><span class="n">s</span><span class="o">%=</span><span class="n">c</span><span class="p">;}</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="k">return</span> <span class="n">s</span><span class="o">%</span><span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="大数取模的模板">大数取模的模板</h3>
 <p>取余公式：(a+b)% p = (a%p+b%p)% p;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="kt">char</span> <span class="n">big_number</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
-<span class="ln"> 2</span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
-<span class="ln"> 3</span><span class="n">type</span> <span class="n">big_mod</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="n">type</span> <span class="n">mod</span><span class="p">){</span>
-<span class="ln"> 4</span>    <span class="n">type</span> <span class="n">len</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">result</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="ln"> 5</span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<span class="ln"> 6</span>        <span class="n">result</span><span class="o">=</span><span class="p">((</span><span class="n">result</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="o">+</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">;</span>
-<span class="ln"> 7</span>        <span class="c1">//如果数据不算太大，可以写成这样来节省时间result=(result*10+a[i]-&#39;0&#39;)%mod;
-</span><span class="ln"> 8</span><span class="c1"></span>    <span class="p">}</span>
-<span class="ln"> 9</span>    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-<span class="ln">10</span><span class="p">}</span>
-<span class="ln">11</span><span class="c1">//test
-</span><span class="ln">12</span><span class="c1"></span><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>
-<span class="ln">13</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="ln">14</span><span class="p">{</span>   <span class="k">while</span><span class="p">(</span><span class="n">gets</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
-<span class="ln">15</span>        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">big_mod</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
-<span class="ln">16</span><span class="p">}</span>
-</code></pre></div><h2 id="哈希模版hash-template">哈希模版(hash template)</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln"> 1</span><span class="n">const</span> <span class="nb">int</span>  <span class="n">MAX</span><span class="o">=</span><span class="mi">1000003</span><span class="p">;</span>
-<span class="ln"> 2</span><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-<span class="ln"> 3</span><span class="k">class</span> <span class="nc">hash</span>
-<span class="ln"> 4</span><span class="p">{</span>
-<span class="ln"> 5</span><span class="n">private</span><span class="p">:</span>
-<span class="ln"> 6</span>    <span class="nb">int</span> <span class="n">pos</span><span class="p">;</span>
-<span class="ln"> 7</span>    <span class="nb">int</span> <span class="nb">next</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
-<span class="ln"> 8</span>    <span class="nb">int</span> <span class="n">head</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
-<span class="ln"> 9</span>    <span class="n">T</span> <span class="n">key</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
-<span class="ln">10</span><span class="n">public</span><span class="p">:</span>
-<span class="ln">11</span>    <span class="nb">hash</span><span class="p">();</span>
-<span class="ln">12</span>    <span class="nb">bool</span> <span class="n">search</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>
-<span class="ln">13</span>    <span class="n">void</span> <span class="n">push</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>
-<span class="ln">14</span><span class="p">};</span>
-<span class="ln">15</span><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-<span class="ln">16</span><span class="nb">hash</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">::</span><span class="nb">hash</span><span class="p">()</span>
-<span class="ln">17</span><span class="p">{</span>
-<span class="ln">18</span>    <span class="n">pos</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="ln">19</span>    <span class="n">memset</span><span class="p">(</span><span class="nb">next</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="nb">next</span><span class="p">));</span>
-<span class="ln">20</span>    <span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
-<span class="ln">21</span>    <span class="o">//</span><span class="n">memset</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">key</span><span class="p">));</span>
-<span class="ln">22</span><span class="p">}</span>
-<span class="ln">23</span><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-<span class="ln">24</span><span class="n">inline</span> <span class="nb">bool</span> <span class="nb">hash</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">::</span><span class="n">search</span><span class="p">(</span><span class="n">const</span> <span class="n">T</span> <span class="n">x</span><span class="p">)</span>
-<span class="ln">25</span><span class="p">{</span>
-<span class="ln">26</span>    <span class="nb">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">x</span><span class="o">%</span><span class="n">MAX</span><span class="p">;</span>
-<span class="ln">27</span>    <span class="nb">int</span> <span class="n">t</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">];</span>
-<span class="ln">28</span>    <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="ln">29</span>    <span class="p">{</span>
-<span class="ln">30</span>        <span class="k">if</span> <span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">==</span><span class="n">x</span><span class="p">)</span>
-<span class="ln">31</span>        <span class="p">{</span>
-<span class="ln">32</span>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-<span class="ln">33</span>        <span class="p">}</span>
-<span class="ln">34</span>        <span class="n">t</span><span class="o">=</span><span class="nb">next</span><span class="p">[</span><span class="n">t</span><span class="p">];</span>
-<span class="ln">35</span>    <span class="p">}</span>
-<span class="ln">36</span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="ln">37</span><span class="p">}</span>
-<span class="ln">38</span><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-<span class="ln">39</span><span class="n">inline</span> <span class="n">void</span> <span class="nb">hash</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">::</span><span class="n">push</span><span class="p">(</span><span class="n">const</span> <span class="n">T</span> <span class="n">x</span><span class="p">)</span>
-<span class="ln">40</span><span class="p">{</span>
-<span class="ln">41</span>    <span class="nb">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">x</span><span class="o">%</span> <span class="n">MAX</span><span class="p">;</span>
-<span class="ln">42</span>    <span class="k">if</span> <span class="p">(</span><span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="ln">43</span>    <span class="p">{</span>
-<span class="ln">44</span>        <span class="nb">next</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">];</span>
-<span class="ln">45</span>    <span class="p">}</span>
-<span class="ln">46</span>    <span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span><span class="o">=</span><span class="n">pos</span><span class="p">;</span>
-<span class="ln">47</span>    <span class="n">key</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
-<span class="ln">48</span>    <span class="n">pos</span><span class="o">++</span><span class="p">;</span>
-<span class="ln">49</span><span class="p">}</span>
-</code></pre></div><h2 id="python-协程处理-requests">Python 协程处理 requests</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">  1</span><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">monkey</span>
-<span class="ln">  2</span><span class="n">monkey</span><span class="o">.</span><span class="n">patch_all</span><span class="p">()</span>
-<span class="ln">  3</span>
-<span class="ln">  4</span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="ln">  5</span><span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
-<span class="ln">  6</span><span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="ln">  7</span>
-<span class="ln">  8</span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="ln">  9</span><span class="kn">import</span> <span class="nn">time</span>
-<span class="ln"> 10</span><span class="kn">import</span> <span class="nn">gevent</span>
-<span class="ln"> 11</span><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">pool</span>
-<span class="ln"> 12</span><span class="kn">import</span> <span class="nn">re</span>
-<span class="ln"> 13</span><span class="kn">import</span> <span class="nn">math</span>
-<span class="ln"> 14</span><span class="kn">import</span> <span class="nn">pymysql</span>
-<span class="ln"> 15</span><span class="kn">import</span> <span class="nn">functools</span>
-<span class="ln"> 16</span><span class="kn">from</span> <span class="nn">DBUtils.PooledDB</span> <span class="kn">import</span> <span class="n">PooledDB</span>
-<span class="ln"> 17</span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="ln"> 18</span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="ln"> 19</span>
-<span class="ln"> 20</span><span class="c1"># db ip</span>
-<span class="ln"> 21</span><span class="s1">&#39;&#39;&#39;
-</span><span class="ln"> 22</span><span class="s1">db msg
-</span><span class="ln"> 23</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="ln"> 24</span><span class="c1"># 数据库连接池</span>
-<span class="ln"> 25</span><span class="n">mysql_db_pool</span> <span class="o">=</span> <span class="n">PooledDB</span><span class="p">(</span><span class="n">creator</span><span class="o">=</span><span class="n">pymysql</span><span class="p">,</span> <span class="n">mincached</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxcached</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maxconnections</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">base_ip</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
-<span class="ln"> 26</span>                         <span class="n">user</span><span class="o">=</span><span class="n">base_user</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">base_pwd</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="n">base_db</span><span class="p">,</span> <span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">use_unicode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">blocking</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ln"> 27</span><span class="c1"># target url</span>
-<span class="ln"> 28</span><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="ln"> 29</span>
-<span class="ln"> 30</span>
-<span class="ln"> 31</span><span class="n">complete_count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="ln"> 32</span><span class="c1"># log--</span>
-<span class="ln"> 33</span><span class="n">func_count_dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="ln"> 34</span>
-<span class="ln"> 35</span><span class="k">def</span> <span class="nf">func_time_logger</span><span class="p">(</span><span class="n">fun</span><span class="p">):</span>
-<span class="ln"> 36</span>    <span class="k">if</span> <span class="n">fun</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mioji.aop_utils.logger&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-<span class="ln"> 37</span>        <span class="k">return</span> <span class="n">fun</span>
-<span class="ln"> 38</span>    <span class="n">fun</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;mioji.aop_utils.logger&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="ln"> 39</span>
-<span class="ln"> 40</span>    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">fun</span><span class="p">)</span>
-<span class="ln"> 41</span>    <span class="k">def</span> <span class="nf">logging</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
-<span class="ln"> 42</span>        <span class="n">func_count_dict</span><span class="p">[</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ln"> 43</span>        <span class="n">begin</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="ln"> 44</span>        <span class="n">result</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
-<span class="ln"> 45</span>        <span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="ln"> 46</span>        <span class="n">func_count_dict</span><span class="p">[</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-<span class="ln"> 47</span>        <span class="nb">print</span> <span class="s1">&#39;func </span><span class="si">{0}</span><span class="s1">, cost:</span><span class="si">{1}</span><span class="s1">, ex:</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">begin</span> <span class="p">,</span> <span class="n">func_count_dict</span><span class="p">[</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">])</span>
-<span class="ln"> 48</span>        <span class="k">return</span> <span class="n">result</span>
-<span class="ln"> 49</span>
-<span class="ln"> 50</span>    <span class="k">return</span> <span class="n">logging</span>
-<span class="ln"> 51</span><span class="c1"># --log</span>
-<span class="ln"> 52</span>
-<span class="ln"> 53</span><span class="c1"># 获得代理</span>
-<span class="ln"> 54</span><span class="nd">@func_time_logger</span>
-<span class="ln"> 55</span><span class="k">def</span> <span class="nf">get_PROXY</span><span class="p">():</span>
-<span class="ln"> 56</span>    <span class="c1"># 代理url</span>
-<span class="ln"> 57</span>    <span class="n">R</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="ln"> 58</span>    <span class="n">p</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">content</span>
-<span class="ln"> 59</span>    <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;10.&#39;</span><span class="p">):</span>
-<span class="ln"> 60</span>        <span class="c1"># if p.split(&#39;:&#39;)[0] in SOCKS_PROXY:</span>
-<span class="ln"> 61</span>        <span class="n">PROXY</span> <span class="o">=</span> <span class="p">{</span>
-<span class="ln"> 62</span>        <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s1">&#39;socks5://&#39;</span> <span class="o">+</span> <span class="n">p</span><span class="p">,</span>
-<span class="ln"> 63</span>        <span class="s1">&#39;https&#39;</span><span class="p">:</span> <span class="s1">&#39;socks5://&#39;</span> <span class="o">+</span> <span class="n">p</span>
-<span class="ln"> 64</span>        <span class="p">}</span>
-<span class="ln"> 65</span>    <span class="k">else</span><span class="p">:</span>
-<span class="ln"> 66</span>        <span class="bp">self</span><span class="o">.</span><span class="n">real_ip</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ln"> 67</span>        <span class="n">proxy_type</span> <span class="o">=</span> <span class="s1">&#39;http&#39;</span>
-<span class="ln"> 68</span>        <span class="n">PROXY</span> <span class="o">=</span> <span class="p">{</span>
-<span class="ln"> 69</span>            <span class="s1">&#39;https&#39;</span><span class="p">:</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="n">p</span><span class="p">,</span>
-<span class="ln"> 70</span>            <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="n">p</span><span class="p">,</span>
-<span class="ln"> 71</span>        <span class="p">}</span>
-<span class="ln"> 72</span>
-<span class="ln"> 73</span>    <span class="k">return</span> <span class="n">PROXY</span>
-<span class="ln"> 74</span>
-<span class="ln"> 75</span><span class="c1"># requests</span>
-<span class="ln"> 76</span><span class="nd">@func_time_logger</span>
-<span class="ln"> 77</span><span class="k">def</span> <span class="nf">get_request_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<span class="ln"> 78</span>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="ln"> 79</span>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-<span class="ln"> 80</span>        <span class="k">try</span><span class="p">:</span>
-<span class="ln"> 81</span>            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="n">get_PROXY</span><span class="p">(),</span> <span class="n">timeout</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="ln"> 82</span>            <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span>
-<span class="ln"> 83</span>            <span class="k">return</span> <span class="n">data</span>
-<span class="ln"> 84</span>        <span class="k">except</span><span class="p">:</span>
-<span class="ln"> 85</span>            <span class="nb">print</span> <span class="s1">&#39;get error&#39;</span>
-<span class="ln"> 86</span>            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ln"> 87</span>    <span class="k">return</span> <span class="kc">None</span>
-<span class="ln"> 88</span>
-<span class="ln"> 89</span><span class="c1"># process function</span>
-<span class="ln"> 90</span><span class="nd">@func_time_logger</span>
-<span class="ln"> 91</span><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">):</span>
-<span class="ln"> 92</span>
-<span class="ln"> 93</span>    <span class="n">get_request_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="ln"> 94</span>
-<span class="ln"> 95</span>    <span class="s1">&#39;&#39;&#39;
-</span><span class="ln"> 96</span><span class="s1">    other works
-</span><span class="ln"> 97</span><span class="s1">    &#39;&#39;&#39;</span>
-<span class="ln"> 98</span>
-<span class="ln"> 99</span>    <span class="k">global</span> <span class="n">complete_count</span>
-<span class="ln">100</span>    <span class="n">complete_count</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ln">101</span>    <span class="nb">print</span> <span class="s1">&#39;end </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sid</span><span class="p">)</span>
-<span class="ln">102</span>    <span class="nb">print</span> <span class="s1">&#39;complete </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">complete_count</span><span class="p">)</span>
-<span class="ln">103</span>
-<span class="ln">104</span><span class="c1"># 异步协程处理请求量大的需求</span>
-<span class="ln">105</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<span class="ln">106</span>    <span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="ln">107</span>
-<span class="ln">108</span>    <span class="n">gs</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="ln">109</span>    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">data_list</span><span class="p">:</span>
-<span class="ln">110</span>        <span class="n">g</span> <span class="o">=</span> <span class="n">execute_pool</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">process</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,))</span>
-<span class="ln">111</span>        <span class="n">gs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-<span class="ln">112</span>    <span class="n">gevent</span><span class="o">.</span><span class="n">joinall</span><span class="p">(</span><span class="n">gs</span><span class="p">)</span>
-<span class="ln">113</span>
-<span class="ln">114</span>    <span class="nb">print</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">s</span>
-<span class="ln">115</span>
-</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kt">char</span> <span class="n">big_number</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="n">type</span> <span class="n">big_mod</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="n">type</span> <span class="n">mod</span><span class="p">){</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="n">type</span> <span class="n">len</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">result</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">        <span class="n">result</span><span class="o">=</span><span class="p">((</span><span class="n">result</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="o">+</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">)</span><span class="o">%</span><span class="n">mod</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="c1">//如果数据不算太大，可以写成这样来节省时间result=(result*10+a[i]-&#39;0&#39;)%mod;
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1">//test
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">{</span>   <span class="k">while</span><span class="p">(</span><span class="n">gets</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">big_mod</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="哈希模版hash-template">哈希模版(hash template)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="n">const</span> <span class="nb">int</span>  <span class="n">MAX</span><span class="o">=</span><span class="mi">1000003</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">class</span> <span class="nc">hash</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="n">private</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="nb">int</span> <span class="n">pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="nb">int</span> <span class="nb">next</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nb">int</span> <span class="n">head</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="n">T</span> <span class="n">key</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="n">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="nb">hash</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="nb">bool</span> <span class="n">search</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="n">void</span> <span class="n">push</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="nb">hash</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">::</span><span class="nb">hash</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="n">pos</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="n">memset</span><span class="p">(</span><span class="nb">next</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="nb">next</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">    <span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">    <span class="o">//</span><span class="n">memset</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">key</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="n">inline</span> <span class="nb">bool</span> <span class="nb">hash</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">::</span><span class="n">search</span><span class="p">(</span><span class="n">const</span> <span class="n">T</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    <span class="nb">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">x</span><span class="o">%</span><span class="n">MAX</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">    <span class="nb">int</span> <span class="n">t</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">==</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">        <span class="n">t</span><span class="o">=</span><span class="nb">next</span><span class="p">[</span><span class="n">t</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="n">inline</span> <span class="n">void</span> <span class="nb">hash</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">::</span><span class="n">push</span><span class="p">(</span><span class="n">const</span> <span class="n">T</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl">    <span class="nb">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">x</span><span class="o">%</span> <span class="n">MAX</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl">        <span class="nb">next</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">45</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">46</span><span class="cl">    <span class="n">head</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span><span class="o">=</span><span class="n">pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl">    <span class="n">key</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">48</span><span class="cl">    <span class="n">pos</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">49</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="python-协程处理-requests">Python 协程处理 requests</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">  1</span><span class="cl"><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">monkey</span>
+</span></span><span class="line"><span class="ln">  2</span><span class="cl"><span class="n">monkey</span><span class="o">.</span><span class="n">patch_all</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">  3</span><span class="cl">
+</span></span><span class="line"><span class="ln">  4</span><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="ln">  5</span><span class="cl"><span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">  6</span><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">  7</span><span class="cl">
+</span></span><span class="line"><span class="ln">  8</span><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="ln">  9</span><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="ln"> 10</span><span class="cl"><span class="kn">import</span> <span class="nn">gevent</span>
+</span></span><span class="line"><span class="ln"> 11</span><span class="cl"><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">pool</span>
+</span></span><span class="line"><span class="ln"> 12</span><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="ln"> 13</span><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="ln"> 14</span><span class="cl"><span class="kn">import</span> <span class="nn">pymysql</span>
+</span></span><span class="line"><span class="ln"> 15</span><span class="cl"><span class="kn">import</span> <span class="nn">functools</span>
+</span></span><span class="line"><span class="ln"> 16</span><span class="cl"><span class="kn">from</span> <span class="nn">DBUtils.PooledDB</span> <span class="kn">import</span> <span class="n">PooledDB</span>
+</span></span><span class="line"><span class="ln"> 17</span><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="ln"> 18</span><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+</span></span><span class="line"><span class="ln"> 19</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 20</span><span class="cl"><span class="c1"># db ip</span>
+</span></span><span class="line"><span class="ln"> 21</span><span class="cl"><span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="ln"> 22</span><span class="cl"><span class="s1">db msg
+</span></span></span><span class="line"><span class="ln"> 23</span><span class="cl"><span class="s1">&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="ln"> 24</span><span class="cl"><span class="c1"># 数据库连接池</span>
+</span></span><span class="line"><span class="ln"> 25</span><span class="cl"><span class="n">mysql_db_pool</span> <span class="o">=</span> <span class="n">PooledDB</span><span class="p">(</span><span class="n">creator</span><span class="o">=</span><span class="n">pymysql</span><span class="p">,</span> <span class="n">mincached</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxcached</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maxconnections</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">base_ip</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 26</span><span class="cl">                         <span class="n">user</span><span class="o">=</span><span class="n">base_user</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">base_pwd</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="n">base_db</span><span class="p">,</span> <span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">use_unicode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">blocking</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 27</span><span class="cl"><span class="c1"># target url</span>
+</span></span><span class="line"><span class="ln"> 28</span><span class="cl"><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="ln"> 29</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 30</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 31</span><span class="cl"><span class="n">complete_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="ln"> 32</span><span class="cl"><span class="c1"># log--</span>
+</span></span><span class="line"><span class="ln"> 33</span><span class="cl"><span class="n">func_count_dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 34</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 35</span><span class="cl"><span class="k">def</span> <span class="nf">func_time_logger</span><span class="p">(</span><span class="n">fun</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 36</span><span class="cl">    <span class="k">if</span> <span class="n">fun</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mioji.aop_utils.logger&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 37</span><span class="cl">        <span class="k">return</span> <span class="n">fun</span>
+</span></span><span class="line"><span class="ln"> 38</span><span class="cl">    <span class="n">fun</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;mioji.aop_utils.logger&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="ln"> 39</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 40</span><span class="cl">    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">fun</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 41</span><span class="cl">    <span class="k">def</span> <span class="nf">logging</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 42</span><span class="cl">        <span class="n">func_count_dict</span><span class="p">[</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln"> 43</span><span class="cl">        <span class="n">begin</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln"> 44</span><span class="cl">        <span class="n">result</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 45</span><span class="cl">        <span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln"> 46</span><span class="cl">        <span class="n">func_count_dict</span><span class="p">[</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln"> 47</span><span class="cl">        <span class="nb">print</span> <span class="s1">&#39;func </span><span class="si">{0}</span><span class="s1">, cost:</span><span class="si">{1}</span><span class="s1">, ex:</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">begin</span> <span class="p">,</span> <span class="n">func_count_dict</span><span class="p">[</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">])</span>
+</span></span><span class="line"><span class="ln"> 48</span><span class="cl">        <span class="k">return</span> <span class="n">result</span>
+</span></span><span class="line"><span class="ln"> 49</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 50</span><span class="cl">    <span class="k">return</span> <span class="n">logging</span>
+</span></span><span class="line"><span class="ln"> 51</span><span class="cl"><span class="c1"># --log</span>
+</span></span><span class="line"><span class="ln"> 52</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 53</span><span class="cl"><span class="c1"># 获得代理</span>
+</span></span><span class="line"><span class="ln"> 54</span><span class="cl"><span class="nd">@func_time_logger</span>
+</span></span><span class="line"><span class="ln"> 55</span><span class="cl"><span class="k">def</span> <span class="nf">get_PROXY</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln"> 56</span><span class="cl">    <span class="c1"># 代理url</span>
+</span></span><span class="line"><span class="ln"> 57</span><span class="cl">    <span class="n">R</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 58</span><span class="cl">    <span class="n">p</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="ln"> 59</span><span class="cl">    <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;10.&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 60</span><span class="cl">        <span class="c1"># if p.split(&#39;:&#39;)[0] in SOCKS_PROXY:</span>
+</span></span><span class="line"><span class="ln"> 61</span><span class="cl">        <span class="n">PROXY</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 62</span><span class="cl">        <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s1">&#39;socks5://&#39;</span> <span class="o">+</span> <span class="n">p</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 63</span><span class="cl">        <span class="s1">&#39;https&#39;</span><span class="p">:</span> <span class="s1">&#39;socks5://&#39;</span> <span class="o">+</span> <span class="n">p</span>
+</span></span><span class="line"><span class="ln"> 64</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 65</span><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln"> 66</span><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">real_ip</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 67</span><span class="cl">        <span class="n">proxy_type</span> <span class="o">=</span> <span class="s1">&#39;http&#39;</span>
+</span></span><span class="line"><span class="ln"> 68</span><span class="cl">        <span class="n">PROXY</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 69</span><span class="cl">            <span class="s1">&#39;https&#39;</span><span class="p">:</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="n">p</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 70</span><span class="cl">            <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="n">p</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 71</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 72</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 73</span><span class="cl">    <span class="k">return</span> <span class="n">PROXY</span>
+</span></span><span class="line"><span class="ln"> 74</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 75</span><span class="cl"><span class="c1"># requests</span>
+</span></span><span class="line"><span class="ln"> 76</span><span class="cl"><span class="nd">@func_time_logger</span>
+</span></span><span class="line"><span class="ln"> 77</span><span class="cl"><span class="k">def</span> <span class="nf">get_request_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 78</span><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="ln"> 79</span><span class="cl">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln"> 80</span><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln"> 81</span><span class="cl">            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="n">get_PROXY</span><span class="p">(),</span> <span class="n">timeout</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln"> 82</span><span class="cl">            <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="ln"> 83</span><span class="cl">            <span class="k">return</span> <span class="n">data</span>
+</span></span><span class="line"><span class="ln"> 84</span><span class="cl">        <span class="k">except</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln"> 85</span><span class="cl">            <span class="nb">print</span> <span class="s1">&#39;get error&#39;</span>
+</span></span><span class="line"><span class="ln"> 86</span><span class="cl">            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln"> 87</span><span class="cl">    <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="ln"> 88</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 89</span><span class="cl"><span class="c1"># process function</span>
+</span></span><span class="line"><span class="ln"> 90</span><span class="cl"><span class="nd">@func_time_logger</span>
+</span></span><span class="line"><span class="ln"> 91</span><span class="cl"><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 92</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 93</span><span class="cl">    <span class="n">get_request_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 94</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 95</span><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="ln"> 96</span><span class="cl"><span class="s1">    other works
+</span></span></span><span class="line"><span class="ln"> 97</span><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="ln"> 98</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 99</span><span class="cl">    <span class="k">global</span> <span class="n">complete_count</span>
+</span></span><span class="line"><span class="ln">100</span><span class="cl">    <span class="n">complete_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln">101</span><span class="cl">    <span class="nb">print</span> <span class="s1">&#39;end </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sid</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">102</span><span class="cl">    <span class="nb">print</span> <span class="s1">&#39;complete </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">complete_count</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">103</span><span class="cl">
+</span></span><span class="line"><span class="ln">104</span><span class="cl"><span class="c1"># 异步协程处理请求量大的需求</span>
+</span></span><span class="line"><span class="ln">105</span><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">106</span><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">107</span><span class="cl">
+</span></span><span class="line"><span class="ln">108</span><span class="cl">    <span class="n">gs</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="ln">109</span><span class="cl">    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">data_list</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">110</span><span class="cl">        <span class="n">g</span> <span class="o">=</span> <span class="n">execute_pool</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">process</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,))</span>
+</span></span><span class="line"><span class="ln">111</span><span class="cl">        <span class="n">gs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">112</span><span class="cl">    <span class="n">gevent</span><span class="o">.</span><span class="n">joinall</span><span class="p">(</span><span class="n">gs</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">113</span><span class="cl">
+</span></span><span class="line"><span class="ln">114</span><span class="cl">    <span class="nb">print</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">s</span>
+</span></span></code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -548,7 +547,7 @@ Von
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -719,7 +718,7 @@ Von
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
+<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {

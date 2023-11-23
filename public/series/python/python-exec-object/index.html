@@ -27,9 +27,9 @@
 <meta name="twitter:title" content="Python Exec Object"/>
 <meta name="twitter:description" content="python-exec-object"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -241,38 +241,38 @@ Von
   </span><a href="/series/python/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python</a><a href="/tags/python3/" class="badge rounded-pill text-white bg-primary post-taxonomy">Python3</a></div>
 <div class="post-content mb-3"><h2 id="exec">exec()</h2>
 <h3 id="syntax">Syntax:</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="n">exec</span><span class="p">(</span><span class="nb">object</span><span class="p">[,</span> <span class="nb">globals</span><span class="p">[,</span> <span class="nb">locals</span><span class="p">]])</span>
-<span class="ln">2</span>
-<span class="ln">3</span><span class="p">:</span><span class="n">param</span> <span class="nb">object</span><span class="p">:</span> <span class="n">As</span> <span class="n">already</span> <span class="n">said</span> <span class="n">this</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span> <span class="ow">or</span> <span class="nb">object</span> <span class="n">code</span>
-<span class="ln">4</span><span class="p">:</span><span class="n">param</span> <span class="nb">globals</span><span class="p">:</span> <span class="n">This</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">optional</span>
-<span class="ln">5</span><span class="p">:</span><span class="n">param</span> <span class="nb">locals</span><span class="p">:</span> <span class="n">This</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">mapping</span> <span class="nb">object</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">optional</span>
-</code></pre></div><p>eg.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="ln">2</span><span class="n">exec</span><span class="p">(</span><span class="s2">&#34;print(factorial(5))&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;factorial&#34;</span><span class="p">:</span><span class="n">factorial</span><span class="p">})</span>
-</code></pre></div><h2 id="eval">eval()</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">exec</span><span class="p">(</span><span class="nb">object</span><span class="p">[,</span> <span class="nb">globals</span><span class="p">[,</span> <span class="nb">locals</span><span class="p">]])</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">:</span><span class="n">param</span> <span class="nb">object</span><span class="p">:</span> <span class="n">As</span> <span class="n">already</span> <span class="n">said</span> <span class="n">this</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span> <span class="ow">or</span> <span class="nb">object</span> <span class="n">code</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="p">:</span><span class="n">param</span> <span class="nb">globals</span><span class="p">:</span> <span class="n">This</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">optional</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">:</span><span class="n">param</span> <span class="nb">locals</span><span class="p">:</span> <span class="n">This</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">mapping</span> <span class="nb">object</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">optional</span>
+</span></span></code></pre></div><p>eg.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">exec</span><span class="p">(</span><span class="s2">&#34;print(factorial(5))&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;factorial&#34;</span><span class="p">:</span><span class="n">factorial</span><span class="p">})</span>
+</span></span></code></pre></div><h2 id="eval">eval()</h2>
 <h3 id="syntax-1">Syntax:</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="nb">eval</span><span class="p">(</span><span class="n">expression</span><span class="p">[,</span> <span class="nb">globals</span><span class="p">[,</span> <span class="nb">locals</span><span class="p">]])</span>
-</code></pre></div><h3 id="diff-with-exec">diff with exec()</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">eval</span><span class="p">(</span><span class="n">expression</span><span class="p">[,</span> <span class="nb">globals</span><span class="p">[,</span> <span class="nb">locals</span><span class="p">]])</span>
+</span></span></code></pre></div><h3 id="diff-with-exec">diff with exec()</h3>
 <p>1.eval accepts only a single expression, exec can take a code block that has Python statements: loops, try: except:, class and function/method definitions and so on.
 2.eval returns the value of the given expression, whereas exec ignores the return value from its code, and always returns None (in Python 2 it is a statement and cannot be used as an expression, so it really does not return anything).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln"> 1</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="ln"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;37 + a&#39;</span><span class="p">)</span>   <span class="c1"># it is an expression</span>
-<span class="ln"> 3</span><span class="mi">42</span>
-<span class="ln"> 4</span><span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="s1">&#39;37 + a&#39;</span><span class="p">)</span>   <span class="c1"># it is an expression statement; value is ignored (None is returned)</span>
-<span class="ln"> 5</span><span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="s1">&#39;a = 47&#39;</span><span class="p">)</span>   <span class="c1"># modify a global variable as a side effect</span>
-<span class="ln"> 6</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="ln"> 7</span><span class="mi">47</span>
-<span class="ln"> 8</span><span class="o">&gt;&gt;&gt;</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;a = 47&#39;</span><span class="p">)</span>  <span class="c1"># you cannot evaluate a statement</span>
-<span class="ln"> 9</span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-<span class="ln">10</span>  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ln">11</span>  <span class="n">File</span> <span class="s2">&#34;&lt;string&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ln">12</span>    <span class="n">a</span> <span class="o">=</span> <span class="mi">47</span>
-<span class="ln">13</span>      <span class="o">^</span>
-<span class="ln">14</span><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
-</code></pre></div><h2 id="compile">compile()</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;37 + a&#39;</span><span class="p">)</span>   <span class="c1"># it is an expression</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="mi">42</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="s1">&#39;37 + a&#39;</span><span class="p">)</span>   <span class="c1"># it is an expression statement; value is ignored (None is returned)</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">exec</span><span class="p">(</span><span class="s1">&#39;a = 47&#39;</span><span class="p">)</span>   <span class="c1"># modify a global variable as a side effect</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="mi">47</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;a = 47&#39;</span><span class="p">)</span>  <span class="c1"># you cannot evaluate a statement</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="n">File</span> <span class="s2">&#34;&lt;string&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="n">a</span> <span class="o">=</span> <span class="mi">47</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">      <span class="o">^</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</span></span></code></pre></div><h2 id="compile">compile()</h2>
 <h3 id="syntax-2">Syntax:</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dont_inherit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">optimize</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div><p>It can be used to speed up repeated invocations of the same code with exec or eval by compiling the source into a code object beforehand.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dont_inherit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">optimize</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><p>It can be used to speed up repeated invocations of the same code with exec or eval by compiling the source into a code object beforehand.</p>
 <p><a href="https://docs.python.org/3/library/functions.html#compile" target="_blank" rel="noopener noreferrer">compile</a>
 </p>
 </div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
@@ -320,7 +320,7 @@ Von
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -491,7 +491,7 @@ Von
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
+<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {

@@ -12,7 +12,7 @@
 <meta name="description" content="Golang Notes" /><meta itemprop="name" content="Fan vs go func">
 <meta itemprop="description" content="Golang Notes"><meta itemprop="datePublished" content="2021-11-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-11-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="353"><meta itemprop="image" content="/images/bg/go.png">
+<meta itemprop="wordCount" content="352"><meta itemprop="image" content="/images/bg/go.png">
 <meta itemprop="keywords" content="" /><meta property="og:title" content="Fan vs go func" />
 <meta property="og:description" content="Golang Notes" />
 <meta property="og:type" content="article" />
@@ -26,9 +26,9 @@
 <meta name="twitter:title" content="Fan vs go func"/>
 <meta name="twitter:description" content="Golang Notes"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -255,92 +255,91 @@ Von
 </nav>
   </div>
 </div><div class="post-content mb-3"><h2 id="test-script">test script</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nf">gen</span><span class="p">(</span><span class="nx">nums</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span> <span class="p">{</span>
-<span class="ln"> 2</span>   <span class="nx">out</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
-<span class="ln"> 3</span>   <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 4</span>      <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>
-<span class="ln"> 5</span>         <span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">n</span>
-<span class="ln"> 6</span>      <span class="p">}</span>
-<span class="ln"> 7</span>      <span class="nb">close</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
-<span class="ln"> 8</span>   <span class="p">}()</span>
-<span class="ln"> 9</span>   <span class="k">return</span> <span class="nx">out</span>
-<span class="ln">10</span><span class="p">}</span>
-<span class="ln">11</span><span class="kd">func</span> <span class="nf">sq</span><span class="p">(</span><span class="nx">in</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span> <span class="p">{</span>
-<span class="ln">12</span>   <span class="nx">out</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
-<span class="ln">13</span>   <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">14</span>      <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">in</span> <span class="p">{</span>
-<span class="ln">15</span>         <span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">n</span> <span class="o">*</span> <span class="nx">n</span>
-<span class="ln">16</span>      <span class="p">}</span>
-<span class="ln">17</span>      <span class="nb">close</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
-<span class="ln">18</span>   <span class="p">}()</span>
-<span class="ln">19</span>   <span class="k">return</span> <span class="nx">out</span>
-<span class="ln">20</span><span class="p">}</span>
-<span class="ln">21</span>
-<span class="ln">22</span><span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="nx">cs</span> <span class="o">...&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span> <span class="p">{</span>
-<span class="ln">23</span>   <span class="kd">var</span> <span class="nx">wg</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span>
-<span class="ln">24</span>   <span class="nx">out</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
-<span class="ln">25</span>
-<span class="ln">26</span>   <span class="c1">// Start an output goroutine for each input channel in cs.  output
-</span><span class="ln">27</span><span class="c1"></span>   <span class="c1">// copies values from c to out until c is closed, then calls wg.Done.
-</span><span class="ln">28</span><span class="c1"></span>   <span class="nx">output</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">c</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">29</span>      <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">c</span> <span class="p">{</span>
-<span class="ln">30</span>         <span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">n</span>
-<span class="ln">31</span>      <span class="p">}</span>
-<span class="ln">32</span>      <span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
-<span class="ln">33</span>   <span class="p">}</span>
-<span class="ln">34</span>   <span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">cs</span><span class="p">))</span>
-<span class="ln">35</span>   <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">cs</span> <span class="p">{</span>
-<span class="ln">36</span>      <span class="k">go</span> <span class="nf">output</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
-<span class="ln">37</span>   <span class="p">}</span>
-<span class="ln">38</span>
-<span class="ln">39</span>   <span class="c1">// Start a goroutine to close out once all the output goroutines are
-</span><span class="ln">40</span><span class="c1"></span>   <span class="c1">// done.  This must start after the wg.Add call.
-</span><span class="ln">41</span><span class="c1"></span>   <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">42</span>      <span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span>
-<span class="ln">43</span>      <span class="nb">close</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
-<span class="ln">44</span>   <span class="p">}()</span>
-<span class="ln">45</span>   <span class="k">return</span> <span class="nx">out</span>
-<span class="ln">46</span><span class="p">}</span>
-<span class="ln">47</span>
-<span class="ln">48</span><span class="kd">func</span> <span class="nf">TestFan</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">49</span>   <span class="nx">x</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span>
-<span class="ln">50</span>   <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-<span class="ln">51</span>      <span class="nx">x</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
-<span class="ln">52</span>   <span class="p">}</span>
-<span class="ln">53</span>   <span class="nx">st</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span>
-<span class="ln">54</span>   <span class="nx">c</span> <span class="o">:=</span> <span class="nf">gen</span><span class="p">(</span><span class="nx">x</span><span class="o">...</span><span class="p">)</span>
-<span class="ln">55</span>
-<span class="ln">56</span>   <span class="nx">out</span> <span class="o">:=</span> <span class="p">[]</span><span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">{}</span>
-<span class="ln">57</span>   <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-<span class="ln">58</span>      <span class="nx">out</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span> <span class="nf">sq</span><span class="p">(</span><span class="nx">c</span><span class="p">))</span>
-<span class="ln">59</span>   <span class="p">}</span>
-<span class="ln">60</span>
-<span class="ln">61</span>   <span class="c1">// Consume the output.
-</span><span class="ln">62</span><span class="c1"></span>   <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nf">merge</span><span class="p">(</span><span class="nx">out</span><span class="o">...</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">63</span>      <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="c1">// 4 then 9, or 9 then 4
-</span><span class="ln">64</span><span class="c1"></span>   <span class="p">}</span>
-<span class="ln">65</span>   <span class="nx">t1</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span> <span class="o">-</span> <span class="nx">st</span>
-<span class="ln">66</span>
-<span class="ln">67</span>   <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;=======&#34;</span><span class="p">)</span>
-<span class="ln">68</span>   <span class="nx">st</span> <span class="p">=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span>
-<span class="ln">69</span>   <span class="kd">var</span> <span class="nx">wg</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span>
-<span class="ln">70</span>   <span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
-<span class="ln">71</span>   <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">x</span> <span class="p">{</span>
-<span class="ln">72</span>      <span class="k">go</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">73</span>         <span class="k">defer</span> <span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
-<span class="ln">74</span>         <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">)</span>
-<span class="ln">75</span>      <span class="p">}(</span><span class="nx">i</span><span class="p">)</span>
-<span class="ln">76</span>   <span class="p">}</span>
-<span class="ln">77</span>   <span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span>
-<span class="ln">78</span>   <span class="nx">t2</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span> <span class="o">-</span> <span class="nx">st</span>
-<span class="ln">79</span>
-<span class="ln">80</span>   <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;===%d vs %d&#34;</span><span class="p">,</span> <span class="nx">t1</span><span class="p">,</span> <span class="nx">t2</span><span class="p">)</span>
-<span class="ln">81</span>   <span class="nx">assert</span><span class="p">.</span><span class="nf">Assert</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span> <span class="nx">t1</span> <span class="p">&lt;</span> <span class="nx">t2</span><span class="p">)</span>
-<span class="ln">82</span><span class="p">}</span>
-<span class="ln">83</span>
-<span class="ln">84</span><span class="c1">// performace 1:4
-</span><span class="ln">85</span><span class="c1"></span>
-</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">func</span> <span class="nf">gen</span><span class="p">(</span><span class="nx">nums</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">   <span class="nx">out</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">   <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">      <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">         <span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">n</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">      <span class="nb">close</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">   <span class="p">}()</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">   <span class="k">return</span> <span class="nx">out</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="kd">func</span> <span class="nf">sq</span><span class="p">(</span><span class="nx">in</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">   <span class="nx">out</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">   <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">      <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">in</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">         <span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">n</span> <span class="o">*</span> <span class="nx">n</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">      <span class="nb">close</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">   <span class="p">}()</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">   <span class="k">return</span> <span class="nx">out</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="nx">cs</span> <span class="o">...&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">   <span class="kd">var</span> <span class="nx">wg</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">   <span class="nx">out</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">
+</span></span><span class="line"><span class="ln">26</span><span class="cl">   <span class="c1">// Start an output goroutine for each input channel in cs.  output
+</span></span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="c1"></span>   <span class="c1">// copies values from c to out until c is closed, then calls wg.Done.
+</span></span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="c1"></span>   <span class="nx">output</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">c</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">      <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">c</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">         <span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">n</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">      <span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">   <span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">cs</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl">   <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">cs</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl">      <span class="k">go</span> <span class="nf">output</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl">
+</span></span><span class="line"><span class="ln">39</span><span class="cl">   <span class="c1">// Start a goroutine to close out once all the output goroutines are
+</span></span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="c1"></span>   <span class="c1">// done.  This must start after the wg.Add call.
+</span></span></span><span class="line"><span class="ln">41</span><span class="cl"><span class="c1"></span>   <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl">      <span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl">      <span class="nb">close</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl">   <span class="p">}()</span>
+</span></span><span class="line"><span class="ln">45</span><span class="cl">   <span class="k">return</span> <span class="nx">out</span>
+</span></span><span class="line"><span class="ln">46</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl">
+</span></span><span class="line"><span class="ln">48</span><span class="cl"><span class="kd">func</span> <span class="nf">TestFan</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">49</span><span class="cl">   <span class="nx">x</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="ln">50</span><span class="cl">   <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">      <span class="nx">x</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">   <span class="nx">st</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">54</span><span class="cl">   <span class="nx">c</span> <span class="o">:=</span> <span class="nf">gen</span><span class="p">(</span><span class="nx">x</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">55</span><span class="cl">
+</span></span><span class="line"><span class="ln">56</span><span class="cl">   <span class="nx">out</span> <span class="o">:=</span> <span class="p">[]</span><span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">{}</span>
+</span></span><span class="line"><span class="ln">57</span><span class="cl">   <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">58</span><span class="cl">      <span class="nx">out</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span> <span class="nf">sq</span><span class="p">(</span><span class="nx">c</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln">59</span><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="ln">60</span><span class="cl">
+</span></span><span class="line"><span class="ln">61</span><span class="cl">   <span class="c1">// Consume the output.
+</span></span></span><span class="line"><span class="ln">62</span><span class="cl"><span class="c1"></span>   <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nf">merge</span><span class="p">(</span><span class="nx">out</span><span class="o">...</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">63</span><span class="cl">      <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="c1">// 4 then 9, or 9 then 4
+</span></span></span><span class="line"><span class="ln">64</span><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="ln">65</span><span class="cl">   <span class="nx">t1</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span> <span class="o">-</span> <span class="nx">st</span>
+</span></span><span class="line"><span class="ln">66</span><span class="cl">
+</span></span><span class="line"><span class="ln">67</span><span class="cl">   <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;=======&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">68</span><span class="cl">   <span class="nx">st</span> <span class="p">=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">69</span><span class="cl">   <span class="kd">var</span> <span class="nx">wg</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl">   <span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln">71</span><span class="cl">   <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">x</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">72</span><span class="cl">      <span class="k">go</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">73</span><span class="cl">         <span class="k">defer</span> <span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">74</span><span class="cl">         <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">75</span><span class="cl">      <span class="p">}(</span><span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">76</span><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="ln">77</span><span class="cl">   <span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">78</span><span class="cl">   <span class="nx">t2</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UnixMicro</span><span class="p">()</span> <span class="o">-</span> <span class="nx">st</span>
+</span></span><span class="line"><span class="ln">79</span><span class="cl">
+</span></span><span class="line"><span class="ln">80</span><span class="cl">   <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;===%d vs %d&#34;</span><span class="p">,</span> <span class="nx">t1</span><span class="p">,</span> <span class="nx">t2</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">81</span><span class="cl">   <span class="nx">assert</span><span class="p">.</span><span class="nf">Assert</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span> <span class="nx">t1</span> <span class="p">&lt;</span> <span class="nx">t2</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">82</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">83</span><span class="cl">
+</span></span><span class="line"><span class="ln">84</span><span class="cl"><span class="c1">// performace 1:4
+</span></span></span></code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -385,7 +384,7 @@ Von
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -556,7 +555,7 @@ Von
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script>
+<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
