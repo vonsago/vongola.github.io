@@ -204,49 +204,133 @@ Von
   <div class="card-body">
     <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active">Categories</li></ol>
   </div>
-</nav><div class="taxonomys"><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/docker/">Docker</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>1 post in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/docker/docker-stats/">Docker Stats</a>
-              <span class="float-end post-date">Feb 20</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/algorithm/">Algorithm</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>1 post in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/algorithm/game-theory/">Game Theory</a>
-              <span class="float-end post-date">Nov 18</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/k8s/">Kubernetes</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>0 posts in total</span>
-          </div><ul class="taxonomy-posts"></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/workway/">Work Way</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>0 posts in total</span>
-          </div><ul class="taxonomy-posts"></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div></div><div class="row table-responsive mb-3">
+</nav><div class="posts mb-4"><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/k8s/discovery/">Service Discovery
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 2, 2022
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a><a href="/tags/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Service Discovery" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/network/post/">HTTP Method POST vs GET
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Aug 3, 2022
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/network/" class="badge rounded-pill text-white bg-primary post-taxonomy">Network</a><a href="/tags/http/" class="badge rounded-pill text-white bg-primary post-taxonomy">HTTP</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="HTTP Method POST vs GET" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/golang/fan/">Fan vs Go Func
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 29, 2021
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/categories/golang/" class="badge rounded-pill text-white bg-primary post-taxonomy">Golang</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Fan vs go func" src="/images/bg/go.png" loading="lazy"
+   width="400" height="400"
+   />
+
+          
+          test script 1func gen(nums ...int) &lt;-chan int { 2 out := make(chan int) 3 go func() { 4 for _, n := range nums { 5 out &lt;- n 6 } 7 close(out) 8 }() 9 return out 10} 11func sq(in &lt;-chan int) &lt;-chan int { 12 out := make(chan int) 13 go func() { 14 for n := range in { 15 out &lt;- n * n 16 } 17 close(out) 18 …
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/workway/cicd/">DevOps!
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 25, 2021
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/series/manual/" class="badge rounded-pill text-white bg-primary post-taxonomy">Manual</a><a href="/tags/blog/" class="badge rounded-pill text-white bg-primary post-taxonomy">Blog</a><a href="/tags/github/" class="badge rounded-pill text-white bg-primary post-taxonomy">github</a><a href="/tags/dns/" class="badge rounded-pill text-white bg-primary post-taxonomy">DNS</a><a href="/tags/domain/" class="badge rounded-pill text-white bg-primary post-taxonomy">domain</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="DevOps!" src="/images/bg/computerp.png" loading="lazy"
+   width="5760" height="3840"
+   />
+
+          
+          what is devops DevOps 是一种工作模式，集合文化理念、实践和工具，来使团队的工作合作更高效，交付更便捷可靠。 why need devops 懒 因为它可以帮我们自动的处理一些苦燥的任务
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/k8s/log/">Docker Log
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Sep 9, 2021
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a><a href="/tags/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Docker Log" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          Docker docker 支持的日志驱动，配置文件 /etc/docker/daemon.json none 没有容器日志，无任何输出 local 自定义格式存储 json-file 默认驱动程序，json syslog 依赖 syslog 守护进程，可指定路径 journald 依赖 journald 守护进程
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/docker/docker-stats/">Docker Stats
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Feb 20, 2020
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>4 min read
+  </span><a href="/categories/docker/" class="badge rounded-pill text-white bg-primary post-taxonomy">Docker</a><a href="/tags/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a><a href="/tags/docker/" class="badge rounded-pill text-white bg-primary post-taxonomy">Docker</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Docker Stats" src="/images/bg/bg2.jpeg" loading="lazy"
+   width="2824" height="2824"
+   />
+
+          
+          Docker Stats 1是基于docker 1.10.3版本的源码， 2对docker stats命令进行源码分析，看看docker stats命令输出的数据是从cg
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/k8s/kubernetes-learn/">Kubernetes Beginner
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jan 3, 2020
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>5 min read
+  </span><a href="/categories/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a><a href="/tags/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Kubernetes Beginner" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          调度 网络 容器网络模式 none: 完全隔离，既不访问外部网络，也不提供服务访问自己。可以用于测试容器，为后续容器创建网络环境容器 host: 共享宿主机网络，性能好
+        </div>
+      </div>
+    </article></div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
       <li class="page-item">
         <a href="/categories/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -260,14 +344,18 @@ Von
       <li class="page-item active">
         <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 </div>
+
 </div><aside class="col-lg-4 sidebar d-flex">
   <div class="container">
     
