@@ -12,7 +12,7 @@
 <meta name="description" content="kubernetes" /><meta itemprop="name" content="Install kubernetes(k8s) with kubeadm">
 <meta itemprop="description" content="kubernetes"><meta itemprop="datePublished" content="2023-08-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-08-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="810"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="wordCount" content="878"><meta itemprop="image" content="/images/bg/bgh1.jpg">
 <meta itemprop="keywords" content="Kubernetes," /><meta property="og:title" content="Install kubernetes(k8s) with kubeadm" />
 <meta property="og:description" content="kubernetes" />
 <meta property="og:type" content="article" />
@@ -272,6 +272,7 @@ Von
         <li><a href="#dns-问题-条目不能超过3">DNS 问题 （条目不能超过3）</a></li>
         <li><a href="#plugin-typeflannel-failed-add-open-runflannelsubnetenv-no-such-file-or-directory">plugin type=&ldquo;flannel&rdquo; failed (add): open /run/flannel/subnet.env: no such file or directory</a></li>
         <li><a href="#dashboad-baretoken">dashboad baretoken</a></li>
+        <li><a href="#kubeadmin-join-throws-this-error-procsysnetbridgebridge-nf-call-iptables-does-not-exist">Kubeadmin join throws this error “/proc/sys/net/bridge/bridge-nf-call-iptables does not exist”</a></li>
       </ul>
     </li>
   </ul>
@@ -454,7 +455,11 @@ systemctl start kubelet</p>
 <h3 id="dashboad-baretoken">dashboad baretoken</h3>
 <p><a href="https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md" target="_blank" rel="noopener noreferrer">https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md</a>
 </p>
-</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<h3 id="kubeadmin-join-throws-this-error-procsysnetbridgebridge-nf-call-iptables-does-not-exist">Kubeadmin join throws this error “/proc/sys/net/bridge/bridge-nf-call-iptables does not exist”</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>modprobe br_netfilter
+<span class="ln">2</span>echo 1 &gt; /proc/sys/net/bridge/bridge-nf-call-iptables
+<span class="ln">3</span>echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -568,12 +573,12 @@ systemctl start kubelet</p>
             Network
           </a><a href="/categories/data/" class="badge bg-primary text-white rounded post-taxonomy" title="Data">
             Data
+          </a><a href="/categories/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
           </a><a href="/categories/golang/" class="badge bg-primary text-white rounded post-taxonomy" title="Golang">
             Golang
           </a><a href="/categories/algorithm/" class="badge bg-primary text-white rounded post-taxonomy" title="Algorithm">
             Algorithm
-          </a><a href="/categories/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
-            Docker
           </a><a href="/categories/mongodb/" class="badge bg-primary text-white rounded post-taxonomy" title="Mongodb">
             Mongodb
           </a></div>
@@ -606,22 +611,22 @@ systemctl start kubelet</p>
             Python3
           </a><a href="/tags/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
             Linux
+          </a><a href="/tags/http/" class="badge bg-primary text-white rounded post-taxonomy" title="HTTP">
+            HTTP
           </a><a href="/tags/kubernetes/" class="badge bg-primary text-white rounded post-taxonomy" title="Kubernetes">
             Kubernetes
           </a><a href="/tags/web/" class="badge bg-primary text-white rounded post-taxonomy" title="Web">
             Web
           </a><a href="/tags/dns/" class="badge bg-primary text-white rounded post-taxonomy" title="DNS">
             DNS
-          </a><a href="/tags/http/" class="badge bg-primary text-white rounded post-taxonomy" title="HTTP">
-            HTTP
           </a><a href="/tags/blog/" class="badge bg-primary text-white rounded post-taxonomy" title="Blog">
             Blog
           </a><a href="/tags/data/" class="badge bg-primary text-white rounded post-taxonomy" title="Data">
             Data
+          </a><a href="/tags/docker/" class="badge bg-primary text-white rounded post-taxonomy" title="Docker">
+            Docker
           </a><a href="/tags/domain/" class="badge bg-primary text-white rounded post-taxonomy" title="domain">
             domain
-          </a><a href="/tags/ffmpeg/" class="badge bg-primary text-white rounded post-taxonomy" title="FFmpeg">
-            FFmpeg
           </a></div>
       </div>
     </section>

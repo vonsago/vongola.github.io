@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>History of HTTP</title>
+      <link>/categories/network/httpcode/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/httpcode/</guid>
+      <description>HTTP 响应状态码用来表明特定 HTTP 请求是否成功完成。 响应被归为以下五大类： 信息响应 (100–199) 成功响应 (200–299) 重定向消息 (300–3</description>
+    </item>
+    
     <item>
       <title>History of HTTP</title>
       <link>/categories/network/http/</link>

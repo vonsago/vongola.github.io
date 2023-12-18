@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 20 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Base</title>
+      <link>/categories/docker/docker-base/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/docker/docker-base/</guid>
+      <description> </description>
+    </item>
+    
     <item>
       <title>Docker Stats</title>
       <link>/categories/docker/docker-stats/</link>

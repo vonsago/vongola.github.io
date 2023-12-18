@@ -54,6 +54,15 @@
     </item>
     
     <item>
+      <title>History of HTTP</title>
+      <link>/categories/network/httpcode/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/httpcode/</guid>
+      <description>HTTP 响应状态码用来表明特定 HTTP 请求是否成功完成。 响应被归为以下五大类： 信息响应 (100–199) 成功响应 (200–299) 重定向消息 (300–3</description>
+    </item>
+    
+    <item>
       <title>DNS use both the protocols TCP and UDP</title>
       <link>/categories/network/dns/</link>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
@@ -174,6 +183,15 @@ These are the common top-level directories associated with the root directory: /
     </item>
     
     <item>
+      <title>Docker Base</title>
+      <link>/categories/docker/docker-base/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/docker/docker-base/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
       <title>RTMP</title>
       <link>/series/linux/rtmp/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
@@ -225,7 +243,7 @@ These are the common top-level directories associated with the root directory: /
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/k8s/kubernetes-learn/</guid>
-      <description>调度 网络 https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/#6-internet-to-service-networking-a-nameinternal-to-servicea</description>
+      <description>调度 网络 容器网络模式 none: 完全隔离，既不访问外部网络，也不提供服务访问自己。可以用于测试容器，为后续容器创建网络环境容器 host: 共享宿主机网络，性能好</description>
     </item>
     
     <item>
