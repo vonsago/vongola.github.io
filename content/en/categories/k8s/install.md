@@ -242,3 +242,10 @@ try  `rm -f /etc/cni/net.d/*flannel* `
 https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
 
 
+### Kubeadmin join throws this error “/proc/sys/net/bridge/bridge-nf-call-iptables does not exist”
+
+```
+modprobe br_netfilter
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
