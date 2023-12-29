@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>k8s questions</title>
+      <link>/categories/k8s/k8sinterview/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/k8sinterview/</guid>
+      <description>cgroup v1 vs v2 namespace 分类，他和sandbox关系 service vs ep deployment vs RS clusterip 访问不通的原因 service 和 deployment 的关系，headless service是什么 宿主机上能看到的容器里的</description>
+    </item>
+    
     <item>
       <title>Install kubernetes(k8s) with kubeadm</title>
       <link>/categories/k8s/install/</link>
