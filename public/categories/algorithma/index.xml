@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithma on Vassago&#39;s Blog</title>
+    <link>/categories/algorithma/</link>
+    <description>Recent content in Algorithma on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/categories/algorithma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KMP code</title>
+      <link>/categories/algorithm/redis/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/algorithm/redis/</guid>
+      <description>1 2func kmp(s, sub string) int { 3	bu := make([]int, len(sub)) 4	// abcdabd 5	for i, j := 1, 0; i &amp;lt; len(sub); i++ { 6	for j &amp;gt; 0 &amp;amp;&amp;amp; sub[j] != sub[i] { 7	j = bu[j-1] 8	} 9	if sub[j] == sub[i] { 10	j++ 11	} 12	bu[i] = j 13	} 14	for i, j := 0, 0; i &amp;lt; len(s); i++ { 15	if s[i] == sub[j] { 16	j++ 17	if j == len(sub) { 18	return i 19	} 20	} else { 21	if j &amp;gt; 0 { 22	j = j - (j - bu[j-1]) 23	i-- 24	} else { 25	} 26	} 27	} 28	return -1 29} 30 31func TestKmp(t *testing.</description>
+    </item>
+    
+  </channel>
+</rss>
