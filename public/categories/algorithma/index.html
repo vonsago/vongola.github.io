@@ -206,7 +206,7 @@ Von
   </div>
 </nav><div class="posts mb-4"><article class="row card post component">
       <div class="card-body">
-        <h2 class="card-title post-title"><a href="/categories/algorithm/redis/">KMP Code
+        <h2 class="card-title post-title"><a href="/categories/algorithm/kmp/">KMP Code
 </a></h2><div class="post-meta"><span class="post-date" title="created on">
     <i class="fas fa-fw fa-calendar-alt"></i>Jan 1, 2024
   </span><span class="post-reading-time" title="reading time">
@@ -219,7 +219,7 @@ Von
    />
 
           
-          1 2func kmp(s, sub string) int { 3	bu := make([]int, len(sub)) 4	// abcdabd 5	for i, j := 1, 0; i &lt; len(sub); i++ { 6	for j &gt; 0 &amp;&amp; sub[j] != sub[i] { 7	j = bu[j-1] 8	} 9	if sub[j] == sub[i] { 10	j++ 11	} 12	bu[i] = j 13	} 14	for i, j := 0, 0; i &lt; len(s); i++ { 15	if s[i] == sub[j] { 16	j++ 17	if j == …
+          1 2func kmp(s, sub string) int { 3	bu := make([]int, len(sub)) 4	// abcdabd 5	for i, j := 1, 0; i &lt; len(sub); i++ { 6	for j &gt; 0 &amp;&amp; sub[j] != sub[i] { 7	j = bu[j-1] 8	} 9	if sub[j] == sub[i] { 10	j++ 11	} 12	bu[i] = j 13	} 14 for i, j := 0, 0; i &lt; len(s); i++ { 15	for j &gt; 0 &amp;&amp; s[i] !
         </div>
       </div>
     </article></div><div class="row table-responsive mb-3"></div>
