@@ -27,18 +27,15 @@ func kmp(s, sub string) int {
 		}
 		bu[i] = j
 	}
-	for i, j := 0, 0; i < len(s); i++ {
+    for i, j := 0, 0; i < len(s); i++ {
+		for j > 0 && s[i] != sub[j] {
+			j = bu[j-1]
+		}
 		if s[i] == sub[j] {
 			j++
-			if j == len(sub) {
-				return i
-			}
-		} else {
-			if j > 0 {
-				j = j - (j - bu[j-1])
-				i--
-			} else {
-			}
+		}
+		if j == len(sub) {
+			return i - j + 1
 		}
 	}
 	return -1
