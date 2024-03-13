@@ -204,82 +204,133 @@ Von
   <div class="card-body">
     <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active">Categories</li></ol>
   </div>
-</nav><div class="taxonomys"><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/algorithma/">Algorithma</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>1 post in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/algorithm/kmp/">KMP code</a>
-              <span class="float-end post-date">Jan 1</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/kubernetes/">Kubernetes</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>5 posts in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/k8s/k8sinterview/">k8s questions</a>
-              <span class="float-end post-date">Dec 29</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/k8s/install/">Install kubernetes(k8s) with kubeadm</a>
-              <span class="float-end post-date">Aug 29</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/k8s/discovery/">Service Discovery</a>
-              <span class="float-end post-date">Nov 2</span>
-            </li></ul>
-          <div class="taxonomy-actions"><a class="btn btn-sm btn-outline-primary" href="/categories/kubernetes/">Read More</a></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/data/">Data</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>3 posts in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/data/rds2mys2mon/">Redis Mongodb Mysql</a>
-              <span class="float-end post-date">Oct 13</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/data/redis-cls/">Install redis cluster with docker-compose</a>
-              <span class="float-end post-date">Jul 1</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/data/redis/">Install redis cluster with docker-compose</a>
-              <span class="float-end post-date">Jul 1</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/mongodb/">Mongodb</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>1 post in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/data/mongodb_p1/">Tuning page size and compression of mongodb</a>
-              <span class="float-end post-date">Oct 7</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/golang/">Golang</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>2 posts in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/golang/process_pool/">Goroutine Pool</a>
-              <span class="float-end post-date">Aug 29</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/golang/fan/">Fan vs go func</a>
-              <span class="float-end post-date">Nov 29</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div></div><div class="row table-responsive mb-3">
+</nav><div class="posts mb-4"><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/algorithm/kmp/">KMP Code
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jan 1, 2024
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/algorithma/" class="badge rounded-pill text-white bg-primary post-taxonomy">Algorithma</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="KMP code" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          1 2func kmp(s, sub string) int { 3	bu := make([]int, len(sub)) 4	// abcdabd 5	for i, j := 1, 0; i &lt; len(sub); i++ { 6	for j &gt; 0 &amp;&amp; sub[j] != sub[i] { 7	j = bu[j-1] 8	} 9	if sub[j] == sub[i] { 10	j++ 11	} 12	bu[i] = j 13	} 14 for i, j := 0, 0; i &lt; len(s); i++ { 15	for j &gt; 0 &amp;&amp; s[i] !
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/k8s/k8sinterview/">K8s Questions
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Dec 29, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a><a href="/tags/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="k8s questions" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          cgroup v1 vs v2 namespace 分类，他和sandbox关系 service vs ep deployment vs RS clusterip 访问不通的原因 service 和 deployment 的关系，headless service是什么 宿主机上能看到的容器里的
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/data/rds2mys2mon/">Redis Mongodb Mysql
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Oct 13, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/redis/" class="badge rounded-pill text-white bg-primary post-taxonomy">Redis</a><a href="/tags/mongodb/" class="badge rounded-pill text-white bg-primary post-taxonomy">Mongodb</a><a href="/tags/mysql/" class="badge rounded-pill text-white bg-primary post-taxonomy">Mysql</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Redis Mongodb Mysql" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          Redis MongoDB MySQL 数据模型: 基于键值的内存数据存储 永久性文档数据库，将数据存储在 JSON 文档中，然后将其整理成集合 将数据存储在列和行中。数据存储是表格式和关系
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/data/mongodb_p1/">Tuning Page Size and Compression of Mongodb
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Oct 7, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/categories/mongodb/" class="badge rounded-pill text-white bg-primary post-taxonomy">Mongodb</a><a href="/tags/mongodb/" class="badge rounded-pill text-white bg-primary post-taxonomy">Mongodb</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Tuning page size and compression of mongodb" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          Mongodb 存储到底是Btree 还是B+tree 实际上要讨论的是 WiredTiger 存储引擎到底是什么结构 提前要对齐的几件事情 文档中称表是B-Trees是一种简单表达，
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/golang/process_pool/">Goroutine Pool
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Aug 29, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/golang/" class="badge rounded-pill text-white bg-primary post-taxonomy">Golang</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Goroutine Pool" src="/images/bg/go.png" loading="lazy"
+   width="400" height="400"
+   />
+
+          
+          1package test 2 3import ( 4 &#34;fmt&#34; 5 &#34;runtime&#34; 6 &#34;testing&#34; 7 &#34;time&#34; 8) 9 10type PPool struct { 11 EntryChan chan func() error 12 JobChan chan func() error 13 WorkNum int 14} 15 16func NewPPool(cap int) *PPool { 17 p := PPool{ 18 EntryChan: make(chan func() error), 19 JobChan: make(chan …
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/k8s/install/">Install Kubernetes(k8s) With Kubeadm
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Aug 29, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/categories/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a><a href="/tags/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Install kubernetes(k8s) with kubeadm" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          Version Choise .ref https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ kubeadm version: &amp;version.Info{Major:&ldquo;1&rdquo;, Minor:&ldquo;26&rdquo;, GitVersion:&ldquo;v1.26.1&rdquo;, GitCommit:&ldquo;8f94681cd294aa8cfd3407b8191f6c70214973a4&rdquo;, …
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/data/redis-cls/">Install Redis Cluster With Docker-Compose
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jul 1, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/redis/" class="badge rounded-pill text-white bg-primary post-taxonomy">Redis</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Install redis cluster with docker-compose" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf …
+        </div>
+      </div>
+    </article></div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
       <li class="page-item disabled">
         <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -294,13 +345,17 @@ Von
         <a href="/categories/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
       <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
         <a href="/categories/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/categories/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/categories/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 </div>
+
 </div><aside class="col-lg-4 sidebar d-flex">
   <div class="container">
     

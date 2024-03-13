@@ -204,70 +204,135 @@ Von
   <div class="card-body">
     <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active">Categories</li></ol>
   </div>
-</nav><div class="taxonomys"><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/network/">Network</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>4 posts in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/network/httpcode/">History of HTTP</a>
-              <span class="float-end post-date">Jan 7</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/network/dns/">DNS use both the protocols TCP and UDP</a>
-              <span class="float-end post-date">Jan 6</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/network/http/">History of HTTP</a>
-              <span class="float-end post-date">Jan 6</span>
-            </li></ul>
-          <div class="taxonomy-actions"><a class="btn btn-sm btn-outline-primary" href="/categories/network/">Read More</a></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/docker/">Docker</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>2 posts in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/docker/docker-base/">Docker Base</a>
-              <span class="float-end post-date">Jul 21</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/categories/docker/docker-stats/">Docker Stats</a>
-              <span class="float-end post-date">Feb 20</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/algorithm/">Algorithm</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>1 post in total</span>
-          </div><ul class="taxonomy-posts"><li class="taxonomy-post">
-              <a class="post-title" href="/categories/algorithm/game-theory/">Game Theory</a>
-              <span class="float-end post-date">Nov 18</span>
-            </li></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/k8s/">Kubernetes</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>0 posts in total</span>
-          </div><ul class="taxonomy-posts"></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div><div class="taxonomy row card component">
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="/categories/workway/">Work Way</a>
-          </h2>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>0 posts in total</span>
-          </div><ul class="taxonomy-posts"></ul>
-          <div class="taxonomy-actions"></div></div>
-      </div></div><div class="row table-responsive mb-3">
+</nav><div class="posts mb-4"><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/data/redis/">Install Redis Cluster With Docker-Compose
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jul 1, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/redis/" class="badge rounded-pill text-white bg-primary post-taxonomy">Redis</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Install redis cluster with docker-compose" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf …
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/network/httpcode/">History of HTTP
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jan 7, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>8 min read
+  </span><a href="/categories/network/" class="badge rounded-pill text-white bg-primary post-taxonomy">Network</a><a href="/tags/http/" class="badge rounded-pill text-white bg-primary post-taxonomy">HTTP</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="History of HTTP" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          HTTP 响应状态码用来表明特定 HTTP 请求是否成功完成。 响应被归为以下五大类： 信息响应 (100–199) 成功响应 (200–299) 重定向消息 (300–3
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/network/dns/">DNS Use Both the Protocols TCP and UDP
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jan 6, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/network/" class="badge rounded-pill text-white bg-primary post-taxonomy">Network</a><a href="/tags/dns/" class="badge rounded-pill text-white bg-primary post-taxonomy">DNS</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="DNS use both the protocols TCP and UDP" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          UDP packets can&rsquo;t be greater than 512 bytes.
+TCP is used for Zone transfer and UDP for name, and queries either regular (primary) or reverse.
+There should be consistency in DNS Zone database.
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/network/http/">History of HTTP
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Jan 6, 2023
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/categories/network/" class="badge rounded-pill text-white bg-primary post-taxonomy">Network</a><a href="/tags/http/" class="badge rounded-pill text-white bg-primary post-taxonomy">HTTP</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="History of HTTP" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          HTTP 0.9 也叫做单行（one-line）协议，基于 TCP 只允许 GET，只会响应 HTML 格式的字符串 HTTP 1.0 增加了请求头，版本号（比如 content-type，就
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/k8s/discovery/">Service Discovery
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 2, 2022
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a><a href="/tags/kubernetes/" class="badge rounded-pill text-white bg-primary post-taxonomy">Kubernetes</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Service Discovery" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/network/post/">HTTP Method POST vs GET
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Aug 3, 2022
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/network/" class="badge rounded-pill text-white bg-primary post-taxonomy">Network</a><a href="/tags/http/" class="badge rounded-pill text-white bg-primary post-taxonomy">HTTP</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="HTTP Method POST vs GET" src="/images/bg/bgh1.jpg" loading="lazy"
+   width="1900" height="872"
+   />
+
+          
+          语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求
+        </div>
+      </div>
+    </article><article class="row card post component">
+      <div class="card-body">
+        <h2 class="card-title post-title"><a href="/categories/golang/fan/">Fan vs Go Func
+</a></h2><div class="post-meta"><span class="post-date" title="created on">
+    <i class="fas fa-fw fa-calendar-alt"></i>Nov 29, 2021
+  </span><span class="post-reading-time" title="reading time">
+    <i class="fas fa-fw fa-coffee"></i>2 min read
+  </span><a href="/categories/golang/" class="badge rounded-pill text-white bg-primary post-taxonomy">Golang</a></div>
+<div class="post-summary">
+          
+          <img class="img-fluid" alt="Fan vs go func" src="/images/bg/go.png" loading="lazy"
+   width="400" height="400"
+   />
+
+          
+          test script 1func gen(nums ...int) &lt;-chan int { 2 out := make(chan int) 3 go func() { 4 for _, n := range nums { 5 out &lt;- n 6 } 7 close(out) 8 }() 9 return out 10} 11func sq(in &lt;-chan int) &lt;-chan int { 12 out := make(chan int) 13 go func() { 14 for n := range in { 15 out &lt;- n * n 16 } 17 close(out) 18 …
+        </div>
+      </div>
+    </article></div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
       <li class="page-item">
         <a href="/categories/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -281,14 +346,18 @@ Von
       <li class="page-item active">
         <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 </div>
+
 </div><aside class="col-lg-4 sidebar d-flex">
   <div class="container">
     
