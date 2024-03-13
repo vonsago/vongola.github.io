@@ -3,29 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>位运算的数学等价 - Vassago&#39;s Blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>Install redis cluster with docker-compose - Vassago&#39;s Blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
-<meta name="description" content="bit" /><meta itemprop="name" content="位运算的数学等价">
-<meta itemprop="description" content="bit"><meta itemprop="datePublished" content="2019-10-03T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-10-03T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1203"><meta itemprop="image" content="/images/bg/computerp.png">
-<meta itemprop="keywords" content="Math," /><meta property="og:title" content="位运算的数学等价" />
-<meta property="og:description" content="bit" />
+<meta name="description" content="" /><meta itemprop="name" content="Install redis cluster with docker-compose">
+<meta itemprop="description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}"><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-07-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="351"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="keywords" content="Data,Redis," /><meta property="og:title" content="Install redis cluster with docker-compose" />
+<meta property="og:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/series/math/bit-calc/" /><meta property="og:image" content="/images/bg/computerp.png" /><meta property="article:section" content="series" />
-<meta property="article:published_time" content="2019-10-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-10-03T00:00:00+00:00" />
-<meta property="og:see_also" content="/series/math/mathday/" />
+<meta property="og:url" content="/categories/data/redis-cls/" /><meta property="og:image" content="/images/bg/bgh1.jpg" /><meta property="article:section" content="categories" />
+<meta property="article:published_time" content="2023-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-01T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/images/bg/computerp.png"/>
+<meta name="twitter:image" content="/images/bg/bgh1.jpg"/>
 
-<meta name="twitter:title" content="位运算的数学等价"/>
-<meta name="twitter:description" content="bit"/>
+<meta name="twitter:title" content="Install redis cluster with docker-compose"/>
+<meta name="twitter:description" content="创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;&amp; PORT=${port}"/>
 <meta name="twitter:site" content="@V_assago"/>
 <link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
@@ -53,11 +52,11 @@ Von
   </div>
   <div class="offcanvas-body">
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%bd%8d%e8%bf%90%e7%ae%97%e7%9a%84%e6%95%b0%e5%ad%a6%e7%ad%89%e4%bb%b7&url=%2fseries%2fmath%2fbit-calc%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=Install%20redis%20cluster%20with%20docker-compose&url=%2fcategories%2fdata%2fredis-cls%2f">
       <i class="fab fa-fw fa-twitter"></i> Twitter
     </a>
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2fmath%2fbit-calc%2f">
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fcategories%2fdata%2fredis-cls%2f">
       <i class="fab fa-fw fa-facebook-f"></i> Facebook
     </a>
   </div>
@@ -208,7 +207,7 @@ Von
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/series/">Series</a></li><li class="breadcrumb-item active">位运算的数学等价</li></ol>
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/categories/">Categories</a></li><li class="breadcrumb-item active">Install Redis Cluster With Docker-Compose</li></ol>
   </div>
 </nav>    <article class="row card component mb-4 post"><div class="post-panel-wrapper">
   <div class="d-flex flex-column component rounded post-panel">
@@ -228,98 +227,116 @@ Von
 ">
   <i class="fas fa-fw fa-copyright"></i>
 </a>
-    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
-  <i class="fas fa-fw fa-list-alt"></i>
-</a>
+    
     
   </div>
 </div>
 <div class="card-body">
-        <h1 class="card-title my-3">位运算的数学等价
+        <h1 class="card-title my-3">Install Redis Cluster With Docker-Compose
 </h1><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Oct 3, 2019
+    <i class="fas fa-fw fa-calendar-alt"></i>Jul 1, 2023
   </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>3 min read
-  </span><a href="/series/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">math</a><a href="/tags/math/" class="badge rounded-pill text-white bg-primary post-taxonomy">Math</a></div>
-<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
-  <div class="offcanvas-header">
-    <h2 class="offcanvas-title" id="offcanvasTOCLabel">Table Of Contents</h5>
-      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
-        <i class="fas fa-times"></i>
-      </button>
-  </div>
-  <div class="offcanvas-body">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#按位运算符c共有6个----------">按位运算符C++共有6个&laquo; , &raquo; , ~ , &amp; , | , ^</a></li>
-    <li><a href="#移位运算符">移位运算符</a></li>
-  </ul>
-</nav>
-  </div>
-</div><div class="post-content mb-3"><h2 id="按位运算符c共有6个----------">按位运算符C++共有6个&laquo; , &raquo; , ~ , &amp; , | , ^</h2>
-<h2 id="移位运算符">移位运算符</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//左移运算符&lt;&lt;语法：
-<span class="ln">2</span>value &lt;&lt; shift  //value是被操作的整数值，shift是要移动的位数
-<span class="ln">3</span>//功能：左移一位相当于乘2，左移n位相当于乘以2的n次方
-<span class="ln">4</span>//左移运算符在汇编语言中直接修改寄存器的内容，但是C++生成一个新值，如：
-<span class="ln">5</span>int x=30;
-<span class="ln">6</span>int y= x&lt;&lt;3;
-<span class="ln">7</span>//
-<span class="ln">8</span>x=x&lt;&lt;4;
-<span class="ln">9</span>y&lt;&lt;=2;
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//右移运算符&lt;&lt;语法：
-<span class="ln">2</span>value &gt;&gt; shift  //value是被操作的整数值，shift是要移动的位数
-<span class="ln">3</span>//功能：左移一位相当于除以2，左移n位相当于除以2的n次方，如：
-<span class="ln">4</span>int x=4;
-<span class="ln">5</span>x&gt;&gt;1;
-<span class="ln">6</span>x&gt;&gt;=1;
-</code></pre></div><p>逻辑按位运算符</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位非 ~
-<span class="ln">2</span>//先将数写成二进制形式，再将每个0化为1，
-<span class="ln">3</span>//功能：新值是原值的补位，如
-<span class="ln">4</span>unsigned char x=3;
-<span class="ln">5</span>十进制中~3=252，
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位 OR(|)对两个整数进行操作，生成一个新的整数值。
-<span class="ln">2</span>//将数写成二进制形式，对应位“见1为1”
-<span class="ln">3</span>//可以组合赋值运算符，如
-<span class="ln">4</span>a |= b;
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位 XOR(^)将两个数结合起来，生成一个新的整数值。
-<span class="ln">2</span>//将数写成二进制形式，对应位“不同为1，相同为0”
-<span class="ln">3</span>//可以组合赋值运算符，如
-<span class="ln">4</span>a ^= b;
-</code></pre></div><p>异或性质：</p>
-<p>（1）交换律：A ⊕ B = B ⊕ A
-（2）结合律：A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C
-（3）自反：A ⊕ B ⊕ B = A ⊕ 0 = A</p>
-<p>异或的应用：</p>
-<p>（1）快速比较两个值
-判断两个int数字a，b是否相等a ^ b == 0则a,b相等。</p>
-<p>（2）在汇编语言中经常用于将变量置零：xor a，a；</p>
-<p>（3）我们可以使用异或来使某些特定的位翻转，因为不管是0或者是1与1做异或将得到原值的相反值；</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>0 ^ 1 = 1
+    <i class="fas fa-fw fa-coffee"></i>1 min read
+  </span><a href="/categories/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/data/" class="badge rounded-pill text-white bg-primary post-taxonomy">Data</a><a href="/tags/redis/" class="badge rounded-pill text-white bg-primary post-taxonomy">Redis</a></div>
+<div class="post-content mb-3"><h1 id="创建目录">创建目录</h1>
+<p>mkdir -p /usr/local/docker-redis/redis-cluster</p>
+<h1 id="切换至指定目录">切换至指定目录</h1>
+<p>cd /usr/local/docker-redis/redis-cluster/</p>
+<h1 id="编写-redis-clustertmpl-文件">编写 redis-cluster.tmpl 文件</h1>
+<p>vi redis-cluster.tmpl</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>port ${PORT}
+<span class="ln"> 2</span>requirepass 1234
+<span class="ln"> 3</span>masterauth 1234
+<span class="ln"> 4</span>protected-mode no
+<span class="ln"> 5</span>daemonize no
+<span class="ln"> 6</span>appendonly yes
+<span class="ln"> 7</span>cluster-enabled yes
+<span class="ln"> 8</span>cluster-config-file nodes.conf
+<span class="ln"> 9</span>cluster-node-timeout 15000
+<span class="ln">10</span>cluster-announce-ip 192.168.10.10
+<span class="ln">11</span>cluster-announce-port ${PORT}
+<span class="ln">12</span>cluster-announce-bus-port 1${PORT}
+<span class="ln">13</span>
+</code></pre></div><p>mkdir conf &amp; data path</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>
+<span class="ln"> 2</span>for port in `seq 6371 6373`; do \
+<span class="ln"> 3</span>  mkdir -p ${port}/conf \
+<span class="ln"> 4</span>  &amp;&amp; PORT=${port} envsubst &lt; redis-cluster.tmpl &gt; ${port}/conf/redis.conf \
+<span class="ln"> 5</span>  &amp;&amp; mkdir -p ${port}/data;\
+<span class="ln"> 6</span>done
+<span class="ln"> 7</span>
+<span class="ln"> 8</span>for port in `seq 6374 6376`; do \
+<span class="ln"> 9</span>  mkdir -p ${port}/conf \
+<span class="ln">10</span>  &amp;&amp; PORT=${port} envsubst &lt; redis-cluster.tmpl &gt; ${port}/conf/redis.conf \
+<span class="ln">11</span>  &amp;&amp; mkdir -p ${port}/data;\
+<span class="ln">12</span>done
+</code></pre></div><p>compose.yaml</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>version: &#34;3.8&#34;
+<span class="ln"> 2</span>
+<span class="ln"> 3</span>services:
+<span class="ln"> 4</span>  redis-6371: # 服务名称
+<span class="ln"> 5</span>    image: redis # 创建容器时所需的镜像
+<span class="ln"> 6</span>    container_name: redis-6371 # 容器名称
+<span class="ln"> 7</span>    restart: always # 容器总是重新启动
+<span class="ln"> 8</span>    network_mode: &#34;host&#34; # host 网络模式
+<span class="ln"> 9</span>    volumes: # 数据卷，目录挂载
+<span class="ln">10</span>      - /usr/local/docker-redis/redis-cluster/6371/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">11</span>      - /usr/local/docker-redis/redis-cluster/6371/data:/data
+<span class="ln">12</span>    command: redis-server /usr/local/etc/redis/redis.conf # 覆盖容器启动后默认执行的命令
+<span class="ln">13</span>
+<span class="ln">14</span>  redis-6372:
+<span class="ln">15</span>    image: redis
+<span class="ln">16</span>    container_name: redis-6372
+<span class="ln">17</span>    network_mode: &#34;host&#34;
+<span class="ln">18</span>    volumes:
+<span class="ln">19</span>      - /usr/local/docker-redis/redis-cluster/6372/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">20</span>      - /usr/local/docker-redis/redis-cluster/6372/data:/data
+<span class="ln">21</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">22</span>
+<span class="ln">23</span>  redis-6373:
+<span class="ln">24</span>    image: redis
+<span class="ln">25</span>    container_name: redis-6373
+<span class="ln">26</span>    network_mode: &#34;host&#34;
+<span class="ln">27</span>    volumes:
+<span class="ln">28</span>      - /usr/local/docker-redis/redis-cluster/6373/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">29</span>      - /usr/local/docker-redis/redis-cluster/6373/data:/data
+<span class="ln">30</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">31</span>
+<span class="ln">32</span>  redis-6374:
+<span class="ln">33</span>    image: redis
+<span class="ln">34</span>    container_name: redis-6374
+<span class="ln">35</span>    network_mode: &#34;host&#34;
+<span class="ln">36</span>    volumes:
+<span class="ln">37</span>      - /usr/local/docker-redis/redis-cluster/6374/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">38</span>      - /usr/local/docker-redis/redis-cluster/6374/data:/data
+<span class="ln">39</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">40</span>
+<span class="ln">41</span>  redis-6375:
+<span class="ln">42</span>    image: redis
+<span class="ln">43</span>    container_name: redis-6375
+<span class="ln">44</span>    network_mode: &#34;host&#34;
+<span class="ln">45</span>    volumes:
+<span class="ln">46</span>      - /usr/local/docker-redis/redis-cluster/6375/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">47</span>      - /usr/local/docker-redis/redis-cluster/6375/data:/data
+<span class="ln">48</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">49</span>
+<span class="ln">50</span>  redis-6376:
+<span class="ln">51</span>    image: redis
+<span class="ln">52</span>    container_name: redis-6376
+<span class="ln">53</span>    network_mode: &#34;host&#34;
+<span class="ln">54</span>    volumes:
+<span class="ln">55</span>      - /usr/local/docker-redis/redis-cluster/6376/conf/redis.conf:/usr/local/etc/redis/redis.conf
+<span class="ln">56</span>      - /usr/local/docker-redis/redis-cluster/6376/data:/data
+<span class="ln">57</span>    command: redis-server /usr/local/etc/redis/redis.conf
+<span class="ln">58</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>docker-compose up -d
 <span class="ln">2</span>
-<span class="ln">3</span>1 ^ 1 = 0
-</code></pre></div><p>（4）我们使用异或来判断一个二进制数中1的数量是奇数还是偶数</p>
-<blockquote>
-<p>例如：求10100001中1的数量是奇数还是偶数； 答案：1 ^ 0 ^ 1 ^ 0 ^ 0 ^ 0 ^ 0 ^ 1 = 1,结果为1就是奇数个1，结果为0就是偶数个1； 应用：这条性质可用于奇偶校验（Parity Check），比如在串口通信过程中，每个字节的数据都计算一个校验位，数据和校验位一起发送出去，这样接收方可以根据校验位粗略地判断接收到的数据是否有误</p>
-</blockquote>
-<p>（5）校验和恢复</p>
-<blockquote>
-<p>校验和恢复主要利用的了异或的特性：IF a ^ b = c THEN a ^ c = b 应用：一个很好的应用实例是RAID5，使用3块磁盘（A、B、C）组成RAID5阵列，当用户写数据时，将数据分成两部分，分别写到磁盘A和磁盘B，A ^ B的结果写到磁盘C；当读取A的数据时，通过B ^ C可以对A的数据做校验，当A盘出错时，通过B ^ C也可以恢复A盘的数据。</p>
-</blockquote>
-<p>（6）经典题目：不使用其他空间，交换两个值</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>a = a ^ b;
-<span class="ln">2</span>b = a ^ b; //a ^ b ^ b = a ^ 0 = a;
-<span class="ln">3</span>a = a ^ b;
-</code></pre></div><p>（7）面试题：互换二进制数的奇偶位；
-以上性质来自<a href="https://www.lijinma.com/blog/2014/05/29/amazing-xor/" target="_blank" rel="noopener noreferrer">金马的Blog</a>
-</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位 AND(&amp;)将两个数结合起来，生成一个新的整数值。
-<span class="ln">2</span>//将数写成二进制形式，对应位“同为1结果才为1”
-<span class="ln">3</span>//可以组合赋值运算符，如
-<span class="ln">4</span>a &amp;= b;
-<span class="ln">5</span>
-<span class="ln">6</span>a &amp; 1//取a二进制的最低位，判断和1是否相同，相同返回1，否则返回0，可用于判断奇偶
+<span class="ln">3</span>redis-cli -a 1234 --cluster create {ip}:6371 {ip}:6372 {ip}:6373 {ip}:6374 {ip}:6375 {ip}:6376 --cluster-replicas 1
+<span class="ln">4</span>
+</code></pre></div><p>Install docker compose</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>
+<span class="ln">2</span>curl -SL https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+<span class="ln">3</span>
 </code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
@@ -347,19 +364,19 @@ Von
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
   <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
-    <a href="/series/python/python-gc/">Python GC
+    <a href="/categories/data/redis/">Install Redis Cluster With Docker-Compose
 </a>
   </div><div class="post-nav post-next">
-    <a href="/series/python/python-encoding/">Python Encode
+    <a href="/categories/k8s/install/">Install Kubernetes(k8s) With Kubeadm
 </a>
     <i class="fas fa-fw fa-chevron-right"></i>
   </div></div><section class="related-posts-wrapper">
     <h3>Related Posts</h3>
-    <ul class="related-posts"><li><a href="/series/python/python-encoding/">Python Encode
-</a></li><li><a href="/series/python/python-gc/">Python GC
-</a></li><li><a href="/about/">About
-</a></li><li><a href="/series/python/pychallenge/">Python Challenges
-</a></li><li><a href="/contact/">Contact Me
+    <ul class="related-posts"><li><a href="/categories/data/redis/">Install Redis Cluster With Docker-Compose
+</a></li><li><a href="/categories/network/httpcode/">History of HTTP
+</a></li><li><a href="/categories/network/dns/">DNS Use Both the Protocols TCP and UDP
+</a></li><li><a href="/categories/network/http/">History of HTTP
+</a></li><li><a href="/categories/k8s/discovery/">Service Discovery
 </a></li></ul>
   </section></div>
     </article><div class="card component row post-comments">

@@ -6,7 +6,7 @@ location = "Mars"
 # alternatives:
 # location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
 # location = "<a href='https://www.google.com/maps/search/Earth'>Earth</a>"
-about = "https://vonv.tk/about/"
+about = "https://dr-von.top/about/"
 
 [params]
   #layout = "compact"

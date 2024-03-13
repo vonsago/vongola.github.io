@@ -70,7 +70,7 @@ viewer = true # Image Viewer
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]
-  baidu = "efa234dd0de80cabe5e7cb41e0f81e74" # Baidu Analytics
+  baidu = "40c8a466fbe1d251bf8012e531261a1c" # Baidu Analytics
 
 # Site verification
 [siteVerification]
