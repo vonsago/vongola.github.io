@@ -64,6 +64,15 @@
     
     <item>
       <title>Install redis cluster with docker-compose</title>
+      <link>/categories/data/redis-cls/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data/redis-cls/</guid>
+      <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp;amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;amp;&amp;amp; PORT=${port}</description>
+    </item>
+    
+    <item>
+      <title>Install redis cluster with docker-compose</title>
       <link>/categories/data/redis/</link>
       <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
       
