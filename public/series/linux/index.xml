@@ -5,7 +5,7 @@
     <link>/series/linux/</link>
     <description>Recent content in Linux on Vassago&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/series/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -33,7 +33,7 @@ These are the common top-level directories associated with the root directory: /
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/series/linux/rtmp/</guid>
-      <description>What is RTMP   </description>
+      <description>What is RTMP </description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ These are the common top-level directories associated with the root directory: /
       
       <guid>/series/linux/session-cookie-diff/</guid>
       <description>Session
-   Session can store any type of data because the value is of data type of “object”    These are stored at server side.    Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server.    Session is independent for every client i.e. individual for every client.    There is no limitation on the size or number of sessions to be used in an application.</description>
+Session can store any type of data because the value is of data type of “object” These are stored at server side. Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server. Session is independent for every client i.e. individual for every client. There is no limitation on the size or number of sessions to be used in an application. We cannot disable the sessions.</description>
     </item>
     
     <item>

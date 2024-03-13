@@ -27,9 +27,9 @@
 <meta name="twitter:title" content="Linux Interview"/>
 <meta name="twitter:description" content="Linux Interview"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -316,14 +316,14 @@ Von
 <h2 id="runlevel--telinit">runlevel &amp; telinit</h2>
 <p><code>runlevel</code>读取系统的utmp文件夹定位系统的运行级别记录，然后显示当前系统的执行等级
 运行级别指的是<code>Unix-Like</code>系统下不同的运行模式，通常分为7等，分别是从0到6</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="ln">1</span><span class="m">0</span> ：停机
-<span class="ln">2</span><span class="m">1</span> ：单用户模式
-<span class="ln">3</span><span class="m">2</span> ：多用户模式，无网络
-<span class="ln">4</span><span class="m">3</span> ：完全的多用户模式
-<span class="ln">5</span><span class="m">4</span> ：用户自定义
-<span class="ln">6</span><span class="m">5</span> ：图形界面多用户模式
-<span class="ln">7</span><span class="m">6</span> ：重启 
-</code></pre></div><p><code>telinit</code>命令可以设置当前系统的运行等级</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl"><span class="m">0</span> ：停机
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="m">1</span> ：单用户模式
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="m">2</span> ：多用户模式，无网络
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="m">3</span> ：完全的多用户模式
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="m">4</span> ：用户自定义
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="m">5</span> ：图形界面多用户模式
+</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="m">6</span> ：重启 
+</span></span></code></pre></div><p><code>telinit</code>命令可以设置当前系统的运行等级</p>
 <h2 id="atq">atq</h2>
 <p>可以列出定义在以后特定时间运行一次的所有任务</p>
 <h2 id="set">set</h2>
@@ -336,14 +336,14 @@ Von
 <code>export PATH=$PATH:/usr/local/bin</code>  #将/usr/local/bin加入环境变量中</p>
 <h2 id="chmod-1">chmod</h2>
 <p>linux 中权限的粒度有 拥有者 、群组 、其它组 三种</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="ln">1</span>-rw------- <span class="o">(</span>600<span class="o">)</span>  只有拥有者有读写权限。
-<span class="ln">2</span>-rw-r--r-- <span class="o">(</span>644<span class="o">)</span>  只有拥有者有读写权限；而属组用户和其他用户只有读权限。
-<span class="ln">3</span>-rwx------ <span class="o">(</span>700<span class="o">)</span>  只有拥有者有读、写、执行权限。
-<span class="ln">4</span>-rwxr-xr-x <span class="o">(</span>755<span class="o">)</span>  拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
-<span class="ln">5</span>-rwx--x--x <span class="o">(</span>711<span class="o">)</span>  拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
-<span class="ln">6</span>-rw-rw-rw- <span class="o">(</span>666<span class="o">)</span>  所有用户都有文件读、写权限。
-<span class="ln">7</span>-rwxrwxrwx <span class="o">(</span>777<span class="o">)</span>  所有用户都有读、写、执行权限。
-</code></pre></div><p>算法：
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">-rw------- <span class="o">(</span>600<span class="o">)</span>  只有拥有者有读写权限。
+</span></span><span class="line"><span class="ln">2</span><span class="cl">-rw-r--r-- <span class="o">(</span>644<span class="o">)</span>  只有拥有者有读写权限；而属组用户和其他用户只有读权限。
+</span></span><span class="line"><span class="ln">3</span><span class="cl">-rwx------ <span class="o">(</span>700<span class="o">)</span>  只有拥有者有读、写、执行权限。
+</span></span><span class="line"><span class="ln">4</span><span class="cl">-rwxr-xr-x <span class="o">(</span>755<span class="o">)</span>  拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
+</span></span><span class="line"><span class="ln">5</span><span class="cl">-rwx--x--x <span class="o">(</span>711<span class="o">)</span>  拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
+</span></span><span class="line"><span class="ln">6</span><span class="cl">-rw-rw-rw- <span class="o">(</span>666<span class="o">)</span>  所有用户都有文件读、写权限。
+</span></span><span class="line"><span class="ln">7</span><span class="cl">-rwxrwxrwx <span class="o">(</span>777<span class="o">)</span>  所有用户都有读、写、执行权限。
+</span></span></code></pre></div><p>算法：
 <code>rw-</code> = <code>110</code> = <code>6</code></p>
 <h2 id="userdel">userdel</h2>
 <p>删除使用者帐号及相关档案</p>
@@ -467,7 +467,7 @@ CPU 的核心是从程序或应用程序获取指令并执行计算。此过程�
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -640,7 +640,7 @@ CPU 的核心是从程序或应用程序获取指令并执行计算。此过程�
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6T4S9BSTB"></script>
+<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6T4S9BSTB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

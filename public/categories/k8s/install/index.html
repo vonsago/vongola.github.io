@@ -12,7 +12,7 @@
 <meta name="description" content="kubernetes" /><meta itemprop="name" content="Install kubernetes(k8s) with kubeadm">
 <meta itemprop="description" content="kubernetes"><meta itemprop="datePublished" content="2023-08-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-08-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="878"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="wordCount" content="877"><meta itemprop="image" content="/images/bg/bgh1.jpg">
 <meta itemprop="keywords" content="Kubernetes," /><meta property="og:title" content="Install kubernetes(k8s) with kubeadm" />
 <meta property="og:description" content="kubernetes" />
 <meta property="og:type" content="article" />
@@ -26,9 +26,9 @@
 <meta name="twitter:title" content="Install kubernetes(k8s) with kubeadm"/>
 <meta name="twitter:description" content="kubernetes"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -287,81 +287,80 @@ Von
 <li>containerd:    1.6.18</li>
 </ul>
 <h2 id="prepare">Prepare</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="ln"> 1</span><span class="c1"># check swap off with free -m .ref https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/install-kubeadm/</span>
-<span class="ln"> 2</span>swapoff -a
-<span class="ln"> 3</span>
-<span class="ln"> 4</span>
-<span class="ln"> 5</span><span class="c1"># check port is available</span>
-<span class="ln"> 6</span>nc 127.0.0.1 <span class="m">6443</span>
-<span class="ln"> 7</span>
-<span class="ln"> 8</span><span class="c1"># some host dependences</span>
-<span class="ln"> 9</span>apt install socat conntrack
-<span class="ln">10</span>
-<span class="ln">11</span><span class="c1"># Kubernetes package repositories </span>
-<span class="ln">12</span>sudo apt-get update
-<span class="ln">13</span>sudo apt-get install -y apt-transport-https ca-certificates curl
-<span class="ln">14</span>
-<span class="ln">15</span>curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-<span class="ln">16</span><span class="nb">echo</span> <span class="s1">&#39;deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /&#39;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/kubernetes.list
-<span class="ln">17</span>
-<span class="ln">18</span>sudo apt-get update
-<span class="ln">19</span>sudo apt-get install -y kubelet kubeadm kubectl
-<span class="ln">20</span>sudo apt-mark hold kubelet kubeadm kubectl
-<span class="ln">21</span>
-<span class="ln">22</span><span class="c1"># In China, user can use sources of aliyun</span>
-<span class="ln">23</span>curl -s https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg <span class="p">|</span> apt-key add -
-<span class="ln">24</span>cat <span class="s">&lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list
-</span><span class="ln">25</span><span class="s">deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
-</span><span class="ln">26</span><span class="s">EOF</span>
-<span class="ln">27</span>apt-get update
-<span class="ln">28</span>apt-get install -y kubelet kubeadm kubectl
-<span class="ln">29</span>
-<span class="ln">30</span><span class="c1"># Install crictl</span>
-<span class="ln">31</span><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&#34;v1.26.0&#34;</span>
-<span class="ln">32</span>wget https://github.com/kubernetes-sigs/cri-tools/releases/download/<span class="nv">$VERSION</span>/crictl-<span class="nv">$VERSION</span>-linux-amd64.tar.gz
-<span class="ln">33</span>sudo tar zxvf crictl-<span class="nv">$VERSION</span>-linux-amd64.tar.gz -C /usr/local/bin
-<span class="ln">34</span>rm -f crictl-<span class="nv">$VERSION</span>-linux-amd64.tar.gz
-<span class="ln">35</span>
-<span class="ln">36</span><span class="c1"># Prepare config file for kubelet</span>
-<span class="ln">37</span><span class="nv">RELEASE_VERSION</span><span class="o">=</span><span class="s2">&#34;v0.4.0&#34;</span>
-<span class="ln">38</span>curl -sSL <span class="s2">&#34;https://raw.githubusercontent.com/kubernetes/release/</span><span class="si">${</span><span class="nv">RELEASE_VERSION</span><span class="si">}</span><span class="s2">/cmd/kubepkg/templates/latest/deb/kubelet/lib/systemd/system/kubelet.service&#34;</span> <span class="p">|</span> sed <span class="s2">&#34;s:/usr/bin:</span><span class="si">${</span><span class="nv">DOWNLOAD_DIR</span><span class="si">}</span><span class="s2">:g&#34;</span> <span class="p">|</span> sudo tee /etc/systemd/system/kubelet.service
-<span class="ln">39</span>sudo mkdir -p /etc/systemd/system/kubelet.service.d
-<span class="ln">40</span>curl -sSL <span class="s2">&#34;https://raw.githubusercontent.com/kubernetes/release/</span><span class="si">${</span><span class="nv">RELEASE_VERSION</span><span class="si">}</span><span class="s2">/cmd/kubepkg/templates/latest/deb/kubeadm/10-kubeadm.conf&#34;</span> <span class="p">|</span> sed <span class="s2">&#34;s:/usr/bin:</span><span class="si">${</span><span class="nv">DOWNLOAD_DIR</span><span class="si">}</span><span class="s2">:g&#34;</span> <span class="p">|</span> sudo tee /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-</code></pre></div><h2 id="install">Install</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="ln"> 1</span>kubeadm init --image-repository registry.cn-hangzhou.aliyuncs.com/google_containers --service-cidr<span class="o">=</span>10.96.0.0/16 --pod-network-cidr<span class="o">=</span>10.244.0.0/16  --v<span class="o">=</span><span class="m">5</span>
-<span class="ln"> 2</span>
-<span class="ln"> 3</span><span class="c1"># if Your Kubernetes control-plane has initialized successfully!</span>
-<span class="ln"> 4</span>kubectl get node
-<span class="ln"> 5</span>NAME          STATUS   ROLES           AGE   VERSION
-<span class="ln"> 6</span>bvc-smt-004   Ready    control-plane   30m   v1.26.1
-<span class="ln"> 7</span>
-<span class="ln"> 8</span>crictl ps<span class="p">|</span>grep kube or docker ps<span class="p">|</span>grep kub
-<span class="ln"> 9</span>
-<span class="ln">10</span><span class="c1"># The join node token needs to be regenerated after it expires in 24h.</span>
-<span class="ln">11</span><span class="c1"># openssl x509 -in /etc/kubernetes/pki/ca.crt -noout -pubkey | openssl rsa -pubin -outform DER 2&gt;/dev/null | sha256sum | cut -d&#39; &#39; -f1</span>
-<span class="ln">12</span>kubeadm token create --print-join-command
-<span class="ln">13</span>kubeadm join 10.23.34.45:6443 --token xxx --discovery-token-ca-cert-hash shar:123
-<span class="ln">14</span>
-<span class="ln">15</span><span class="c1"># Test pod</span>
-<span class="ln">16</span>cat hello.yaml
-<span class="ln">17</span>apiVersion: v1
-<span class="ln">18</span>kind: Pod
-<span class="ln">19</span>metadata:
-<span class="ln">20</span>  name: hello-pod
-<span class="ln">21</span>  labels:
-<span class="ln">22</span>    app.kubernetes.io/name: MyApp
-<span class="ln">23</span>spec:
-<span class="ln">24</span>  containers:
-<span class="ln">25</span>  - name: hello-pod
-<span class="ln">26</span>    image: busybox:1.28
-<span class="ln">27</span>    command: <span class="o">[</span><span class="s1">&#39;sh&#39;</span>, <span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;echo The app is running! &amp;&amp; sleep 20&#39;</span><span class="o">]</span>
-<span class="ln">28</span>
-<span class="ln">29</span>kubectl apply -f hello.yaml
-<span class="ln">30</span>
-<span class="ln">31</span><span class="c1"># Install CNI</span>
-<span class="ln">32</span>calico https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart
-<span class="ln">33</span>
-</code></pre></div><h2 id="troubleshooting--resolution">Troubleshooting &amp; Resolution</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># check swap off with free -m .ref https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/install-kubeadm/</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">swapoff -a
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># check port is available</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">nc 127.0.0.1 <span class="m">6443</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1"># some host dependences</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">apt install socat conntrack
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"># Kubernetes package repositories </span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="ln">13</span><span class="cl">sudo apt-get install -y apt-transport-https ca-certificates curl
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl">curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /&#39;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/kubernetes.list
+</span></span><span class="line"><span class="ln">17</span><span class="cl">
+</span></span><span class="line"><span class="ln">18</span><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="ln">19</span><span class="cl">sudo apt-get install -y kubelet kubeadm kubectl
+</span></span><span class="line"><span class="ln">20</span><span class="cl">sudo apt-mark hold kubelet kubeadm kubectl
+</span></span><span class="line"><span class="ln">21</span><span class="cl">
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="c1"># In China, user can use sources of aliyun</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">curl -s https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg <span class="p">|</span> apt-key add -
+</span></span><span class="line"><span class="ln">24</span><span class="cl">cat <span class="s">&lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list
+</span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="s">deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
+</span></span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">apt-get update
+</span></span><span class="line"><span class="ln">28</span><span class="cl">apt-get install -y kubelet kubeadm kubectl
+</span></span><span class="line"><span class="ln">29</span><span class="cl">
+</span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="c1"># Install crictl</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&#34;v1.26.0&#34;</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">wget https://github.com/kubernetes-sigs/cri-tools/releases/download/<span class="nv">$VERSION</span>/crictl-<span class="nv">$VERSION</span>-linux-amd64.tar.gz
+</span></span><span class="line"><span class="ln">33</span><span class="cl">sudo tar zxvf crictl-<span class="nv">$VERSION</span>-linux-amd64.tar.gz -C /usr/local/bin
+</span></span><span class="line"><span class="ln">34</span><span class="cl">rm -f crictl-<span class="nv">$VERSION</span>-linux-amd64.tar.gz
+</span></span><span class="line"><span class="ln">35</span><span class="cl">
+</span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="c1"># Prepare config file for kubelet</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="nv">RELEASE_VERSION</span><span class="o">=</span><span class="s2">&#34;v0.4.0&#34;</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl">curl -sSL <span class="s2">&#34;https://raw.githubusercontent.com/kubernetes/release/</span><span class="si">${</span><span class="nv">RELEASE_VERSION</span><span class="si">}</span><span class="s2">/cmd/kubepkg/templates/latest/deb/kubelet/lib/systemd/system/kubelet.service&#34;</span> <span class="p">|</span> sed <span class="s2">&#34;s:/usr/bin:</span><span class="si">${</span><span class="nv">DOWNLOAD_DIR</span><span class="si">}</span><span class="s2">:g&#34;</span> <span class="p">|</span> sudo tee /etc/systemd/system/kubelet.service
+</span></span><span class="line"><span class="ln">39</span><span class="cl">sudo mkdir -p /etc/systemd/system/kubelet.service.d
+</span></span><span class="line"><span class="ln">40</span><span class="cl">curl -sSL <span class="s2">&#34;https://raw.githubusercontent.com/kubernetes/release/</span><span class="si">${</span><span class="nv">RELEASE_VERSION</span><span class="si">}</span><span class="s2">/cmd/kubepkg/templates/latest/deb/kubeadm/10-kubeadm.conf&#34;</span> <span class="p">|</span> sed <span class="s2">&#34;s:/usr/bin:</span><span class="si">${</span><span class="nv">DOWNLOAD_DIR</span><span class="si">}</span><span class="s2">:g&#34;</span> <span class="p">|</span> sudo tee /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+</span></span></code></pre></div><h2 id="install">Install</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl">kubeadm init --image-repository registry.cn-hangzhou.aliyuncs.com/google_containers --service-cidr<span class="o">=</span>10.96.0.0/16 --pod-network-cidr<span class="o">=</span>10.244.0.0/16  --v<span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c1"># if Your Kubernetes control-plane has initialized successfully!</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">kubectl get node
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">NAME          STATUS   ROLES           AGE   VERSION
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">bvc-smt-004   Ready    control-plane   30m   v1.26.1
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">crictl ps<span class="p">|</span>grep kube or docker ps<span class="p">|</span>grep kub
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c1"># The join node token needs to be regenerated after it expires in 24h.</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"># openssl x509 -in /etc/kubernetes/pki/ca.crt -noout -pubkey | openssl rsa -pubin -outform DER 2&gt;/dev/null | sha256sum | cut -d&#39; &#39; -f1</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">kubeadm token create --print-join-command
+</span></span><span class="line"><span class="ln">13</span><span class="cl">kubeadm join 10.23.34.45:6443 --token xxx --discovery-token-ca-cert-hash shar:123
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="c1"># Test pod</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">cat hello.yaml
+</span></span><span class="line"><span class="ln">17</span><span class="cl">apiVersion: v1
+</span></span><span class="line"><span class="ln">18</span><span class="cl">kind: Pod
+</span></span><span class="line"><span class="ln">19</span><span class="cl">metadata:
+</span></span><span class="line"><span class="ln">20</span><span class="cl">  name: hello-pod
+</span></span><span class="line"><span class="ln">21</span><span class="cl">  labels:
+</span></span><span class="line"><span class="ln">22</span><span class="cl">    app.kubernetes.io/name: MyApp
+</span></span><span class="line"><span class="ln">23</span><span class="cl">spec:
+</span></span><span class="line"><span class="ln">24</span><span class="cl">  containers:
+</span></span><span class="line"><span class="ln">25</span><span class="cl">  - name: hello-pod
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    image: busybox:1.28
+</span></span><span class="line"><span class="ln">27</span><span class="cl">    command: <span class="o">[</span><span class="s1">&#39;sh&#39;</span>, <span class="s1">&#39;-c&#39;</span>, <span class="s1">&#39;echo The app is running! &amp;&amp; sleep 20&#39;</span><span class="o">]</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">
+</span></span><span class="line"><span class="ln">29</span><span class="cl">kubectl apply -f hello.yaml
+</span></span><span class="line"><span class="ln">30</span><span class="cl">
+</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="c1"># Install CNI</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">calico https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart
+</span></span></code></pre></div><h2 id="troubleshooting--resolution">Troubleshooting &amp; Resolution</h2>
 <h3 id="there-are-many-init-fail-when-check-kubelet-status">there are many init fail when check kubelet status</h3>
 <p><code>systemctl status kubelet</code></p>
 <p><code>journalctl -xu kubelet</code></p>
@@ -394,36 +393,36 @@ resolve image pull fail with agent, <code>kubeadm config images pull --image-rep
 <p>or edit /etc/containerd/config.toml</p>
 <h3 id="containerd-harbor-config">Containerd harbor config</h3>
 <p>config harbor of hub.xxx.co with name: xxx</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="ln"> 1</span><span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">]</span>
-<span class="ln"> 2</span>
-<span class="ln"> 3</span>      <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">mirrors</span><span class="p">]</span>
-<span class="ln"> 4</span>
-<span class="ln"> 5</span>        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">mirrors</span><span class="p">.</span><span class="s2">&#34;docker.io&#34;</span><span class="p">]</span>
-<span class="ln"> 6</span>
-<span class="ln"> 7</span>          <span class="nx">endpoint</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;https://registry-1.docker.io&#34;</span><span class="p">]</span>
-<span class="ln"> 8</span>
-<span class="ln"> 9</span>        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">mirrors</span><span class="p">.</span><span class="s2">&#34;hub.xxx.co&#34;</span><span class="p">]</span>
-<span class="ln">10</span>
-<span class="ln">11</span>          <span class="nx">endpoint</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;https://hub.xxx.co&#34;</span><span class="p">]</span>
-<span class="ln">12</span>
-<span class="ln">13</span>      <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">configs</span><span class="p">]</span>
-<span class="ln">14</span>
-<span class="ln">15</span>        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="s2">&#34;hub.xxx.co&#34;</span><span class="p">.</span><span class="nx">tls</span><span class="p">]</span>
-<span class="ln">16</span>
-<span class="ln">17</span>          <span class="nx">insecure_skip_verify</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="ln">18</span>
-<span class="ln">19</span>          <span class="c">#ca_file = &#34;/etc/containerd/certs.d/registry.harbor.com/ca.crt&#34; #ca证书</span>
-<span class="ln">20</span>
-<span class="ln">21</span>          <span class="c">#cert_file = &#34;/etc/containerd/certs.d/registry.harbor.com/registry.harbor.com.cert&#34; #harbor证书</span>
-<span class="ln">22</span>
-<span class="ln">23</span>          <span class="c">#key_file = &#34;/etc/containerd/certs.d/registry.harbor.com/registry.harbor.com.key&#34; #密钥</span>
-<span class="ln">24</span>
-<span class="ln">25</span>        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="s2">&#34;hub.xxx.co&#34;</span><span class="p">.</span><span class="nx">auth</span><span class="p">]</span>
-<span class="ln">26</span>
-<span class="ln">27</span>          <span class="nx">username</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>
-<span class="ln">28</span>
-<span class="ln">29</span>          <span class="nx">password</span> <span class="p">=</span> <span class="s2">&#34;xxxxxx&#34;</span>
-</code></pre></div><h3 id="control-plane-can-schduler-pod">Control-plane can schduler pod</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">      <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">mirrors</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">mirrors</span><span class="p">.</span><span class="s2">&#34;docker.io&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">          <span class="nx">endpoint</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;https://registry-1.docker.io&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">mirrors</span><span class="p">.</span><span class="s2">&#34;hub.xxx.co&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl">          <span class="nx">endpoint</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;https://hub.xxx.co&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl">      <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">configs</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl">        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="s2">&#34;hub.xxx.co&#34;</span><span class="p">.</span><span class="nx">tls</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">
+</span></span><span class="line"><span class="ln">17</span><span class="cl">          <span class="nx">insecure_skip_verify</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl">          <span class="c">#ca_file = &#34;/etc/containerd/certs.d/registry.harbor.com/ca.crt&#34; #ca证书</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
+</span></span><span class="line"><span class="ln">21</span><span class="cl">          <span class="c">#cert_file = &#34;/etc/containerd/certs.d/registry.harbor.com/registry.harbor.com.cert&#34; #harbor证书</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">
+</span></span><span class="line"><span class="ln">23</span><span class="cl">          <span class="c">#key_file = &#34;/etc/containerd/certs.d/registry.harbor.com/registry.harbor.com.key&#34; #密钥</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">
+</span></span><span class="line"><span class="ln">25</span><span class="cl">        <span class="p">[</span><span class="nx">plugins</span><span class="p">.</span><span class="s2">&#34;io.containerd.grpc.v1.cri&#34;</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="s2">&#34;hub.xxx.co&#34;</span><span class="p">.</span><span class="nx">auth</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">
+</span></span><span class="line"><span class="ln">27</span><span class="cl">          <span class="nx">username</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">
+</span></span><span class="line"><span class="ln">29</span><span class="cl">          <span class="nx">password</span> <span class="p">=</span> <span class="s2">&#34;xxxxxx&#34;</span>
+</span></span></code></pre></div><h3 id="control-plane-can-schduler-pod">Control-plane can schduler pod</h3>
 <p>kubectl taint node xxx node-role.kubernetes.io/control-plane-</p>
 <p>rollback: kubectl taint node xxx node-role.kubernetes.io/control-plane:NoSchedule</p>
 <h3 id="couldnt-get-current-server-api-group-list-on-node">couldn&rsquo;t get current server API group list on node</h3>
@@ -456,10 +455,10 @@ systemctl start kubelet</p>
 <p><a href="https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md" target="_blank" rel="noopener noreferrer">https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md</a>
 </p>
 <h3 id="kubeadmin-join-throws-this-error-procsysnetbridgebridge-nf-call-iptables-does-not-exist">Kubeadmin join throws this error “/proc/sys/net/bridge/bridge-nf-call-iptables does not exist”</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>modprobe br_netfilter
-<span class="ln">2</span>echo 1 &gt; /proc/sys/net/bridge/bridge-nf-call-iptables
-<span class="ln">3</span>echo 1 &gt; /proc/sys/net/ipv4/ip_forward
-</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">modprobe br_netfilter
+</span></span><span class="line"><span class="ln">2</span><span class="cl">echo 1 &gt; /proc/sys/net/bridge/bridge-nf-call-iptables
+</span></span><span class="line"><span class="ln">3</span><span class="cl">echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+</span></span></code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -498,13 +497,13 @@ systemctl start kubelet</p>
 </a></li><li><a href="/categories/k8s/log/">Docker Log
 </a></li><li><a href="/categories/k8s/kubernetes-learn/">Kubernetes Beginner
 </a></li><li><a href="/categories/golang/process_pool/">Goroutine Pool
-</a></li><li><a href="/categories/data/redis-cls/">Install Redis Cluster With Docker-Compose
+</a></li><li><a href="/categories/data/redis/">Install Redis Cluster With Docker-Compose
 </a></li></ul>
   </section></div>
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -677,7 +676,7 @@ systemctl start kubelet</p>
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6T4S9BSTB"></script>
+<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6T4S9BSTB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
