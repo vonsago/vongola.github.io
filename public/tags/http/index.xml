@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on Vassago&#39;s Blog</title>
+    <link>/tags/http/</link>
+    <description>Recent content in HTTP on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>History of HTTP</title>
+      <link>/categories/network/httpcode/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/httpcode/</guid>
+      <description>HTTP 响应状态码用来表明特定 HTTP 请求是否成功完成。 响应被归为以下五大类： 信息响应 (100–199) 成功响应 (200–299) 重定向消息 (300–3</description>
+    </item>
+    
+    <item>
+      <title>History of HTTP</title>
+      <link>/categories/network/http/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/http/</guid>
+      <description>HTTP 0.9 也叫做单行（one-line）协议，基于 TCP 只允许 GET，只会响应 HTML 格式的字符串 HTTP 1.0 增加了请求头，版本号（比如 content-type，就</description>
+    </item>
+    
+    <item>
+      <title>HTTP Method POST vs GET</title>
+      <link>/categories/network/post/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/network/post/</guid>
+      <description>语义角度 GET 通常用于获取资源或者执行无副作用的操作 POST 通常用于提交数据并执行更改服务器状态的操作（服务器需要更多时间来处理 POST 请求） 安全角度 GET 请求</description>
+    </item>
+    
+    <item>
+      <title>Get Wlan Password</title>
+      <link>/series/linux/get-wlan-passwd/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/get-wlan-passwd/</guid>
+      <description>如何获取你知道/不知道的 wifi 密码 本文仅限于学习，请勿用于非法用途 否则后果作者概不负责 获取链接过的 wifi 密码 Windows: 管理员运行： 1for /f &amp;#34;skip=9 tokens=1,2 delims=:&amp;#34; %i in (&amp;#39;netsh wlan show profiles&amp;#39;) do @echo</description>
+    </item>
+    
+  </channel>
+</rss>

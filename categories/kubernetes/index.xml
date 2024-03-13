@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Vassago&#39;s Blog</title>
+    <link>/categories/kubernetes/</link>
+    <description>Recent content in Kubernetes on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>k8s questions</title>
+      <link>/categories/k8s/k8sinterview/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/k8sinterview/</guid>
+      <description>cgroup v1 vs v2 namespace 分类，他和sandbox关系 service vs ep deployment vs RS clusterip 访问不通的原因 service 和 deployment 的关系，headless service是什么 宿主机上能看到的容器里的</description>
+    </item>
+    
+    <item>
+      <title>Install kubernetes(k8s) with kubeadm</title>
+      <link>/categories/k8s/install/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/install/</guid>
+      <description>Version Choise .ref https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ kubeadm version: &amp;amp;version.Info{Major:&amp;ldquo;1&amp;rdquo;, Minor:&amp;ldquo;26&amp;rdquo;, GitVersion:&amp;ldquo;v1.26.1&amp;rdquo;, GitCommit:&amp;ldquo;8f94681cd294aa8cfd3407b8191f6c70214973a4&amp;rdquo;, GitTreeState:&amp;ldquo;clean&amp;rdquo;, BuildDate:&amp;ldquo;2023-01-18T15:56:50Z&amp;rdquo;, GoVersion:&amp;ldquo;go1.19.5&amp;rdquo;, Compiler:&amp;ldquo;gc&amp;rdquo;, Platform:&amp;ldquo;linux/amd64&amp;rdquo;} docker Version: 20.10.12 containerd: 1.6.18 Prepare 1# check swap off with free -m .ref https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ 2swapoff -a 3 4 5# check port is available 6nc 127.0.0.1 6443 7 8# some host dependences 9apt install socat conntrack 10 11# Kubernetes package repositories 12sudo apt-get update 13sudo apt-get install -y apt-transport-https ca-certificates curl 14 15curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key</description>
+    </item>
+    
+    <item>
+      <title>Service Discovery</title>
+      <link>/categories/k8s/discovery/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/discovery/</guid>
+      <description>一致性协议算法主要有Paxos、Raft、ZAB。 Zookeeper Eureka Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管</description>
+    </item>
+    
+    <item>
+      <title>Docker Log</title>
+      <link>/categories/k8s/log/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/log/</guid>
+      <description>Docker docker 支持的日志驱动，配置文件 /etc/docker/daemon.json none 没有容器日志，无任何输出 local 自定义格式存储 json-file 默认驱动程序，json syslog 依赖 syslog 守护进程，可指定路径 journald 依赖 journald 守护进程</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Beginner</title>
+      <link>/categories/k8s/kubernetes-learn/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/k8s/kubernetes-learn/</guid>
+      <description>调度 网络 容器网络模式 none: 完全隔离，既不访问外部网络，也不提供服务访问自己。可以用于测试容器，为后续容器创建网络环境容器 host: 共享宿主机网络，性能好</description>
+    </item>
+    
+  </channel>
+</rss>

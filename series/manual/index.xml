@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manual on Vassago&#39;s Blog</title>
+    <link>/series/manual/</link>
+    <description>Recent content in Manual on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 25 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/series/manual/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps!</title>
+      <link>/categories/workway/cicd/</link>
+      <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/workway/cicd/</guid>
+      <description>what is devops DevOps 是一种工作模式，集合文化理念、实践和工具，来使团队的工作合作更高效，交付更便捷可靠。 why need devops 懒 因为它可以帮我们自动的处理一些苦燥的任务</description>
+    </item>
+    
+    <item>
+      <title>Letters ASCII Table</title>
+      <link>/posts/letter/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/letter/</guid>
+      <description>   Letter ASCII Code Binary Letter ASCII Code Binary     a 097 01100001 A 065 01000001   b 098 01100010 B 066 01000010   c 099 01100011 C 067 01000011   d 100 01100100 D 068 01000100   e 101 01100101 E 069 01000101   f 102 01100110 F 070 01000110   g 103 01100111 G 071 01000111   h 104 01101000 H 072 01001000   i 105 01101001 I 073 01001001   j 106 01101010 J 074 01001010   k 107 01101011 K 075 01001011   l 108 01101100 L 076 01001100   m 109 01101101 M 077 01001101   n 110 01101110 N 078 01001110   o 111 01101111 O 079 01001111   p 112 01110000 P 080 01010000   q 113 01110001 Q 081 01010001   r 114 01110010 R 082 01010010   s 115 01110011 S 083 01010011   t 116 01110100 T 084 01010100   u 117 01110101 U 085 01010101   v 118 01110110 V 086 01010110   w 119 01110111 W 087 01010111   x 120 01111000 X 088 01011000   y 121 01111001 Y 089 01011001   z 122 01111010 Z 090 01011010    </description>
+    </item>
+    
+    <item>
+      <title>Code template</title>
+      <link>/series/python/code-template/</link>
+      <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/series/python/code-template/</guid>
+      <description>Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&amp;#39;&amp;#39;) 6 f.write(result) 7 8def process(args): 9 &amp;#39;&amp;#39;&amp;#39; 10work 11&amp;#39;&amp;#39;&amp;#39; 12 return result 13 14if __name__ == &amp;#39;__main__&amp;#39;: 15 pool = multiprocessing.Pool(processes = 100)</description>
+    </item>
+    
+    <item>
+      <title>Build Blog</title>
+      <link>/posts/blog/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/blog/</guid>
+      <description>Build Blog Gitpage + Hexo 搭建个人博客，全程免费，记录注意事项。 总览 Gitpage 慷慨的 github 给我们的网站托管 Freenom 免费域名 DNSPod 免费的DNS解析 Markdown 熟悉一些 Markdown 的语法 StaticSite A List of Static Site Generators for</description>
+    </item>
+    
+  </channel>
+</rss>
