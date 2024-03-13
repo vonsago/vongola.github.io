@@ -71,6 +71,7 @@ viewer = true # Image Viewer
 
 [analytics]
   baidu = "40c8a466fbe1d251bf8012e531261a1c" # Baidu Analytics
+  google = "G-Y6T4S9BSTB"
 
 # Site verification
 [siteVerification]
