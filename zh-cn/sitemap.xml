@@ -93,17 +93,17 @@
                 href="/zh-cn/"
                 />
   </url><url>
-    <loc>/zh-cn/series/</loc>
+    <loc>/zh-cn/tags/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/series/"
+                href="/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/series/"
+                href="/zh-cn/tags/"
                 />
   </url><url>
     <loc>/zh-cn/posts/</loc>
@@ -119,17 +119,17 @@
                 href="/zh-cn/posts/"
                 />
   </url><url>
-    <loc>/zh-cn/tags/</loc>
+    <loc>/zh-cn/series/</loc>
     <lastmod>2019-11-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/tags/"
+                href="/zh-cn/series/"
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
@@ -156,18 +156,6 @@
                 href="/zh-cn/archives/"
                 />
   </url><url>
-    <loc>/zh-cn/search/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/search/"
-                />
-  </url><url>
     <loc>/zh-cn/contact/</loc>
     <xhtml:link
                 rel="alternate"
@@ -178,6 +166,18 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/contact/"
+                />
+  </url><url>
+    <loc>/zh-cn/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/search/"
                 />
   </url>
 </urlset>
