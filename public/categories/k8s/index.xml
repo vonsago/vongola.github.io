@@ -5,7 +5,7 @@
     <link>/categories/k8s/</link>
     <description>Recent content in Kubernetes on Vassago&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright><atom:link href="/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
