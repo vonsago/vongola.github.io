@@ -5,7 +5,7 @@
     <link>/</link>
     <description>Recent content on Vassago&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -77,7 +77,7 @@
       <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>/categories/data/redis-cls/</guid>
-      <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp;amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;amp;&amp;amp; PORT=${port}</description>
+      <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} mkdir conf &amp;amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;amp;&amp;amp; PORT=${port} envsubst</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@
       <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>/categories/data/redis/</guid>
-      <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} 13 mkdir conf &amp;amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;amp;&amp;amp; PORT=${port}</description>
+      <description>创建目录 mkdir -p /usr/local/docker-redis/redis-cluster 切换至指定目录 cd /usr/local/docker-redis/redis-cluster/ 编写 redis-cluster.tmpl 文件 vi redis-cluster.tmpl 1port ${PORT} 2requirepass 1234 3masterauth 1234 4protected-mode no 5daemonize no 6appendonly yes 7cluster-enabled yes 8cluster-config-file nodes.conf 9cluster-node-timeout 15000 10cluster-announce-ip 192.168.10.10 11cluster-announce-port ${PORT} 12cluster-announce-bus-port 1${PORT} mkdir conf &amp;amp; data path 1 2for port in `seq 6371 6373`; do \ 3 mkdir -p ${port}/conf \ 4 &amp;amp;&amp;amp; PORT=${port} envsubst</description>
     </item>
     
     <item>
@@ -133,7 +133,7 @@ There should be consistency in DNS Zone database.</description>
       <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>/series/python/pip/</guid>
-      <description>1cat &amp;gt;&amp;gt; .pip/pip.conf &amp;lt;&amp;lt; EOF 23[global] 45timeout = 6000 67index-url = https://pypi.douban.com/simple/ 89[install] 1011use-mirrors = true 1213mirrors = https://pypi.douban.com/simple/ 1415trusted-host = pypi.douban.com 1617EOF </description>
+      <description> 1cat &amp;gt;&amp;gt; .pip/pip.conf &amp;lt;&amp;lt; EOF 2 3[global] 4 5timeout = 6000 6 7index-url = https://pypi.douban.com/simple/ 8 9[install] 10 11use-mirrors = true 12 13mirrors = https://pypi.douban.com/simple/ 14 15trusted-host = pypi.douban.com 16 17EOF </description>
     </item>
     
     <item>
@@ -178,7 +178,7 @@ There should be consistency in DNS Zone database.</description>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/letter/</guid>
-      <description>   Letter ASCII Code Binary Letter ASCII Code Binary     a 097 01100001 A 065 01000001   b 098 01100010 B 066 01000010   c 099 01100011 C 067 01000011   d 100 01100100 D 068 01000100   e 101 01100101 E 069 01000101   f 102 01100110 F 070 01000110   g 103 01100111 G 071 01000111   h 104 01101000 H 072 01001000   i 105 01101001 I 073 01001001   j 106 01101010 J 074 01001010   k 107 01101011 K 075 01001011   l 108 01101100 L 076 01001100   m 109 01101101 M 077 01001101   n 110 01101110 N 078 01001110   o 111 01101111 O 079 01001111   p 112 01110000 P 080 01010000   q 113 01110001 Q 081 01010001   r 114 01110010 R 082 01010010   s 115 01110011 S 083 01010011   t 116 01110100 T 084 01010100   u 117 01110101 U 085 01010101   v 118 01110110 V 086 01010110   w 119 01110111 W 087 01010111   x 120 01111000 X 088 01011000   y 121 01111001 Y 089 01011001   z 122 01111010 Z 090 01011010    </description>
+      <description> Letter ASCII Code Binary Letter ASCII Code Binary a 097 01100001 A 065 01000001 b 098 01100010 B 066 01000010 c 099 01100011 C 067 01000011 d 100 01100100 D 068 01000100 e 101 01100101 E 069 01000101 f 102 01100110 F 070 01000110 g 103 01100111 G 071 01000111 h 104 01101000 H 072 01001000 i 105 01101001 I 073 01001001 j 106 01101010 J 074 01001010 k 107 01101011 K 075 01001011 l 108 01101100 L 076 01001100 m 109 01101101 M 077 01001101 n 110 01101110 N 078 01001110 o 111 01101111 O 079 01001111 p 112 01110000 P 080 01010000 q 113 01110001 Q 081 01010001 r 114 01110010 R 082 01010010 s 115 01110011 S 083 01010011 t 116 01110100 T 084 01010100 u 117 01110101 U 085 01010101 v 118 01110110 V 086 01010110 w 119 01110111 W 087 01010111 x 120 01111000 X 088 01011000 y 121 01111001 Y 089 01011001 z 122 01111010 Z 090 01011010 </description>
     </item>
     
     <item>
@@ -233,7 +233,7 @@ These are the common top-level directories associated with the root directory: /
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/series/linux/rtmp/</guid>
-      <description>What is RTMP   </description>
+      <description>What is RTMP </description>
     </item>
     
     <item>
@@ -252,7 +252,7 @@ These are the common top-level directories associated with the root directory: /
       
       <guid>/series/linux/session-cookie-diff/</guid>
       <description>Session
-   Session can store any type of data because the value is of data type of “object”    These are stored at server side.    Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server.    Session is independent for every client i.e. individual for every client.    There is no limitation on the size or number of sessions to be used in an application.</description>
+Session can store any type of data because the value is of data type of “object” These are stored at server side. Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server. Session is independent for every client i.e. individual for every client. There is no limitation on the size or number of sessions to be used in an application. We cannot disable the sessions.</description>
     </item>
     
     <item>
@@ -270,7 +270,7 @@ These are the common top-level directories associated with the root directory: /
       <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/series/python/real-python/</guid>
-      <description>FFmpeg calls python Depends  ffmpeg needs to dynamically compile (or python programs need to be statically compiled, it&amp;rsquo;s difficult) python program needs to call cpython interface   Example docker images python programs debug </description>
+      <description>FFmpeg calls python Depends ffmpeg needs to dynamically compile (or python programs need to be statically compiled, it&amp;rsquo;s difficult) python program needs to call cpython interface Example docker images python programs debug </description>
     </item>
     
     <item>
@@ -333,7 +333,7 @@ These are the common top-level directories associated with the root directory: /
       <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/series/python/code-template/</guid>
-      <description>Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&amp;#39;&amp;#39;) 6 f.write(result) 7 8def process(args): 9 &amp;#39;&amp;#39;&amp;#39; 10work 11&amp;#39;&amp;#39;&amp;#39; 12 return result 13 14if __name__ == &amp;#39;__main__&amp;#39;: 15 pool = multiprocessing.Pool(processes = 100)</description>
+      <description>Code Template Python多进程写入文件(multiprocessing template) 参考文档 1#multiprocessing template 2import multiprocessing 3 4def write_file(result): 5 f = open(&amp;#39;&amp;#39;) 6 f.write(result) 7 8def process(args): 9 &amp;#39;&amp;#39;&amp;#39; 10 work 11 &amp;#39;&amp;#39;&amp;#39; 12 return result 13 14if __name__ == &amp;#39;__main__&amp;#39;: 15 pool = multiprocessing.Pool(processes</description>
     </item>
     
     <item>
@@ -379,7 +379,7 @@ These are the common top-level directories associated with the root directory: /
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/series/python/python-encoding/</guid>
-      <description>Python Encoding b&#39;&#39; 型 1b&amp;#39;hello&amp;#39;.decode() u&#39;&#39; 型 1a=u&amp;#39;\xe5\x9c\xa3\xe5\xbd\xbc\xe5\xbe\x97\xe5\xa0\xa1\xe6\x8e\x92\xe5\x90\x8d\xe7\xac\xac1 \xe9\xa4\x90\xe5\x8e\x85(\xe5\x85\xb18,650 \xe9\x97\xb4)&amp;#39; 2print(a.encode(&amp;#39;raw-unicode-escape&amp;#39;)) \u00 型 1&amp;gt;&amp;gt;&amp;gt; a = u&amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082\n&amp;#39; 2&amp;gt;&amp;gt;&amp;gt; print(a) 3&amp;gt;&amp;gt;&amp;gt; print(a.encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf-8&amp;#39;)) \uxxxx 型 1a=&amp;#39;\u56e0&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;)) 1a = &amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;).encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf8&amp;#39;)) unicode+ascii，且u前没有\ 1#coding=utf8 2s = &amp;#39;u00e7u0088u00b1u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u009fu008eu00e9u0099u0085u00e9u0085u0092u00e5u00bau0097u00e6u0098u00afu00e4u00b8u0080u00e5u00aeu00b6u00efu00bcu008cu00e8u00b7u009du00e7u00a6u00bbu00e5u00aeu0089u00e6u00a0u00bcu00e5u00b0u0094u00e5u008du009au00e7u0089u00a9u00e9u00a6u0086u00e5u0092u008cu00e5u0085u008bu00e9u009bu00b7u00e9u00bbu0098u00e6u00a1u00a5u00e4u00b8u008du00e5u0088u00b0 15 u00e5u0088u0086u00e9u0092u009fu00e7u009au0084u00e6u00adu00a5u00e8u00a1u008cu00e8u00b7u00afu00e7u00a8u008bu00e3u0080u0082u00e8u0080u008cu00e4u00b8u0094u00efu00bcu008cu00e8u00bfu0099u00e5u00aeu00b6u00e9u0085u0092u00e5u00bau0097u00e8u00b7u009du00e7u00a6u00bbu00e5u009fu0083u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u00a4u00a7u00e6u0095u0099u00e5u00a0u0082u00e5u0092u008cEgapark Erfurtu00e4u00b8u008du00e5u0088u00b0 5 u00e5u0085u00acu00e9u0087u008cu00e3u0080u0082 u00e6u00adu00a4u00e9u0085u0092u00e5u00bau0097u00e6u008fu0090u00e4u00beu009bu00e9u00a4u0090u00e5u008eu0085u00e3u0080u0081u00e5u00b1u008bu00e9u00a1u00b6u00e9u009cu00b2u00e5u008fu00b0u00e5u0092u008cu00e5u00b9u00b2u00e6u00b4u0097/u00e6u00b4u0097u00e8u00a1u00a3u00e6u009cu008du00e5u008au00a1u00e3u0080u0082u00e5u00a6u0082u00e6u009eu009cu00e6u0082u00a8u00e6u0083u00b3u00e5u0096u009du00e6u009du00afu00e9u00a5u00aeu00e6u0096u0099u00e6u0094u00beu00e6u009du00beu00e4u00b8u0080u00e4u00b8u008bu00efu00bcu008cu00e9u0085u0092u00e5u0090u00a7/u00e9u0085u0092u00e5u00bbu008au00e7u00bbu009du00e5u00afu00b9u00e6u0098u00afu00e6u0082u00a8u00e7u009au0084u00e5u00a5u00bdu00e5u008eu00bbu00e5u00a4u0084u00e3u0080u0082&amp;#39; 3 4import re 5 6pattern = re.compile(r&amp;#39;((u00([a-z0-9]){2})+)&amp;#39;) 7for i in pattern.findall(s):</description>
+      <description>Python Encoding b&amp;rsquo;&amp;rsquo; 型 1b&amp;#39;hello&amp;#39;.decode() u&amp;rsquo;&amp;rsquo; 型 1a=u&amp;#39;\xe5\x9c\xa3\xe5\xbd\xbc\xe5\xbe\x97\xe5\xa0\xa1\xe6\x8e\x92\xe5\x90\x8d\xe7\xac\xac 1 \xe9\xa4\x90\xe5\x8e\x85 (\xe5\x85\xb1 8,650 \xe9\x97\xb4)&amp;#39; 2print(a.encode(&amp;#39;raw-unicode-escape&amp;#39;)) \u00 型 1&amp;gt;&amp;gt;&amp;gt; a = u&amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082\n&amp;#39; 2&amp;gt;&amp;gt;&amp;gt; print(a) 3&amp;gt;&amp;gt;&amp;gt; print(a.encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf-8&amp;#39;)) \uxxxx 型 1a=&amp;#39;\u56e0&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;)) 1a = &amp;#39;\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e5\u009f\u00bc\u00e7\u008e\u0089\u00e5\u00b8\u0082&amp;#39; 2print(a.decode(&amp;#39;unicode-escape&amp;#39;).encode(&amp;#39;iso-8859-1&amp;#39;).decode(&amp;#39;utf8&amp;#39;)) unicode+ascii，且u前没有\ 1#coding=utf8 2s = &amp;#39;u00e7u0088u00b1u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u009fu008eu00e9u0099u0085u00e9u0085u0092u00e5u00bau0097u00e6u0098u00afu00e4u00b8u0080u00e5u00aeu00b6u00efu00bcu008cu00e8u00b7u009du00e7u00a6u00bbu00e5u00aeu0089u00e6u00a0u00bcu00e5u00b0u0094u00e5u008du009au00e7u0089u00a9u00e9u00a6u0086u00e5u0092u008cu00e5u0085u008bu00e9u009bu00b7u00e9u00bbu0098u00e6u00a1u00a5u00e4u00b8u008du00e5u0088u00b0 15 u00e5u0088u0086u00e9u0092u009fu00e7u009au0084u00e6u00adu00a5u00e8u00a1u008cu00e8u00b7u00afu00e7u00a8u008bu00e3u0080u0082u00e8u0080u008cu00e4u00b8u0094u00efu00bcu008cu00e8u00bfu0099u00e5u00aeu00b6u00e9u0085u0092u00e5u00bau0097u00e8u00b7u009du00e7u00a6u00bbu00e5u009fu0083u00e5u00b0u0094u00e7u00a6u008fu00e7u0089u00b9u00e5u00a4u00a7u00e6u0095u0099u00e5u00a0u0082u00e5u0092u008cEgapark Erfurtu00e4u00b8u008du00e5u0088u00b0 5 u00e5u0085u00acu00e9u0087u008cu00e3u0080u0082 u00e6u00adu00a4u00e9u0085u0092u00e5u00bau0097u00e6u008fu0090u00e4u00beu009bu00e9u00a4u0090u00e5u008eu0085u00e3u0080u0081u00e5u00b1u008bu00e9u00a1u00b6u00e9u009cu00b2u00e5u008fu00b0u00e5u0092u008cu00e5u00b9u00b2u00e6u00b4u0097/u00e6u00b4u0097u00e8u00a1u00a3u00e6u009cu008du00e5u008au00a1u00e3u0080u0082u00e5u00a6u0082u00e6u009eu009cu00e6u0082u00a8u00e6u0083u00b3u00e5u0096u009du00e6u009du00afu00e9u00a5u00aeu00e6u0096u0099u00e6u0094u00beu00e6u009du00beu00e4u00b8u0080u00e4u00b8u008bu00efu00bcu008cu00e9u0085u0092u00e5u0090u00a7/u00e9u0085u0092u00e5u00bbu008au00e7u00bbu009du00e5u00afu00b9u00e6u0098u00afu00e6u0082u00a8u00e7u009au0084u00e5u00a5u00bdu00e5u008eu00bbu00e5u00a4u0084u00e3u0080u0082&amp;#39; 3 4import re 5 6pattern = re.compile(r&amp;#39;((u00([a-z0-9]){2})+)&amp;#39;) 7for</description>
     </item>
     
     <item>
