@@ -27,9 +27,9 @@
 <meta name="twitter:title" content="位运算的数学等价"/>
 <meta name="twitter:description" content="bit"/>
 <meta name="twitter:site" content="@V_assago"/>
-<link rel="preload" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/bundle.min.fcd024e77e7ca8dc30926e1b5389582b45bdb44482ee20d1ae3aae2c00de9817.css" integrity="sha256-/NAk5358qNwwkm4bU4lYK0W9tESC7iDRrjquLADemBc=" crossorigin="anonymous"></noscript></head>
-  <body><script src="/js/bootstrap.min.062c2e66b557cb779d59cedff7e0cc76e84beb665a1076e474e87d940be44245.js" integrity="sha256-BiwuZrVXy3edWc7f9&#43;DMduhL62ZaEHbkdOh9lAvkQkU=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
+  <body><script src="/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js" integrity="sha256-tdht06X2DJC&#43;OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin="anonymous"></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -258,36 +258,36 @@ Von
   </div>
 </div><div class="post-content mb-3"><h2 id="按位运算符c共有6个----------">按位运算符C++共有6个&laquo; , &raquo; , ~ , &amp; , | , ^</h2>
 <h2 id="移位运算符">移位运算符</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">//左移运算符&lt;&lt;语法：
-</span></span><span class="line"><span class="ln">2</span><span class="cl">value &lt;&lt; shift  //value是被操作的整数值，shift是要移动的位数
-</span></span><span class="line"><span class="ln">3</span><span class="cl">//功能：左移一位相当于乘2，左移n位相当于乘以2的n次方
-</span></span><span class="line"><span class="ln">4</span><span class="cl">//左移运算符在汇编语言中直接修改寄存器的内容，但是C++生成一个新值，如：
-</span></span><span class="line"><span class="ln">5</span><span class="cl">int x=30;
-</span></span><span class="line"><span class="ln">6</span><span class="cl">int y= x&lt;&lt;3;
-</span></span><span class="line"><span class="ln">7</span><span class="cl">//
-</span></span><span class="line"><span class="ln">8</span><span class="cl">x=x&lt;&lt;4;
-</span></span><span class="line"><span class="ln">9</span><span class="cl">y&lt;&lt;=2;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">//右移运算符&lt;&lt;语法：
-</span></span><span class="line"><span class="ln">2</span><span class="cl">value &gt;&gt; shift  //value是被操作的整数值，shift是要移动的位数
-</span></span><span class="line"><span class="ln">3</span><span class="cl">//功能：左移一位相当于除以2，左移n位相当于除以2的n次方，如：
-</span></span><span class="line"><span class="ln">4</span><span class="cl">int x=4;
-</span></span><span class="line"><span class="ln">5</span><span class="cl">x&gt;&gt;1;
-</span></span><span class="line"><span class="ln">6</span><span class="cl">x&gt;&gt;=1;
-</span></span></code></pre></div><p>逻辑按位运算符</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">//按位非 ~
-</span></span><span class="line"><span class="ln">2</span><span class="cl">//先将数写成二进制形式，再将每个0化为1，
-</span></span><span class="line"><span class="ln">3</span><span class="cl">//功能：新值是原值的补位，如
-</span></span><span class="line"><span class="ln">4</span><span class="cl">unsigned char x=3;
-</span></span><span class="line"><span class="ln">5</span><span class="cl">十进制中~3=252，
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">//按位 OR(|)对两个整数进行操作，生成一个新的整数值。
-</span></span><span class="line"><span class="ln">2</span><span class="cl">//将数写成二进制形式，对应位“见1为1”
-</span></span><span class="line"><span class="ln">3</span><span class="cl">//可以组合赋值运算符，如
-</span></span><span class="line"><span class="ln">4</span><span class="cl">a |= b;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">//按位 XOR(^)将两个数结合起来，生成一个新的整数值。
-</span></span><span class="line"><span class="ln">2</span><span class="cl">//将数写成二进制形式，对应位“不同为1，相同为0”
-</span></span><span class="line"><span class="ln">3</span><span class="cl">//可以组合赋值运算符，如
-</span></span><span class="line"><span class="ln">4</span><span class="cl">a ^= b;
-</span></span></code></pre></div><p>异或性质：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//左移运算符&lt;&lt;语法：
+<span class="ln">2</span>value &lt;&lt; shift  //value是被操作的整数值，shift是要移动的位数
+<span class="ln">3</span>//功能：左移一位相当于乘2，左移n位相当于乘以2的n次方
+<span class="ln">4</span>//左移运算符在汇编语言中直接修改寄存器的内容，但是C++生成一个新值，如：
+<span class="ln">5</span>int x=30;
+<span class="ln">6</span>int y= x&lt;&lt;3;
+<span class="ln">7</span>//
+<span class="ln">8</span>x=x&lt;&lt;4;
+<span class="ln">9</span>y&lt;&lt;=2;
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//右移运算符&lt;&lt;语法：
+<span class="ln">2</span>value &gt;&gt; shift  //value是被操作的整数值，shift是要移动的位数
+<span class="ln">3</span>//功能：左移一位相当于除以2，左移n位相当于除以2的n次方，如：
+<span class="ln">4</span>int x=4;
+<span class="ln">5</span>x&gt;&gt;1;
+<span class="ln">6</span>x&gt;&gt;=1;
+</code></pre></div><p>逻辑按位运算符</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位非 ~
+<span class="ln">2</span>//先将数写成二进制形式，再将每个0化为1，
+<span class="ln">3</span>//功能：新值是原值的补位，如
+<span class="ln">4</span>unsigned char x=3;
+<span class="ln">5</span>十进制中~3=252，
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位 OR(|)对两个整数进行操作，生成一个新的整数值。
+<span class="ln">2</span>//将数写成二进制形式，对应位“见1为1”
+<span class="ln">3</span>//可以组合赋值运算符，如
+<span class="ln">4</span>a |= b;
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位 XOR(^)将两个数结合起来，生成一个新的整数值。
+<span class="ln">2</span>//将数写成二进制形式，对应位“不同为1，相同为0”
+<span class="ln">3</span>//可以组合赋值运算符，如
+<span class="ln">4</span>a ^= b;
+</code></pre></div><p>异或性质：</p>
 <p>（1）交换律：A ⊕ B = B ⊕ A
 （2）结合律：A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C
 （3）自反：A ⊕ B ⊕ B = A ⊕ 0 = A</p>
@@ -296,10 +296,10 @@ Von
 判断两个int数字a，b是否相等a ^ b == 0则a,b相等。</p>
 <p>（2）在汇编语言中经常用于将变量置零：xor a，a；</p>
 <p>（3）我们可以使用异或来使某些特定的位翻转，因为不管是0或者是1与1做异或将得到原值的相反值；</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">0 ^ 1 = 1
-</span></span><span class="line"><span class="ln">2</span><span class="cl">
-</span></span><span class="line"><span class="ln">3</span><span class="cl">1 ^ 1 = 0
-</span></span></code></pre></div><p>（4）我们使用异或来判断一个二进制数中1的数量是奇数还是偶数</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>0 ^ 1 = 1
+<span class="ln">2</span>
+<span class="ln">3</span>1 ^ 1 = 0
+</code></pre></div><p>（4）我们使用异或来判断一个二进制数中1的数量是奇数还是偶数</p>
 <blockquote>
 <p>例如：求10100001中1的数量是奇数还是偶数； 答案：1 ^ 0 ^ 1 ^ 0 ^ 0 ^ 0 ^ 0 ^ 1 = 1,结果为1就是奇数个1，结果为0就是偶数个1； 应用：这条性质可用于奇偶校验（Parity Check），比如在串口通信过程中，每个字节的数据都计算一个校验位，数据和校验位一起发送出去，这样接收方可以根据校验位粗略地判断接收到的数据是否有误</p>
 </blockquote>
@@ -308,19 +308,19 @@ Von
 <p>校验和恢复主要利用的了异或的特性：IF a ^ b = c THEN a ^ c = b 应用：一个很好的应用实例是RAID5，使用3块磁盘（A、B、C）组成RAID5阵列，当用户写数据时，将数据分成两部分，分别写到磁盘A和磁盘B，A ^ B的结果写到磁盘C；当读取A的数据时，通过B ^ C可以对A的数据做校验，当A盘出错时，通过B ^ C也可以恢复A盘的数据。</p>
 </blockquote>
 <p>（6）经典题目：不使用其他空间，交换两个值</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">a = a ^ b;
-</span></span><span class="line"><span class="ln">2</span><span class="cl">b = a ^ b; //a ^ b ^ b = a ^ 0 = a;
-</span></span><span class="line"><span class="ln">3</span><span class="cl">a = a ^ b;
-</span></span></code></pre></div><p>（7）面试题：互换二进制数的奇偶位；
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>a = a ^ b;
+<span class="ln">2</span>b = a ^ b; //a ^ b ^ b = a ^ 0 = a;
+<span class="ln">3</span>a = a ^ b;
+</code></pre></div><p>（7）面试题：互换二进制数的奇偶位；
 以上性质来自<a href="https://www.lijinma.com/blog/2014/05/29/amazing-xor/" target="_blank" rel="noopener noreferrer">金马的Blog</a>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">//按位 AND(&amp;)将两个数结合起来，生成一个新的整数值。
-</span></span><span class="line"><span class="ln">2</span><span class="cl">//将数写成二进制形式，对应位“同为1结果才为1”
-</span></span><span class="line"><span class="ln">3</span><span class="cl">//可以组合赋值运算符，如
-</span></span><span class="line"><span class="ln">4</span><span class="cl">a &amp;= b;
-</span></span><span class="line"><span class="ln">5</span><span class="cl">
-</span></span><span class="line"><span class="ln">6</span><span class="cl">a &amp; 1//取a二进制的最低位，判断和1是否相同，相同返回1，否则返回0，可用于判断奇偶
-</span></span></code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//按位 AND(&amp;)将两个数结合起来，生成一个新的整数值。
+<span class="ln">2</span>//将数写成二进制形式，对应位“同为1结果才为1”
+<span class="ln">3</span>//可以组合赋值运算符，如
+<span class="ln">4</span>a &amp;= b;
+<span class="ln">5</span>
+<span class="ln">6</span>a &amp; 1//取a二进制的最低位，判断和1是否相同，相同返回1，否则返回0，可用于判断奇偶
+</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -365,7 +365,7 @@ Von
     </article><div class="card component row post-comments">
   <div class="card-body"><div id="disqus_thread"></div>
 <script type="application/javascript">
-    window.disqus_config = function () {
+    var disqus_config = function () {
     
     
     
@@ -416,11 +416,11 @@ Von
   </section><section class="recent-posts row card component">
   <div class="card-body">
     <h2 class="card-title">Recent Posts</h2>
-    <ul><li><a href="/series/python/pip/">Change Pip Conf in Global
+    <ul><li><a href="/series/linux/buffercache/">Buffer and Cache
+</a></li><li><a href="/series/python/pip/">Change Pip Conf in Global
 </a></li><li><a href="/series/linux/fxxk_ssh/">Fxxk SSH
 </a></li><li><a href="/series/linux/root_directory/">Linux Path Description
 </a></li><li><a href="/series/ffmpeg/ffmpeg-develop/">Video Develop Environment
-</a></li><li><a href="/series/ffmpeg/video/">流媒体词汇表
 </a></li></ul>
   </div>
 </section><section class="taxonomies row card component">
@@ -442,6 +442,8 @@ Von
             Algorithm
           </a><a href="/categories/algorithma/" class="badge bg-primary text-white rounded post-taxonomy" title="Algorithma">
             Algorithma
+          </a><a href="/categories/linux/" class="badge bg-primary text-white rounded post-taxonomy" title="Linux">
+            Linux
           </a><a href="/categories/mongodb/" class="badge bg-primary text-white rounded post-taxonomy" title="Mongodb">
             Mongodb
           </a></div>
@@ -538,7 +540,7 @@ Von
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script src="/js/bundle.min.a22db253a8b5c22eb0398e46b3fb9670c5b8ef97a74aff61c7f38b07b1d7c400.js" integrity="sha256-oi2yU6i1wi6wOY5Gs/uWcMW475enSv9hx/OLB7HXxAA=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.2b366f6cb186c9ce6e41936589e36005bc87d36452602e9aea75f196009e8b95.js" integrity="sha256-KzZvbLGGyc5uQZNlieNgBbyH02RSYC6a6nXxlgCei5U=" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6T4S9BSTB"></script>
+<script src="/js/bundle.min.724db55a452adc23688111e07e66b400701bbe1793989f2145c66adf2511d9d3.js" integrity="sha256-ck21WkUq3CNogRHgfma0AHAbvheTmJ8hRcZq3yUR2dM=" crossorigin="anonymous" defer></script><script defer src="/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js" integrity="sha256-nzn4l3V&#43;YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6T4S9BSTB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
