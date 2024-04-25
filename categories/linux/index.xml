@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Vassago&#39;s Blog</title>
+    <link>/categories/linux/</link>
+    <description>Recent content in Linux on Vassago&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2015-{year} Ars Von Geotia. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Buffer and Cache</title>
+      <link>/series/linux/buffercache/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/buffercache/</guid>
+      <description>Buffer 缓冲区是存储设备和它访问的程序之间的中介。缓冲从存储设备中读取设备并存储。同样，缓冲区也会将数据写入到存储。 这有助于减少对存储设备的直接读</description>
+    </item>
+    
+  </channel>
+</rss>
