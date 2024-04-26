@@ -3,29 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The different between Session with Cookie - Vassago&#39;s Blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>Linux Signal - Vassago&#39;s Blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
-<meta name="description" content="The different between Session with Cookie" /><meta itemprop="name" content="The different between Session with Cookie">
-<meta itemprop="description" content="The different between Session with Cookie"><meta itemprop="datePublished" content="2020-02-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-02-10T00:00:00+00:00" />
-<meta itemprop="wordCount" content="180"><meta itemprop="image" content="/images/bg/bgh2.jpg">
-<meta itemprop="keywords" content="Web,Linux," /><meta property="og:title" content="The different between Session with Cookie" />
-<meta property="og:description" content="The different between Session with Cookie" />
+<meta name="description" content="" /><meta itemprop="name" content="Linux Signal">
+<meta itemprop="description" content="通过 man 7 signal 给出了官方手册 SINGHUP 1 如果一个进程正在从终端运行并且该终端突然消失，则该进程会收到此信号。HUP是挂断的缩写，指的是在电话调制解调器时"><meta itemprop="datePublished" content="2024-04-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-04-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1358"><meta itemprop="image" content="/images/bg/bgh1.jpg">
+<meta itemprop="keywords" content="Linux," /><meta property="og:title" content="Linux Signal" />
+<meta property="og:description" content="通过 man 7 signal 给出了官方手册 SINGHUP 1 如果一个进程正在从终端运行并且该终端突然消失，则该进程会收到此信号。HUP是挂断的缩写，指的是在电话调制解调器时" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/series/linux/session-cookie-diff/" /><meta property="og:image" content="/images/bg/bgh2.jpg" /><meta property="article:section" content="series" />
-<meta property="article:published_time" content="2020-02-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-02-10T00:00:00+00:00" />
-<meta property="og:see_also" content="/series/linux/fxxk_ssh/" /><meta property="og:see_also" content="/series/linux/root_directory/" /><meta property="og:see_also" content="/series/linux/rtmp/" /><meta property="og:see_also" content="/series/linux/top/" /><meta property="og:see_also" content="/series/linux/get-wlan-passwd/" />
+<meta property="og:url" content="/series/linux/signal/" /><meta property="og:image" content="/images/bg/bgh1.jpg" /><meta property="article:section" content="series" />
+<meta property="article:published_time" content="2024-04-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-04-24T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/images/bg/bgh2.jpg"/>
+<meta name="twitter:image" content="/images/bg/bgh1.jpg"/>
 
-<meta name="twitter:title" content="The different between Session with Cookie"/>
-<meta name="twitter:description" content="The different between Session with Cookie"/>
+<meta name="twitter:title" content="Linux Signal"/>
+<meta name="twitter:description" content="通过 man 7 signal 给出了官方手册 SINGHUP 1 如果一个进程正在从终端运行并且该终端突然消失，则该进程会收到此信号。HUP是挂断的缩写，指的是在电话调制解调器时"/>
 <meta name="twitter:site" content="@V_assago"/>
 <link rel="preload" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/bundle.min.89b15c76d23b1055e418eed718cb78886010e537918653f0a43661ed56307392.css" integrity="sha256-ibFcdtI7EFXkGO7XGMt4iGAQ5TeRhlPwpDZh7VYwc5I=" crossorigin="anonymous"></noscript></head>
@@ -53,11 +52,11 @@ Von
   </div>
   <div class="offcanvas-body">
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=The%20different%20between%20Session%20with%20Cookie&url=%2fseries%2flinux%2fsession-cookie-diff%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=Linux%20Signal&url=%2fseries%2flinux%2fsignal%2f">
       <i class="fab fa-fw fa-twitter"></i> Twitter
     </a>
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2flinux%2fsession-cookie-diff%2f">
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2flinux%2fsignal%2f">
       <i class="fab fa-fw fa-facebook-f"></i> Facebook
     </a>
   </div>
@@ -208,7 +207,7 @@ Von
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/series/">Series</a></li><li class="breadcrumb-item active">The Different Between Session With Cookie</li></ol>
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/series/">Series</a></li><li class="breadcrumb-item active">Linux Signal</li></ol>
   </div>
 </nav>    <article class="row card component mb-4 post"><div class="post-panel-wrapper">
   <div class="d-flex flex-column component rounded post-panel">
@@ -228,103 +227,128 @@ Von
 ">
   <i class="fas fa-fw fa-copyright"></i>
 </a>
-    
+    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
     
   </div>
 </div>
 <div class="card-body">
-        <h1 class="card-title my-3">The Different Between Session With Cookie
+        <h1 class="card-title my-3">Linux Signal
 </h1><div class="post-meta"><span class="post-date" title="created on">
-    <i class="fas fa-fw fa-calendar-alt"></i>Feb 10, 2020
+    <i class="fas fa-fw fa-calendar-alt"></i>Apr 24, 2024
   </span><span class="post-reading-time" title="reading time">
-    <i class="fas fa-fw fa-coffee"></i>1 min read
-  </span><a href="/series/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a><a href="/tags/web/" class="badge rounded-pill text-white bg-primary post-taxonomy">Web</a><a href="/tags/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a></div>
-<div class="post-content mb-3"><p>Session</p>
-<ul>
-<li>
-<ol>
-<li>Session can store any type of data because the value is of data type of “object”</li>
-</ol>
-</li>
-<li>
-<ol start="2">
-<li>These are stored at server side.</li>
-</ol>
-</li>
-<li>
-<ol start="3">
-<li>Sessions are secured because it is stored in binary format/encrypted form and gets decrypted at server.</li>
-</ol>
-</li>
-<li>
-<ol start="4">
-<li>Session is independent for every client i.e. individual for every client.</li>
-</ol>
-</li>
-<li>
-<ol start="5">
-<li>There is no limitation on the size or number of sessions to be used in an application.</li>
-</ol>
-</li>
-<li>
-<ol start="6">
-<li>We cannot disable the sessions. Sessions can be used without cookies also.</li>
-</ol>
-</li>
-<li>
-<ol start="7">
-<li>The disadvantage of session is that it is a burden or an overhead on server.</li>
-</ol>
-</li>
-<li>
-<ol start="8">
-<li>Sessions are called as Non-Persistent cookies because its life time can be set manually</li>
-</ol>
-</li>
-</ul>
-<p>Cookies</p>
-<ul>
-<li>
-<ol>
-<li>Cookies can store only “string” datatype.</li>
-</ol>
-</li>
-<li>
-<ol start="2">
-<li>They are stored at client side.</li>
-</ol>
-</li>
-<li>
-<ol start="3">
-<li>Cookie is non-secure since stored in text-format at client side.</li>
-</ol>
-</li>
-<li>
-<ol start="4">
-<li>Cookies may or may not be individual for every client.</li>
-</ol>
-</li>
-<li>
-<ol start="5">
-<li>Size of cookie is limited to 40 and number of cookies to be used is restricted to 20.</li>
-</ol>
-</li>
-<li>
-<ol start="6">
-<li>Cookies can be disabled.</li>
-</ol>
-</li>
-<li>
-<ol start="7">
-<li>Since the value is in string format there is no security.</li>
-</ol>
-</li>
-<li>
-<ol start="8">
-<li>We have persistent and non-persistent cookies.</li>
-</ol>
-</li>
-</ul>
+    <i class="fas fa-fw fa-coffee"></i>3 min read
+  </span><a href="/categories/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a><a href="/tags/linux/" class="badge rounded-pill text-white bg-primary post-taxonomy">Linux</a></div>
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">Table Of Contents</h5>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#singhup-1">SINGHUP 1</a></li>
+    <li><a href="#sigint-2">SIGINT 2</a></li>
+    <li><a href="#sigquit-3">SIGQUIT 3</a></li>
+    <li><a href="#sigill-4">SIGILL 4</a></li>
+    <li><a href="#sigtrap-5">SIGTRAP 5</a></li>
+    <li><a href="#sigabrt-6">SIGABRT 6</a></li>
+    <li><a href="#sigbus-7">SIGBUS 7</a></li>
+    <li><a href="#sigfpe-8">SIGFPE 8</a></li>
+    <li><a href="#sigkill-9">SIGKILL 9</a></li>
+    <li><a href="#sigusr1-10">SIGUSR1 10</a></li>
+    <li><a href="#sigsegv-11">SIGSEGV 11</a></li>
+    <li><a href="#sigusr2-12">SIGUSR2 12</a></li>
+    <li><a href="#sigpipe-13">SIGPIPE 13</a></li>
+    <li><a href="#sigalrm-14">SIGALRM 14</a></li>
+    <li><a href="#sigterm-15">SIGTERM 15</a></li>
+    <li><a href="#16-unused">16 unused</a></li>
+    <li><a href="#sigchld-17">SIGCHLD 17</a></li>
+    <li><a href="#sigcont-18">SIGCONT 18</a></li>
+    <li><a href="#sigstop-19">SIGSTOP 19</a></li>
+    <li><a href="#sigtstp-20">SIGTSTP 20</a></li>
+    <li><a href="#sigttin-21">SIGTTIN 21</a></li>
+    <li><a href="#sigttou-22">SIGTTOU 22</a></li>
+    <li><a href="#sigurg-23">SIGURG 23</a></li>
+    <li><a href="#sigxcpu-24">SIGXCPU 24</a></li>
+    <li><a href="#sigxfsz-25">SIGXFSZ 25</a></li>
+    <li><a href="#sigvtalrm-26">SIGVTALRM 26</a></li>
+    <li><a href="#sigprof-27">SIGPROF 27</a></li>
+    <li><a href="#sigwinch-28">SIGWINCH 28</a></li>
+    <li><a href="#sigio-29">SIGIO 29</a></li>
+    <li><a href="#sigpwr-30">SIGPWR 30</a></li>
+    <li><a href="#sigsys-31">SIGSYS 31</a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>通过 man 7 signal 给出了官方手册</p>
+<h2 id="singhup-1">SINGHUP 1</h2>
+<p>如果一个进程正在从终端运行并且该终端突然消失，则该进程会收到此信号。HUP是挂断的缩写，指的是在电话调制解调器时代挂断电话</p>
+<h2 id="sigint-2">SIGINT 2</h2>
+<p>进程被“中断”。当您按下 Control+C 时会发生这种情况控制终端。</p>
+<h2 id="sigquit-3">SIGQUIT 3</h2>
+<p>退出</p>
+<h2 id="sigill-4">SIGILL 4</h2>
+<p>非法指令。该程序包含CPU的一些机器代码无法理解。</p>
+<h2 id="sigtrap-5">SIGTRAP 5</h2>
+<p>该信号主要在调试器和程序跟踪器中使用。</p>
+<h2 id="sigabrt-6">SIGABRT 6</h2>
+<p>程序调用了 abort() 函数。这是紧急停止。</p>
+<h2 id="sigbus-7">SIGBUS 7</h2>
+<p>尝试错误地访问内存。这可能是由于内存访问中的对齐错误等。</p>
+<h2 id="sigfpe-8">SIGFPE 8</h2>
+<p>程序中发生浮点异常。</p>
+<h2 id="sigkill-9">SIGKILL 9</h2>
+<p>该进程被使用kill命令的人明确杀死程序。</p>
+<h2 id="sigusr1-10">SIGUSR1 10</h2>
+<p>留给程序员做他们想做的事。</p>
+<h2 id="sigsegv-11">SIGSEGV 11</h2>
+<p>尝试访问未分配给进程的内存。这通常是由读取数组末尾等引起的。</p>
+<h2 id="sigusr2-12">SIGUSR2 12</h2>
+<p>留给程序员做他们想做的事。</p>
+<h2 id="sigpipe-13">SIGPIPE 13</h2>
+<p>如果一个进程正在生成输出并被送入另一个进程，通过管道（“生产者 | 消费者”）和消费者使用它死亡然后生产者被发送这个信号。</p>
+<h2 id="sigalrm-14">SIGALRM 14</h2>
+<p>进程可以在某个时间向操作系统请求“唤醒呼叫”通过调用alarm()函数来确定未来的时间。 当那个时刻到来时整个唤醒呼叫由该信号组成。</p>
+<h2 id="sigterm-15">SIGTERM 15</h2>
+<p>该进程被使用kill命令的人明确杀死程序。</p>
+<h2 id="16-unused">16 unused</h2>
+<h2 id="sigchld-17">SIGCHLD 17</h2>
+<p>该进程先前已创建一个或多个子进程fork() 函数。 这些进程中的一个或多个已经死亡。</p>
+<h2 id="sigcont-18">SIGCONT 18</h2>
+<p>（与 SIGSTOP 一起读取。）
+如果进程已通过发送 SIGSTOP 暂停，然后发送对进程发出 SIGCONT 信号会再次唤醒它（“继续”它）。</p>
+<h2 id="sigstop-19">SIGSTOP 19</h2>
+<p>（与 SIGCONT 一起读取。）
+如果一个进程被发送 SIGSTOP，它就会被操作系统暂停。 它的所有状态都已保留，可供重新启动（通过 SIGCONT），但它没有在此之前获得更多的 CPU 周期。</p>
+<h2 id="sigtstp-20">SIGTSTP 20</h2>
+<p>与SIGSTOP 本质上相同。 这是用户点击时发送的信号终端上的 Control+Z。 （SIGTSTP 是“终端停止”的缩写）
+SIGTSTP 和 SIGSTOP 之间的唯一区别是暂停仅是 SIGTSTP 的默认操作，但却是 SIGTSTP 的必需操作信号停止。 该进程可以选择以不同的方式处理 SIGTSTP，但不会得到任何结果关于 SIGSTOP 的选择。</p>
+<h2 id="sigttin-21">SIGTTIN 21</h2>
+<p>操作系统向后台进程发送此信号尝试从终端读取输入。 典型的反应是暂停（根据SIGSTOP 和 SIFTSTP）并等待 SIGCONT 到达进程被带回到前台。</p>
+<h2 id="sigttou-22">SIGTTOU 22</h2>
+<p>操作系统向后台进程发送此信号尝试将输出写入其终端。 典型的响应如下签署。</p>
+<h2 id="sigurg-23">SIGURG 23</h2>
+<p>操作系统使用网络将此信号发送到进程当“紧急”带外数据发送到它时连接。</p>
+<h2 id="sigxcpu-24">SIGXCPU 24</h2>
+<p>操作系统将此信号发送给已超出其限制的进程CPU 限制。可以在运行 make 之前使用 shell 命令 ulimit -t unlimited 取消任何 CPU 限制，但如果达到 make 中的 CPU 限制，则更可能出现问题。</p>
+<h2 id="sigxfsz-25">SIGXFSZ 25</h2>
+<p>操作系统将此信号发送到尝试创建超出文件大小限制的文件进程。可以在运行 make 之前使用 shell 命令 ulimit -f unlimited 取消任何文件大小限制，但是如果达到 make 中的文件大小限制，则更有可能出现问题。</p>
+<h2 id="sigvtalrm-26">SIGVTALRM 26</h2>
+<p>这与 SIGALRM 非常相似，但 SIGALRM 是在经过一定的实际时间后，在运行进程花费一定量的时间后发送 SIGVTALRM 。</p>
+<h2 id="sigprof-27">SIGPROF 27</h2>
+<p>这也与 SIGALRM 和 SIGVTALRM 非常相似，但是 SIGALRM 是在经过一定的实时时间后发送，在经过一定的实时时间后发送，SIGPROF 是在运行进程并代表进程运行系统代码一段时间后发送的。</p>
+<h2 id="sigwinch-28">SIGWINCH 28</h2>
+<p>（现在大多未使用。）过去，当一个进程的窗口之一调整大小时，它会发送此信号。</p>
+<h2 id="sigio-29">SIGIO 29</h2>
+<p>（也称为 SIGPOLL。）当有一些输入可供处理或者输出通道已经准备好写入时，进程可以安排将此信号发送给它。</p>
+<h2 id="sigpwr-30">SIGPWR 30</h2>
+<p>由电源管理服务发送到进程的信号，表明电源已切换至短期应急电源。该进程（尤其是长时间运行的守护进程）可能会在紧急电源发生故障之前关闭 cleanlt。</p>
+<h2 id="sigsys-31">SIGSYS 31</h2>
+<p>unused</p>
 </div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
@@ -352,19 +376,19 @@ Von
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
   <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
-    <a href="/series/linux/top/">Man Top
+    <a href="/categories/golang/happend_before/">Golang Happened-Before
 </a>
   </div><div class="post-nav post-next">
-    <a href="/categories/docker/docker-stats/">Docker Stats
+    <a href="/series/linux/buffercache/">Buffer and Cache
 </a>
     <i class="fas fa-fw fa-chevron-right"></i>
   </div></div><section class="related-posts-wrapper">
     <h3>Related Posts</h3>
-    <ul class="related-posts"><li><a href="/series/linux/top/">Man Top
-</a></li><li><a href="/series/python/flask-inject-log/">Flask Logger
-</a></li><li><a href="/series/linux/linux-interview/">Linux Interview
-</a></li><li><a href="/series/python/parse-vip-video/">VIP Video Parse Link
-</a></li><li><a href="/series/python/pychallenge/">Python Challenges
+    <ul class="related-posts"><li><a href="/series/linux/fxxk_ssh/">Fxxk SSH
+</a></li><li><a href="/series/linux/root_directory/">Linux Path Description
+</a></li><li><a href="/categories/docker/docker-base/">Docker Base
+</a></li><li><a href="/categories/docker/docker-stats/">Docker Stats
+</a></li><li><a href="/series/linux/session-cookie-diff/">The Different Between Session With Cookie
 </a></li></ul>
   </section></div>
     </article><div class="card component row post-comments">
