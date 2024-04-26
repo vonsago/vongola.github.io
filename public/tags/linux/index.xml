@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>Linux Signal</title>
+      <link>/series/linux/signal/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/series/linux/signal/</guid>
+      <description>通过 man 7 signal 给出了官方手册 SINGHUP 1 如果一个进程正在从终端运行并且该终端突然消失，则该进程会收到此信号。HUP是挂断的缩写，指的是在电话调制解调器时</description>
+    </item>
+    
+    <item>
       <title>Fxxk SSH</title>
       <link>/series/linux/fxxk_ssh/</link>
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
